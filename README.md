@@ -9,5 +9,5 @@ features:
 - title: 兼容性
   details: 兼容原 CQHTTP 插件，零负担迁移。
 - title: 凑数
-  details: 凑足三个，显得比较整齐。
+  details: 凑足三个介绍，显得比较整齐。
 ---

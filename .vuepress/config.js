@@ -47,6 +47,16 @@ module.exports = {
                     ]
                 },
                 {
+                    title: '消息',
+                    path: '/specs/message/',
+                    collapsable: false,
+                    children: [
+                        '/specs/message/string',
+                        '/specs/message/array',
+                        '/specs/message/cqcode',
+                    ]
+                },
+                {
                     title: 'Action',
                     path: '/specs/action/',
                     collapsable: false,

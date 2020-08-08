@@ -27,3 +27,9 @@ CQHTTP 会对每个 API 调用返回一个 JSON 响应（除非是 HTTP 状态�
 所有 API 都可以通过给 action 附加后缀 `_rate_limited` 来进行限速调用，例如 `send_private_msg_rate_limited`、`send_msg_rate_limited`，不过主要还是用在发送消息接口上，以避免消息频率过快导致腾讯封号。所有限速调用将会以指定速度**排队执行**，这个速度可在配置中指定。
 
 限速调用的响应中，`status` 字段为 `async`。
+
+## 相关配置
+
+| 配置项 | 默认值 | 说明 |
+| -------- | ------ | --- |
+| `rate_limit_interval` | `500` | 限速 API 调用的排队间隔时间，单位毫秒 |

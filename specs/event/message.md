@@ -6,6 +6,8 @@
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------- | ------- | ---- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
 | `post_type` | string | `message` | 上报类型 |
 | `message_type` | string | `private` | 消息类型 |
 | `sub_type` | string | `friend`、`group`、`discuss`、`other` | 消息子类型，如果是好友则是 `friend`，如果从群或讨论组来的临时会话则分别是 `group`、`discuss` |
@@ -27,29 +29,6 @@
 
 需要注意的是，`sender` 中的各字段是尽最大努力提供的，也就是说，不保证每个字段都一定存在，也不保证存在的字段都是完全正确的（缓存可能过期）。
 
-#### 示例
-
-```json
-{
-    "time": 1515204254,
-    "post_type": "message",
-    "message_type": "private",
-    "sub_type": "friend",
-    "message_id": 12,
-    "user_id": 12345678,
-    "message": "你好～",
-    "raw_message": "你好～",
-    "font": 456,
-    "sender": {
-        "nickname": "小不点",
-        "sex": "male",
-        "age": 18
-    }
-}
-```
-
-下面的其它事件同这个类似，将不再给出。
-
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 | 默认情况 |
@@ -63,6 +42,8 @@
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------- | ------- | --- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
 | `post_type` | string | `message` | 上报类型 |
 | `message_type` | string | `group` | 消息类型 |
 | `sub_type` | string | `normal`、`anonymous`、`notice` | 消息子类型，正常消息是 `normal`，匿名消息是 `anonymous`，系统提示（如「管理员已禁止群内匿名聊天」）是 `notice` |
@@ -117,6 +98,8 @@
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------- | ------- | --- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
 | `post_type` | string | `message` | 上报类型 |
 | `message_type` | string | `discuss` | 消息类型 |
 | `message_id` | number (int32) | - | 消息 ID |

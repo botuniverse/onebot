@@ -29,7 +29,6 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '协议', link: '/specs/' },
-            { text: '术语表', link: '/glossary.html' },
             { text: '更新日志', link: '/changelog.html' },
             { text: '旧文档', link: '/legacy/' },
         ],
@@ -45,11 +44,8 @@ module.exports = {
                         '/specs/communication/http-post',
                         '/specs/communication/ws',
                         '/specs/communication/ws-reverse',
+                        '/specs/communication/authorization',
                     ]
-                },
-                {
-                    title: '鉴权',
-                    path: '/specs/authorization/'
                 },
                 {
                     title: '消息',

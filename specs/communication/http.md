@@ -4,17 +4,7 @@ CQHTTP 在启动时开启一个 HTTP 服务器，监听配置文件指定的 IP 
 
 参数可能有不同的类型，当用户通过 query 参数或 urlencoded 表单传参，或在 JSON 中使用字符串作为参数值时，CQHTTP 实现需要从字符串解析出对应类型的数据。
 
-具体的各个 `action` 和其所需参数和响应内容，见 [API](/specs/api/)。
-
-## 适用场景
-
-- 在本地初步测试，需要快速测试接口、查看接口返回的数据
-- 运行 CQHTTP 的机器有公网 IP，或 CQHTTP 和业务代码运行在同一机器上
-- ...
-
-## 用法
-
-### 请求
+## 请求
 
 假设配置中指定了 IP 和端口分别为 `127.0.0.1` 和 `5700`，则在浏览器中访问 `http://127.0.0.1:5700/send_private_msg?user_id=1000010000&message=hello` 即可给 QQ 号为 `1000010000` 的好友发送私聊消息 `hello`。
 
@@ -36,7 +26,9 @@ Content-Type: application/json
 - 当使用 urlencoded 表单或 JSON 传递参数时，请求头中的 `Content-Type` 必须对应的为 `application/x-www-form-urlencoded` 或 `application/json`。
 :::
 
-### 响应
+上例中调用的 API（即 action）为 `send_private_msg`，其它 API 及它们的参数和响应内容，见 [API](/specs/api/)。
+
+## 响应
 
 收到 API 请求并处理后，CQHTTP 会返回一个 HTTP 响应，根据具体情况不同，HTTP 状态码不同：
 

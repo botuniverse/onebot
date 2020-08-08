@@ -1,4 +1,4 @@
-# 公开 Action
+# 公开 API
 
 ## `send_private_msg` 发送私聊消息
 
@@ -481,7 +481,7 @@
 | ----- | ------- | --- |
 | `yes` | boolean | 是或否 |
 
-## `get_status` 获取插件运行状态
+## `get_status` 获取运行状态
 
 ### 参数
 
@@ -491,23 +491,13 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `app_initialized` | boolean | CQHTTP 插件已初始化 |
-| `app_enabled` | boolean | CQHTTP 插件已启用 |
-| `plugins_good` | object | CQHTTP 的各内部插件是否正常运行 |
-| `app_good` | boolean | CQHTTP 插件正常运行（已初始化、已启用、各内部插件正常运行） |
 | `online` | boolean | 当前 QQ 在线，`null` 表示无法查询到在线状态 |
-| `good` | boolean | CQHTTP 插件状态符合预期，意味着插件已初始化，内部插件都在正常运行，且 QQ 在线 |
+| `good` | boolean | CQHTTP 状态符合预期，意味着各模块正常运行、功能正常，且 QQ 在线 |
+| …… | - | CQHTTP 实现自行添加的其它内容 |
 
-通常情况下建议只使用 `online` 和 `good` 这两个字段来判断运行状态，因为随着插件的更新，其它字段有可能频繁变化。
+通常情况下建议只使用 `online` 和 `good` 这两个字段来判断运行状态，因为根据 CQHTTP 实现的不同，其它字段可能完全不同。
 
-其中，`online` 字段的在线状态检测有两种方式，可通过 `online_status_detection_method` 配置项切换，默认通过读取 酷Q 日志数据库实现，可切换为 `get_stranger_info` 以通过测试陌生人查询接口的可用性来检测。具体区别如下：
-
-| 在线检测方式 | 优点 | 缺点 |
-| ---------- | --- | ---- |
-| `get_stranger_info`（默认） | 正常情况下比 `log_db` 准确，但请求频率过高时可能变得不准确（在线被认为不在线）；需要发送网络请求 | （几乎不可能）会因为 酷Q 更新而失效 |
-| `log_db`| 查询速度较快；无需网络请求（不会触发腾讯风控）；不会因为请求频率过高而不准确 | 可能因为 酷Q 修改数据库表名、文件名而失效；月尾掉线，月初无法检测到 |
-
-## `get_version_info` 获取 酷Q 及 CQHTTP 插件的版本信息
+## `get_version_info` 获取版本信息
 
 ### 参数
 
@@ -517,16 +507,16 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `coolq_directory` | string | 酷Q 根目录路径 |
-| `coolq_edition` | string | 酷Q 版本，`air` 或 `pro` |
-| `plugin_version` | string | CQHTTP 插件版本，例如 `2.1.3` |
-| `plugin_build_number` | number | CQHTTP 插件 build 号 |
-| `plugin_build_configuration` | string | CQHTTP 插件编译配置，`debug` 或 `release` |
+| `coolq_directory` | string | （兼容性需求）酷Q 根目录路径 |
+| `coolq_edition` | string | （兼容性需求）酷Q 版本，`air` 或 `pro` |
+| `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
+| `plugin_build_number` | number | CQHTTP build 号 |
+| `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |
 
 
-## `set_restart_plugin` 重启 CQHTTP 插件
+## `set_restart_plugin` 重启 CQHTTP
 
-由于重启插件同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需在异步地重启插件，接口返回的 `status` 是 `async`。
+由于重启 CQHTTP 同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需要异步地重启，接口返回的 `status` 是 `async`。
 
 ### 参数
 
@@ -552,9 +542,9 @@
 
 无
 
-## `clean_plugin_log` 清理插件日志
+## `clean_plugin_log` 清理日志
 
-用于清空插件的日志文件。
+用于清空 CQHTTP 的日志文件。
 
 ### 参数
 

@@ -42,9 +42,14 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/specs/communication/http',
+                        '/specs/communication/http-post',
                         '/specs/communication/ws',
                         '/specs/communication/ws-reverse',
                     ]
+                },
+                {
+                    title: '鉴权',
+                    path: '/specs/authorization/'
                 },
                 {
                     title: '消息',
@@ -57,13 +62,12 @@ module.exports = {
                     ]
                 },
                 {
-                    title: 'Action',
-                    path: '/specs/action/',
+                    title: 'API',
+                    path: '/specs/api/',
                     collapsable: false,
                     children: [
-                        '/specs/action/public',
-                        '/specs/action/hidden',
-                        '/specs/action/experimental',
+                        '/specs/api/public',
+                        '/specs/api/hidden',
                     ]
                 },
                 {

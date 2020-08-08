@@ -29,25 +29,64 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '协议', link: '/specs/' },
+            { text: '术语表', link: '/glossary.html' },
             { text: '更新日志', link: '/changelog.html' },
+            { text: '旧文档', link: '/legacy/' },
         ],
         sidebar: {
             '/specs/': [
                 ['/specs/', '介绍'],
                 {
-                    title: '协议',
+                    title: '通信',
+                    path: '/specs/communication/',
                     collapsable: false,
                     children: [
-                        '/specs/configuration',
-                        '/specs/connection',
-                        '/specs/api',
-                        '/specs/websocket-api',
-                        '/specs/event',
-                        '/specs/message',
-                        '/specs/cqcode',
-                    ],
+                        '/specs/communication/http',
+                        '/specs/communication/ws',
+                        '/specs/communication/ws-reverse',
+                    ]
+                },
+                {
+                    title: 'Action',
+                    path: '/specs/action/',
+                    collapsable: false,
+                    children: [
+                        '/specs/action/public',
+                        '/specs/action/hidden',
+                        '/specs/action/experimental',
+                    ]
+                },
+                {
+                    title: '事件',
+                    path: '/specs/event/',
+                    collapsable: false,
+                    children: [
+                        '/specs/event/message',
+                        '/specs/event/notice',
+                        '/specs/event/request',
+                        '/specs/event/meta',
+                    ]
                 },
             ],
+            '/legacy/': [
+                {
+                    title: '旧文档',
+                    path: '/legacy/',
+                    collapsable: false,
+                    children: [
+                        '/legacy/Home',
+                        '/legacy/Docker',
+                        '/legacy/Configuration',
+                        '/legacy/CommunicationMethods',
+                        '/legacy/API',
+                        '/legacy/WebSocketAPI',
+                        '/legacy/Post',
+                        '/legacy/EventFilter',
+                        '/legacy/Message',
+                        '/legacy/CQCode',
+                    ]
+                },
+            ]
         },
     }
 }

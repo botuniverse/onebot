@@ -1,6 +1,6 @@
-# WebSocket API
+# WebSocket API 描述
 
-**注：本页描述的是插件作为 WebSocket 服务端的情况，其它通信方式请见 [通信方式](/CommunicationMethods)。**
+**注：本页描述的是插件作为 WebSocket 服务端的情况，其它通信方式请见 [通信方式](CommunicationMethods)。**
 
 除了 HTTP 方式调用 API、接收事件上报，目前插件还支持 WebSocket。使用 WebSocket 时，只需要你的机器人程序单方面的向插件建立连接，即可调用 API 和接收事件推送。数据全部使用 JSON 格式传递。
 
@@ -38,9 +38,9 @@ Authorization: Bearer kSLuTF2GC2Q4q4ugm3
 }
 ```
 
-这里的 `action` 参数用于指定要调用的 API，具体支持的 API 可以参考 [API 列表](/API#api-列表)。`params` 用于传入参数，如果要调用的 API 不需要参数，则可以不加。
+这里的 `action` 参数用于指定要调用的 API，具体支持的 API 可以参考 [API 列表](API#api-列表)。`params` 用于传入参数，如果要调用的 API 不需要参数，则可以不加。
 
-客户端向插件发送 JSON 之后，插件会往回发送一个调用结果，结构和 [响应说明](/API#响应说明) 是一样的，唯一的区别在于，调用 HTTP 接口时，通过 HTTP 状态码反应的错误情况，被移动到响应 JSON 的 `retcode` 字段，例如，HTTP 接口返回 404 的情况，对应到 WebSocket 的回复，是：
+客户端向插件发送 JSON 之后，插件会往回发送一个调用结果，结构和 [响应说明](API#响应说明) 是一样的，唯一的区别在于，调用 HTTP 接口时，通过 HTTP 状态码反应的错误情况，被移动到响应 JSON 的 `retcode` 字段，例如，HTTP 接口返回 404 的情况，对应到 WebSocket 的回复，是：
 
 ```json
 {
@@ -65,7 +65,7 @@ Authorization: Bearer kSLuTF2GC2Q4q4ugm3
 
 ## `/event/` 接口
 
-连接此接口后，插件会在收到事件后推送至客户端，推送的格式和 HTTP POST 方式上报的完全一致，见 [上报数据格式](/Post#上报数据格式)，事件列表见 [事件列表](/Post#事件列表)。
+连接此接口后，插件会在收到事件后推送至客户端，推送的格式和 HTTP POST 方式上报的完全一致，见 [上报数据格式](Post#上报数据格式)，事件列表见 [事件列表](Post#事件列表)。
 
 与 HTTP 上报不同的是，WebSocket 推送不会对数据进行签名（即 HTTP 上报中的 `X-Signature` 请求头在这里没有等价的东西），并且也不会处理响应数据。如果对事件进行处理的时候需要调用接口，请使用 HTTP 接口或 WebSocket 的 `/api/` 接口。
 

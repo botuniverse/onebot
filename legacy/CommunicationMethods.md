@@ -27,7 +27,7 @@
 
 将 `use_http` 配置为 `true`（默认即 `true`），然后通过 `host`、`port` 来配置要监听的 IP 和端口（默认为 `0.0.0.0:5700`），启用插件后即可通过形如 `http://host:port/send_private_msg?user_id=1234567&message=hello` 的 URL 来调用 API。
 
-具体的 API 调用方法和 API 列表见 [API 描述](/API)。
+具体的 API 调用方法和 API 列表见 [API 描述](API)。
 
 ## 插件作为 WebSocket 服务端
 
@@ -41,7 +41,7 @@
 
 将 `use_ws` 配置为 `true`（默认 `false`），然后通过 `ws_host`、`ws_port` 来配置要监听的 IP 和端口（默认为 `0.0.0.0:6700`），启用插件后即可通过 `ws://ws_host:ws_port/api/` 接口来调用 API，通过 `ws://ws_host:ws_port/event/` 来接收事件推送，通过 `ws://ws_host:ws_port/` 接口来在同一条连接上调用 API 和接收事件推送（相当于 `/api/` 和 `/event/` 接口的合并，对接收到的数据可通过 `post_type` 字段来判断是 API 响应还是事件）。
 
-这两个接口的具体用法见 [WebSocket API 描述](/WebSocketAPI)。
+这两个接口的具体用法见 [WebSocket API 描述](WebSocketAPI)。
 
 ## 插件作为 WebSocket 客户端（反向 WebSocket）
 
@@ -78,11 +78,11 @@ X-Self-ID: 123456
 
 首先插件启用时会启动一个**保持连接**的客户端用于连接 API 调用接口，即 `ws_reverse_api_url` 指定的接口，一旦收到服务端发来的消息就会调用相应的 API 并返回调用结果。
 
-API 的调用方式和插件作为 WebSocket 服务端的 `/api/` 接口使用方式相同，见 [WebSocket API 描述的 `/api/`](/WebSocketAPI#api)，不同在于你的服务端必须在调用 API 后保持连接，以便下次调用。
+API 的调用方式和插件作为 WebSocket 服务端的 `/api/` 接口使用方式相同，见 [WebSocket API 描述的 `/api/`](WebSocketAPI#api)，不同在于你的服务端必须在调用 API 后保持连接，以便下次调用。
 
 #### 事件上报
 
-插件启动时会启动一个**保持连接**的客户端用于连接事件上报接口，即 `ws_reverse_event_url` 指定的接口，在后续接收到 酷Q 的事件时，会通过这个连接发送事件数据。发送事件数据格式和 HTTP POST 方式上报的完全一致，见 [上报数据格式](/Post#上报数据格式)，事件列表见 [事件列表](/Post#事件列表)。
+插件启动时会启动一个**保持连接**的客户端用于连接事件上报接口，即 `ws_reverse_event_url` 指定的接口，在后续接收到 酷Q 的事件时，会通过这个连接发送事件数据。发送事件数据格式和 HTTP POST 方式上报的完全一致，见 [上报数据格式](Post#上报数据格式)，事件列表见 [事件列表](Post#事件列表)。
 
 与 HTTP 上报不同的是，这里上报不会对数据进行签名（即 HTTP 上报中的 `X-Signature` 请求头在这里没有等价的东西），并且也不会处理响应数据。
 

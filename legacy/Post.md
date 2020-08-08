@@ -1,4 +1,4 @@
-# 事件
+# 事件上报
 
 ## 上报方式
 
@@ -104,11 +104,11 @@ ctx.assert(ctx.request.headers['x-signature'] === `sha1=${sig}`, 403);
 
 在下面对上报数据的描述中，「数据类型」使用 JSON 中的名字，例如 `string`、`number` 等。
 
-特别地，数据类型 `message` 表示该参数是一个消息类型的参数。在上报数据中，`message` 的实际类型根据配置项 `post_message_format` 的不同而不同，`post_message_format` 设置为 `string` 和 `array` 分别对应字符串和消息段数组；而在上报请求的回复中，`message` 类型的字段允许接受字符串、消息段数组、单个消息段对象三种类型的数据。关于消息格式的更多细节请查看 [消息格式](/Message)。
+特别地，数据类型 `message` 表示该参数是一个消息类型的参数。在上报数据中，`message` 的实际类型根据配置项 `post_message_format` 的不同而不同，`post_message_format` 设置为 `string` 和 `array` 分别对应字符串和消息段数组；而在上报请求的回复中，`message` 类型的字段允许接受字符串、消息段数组、单个消息段对象三种类型的数据。关于消息格式的更多细节请查看 [消息格式](Message)。
 
 ## 事件过滤
 
-如果需要对事件进行过滤，以减小后端的负担，请参考 [事件过滤器](/EventFilter)。
+如果需要对事件进行过滤，以减小后端的负担，请参考 [事件过滤器](EventFilter)。
 
 ## 事件列表
 
@@ -410,4 +410,4 @@ ctx.assert(ctx.request.headers['x-signature'] === `sha1=${sig}`, 403);
 | `status` | object | - | 状态信息 |
 | `interval` | number (int64) | - | 到下次心跳的间隔，单位毫秒 |
 
-其中 `status` 字段的内容和 [`get_status` 接口的响应数据](/API#响应数据27) 相同。
+其中 `status` 字段的内容和 [`get_status` 接口的响应数据](API#响应数据27) 相同。

@@ -1,4 +1,4 @@
-# API
+# API 描述
 
 ## 请求方式
 
@@ -77,7 +77,7 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 在描述 API 的参数时，「数据类型」使用 JSON 中的名字，例如 `string`、`number` 等。
 
-特别地，数据类型 `message` 表示该参数是一个消息类型的参数，在调用 API 时，`message` 类型的参数允许接受字符串、消息段数组、单个消息段对象三种类型的数据，关于消息格式的更多细节请查看 [消息格式](/Message)。
+特别地，数据类型 `message` 表示该参数是一个消息类型的参数，在调用 API 时，`message` 类型的参数允许接受字符串、消息段数组、单个消息段对象三种类型的数据，关于消息格式的更多细节请查看 [消息格式](Message)。
 
 ## 异步调用
 
@@ -863,4 +863,4 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 另外，请求的路径中不允许出现 `..`，即上级目录的标记，以防止恶意或错误的请求到系统中的其它文件。
 
-本功能默认情况下不开启，在配置文件中将 `serve_data_files` 设置为 `yes` 或 `true` 即可开启，见 [配置文件说明](/Configuration)。
+本功能默认情况下不开启，在配置文件中将 `serve_data_files` 设置为 `yes` 或 `true` 即可开启，见 [配置文件说明](Configuration)。

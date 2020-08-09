@@ -8,13 +8,13 @@ sidebar: auto
 
 ## CQHTTP 实现
 
-理论上，基于 CQHTTP 协议开发的**任何** SDK、框架和机器人应用，都可以无缝地在下面的不同实现中切换。当然，在一小部分细节上各实现可能有一些不同，这也是本项目希望帮助解决的问题。
+理论上，基于 CQHTTP 协议开发的**任何** SDK、框架和机器人应用，都可以无缝地在下面的不同实现中切换。当然，在一小部分细节上各实现可能有一些不同，这也是本项目希望推动解决的问题。
 
-| 项目地址 | 核心作者 | 备注 |
-| --- | --- | --- |
-| [richardchien/coolq-http-api/](https://github.com/richardchien/coolq-http-api) | richardchien | 实现大部分 API，可在 Mirai 平台使用 [mirai-native](https://github.com/iTXTech/mirai-native) 加载 |
-| [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | Mrs4s | 实现大部分 API |
-| [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | yyuueexxiinngg | 实现大部分 API |
+| 项目地址 | 平台 | 核心作者 | 备注 |
+| --- | --- | --- | --- |
+| [richardchien/coolq-http-api/](https://github.com/richardchien/coolq-http-api) | 酷Q | richardchien | 可在 Mirai 平台使用 [mirai-native](https://github.com/iTXTech/mirai-native) 加载 |
+| [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | MiraiGo | Mrs4s |  |
+| [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | Mirai | yyuueexxiinngg |  |
 
 ## SDK／开发框架
 

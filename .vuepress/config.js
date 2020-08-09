@@ -38,9 +38,9 @@ module.exports = {
                 ['/specs/', '介绍'],
                 {
                     title: '通信',
-                    path: '/specs/communication/',
                     collapsable: false,
                     children: [
+                        ['/specs/communication/', '通信概述'],
                         '/specs/communication/http',
                         '/specs/communication/http-post',
                         '/specs/communication/ws',
@@ -50,9 +50,9 @@ module.exports = {
                 },
                 {
                     title: '消息',
-                    path: '/specs/message/',
                     collapsable: false,
                     children: [
+                        ['/specs/message/', '消息概述'],
                         '/specs/message/string',
                         '/specs/message/array',
                         '/specs/message/cqcode',
@@ -60,18 +60,18 @@ module.exports = {
                 },
                 {
                     title: 'API',
-                    path: '/specs/api/',
                     collapsable: false,
                     children: [
+                        ['/specs/api/', 'API 概述'],
                         '/specs/api/public',
                         '/specs/api/hidden',
                     ]
                 },
                 {
                     title: '事件',
-                    path: '/specs/event/',
                     collapsable: false,
                     children: [
+                        ['/specs/event/', '事件概述'],
                         '/specs/event/message',
                         '/specs/event/notice',
                         '/specs/event/request',

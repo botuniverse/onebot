@@ -260,6 +260,60 @@
 
 无
 
+## `set_group_name` 设置群名
+
+### 参数
+
+| 字段名   | 数据类型 | 默认值 | 说明 |
+| -------- | ------ | ---- | ---- |
+| group_id | number (int64)  | - | 群号 |
+| name     | string | - | 新名 |
+
+## `get_group_msg` 获取群历史消息
+
+### 参数
+
+| 字段         | 类型  | 默认值 | 说明   |
+| ------------ | ----- | ------ |  ------ |
+| `message_id` | number (int32) | - |  消息 ID |
+
+### 响应数据
+
+| 字段         | 类型    | 说明       |
+| ------------ | ------- | ---------- |
+| `message_id` | number (int32) | 消息 ID     |
+| `real_id`    | number (int32) | 消息真实 ID |
+| `sender`     | object  | 发送者     |
+| `time`       | number (int32) | 发送时间   |
+| `content`    | message | 消息内容   |
+
+## `get_forward_msg` 获取合并转发内容
+
+### 参数
+
+| 字段         | 类型   | 默认值 | 说明   |
+| ------------ | ------ | ------ | ------ |
+| `message_id` | string | - | 消息id |
+
+### 响应数据
+
+| 字段       | 类型              | 说明     |
+| ---------- | ----------------- | -------- |
+| `messages` | forward message[] | 消息列表 |
+
+## `send_group_forward_msg` 发送合并转发(群)
+
+### 参数
+
+| 字段       | 类型           | 默认值 | 说明                         |
+| ---------- | -------------- |  -------------- | ---------------------------- |
+| `group_id` | number (int64) |  -  | 群号                         |
+| `messages` | forward node[] |  -  |  自定义转发消息, 具体看CQCode |
+
+### 响应数据
+
+无
+
 ## `get_login_info` 获取登录号信息
 
 ### 参数
@@ -449,13 +503,16 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `file` | string | - | 收到的图片文件名（CQ 码的 `file` 参数），如 `6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `file` | string | - | 图片文件名（CQ 码的 `file` 参数） |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
 | `file` | string | 下载后的图片文件路径，如 `C:\Apps\CoolQ\data\image\6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `filename` | string | 图片文件原名 |
+| `size`     | number (int32) | 图片源文件大小 |
+| `url`      | string | 图片下载地址 |
 
 ## `can_send_image` 检查是否可以发送图片
 
@@ -512,7 +569,6 @@
 | `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
 | `plugin_build_number` | number | CQHTTP build 号 |
 | `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |
-
 
 ## `set_restart_plugin` 重启 CQHTTP
 

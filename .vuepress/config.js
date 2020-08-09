@@ -14,9 +14,9 @@ module.exports = {
             before: '<pre class="tree-container"><code>',
             after: '</code></pre>'
         },
-        // '@vuepress/google-analytics': {
-        //     'ga': 'UA-115509121-3'
-        // },
+        '@vuepress/google-analytics': {
+            'ga': 'UA-115509121-1'
+        },
         '@vuepress/back-to-top': true,
         '@vuepress/medium-zoom': true,
     },

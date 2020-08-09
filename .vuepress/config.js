@@ -29,6 +29,7 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '协议', link: '/specs/' },
+            { text: '生态', link: '/ecosystem.html' },
             { text: '更新日志', link: '/changelog.html' },
             { text: '旧文档', link: '/legacy/' },
         ],

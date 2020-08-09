@@ -94,3 +94,27 @@
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `friend_add` | 通知类型 |
 | `user_id` | number (int64) | - | 新添加好友 QQ 号 |
+
+## 群消息撤回
+
+### 上报数据
+
+| 字段名          | 数据类型   | 可能的值       | 说明           |
+| ------------- | ------ | -------------- | -------------- |
+| `post_type`   | string | `notice`       | 上报类型       |
+| `notice_type` | string | `group_recall` | 消息类型       |
+| `group_id`    | number (int64)  |                | 群号           |
+| `user_id`     | number (int64)  |                | 消息发送者 QQ 号   |
+| `operator_id` | number (int64)  |                | 操作者 QQ 号  |
+| `message_id`  | number (int64)  |                | 被撤回的消息 ID |
+
+## 好友消息撤回
+
+### 上报数据
+
+| 字段名          | 数据类型   | 可能的值       | 说明           |
+| ------------- | ------ | -------------- | -------------- |
+| `post_type`   | string | `notice`       | 上报类型       |
+| `notice_type` | string | `friend_recall`| 消息类型       |
+| `user_id`     | number (int64)  |                | 好友 QQ 号        |
+| `message_id`  | number (int64)  |                | 被撤回的消息 ID |

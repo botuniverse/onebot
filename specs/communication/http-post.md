@@ -7,7 +7,7 @@ CQHTTP 在收到事件后，向配置指定的事件上报 URL 通过 POST 请�
 假设配置指定的上报 URL 为 `http://127.0.0.1:8080/`，以私聊消息为例，事件上报的 POST 请求如下：
 
 ```http
-POST /
+POST / HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Type: application/json
 X-Self-ID: 10001000
@@ -33,14 +33,14 @@ X-Self-ID: 10001000
 
 请求头中的 `X-Self-ID` 表示当前正在上报的机器人 QQ 号，和请求正文 JSON 中的 `self_id` 一致。
 
-上例中的事件为私聊消息事件，其它事件及它们的上报内容和支持的响应数据，见 [事件](/specs/event/)。
+上例中的事件为私聊消息事件，其它事件及它们的上报内容和支持的响应数据，见 [事件](../event/)。
 
 ## 签名
 
 如果配置中给出了 `secret`，即签名密钥，则会在每次上报的请求头中加入 HMAC 签名，即 `X-Signature` 头，如：
 
 ```http
-POST /
+POST / HTTP/1.1
 Host: 127.0.0.1:8080
 Content-Type: application/json
 X-Signature: sha1=f9ddd4863ace61e64f462d41ca311e3d2c1176e2

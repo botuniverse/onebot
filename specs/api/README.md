@@ -32,4 +32,4 @@ CQHTTP 会对每个 API 调用返回一个 JSON 响应（除非是 HTTP 状态�
 
 | 配置项 | 默认值 | 说明 |
 | -------- | ------ | --- |
-| `rate_limit_interval` | `500` | 限速 API 调用的排队间隔时间，单位毫秒 |
+| `api.rate_limit_interval` | `500` | 限速 API 调用的排队间隔时间，单位毫秒 |

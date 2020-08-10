@@ -38,4 +38,4 @@ Authorization: Token kSLuTF2GC2Q4q4ugm3
 
 | 配置项名称 | 默认值 | 说明 |
 | -------- | ------ | --- |
-| `access_token` | 空 | access token |
+| `auth.access_token` | 空 | access token |

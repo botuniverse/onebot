@@ -2,12 +2,12 @@
 
 ## 群文件上传
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | ------- | ---- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `group_upload` | 通知类型 |
 | `group_id` | number (int64) | - | 群号 |
@@ -25,12 +25,12 @@
 
 ## 群管理员变动
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | -------- | --- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `group_admin` | 通知类型 |
 | `sub_type` | string | `set`、`unset` | 事件子类型，分别表示设置和取消管理员 |
@@ -39,12 +39,12 @@
 
 ## 群成员减少
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | -------- | --- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `group_decrease` | 通知类型 |
 | `sub_type` | string | `leave`、`kick`、`kick_me` | 事件子类型，分别表示主动退群、成员被踢、登录号被踢 |
@@ -54,12 +54,12 @@
 
 ## 群成员增加
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | -------- | --- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `group_increase` | 通知类型 |
 | `sub_type` | string | `approve`、`invite` | 事件子类型，分别表示管理员已同意入群、管理员邀请入群 |
@@ -69,12 +69,12 @@
 
 ## 群禁言
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | -------- | --- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `group_ban` | 通知类型 |
 | `sub_type` | string | `ban`、`lift_ban` | 事件子类型，分别表示禁言、解除禁言 |
@@ -85,12 +85,12 @@
 
 ## 好友添加
 
-### 上报数据
+### 事件数据
 
 | 字段名 | 数据类型 | 可能的值 | 说明 |
 | ----- | ------ | -------- | --- |
 | `time` | number (int64) | - | 事件发生的时间戳 |
-| `self_id` | number (int64) | - | 收到消息的机器人 QQ 号 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `notice` | 上报类型 |
 | `notice_type` | string | `friend_add` | 通知类型 |
 | `user_id` | number (int64) | - | 新添加好友 QQ 号 |

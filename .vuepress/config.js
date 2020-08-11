@@ -30,6 +30,11 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '协议', link: '/specs/' },
             { text: '生态', link: '/ecosystem.html' },
+            {
+                text: '版本', ariaLabel: '版本菜单', items: [
+                    { text: 'latest', link: '/' },
+                ]
+            },
             { text: '更新日志', link: '/changelog.html' },
             { text: '旧文档', link: '/legacy/' },
         ],

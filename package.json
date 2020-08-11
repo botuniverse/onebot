@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "release": "node ./version.js release"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.2.0",

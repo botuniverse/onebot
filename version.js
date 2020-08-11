@@ -27,7 +27,8 @@ CLI({
                 options.siteConfig.base = `/${version}/`
 
                 for (const navItem of options.siteConfig.themeConfig.nav) {
-                    if (navItem.text == '版本') {
+                    if (navItem.text.startsWith('版本')) {
+                        navItem.text = `版本: ${version}`
                         navItem.items[0].text = version
                         break
                     }
@@ -36,13 +37,6 @@ CLI({
                 logger.info('Updating changelog')
                 const changelog = fs.readFileSync('./changelog.md', 'utf8')
                 fs.writeFileSync('./changelog.md', changelog.replace('## latest', `## ${version}`))
-
-                logger.info('Building docs for', version)
-                wrapCommand(build)({
-                    sourceDir: path.resolve('.'),
-                    dest: `./.vuepress/public/${version}`,
-                    ...options,
-                })
 
                 logger.info('Updating config.js')
                 const configjs = fs.readFileSync('./.vuepress/config.js', 'utf8')
@@ -55,6 +49,13 @@ CLI({
                     }
                 }
                 fs.writeFileSync('./.vuepress/config.js', lines.join('\n'))
+
+                logger.info('Building docs for', version)
+                wrapCommand(build)({
+                    sourceDir: path.resolve('.'),
+                    dest: `./.vuepress/public/${version}`,
+                    ...options,
+                })
             })
     },
 })

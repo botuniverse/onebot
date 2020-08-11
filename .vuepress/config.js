@@ -27,14 +27,14 @@ module.exports = {
         editLinks: true,
         editLinkText: '帮助我们改善此页面',
         nav: [
-            { text: '主页', link: '/' },
-            { text: '协议', link: '/specs/' },
-            { text: '生态', link: '/ecosystem.html' },
             {
-                text: '版本', ariaLabel: '版本菜单', items: [
+                text: '版本: latest', items: [
                     { text: 'latest', link: '/' },
                 ]
             },
+            { text: '主页', link: '/' },
+            { text: '协议', link: '/specs/' },
+            { text: '生态', link: '/ecosystem.html' },
             { text: '更新日志', link: '/changelog.html' },
             { text: '旧文档', link: '/legacy/' },
         ],

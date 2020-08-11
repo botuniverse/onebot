@@ -427,7 +427,7 @@
 
 ## `get_record` 获取语音
 
-其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 酷Q 的 [语音组件](https://cqp.cc/t/21132)。**
+其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 CKYU 的 [语音组件](https://cqp.cc/t/21132)。**
 
 ### 参数
 
@@ -507,8 +507,8 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `coolq_directory` | string | （兼容性需求）酷Q 根目录路径 |
-| `coolq_edition` | string | （兼容性需求）酷Q 版本，`air` 或 `pro` |
+| `coolq_directory` | string | （兼容性需求）CKYU 根目录路径 |
+| `coolq_edition` | string | （兼容性需求）CKYU 版本，`air` 或 `pro` |
 | `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
 | `plugin_build_number` | number | CQHTTP build 号 |
 | `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |

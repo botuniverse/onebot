@@ -51,11 +51,11 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 }
 ```
 
-`status` 字段如果是 `ok` 则表示操作成功，同时 `retcode` （返回码）会等于 0，即 酷Q 函数返回了 0。
+`status` 字段如果是 `ok` 则表示操作成功，同时 `retcode` （返回码）会等于 0，即 CKYU 函数返回了 0。
 
 `status` 字段如果是 `async` 则表示请求已提交异步处理，此时 `retcode` 为 1，具体成功或失败将无法获知。
 
-`status` 字段如果是 `failed` 则表示操作失败，此时 `retcode` 有两种情况：当大于 0 时，表示是 CQHTTP 插件判断出的失败；小于 0 时，为调用 酷Q 函数的返回码，具体含义直接参考 酷Q 文档的 [错误代码](https://docs.cqp.im/dev/v9/errorcode/) 和 酷Q 日志。
+`status` 字段如果是 `failed` 则表示操作失败，此时 `retcode` 有两种情况：当大于 0 时，表示是 CQHTTP 插件判断出的失败；小于 0 时，为调用 CKYU 函数的返回码，具体含义直接参考 CKYU 文档的 [错误代码](https://docs.cqp.im/dev/v9/errorcode/) 和 CKYU 日志。
 
 汇总如下：
 
@@ -63,10 +63,10 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 | --------- | ---- |
 | 0 | 同时 `status` 为 `ok`，表示操作成功 |
 | 1 | 同时 `status` 为 `async`，表示操作已进入异步执行，具体结果未知 |
-| 100 | 参数缺失或参数无效，通常是因为没有传入必要参数，某些接口中也可能因为参数明显无效（比如传入的 QQ 号小于等于 0，此时无需调用 酷Q 函数即可确定失败），此项和以下的 `status` 均为 `failed` |
-| 102 | 酷Q 函数返回的数据无效，一般是因为传入参数有效但没有权限，比如试图获取没有加入的群组的成员列表 |
+| 100 | 参数缺失或参数无效，通常是因为没有传入必要参数，某些接口中也可能因为参数明显无效（比如传入的 QQ 号小于等于 0，此时无需调用 CKYU 函数即可确定失败），此项和以下的 `status` 均为 `failed` |
+| 102 | CKYU 函数返回的数据无效，一般是因为传入参数有效但没有权限，比如试图获取没有加入的群组的成员列表 |
 | 103 | 操作失败，一般是因为用户权限不足，或文件系统异常、不符合预期 |
-| 104 | 由于 酷Q 提供的凭证（Cookie 和 CSRF Token）失效导致请求 QQ 相关接口失败，可尝试清除 酷Q 缓存来解决 |
+| 104 | 由于 CKYU 提供的凭证（Cookie 和 CSRF Token）失效导致请求 QQ 相关接口失败，可尝试清除 CKYU 缓存来解决 |
 | 201 | 工作线程池未正确初始化（无法执行异步任务） |
 
 `data` 字段为 API 返回数据的内容，对于踢人、禁言等不需要返回数据的操作，这里为 null，对于获取群成员信息这类操作，这里为所获取的数据的对象，具体的数据内容将会在相应的 API 描述中给出。注意，异步版本的 API，`data` 永远是 null，即使其相应的同步接口本身是有数据。
@@ -524,7 +524,7 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 ### `/get_record` 获取语音
 
-其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 酷Q 的 [语音组件](https://cqp.cc/t/21132)。**
+其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 CKYU 的 [语音组件](https://cqp.cc/t/21132)。**
 
 #### 参数
 
@@ -597,14 +597,14 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 通常情况下建议只使用 `online` 和 `good` 这两个字段来判断运行状态，因为随着插件的更新，其它字段有可能频繁变化。
 
-其中，`online` 字段的在线状态检测有两种方式，可通过 `online_status_detection_method` 配置项切换，默认通过读取 酷Q 日志数据库实现，可切换为 `get_stranger_info` 以通过测试陌生人查询接口的可用性来检测。具体区别如下：
+其中，`online` 字段的在线状态检测有两种方式，可通过 `online_status_detection_method` 配置项切换，默认通过读取 CKYU 日志数据库实现，可切换为 `get_stranger_info` 以通过测试陌生人查询接口的可用性来检测。具体区别如下：
 
 | 在线检测方式 | 优点 | 缺点 |
 | ---------- | --- | ---- |
-| `get_stranger_info`（默认） | 正常情况下比 `log_db` 准确，但请求频率过高时可能变得不准确（在线被认为不在线）；需要发送网络请求 | （几乎不可能）会因为 酷Q 更新而失效 |
-| `log_db`| 查询速度较快；无需网络请求（不会触发腾讯风控）；不会因为请求频率过高而不准确 | 可能因为 酷Q 修改数据库表名、文件名而失效；月尾掉线，月初无法检测到 |
+| `get_stranger_info`（默认） | 正常情况下比 `log_db` 准确，但请求频率过高时可能变得不准确（在线被认为不在线）；需要发送网络请求 | （几乎不可能）会因为 CKYU 更新而失效 |
+| `log_db`| 查询速度较快；无需网络请求（不会触发腾讯风控）；不会因为请求频率过高而不准确 | 可能因为 CKYU 修改数据库表名、文件名而失效；月尾掉线，月初无法检测到 |
 
-### `/get_version_info` 获取 酷Q 及 CQHTTP 插件的版本信息
+### `/get_version_info` 获取 CKYU 及 CQHTTP 插件的版本信息
 
 #### 参数
 
@@ -614,8 +614,8 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `coolq_directory` | string | 酷Q 根目录路径 |
-| `coolq_edition` | string | 酷Q 版本，`air` 或 `pro` |
+| `coolq_directory` | string | CKYU 根目录路径 |
+| `coolq_edition` | string | CKYU 版本，`air` 或 `pro` |
 | `plugin_version` | string | CQHTTP 插件版本，例如 `2.1.3` |
 | `plugin_build_number` | number | CQHTTP 插件 build 号 |
 | `plugin_build_configuration` | string | CQHTTP 插件编译配置，`debug` 或 `release` |
@@ -663,7 +663,7 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 ## 试验性 API 列表
 
-试验性 API 可以一定程度上增强实用性，但它们并非 酷Q 原生提供的接口，稳定性较差，不保证随时可用（如果不可用可以尝试重新登录 酷Q），且接口可能会在后面的版本中发生变动。除非必要，请尽量避免使用试验性接口。
+试验性 API 可以一定程度上增强实用性，但它们并非 CKYU 原生提供的接口，稳定性较差，不保证随时可用（如果不可用可以尝试重新登录 CKYU），且接口可能会在后面的版本中发生变动。除非必要，请尽量避免使用试验性接口。
 
 所有试验性接口都以下划线（`_`）开头。
 
@@ -806,17 +806,17 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 无
 
-### `/_set_restart` 重启 酷Q，并以当前登录号自动登录（需勾选快速登录）
+### `/_set_restart` 重启 CKYU，并以当前登录号自动登录（需勾选快速登录）
 
-**由于强行退出可能导致 酷Q 数据库损坏而影响功能，此接口除非必要请尽量避免使用。**
+**由于强行退出可能导致 CKYU 数据库损坏而影响功能，此接口除非必要请尽量避免使用。**
 
 #### 参数
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `clean_log` | boolean | `false` | 是否在重启时清空 酷Q 的日志数据库（`log*.db`） |
-| `clean_cache` | boolean | `false` | 是否在重启时清空 酷Q 的缓存数据库（`cache.db`） |
-| `clean_event` | boolean | `false` | 是否在重启时清空 酷Q 的事件数据库（`eventv2.db`） |
+| `clean_log` | boolean | `false` | 是否在重启时清空 CKYU 的日志数据库（`log*.db`） |
+| `clean_cache` | boolean | `false` | 是否在重启时清空 CKYU 的缓存数据库（`cache.db`） |
+| `clean_event` | boolean | `false` | 是否在重启时清空 CKYU 的事件数据库（`eventv2.db`） |
 
 #### 响应数据
 
@@ -836,7 +836,7 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `automatic` | boolean | `false` | 是否自动进行，如果为 true，将不会弹窗提示，而仅仅输出日志，同时如果 `auto_perform_update` 为 true，则会自动更新（需要手动重启 酷Q） |
+| `automatic` | boolean | `false` | 是否自动进行，如果为 true，将不会弹窗提示，而仅仅输出日志，同时如果 `auto_perform_update` 为 true，则会自动更新（需要手动重启 CKYU） |
 
 #### 响应数据
 
@@ -857,7 +857,7 @@ GET /send_private_msg?access_token=kSLuTF2GC2Q4q4ugm3&user_id=123456&message=hel
 
 ## 获取 `data` 目录中的文件的接口
 
-除了上面的 API，插件还提供一个简单的静态文件获取服务，请求方式只支持 HTTP 的 GET，URL 路径为 `/data/` 加上要请求的文件相对于 酷Q `data` 目录的路径。例如，假设 酷Q 主目录在 `C:\Apps\CQA`，则要获取 `C:\Apps\CQA\data\image\ABCD.jpg.cqimg` 的话，只需请求 `/data/image/ABCD.jpg.cqimg`，响应内容即为要请求的文件。
+除了上面的 API，插件还提供一个简单的静态文件获取服务，请求方式只支持 HTTP 的 GET，URL 路径为 `/data/` 加上要请求的文件相对于 CKYU `data` 目录的路径。例如，假设 CKYU 主目录在 `C:\Apps\CQA`，则要获取 `C:\Apps\CQA\data\image\ABCD.jpg.cqimg` 的话，只需请求 `/data/image/ABCD.jpg.cqimg`，响应内容即为要请求的文件。
 
 和上面的其它请求一样，如果配置文件中指定了 access token，则每次请求需要在请求头中加入验证头 `Authorization: Bearer your-token`。
 

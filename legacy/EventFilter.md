@@ -1,6 +1,6 @@
 # 事件过滤器
 
-将配置项 `event_filter` 设置为过滤规则文件名即可开启事件过滤器，例如 `event_filter = filter.json` 将会指定 酷Q 主目录中的 `data\app\io.github.richardchien.coolqhttpapi\filter.json` 作为过滤规则文件，插件启动时会读取该文件中定义的过滤规则（使用 JSON 编写），若文件不存在，或过滤规则语法错误，则会暂停所有上报。
+将配置项 `event_filter` 设置为过滤规则文件名即可开启事件过滤器，例如 `event_filter = filter.json` 将会指定 CKYU 主目录中的 `data\app\io.github.richardchien.coolqhttpapi\filter.json` 作为过滤规则文件，插件启动时会读取该文件中定义的过滤规则（使用 JSON 编写），若文件不存在，或过滤规则语法错误，则会暂停所有上报。
 
 ## 示例
 

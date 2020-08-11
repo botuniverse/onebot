@@ -104,8 +104,8 @@ port = 5701
 | `enable_cors` | `false` | 是否允许跨域请求 |
 | `update_source` | `global` | 更新源 |
 | `update_channel` | `stable` | 更新通道，目前有 `stable`、`beta`、`alpha` 三个 |
-| `auto_check_update` | `false` | 是否自动检查更新（每次启用插件时检查），不启用的情况下，仍然可以在 酷Q 应用菜单中手动检查更新 |
-| `auto_perform_update` | `false` | 是否自动执行更新，仅在 `auto_check_update` 启用时有效，若启用，则插件将在自动检查到更新后，自动下载新版本（需要手动重启 酷Q 以生效） |
+| `auto_check_update` | `false` | 是否自动检查更新（每次启用插件时检查），不启用的情况下，仍然可以在 CKYU 应用菜单中手动检查更新 |
+| `auto_perform_update` | `false` | 是否自动执行更新，仅在 `auto_check_update` 启用时有效，若启用，则插件将在自动检查到更新后，自动下载新版本（需要手动重启 CKYU 以生效） |
 | `thread_pool_size` | `4` | 工作线程池大小，用于异步 API 调用、反向 WebSocket API 调用和一些其它小的异步任务，应根据计算机性能和实际需求适当调节，若设为 0，则使用 `CPU 核心数 * 2 + 1` |
 | `server_thread_pool_size` | `4` | API 服务器线程池大小，用于异步处理请求（HTTP 和 WebSocket），应根据计算机性能和实际需求适当调节，若设为 0，则使用 `CPU 核心数 * 2 + 1` |
 | `convert_unicode_emoji` | `true` | 是否在 CQ:emoji 和实际的 Unicode 之间进行转换，转换可能耗更多时间，但日常情况下影响不大，如果你的机器人需要处理非常大段的消息（上千字），且对性能有要求，可以考虑关闭转换 |
@@ -116,8 +116,8 @@ port = 5701
 | `max_log_files` | `1` | 最大日志文件备份数量（采用日志轮替机制） |
 | `log_level` | `info` | 日志文件和日志控制台的日志等级，可选 `debug`、`info`、`warning`、`error`、`fatal` |
 | `use_extension` | `false` | 是否启用扩展机制，见 [扩展](Extension) |
-| `disable_coolq_log` | `true` | 是否禁用 酷Q 原生日志，由于使用 酷Q 原生日志可能会导致快速重启时插件卡死，所以默认禁用，如果你不在乎重启时卡死，并且需要在 酷Q 原生日志窗口查看插件的日志，可以将此项设为 `false` |
-| `online_status_detection_method` | `get_stranger_info` | QQ 在线状态检测方式，默认（`get_stranger_info`）通过陌生人查询接口判断，设为 `log_db` 可切换成从 酷Q 的日志数据库判断，具体区别见 [其 API 说明](API#get_status-获取插件运行状态) |
+| `disable_coolq_log` | `true` | 是否禁用 CKYU 原生日志，由于使用 CKYU 原生日志可能会导致快速重启时插件卡死，所以默认禁用，如果你不在乎重启时卡死，并且需要在 CKYU 原生日志窗口查看插件的日志，可以将此项设为 `false` |
+| `online_status_detection_method` | `get_stranger_info` | QQ 在线状态检测方式，默认（`get_stranger_info`）通过陌生人查询接口判断，设为 `log_db` 可切换成从 CKYU 的日志数据库判断，具体区别见 [其 API 说明](API#get_status-获取插件运行状态) |
 | `enable_heartbeat` | `false` | 是否启用心跳机制，启用时会产生类型为 `heartbeat` 的元事件，见 [元事件](Post#元事件) |
 | `heartbeat_interval` | `15000` | 产生心跳元事件的时间间隔，单位毫秒 |
 | `enable_rate_limited_actions` | `false` | 是否启用限速 API 调用的支持 |
@@ -134,7 +134,7 @@ port = 5701
     "log_level": "debug",  // 输出调试级别日志
     "show_log_console": true,  // 显示日志控制台
 
-    // 如果想要在酷Q的运行日志中查看插件日志，也可以加上下面这项
+    // 如果想要在CKYU的运行日志中查看插件日志，也可以加上下面这项
     "disable_coolq_log": false
 }
 ```
@@ -150,7 +150,7 @@ port = 5701
 }
 ```
 
-现不再支持自动更新后自动重启 酷Q，需手动重载应用以生效。
+现不再支持自动更新后自动重启 CKYU，需手动重载应用以生效。
 
 ### 生产环境
 

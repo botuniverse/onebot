@@ -4,7 +4,7 @@ sidebar: auto
 
 # 生态
 
-在曾经的 CQHTTP 插件基础上，大量富有创造力的开发者们写出了许多优秀的 SDK、开发框架和机器人应用，成为 酷Q 和 CQHTTP 插件生态的一部分。现在 酷Q 已经画上句号，成为历史，基于 CQHTTP 插件（本文档中改称为 CQHTTP 协议）的项目仍然可以通过各类 CQHTTP 兼容项目（本文档中称为 CQHTTP 实现）来获得新生。
+在曾经的 CQHTTP 插件基础上，大量富有创造力的开发者们写出了许多优秀的 SDK、开发框架和机器人应用，成为 CKYU 和 CQHTTP 插件生态的一部分。现在 CKYU 已经画上句号，成为历史，基于 CQHTTP 插件（本文档中改称为 CQHTTP 协议）的项目仍然可以通过各类 CQHTTP 兼容项目（本文档中称为 CQHTTP 实现）来获得新生。
 
 ## CQHTTP 实现
 
@@ -12,7 +12,7 @@ sidebar: auto
 
 | 项目地址 | 平台 | 核心作者 | 备注 |
 | --- | --- | --- | --- |
-| [richardchien/coolq-http-api/](https://github.com/richardchien/coolq-http-api) | 酷Q | richardchien | 可在 Mirai 平台使用 [mirai-native](https://github.com/iTXTech/mirai-native) 加载 |
+| [richardchien/coolq-http-api/](https://github.com/richardchien/coolq-http-api) | CKYU | richardchien | 可在 Mirai 平台使用 [mirai-native](https://github.com/iTXTech/mirai-native) 加载 |
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | MiraiGo | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | Mirai | yyuueexxiinngg |  |
 
@@ -46,7 +46,7 @@ sidebar: auto
 
 ## 应用案例
 
-QQ 机器人可以用来做很多有意思的事情，这里列出一些基于 CQHTTP 协议的应用案例，欢迎补充。
+聊天机器人可以用来做很多有意思的事情，这里列出一些基于 CQHTTP 协议的应用案例，欢迎补充。
 
 | 项目地址 | 简介 |
 | ------- | --- |

@@ -29,7 +29,7 @@
 
 ## `/get_status` 接口返回数据的变更
 
-`/get_status` 接口的返回数据有所变化，但 `good`、`online`、`app_enabled` 字段仍然不变，具体请自行测试。如果你的应用需要检测 酷Q 和 CQHTTP 插件的运行状态，建议只使用上述三个字段来判断。
+`/get_status` 接口的返回数据有所变化，但 `good`、`online`、`app_enabled` 字段仍然不变，具体请自行测试。如果你的应用需要检测 CKYU 和 CQHTTP 插件的运行状态，建议只使用上述三个字段来判断。
 
 ## Docker 镜像的变更
 
@@ -39,4 +39,4 @@
 
 ## 运行时库的变更
 
-由于新版使用了动态链接的 C 运行时，Windows 7 和 Windows Server 2008 等较老系统可能需要额外安装 [通用 C 运行库更新](https://support.microsoft.com/zh-cn/help/3118401/update-for-universal-c-runtime-in-windows) 才能正常使用，否则 酷Q 启动时会报 DLL 缺失错误。
+由于新版使用了动态链接的 C 运行时，Windows 7 和 Windows Server 2008 等较老系统可能需要额外安装 [通用 C 运行库更新](https://support.microsoft.com/zh-cn/help/3118401/update-for-universal-c-runtime-in-windows) 才能正常使用，否则 CKYU 启动时会报 DLL 缺失错误。

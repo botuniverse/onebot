@@ -1,6 +1,6 @@
 module.exports = {
     title: 'CQHTTP 协议',
-    description: '一个 QQ 机器人应用接口协议',
+    description: '一个聊天机器人应用接口协议',
     markdown: {
         // lineNumbers: true,
     },

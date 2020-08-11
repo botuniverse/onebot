@@ -26,10 +26,13 @@ CLI({
                 logger.info('Releasing version:', version)
                 options.siteConfig.base = `/${version}/`
 
-                for (const navItem of options.siteConfig.themeConfig.nav) {
+                const nav = options.siteConfig.themeConfig.nav
+                nav.splice(nav.length - 3, 3)
+                for (const navItem of nav) {
                     if (navItem.text.startsWith('版本')) {
                         navItem.text = `版本: ${version}`
                         navItem.items[0].text = version
+                        navItem.items.splice(0, 0, { text: 'latest', link: '/', target: '_blank' })
                         break
                     }
                 }
@@ -50,11 +53,17 @@ CLI({
                 }
                 fs.writeFileSync('./.vuepress/config.js', lines.join('\n'))
 
+                const dest = `./.vuepress/public/${version}`
+
                 logger.info('Building docs for', version)
                 wrapCommand(build)({
                     sourceDir: path.resolve('.'),
-                    dest: `./.vuepress/public/${version}`,
+                    dest,
                     ...options,
+                }).then(() => {
+                    fs.unlinkSync(`${dest}/changelog.html`)
+                    fs.unlinkSync(`${dest}/ecosystem.html`)
+                    fs.rmdirSync(`${dest}/legacy`, { recursive: true })
                 })
             })
     },

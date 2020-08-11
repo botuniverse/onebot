@@ -55,7 +55,7 @@ module.exports = {
                         ['/specs/message/', '消息概述'],
                         '/specs/message/string',
                         '/specs/message/array',
-                        '/specs/message/cqcode',
+                        '/specs/message/segment',
                     ]
                 },
                 {

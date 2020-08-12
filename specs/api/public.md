@@ -75,10 +75,10 @@
 | 字段名         | 数据类型    | 说明       |
 | ------------ | ------- | ---------- |
 | `time`       | number (int32) | 发送时间   |
-| `message_type` | string | 消息类型，同 [消息事件](../event/message.md) 的消息类型 |
+| `message_type` | string | 消息类型，同 [消息事件](../event/message.md) |
 | `message_id` | number (int32) | 消息 ID     |
 | `real_id` | number (int32) | 消息真实 ID     |
-| `sender`     | object  | 发送者，同 [消息事件](../event/message.md) 的 `sender` 字段 |
+| `sender`     | object  | 发送人信息，同 [消息事件](../event/message.md) |
 | `message`    | message | 消息内容   |
 
 ## `get_forward_msg` 获取合并转发消息

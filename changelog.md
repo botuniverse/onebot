@@ -20,6 +20,8 @@ sidebar: auto
 - **事件**：修改请求事件，`comment` 字段不再对特殊字符转义，内容总是原始的纯文本字符串
 - **API**：修改 `get_record` API，移除 `full_path` 参数，返回值改为总是绝对路径
 - **API**：修改 `get_version_info` API 的响应数据
+- **API**：修改 `set_restart_plugin` API 为 `set_restart`
+- **API**：修改 `clean_data_dir` API 为 `clean_cache`，移除 `data_dir` 参数
 - **消息段**：修改图片和语音消息段，不再支持使用相对 `data/image` 和 `data/record` 的相对路径发送新图片，对于在事件中收到的图片和语音，仍然可以直接使用收到的 `file` 参数值发送
 - **消息段**：修改图片和语音消息段，新增 `proxy` 参数，用于指定是否通过代理下载图片和语音文件
 - **消息段**：修改图片消息段，新增 `type` 参数，用于表示图片是普通图片还是闪照
@@ -29,6 +31,7 @@ sidebar: auto
 
 - **事件**：移除讨论组消息事件
 - **API**：移除 `send_discuss_msg` `set_discuss_leave` API
+- **API**：移除 `clean_plugin_log` API
 - **消息段**：移除 `rich` 富文本消息段，使用 XML 和 JSON 消息段替代
 
 ## v10

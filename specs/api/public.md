@@ -427,21 +427,22 @@
 
 ## `get_record` 获取语音
 
-其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 CKYU 的 [语音组件](https://cqp.cc/t/21132)。**
+:::tip 提示
+要使用此接口，通常需要安装 ffmpeg，请参考 CQHTTP 实现的相关说明。
+:::
 
 ### 参数
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `file` | string | - | 收到的语音文件名（CQ 码的 `file` 参数），如 `0B38145AA44505000B38145AA4450500.silk` |
+| `file` | string | - | 收到的语音文件名（消息段的 `file` 参数），如 `0B38145AA44505000B38145AA4450500.silk` |
 | `out_format`  | string | - | 要转换到的格式，目前支持 `mp3`、`amr`、`wma`、`m4a`、`spx`、`ogg`、`wav`、`flac` |
-| `full_path`  | boolean | `false` | 是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议） |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `file` | string | 转换后的语音文件名或路径，如 `0B38145AA44505000B38145AA4450500.mp3`，如果开启了 `full_path`，则如 `C:\Apps\CoolQ\data\record\0B38145AA44505000B38145AA4450500.mp3` |
+| `file` | string | 转换后的语音文件路径，如 `/home/somebody/cqhttp/data/record/0B38145AA44505000B38145AA4450500.mp3` |
 
 ## `get_image` 获取图片
 
@@ -449,13 +450,13 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `file` | string | - | 收到的图片文件名（CQ 码的 `file` 参数），如 `6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `file` | string | - | 收到的图片文件名（消息段的 `file` 参数），如 `6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `file` | string | 下载后的图片文件路径，如 `C:\Apps\CoolQ\data\image\6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `file` | string | 下载后的图片文件路径，如 `/home/somebody/cqhttp/data/image/6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
 
 ## `can_send_image` 检查是否可以发送图片
 

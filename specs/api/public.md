@@ -224,6 +224,19 @@
 
 无
 
+## `set_group_name` 设置群名
+
+### 参数
+
+| 字段名   | 数据类型 | 说明 |
+| -------- | ------ | ---- |
+| `group_id` | number (int64) | 群号 |
+| `group_name` | string | 新群名 |
+
+### 响应数据
+
+无
+
 ## `set_group_leave` 退出群组
 
 ### 参数
@@ -288,28 +301,6 @@
 | `sub_type` 或 `type` | string | - | `add` 或 `invite`，请求类型（需要和上报消息中的 `sub_type` 字段相符） |
 | `approve` | boolean | `true` | 是否同意请求／邀请 |
 | `reason` | string | 空 | 拒绝理由（仅在拒绝时有效） |
-
-### 响应数据
-
-无
-
-## `set_group_name` 设置群名
-
-### 参数
-
-| 字段名   | 数据类型 | 说明 |
-| -------- | ------ | ---- |
-| `group_id` | number (int64)  | 群号 |
-| `group_name` | string | 新群名 |
-
-## `send_group_forward_msg` 发送合并转发(群)
-
-### 参数
-
-| 字段名       | 数据类型           | 说明                         |
-| ---------- | -------------- | ---------------------------- |
-| `group_id` | number (int64) | 群号                         |
-| `messages` | forward node[] | 自定义转发消息, 具体看CQCode |
 
 ### 响应数据
 

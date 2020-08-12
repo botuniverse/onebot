@@ -554,11 +554,10 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `coolq_directory` | string | （兼容性需求）CKYU 根目录路径 |
-| `coolq_edition` | string | （兼容性需求）CKYU 版本，`air` 或 `pro` |
-| `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
-| `plugin_build_number` | number | CQHTTP build 号 |
-| `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |
+| `app_name` | string | 应用标识，如 `mirai-native` |
+| `app_version` | string | 应用版本，如 `1.2.3` |
+| `protocol_version` | string | CQHTTP 协议版本，如 `v11` |
+| …… | - | CQHTTP 实现自行添加的其它内容 |
 
 ## `set_restart_plugin` 重启 CQHTTP
 

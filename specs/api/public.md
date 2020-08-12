@@ -32,32 +32,15 @@
 | ----- | ------- | --- |
 | `message_id` | number (int32) | 消息 ID |
 
-## `send_discuss_msg` 发送讨论组消息
-
-### 参数
-
-| 字段名 | 数据类型 | 默认值 | 说明 |
-| ----- | ------- | ----- | --- |
-| `discuss_id` | number | - | 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得） |
-| `message` | message | - | 要发送的内容 |
-| `auto_escape` | boolean | `false` | 消息内容是否作为纯文本发送（即不解析 CQ 码），只在 `message` 字段是字符串时有效 |
-
-### 响应数据
-
-| 字段名 | 数据类型 | 说明 |
-| ----- | ------- | --- |
-| `message_id` | number (int32) | 消息 ID |
-
 ## `send_msg` 发送消息
 
 ### 参数
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `message_type` | string | - | 消息类型，支持 `private`、`group`、`discuss`，分别对应私聊、群组、讨论组，如不传入，则根据传入的 `*_id` 参数判断 |
+| `message_type` | string | - | 消息类型，支持 `private`、`group`，分别对应私聊、群组，如不传入，则根据传入的 `*_id` 参数判断 |
 | `user_id` | number | - | 对方 QQ 号（消息类型为 `private` 时需要） |
 | `group_id` | number | - | 群号（消息类型为 `group` 时需要） |
-| `discuss_id` | number | - | 讨论组 ID（消息类型为 `discuss` 时需要） |
 | `message` | message | - | 要发送的内容 |
 | `auto_escape` | boolean | `false` | 消息内容是否作为纯文本发送（即不解析 CQ 码），只在 `message` 字段是字符串时有效 |
 
@@ -260,18 +243,6 @@
 | `user_id` | number | - | 要设置的 QQ 号 |
 | `special_title` | string | 空 | 专属头衔，不填或空字符串表示删除专属头衔 |
 | `duration` | number | `-1` | 专属头衔有效期，单位秒，-1 表示永久，不过此项似乎没有效果，可能是只有某些特殊的时间长度有效，有待测试 |
-
-### 响应数据
-
-无
-
-## `set_discuss_leave` 退出讨论组
-
-### 参数
-
-| 字段名 | 数据类型 | 默认值 | 说明 |
-| ----- | ------- | ----- | --- |
-| `discuss_id` | number | - | 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得） |
 
 ### 响应数据
 

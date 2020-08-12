@@ -79,6 +79,39 @@
 
 无
 
+## `get_msg` 获取消息
+
+### 参数
+
+| 字段名         | 数据类型  | 说明   |
+| ------------ | ----- | ------ |
+| `message_id` | number (int32) | 消息 ID |
+
+### 响应数据
+
+| 字段名         | 数据类型    | 说明       |
+| ------------ | ------- | ---------- |
+| `time`       | number (int32) | 发送时间   |
+| `message_type` | string | 消息类型，同 [消息事件](../event/message.md) 的消息类型 |
+| `message_id` | number (int32) | 消息 ID     |
+| `real_id` | number (int32) | 消息真实 ID     |
+| `sender`     | object  | 发送者，同 [消息事件](../event/message.md) 的 `sender` 字段 |
+| `message`    | message | 消息内容   |
+
+## `get_forward_msg` 获取合并转发消息
+
+### 参数
+
+| 字段名         | 数据类型   | 说明   |
+| ------------ | ------ | ------ |
+| `id` | string | 合并转发 ID |
+
+### 响应数据
+
+| 字段名 | 类型 | 说明 |
+| --- | --- | --- |
+| `message` | message | 消息内容，使用 [消息的数组格式](../message/array.md) 表示，数组中的消息段全部为 [`node` 消息段](../message/segment.md#合并转发自定义节点) |
+
 ## `send_like` 发送好友赞
 
 ### 参数
@@ -268,39 +301,6 @@
 | -------- | ------ | ---- |
 | `group_id` | number (int64)  | 群号 |
 | `group_name` | string | 新群名 |
-
-## `get_group_msg` 获取群历史消息
-
-### 参数
-
-| 字段名         | 数据类型  | 说明   |
-| ------------ | ----- | ------ |
-| `message_id` | number (int32) | 消息 ID |
-
-### 响应数据
-
-| 字段名         | 数据类型    | 说明       |
-| ------------ | ------- | ---------- |
-| `message_id` | number (int32) | 消息 ID     |
-| `sender`     | object  | 发送者     |
-| `time`       | number (int32) | 发送时间   |
-| `content`    | message | 消息内容   |
-
-其中 `sender` 字段参考 [群消息事件](../event/message.md#群消息)。
-
-## `get_forward_msg` 获取合并转发内容
-
-### 参数
-
-| 字段名         | 数据类型   | 说明   |
-| ------------ | ------ | ------ |
-| `message_id` | string | 消息id |
-
-### 响应数据
-
-| 字段名       | 类型              | 说明     |
-| ---------- | ----------------- | -------- |
-| `messages` | forward message[] | 消息列表 |
 
 ## `send_group_forward_msg` 发送合并转发(群)
 

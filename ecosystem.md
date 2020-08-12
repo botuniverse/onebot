@@ -16,6 +16,12 @@ sidebar: auto
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | MiraiGo | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | Mirai | yyuueexxiinngg |  |
 
+除了上面的实现，也欢迎大家在其它各类机器人平台实现 CQHTTP 协议，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
+
+:::tip 提示
+CQHTTP 实现可以在 README 中添加徽章 ![Badge](https://img.shields.io/badge/CQHTTP-v10-black) 来表示支持的 CQHTTP 协议版本，徽章图片 URL 是 `https://img.shields.io/badge/CQHTTP-v10-black`，可修改 URL 中的 `v10` 以表示不同版本。
+:::
+
 ## SDK／开发框架
 
 对于使用下面这些语言的机器人开发者，如果不想自己处理繁杂的请求和解析操作，可以尝试使用已经封装好的 SDK 或开发框架。

@@ -260,6 +260,61 @@
 
 无
 
+## `set_group_name` 设置群名
+
+### 参数
+
+| 字段名   | 数据类型 | 说明 |
+| -------- | ------ | ---- |
+| `group_id` | number (int64)  | 群号 |
+| `group_name` | string | 新群名 |
+
+## `get_group_msg` 获取群历史消息
+
+### 参数
+
+| 字段名         | 数据类型  | 说明   |
+| ------------ | ----- | ------ |
+| `message_id` | number (int32) | 消息 ID |
+
+### 响应数据
+
+| 字段名         | 数据类型    | 说明       |
+| ------------ | ------- | ---------- |
+| `message_id` | number (int32) | 消息 ID     |
+| `sender`     | object  | 发送者     |
+| `time`       | number (int32) | 发送时间   |
+| `content`    | message | 消息内容   |
+
+其中 `sender` 字段参考 [群消息事件](../event/message.md#群消息)。
+
+## `get_forward_msg` 获取合并转发内容
+
+### 参数
+
+| 字段名         | 数据类型   | 说明   |
+| ------------ | ------ | ------ |
+| `message_id` | string | 消息id |
+
+### 响应数据
+
+| 字段名       | 类型              | 说明     |
+| ---------- | ----------------- | -------- |
+| `messages` | forward message[] | 消息列表 |
+
+## `send_group_forward_msg` 发送合并转发(群)
+
+### 参数
+
+| 字段名       | 数据类型           | 说明                         |
+| ---------- | -------------- | ---------------------------- |
+| `group_id` | number (int64) | 群号                         |
+| `messages` | forward node[] | 自定义转发消息, 具体看CQCode |
+
+### 响应数据
+
+无
+
 ## `get_login_info` 获取登录号信息
 
 ### 参数
@@ -513,7 +568,6 @@
 | `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
 | `plugin_build_number` | number | CQHTTP build 号 |
 | `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |
-
 
 ## `set_restart_plugin` 重启 CQHTTP
 

@@ -6,6 +6,9 @@ sidebar: auto
 
 ## latest
 
+- 新增群消息撤回和好友消息撤回事件
+- 新增回复、合并转发、合并转发节点、合并转发自定义节点消息段
+- 新增 `get_msg` `get_forward_msg` `set_group_name` API
 - 修改 `get_record` API，移除 `full_path` 参数，返回值改为总是绝对路径
 - 修改请求事件，`comment` 字段不再对特殊字符转义，内容总是原始的纯文本字符串
 

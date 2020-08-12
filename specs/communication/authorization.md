@@ -27,12 +27,8 @@ GET /get_friend_list?access_token=kSLuTF2GC2Q4q4ugm3 HTTP/1.1
 ```http
 GET /ws/api HTTP/1.1
 ...
-Authorization: Token kSLuTF2GC2Q4q4ugm3
+Authorization: Bearer kSLuTF2GC2Q4q4ugm3
 ```
-
-:::danger 重要
-这里本应该是 `Authorization: Bearer kSLuTF2GC2Q4q4ugm3`（和 [HTTP 和正向 WebSocket](#http-和正向-websocket) 一致），但由于原 CQHTTP 插件历史上的某次升级时忘记把这里的 `Token` 改为 `Bearer`，持续了较长时间，因此如果修改可能会对已有代码造成破坏，因此决定保持为 `Token` 不变。
-:::
 
 ## 相关配置
 

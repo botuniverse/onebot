@@ -17,6 +17,7 @@ sidebar: auto
 
 ### 变更
 
+- **通信**：反向 WebSocket 请求头的 `Authorization` 中，`Token` 改为 `Bearer`，与 HTTP 和正向 WebSocket 一致
 - **事件**：修改请求事件，`comment` 字段不再对特殊字符转义，内容总是原始的纯文本字符串
 - **API**：修改 `get_record` API，移除 `full_path` 参数，返回值改为总是绝对路径
 - **API**：修改 `get_version_info` API 的响应数据

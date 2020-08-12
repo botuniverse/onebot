@@ -27,7 +27,7 @@ CLI({
                 options.siteConfig.base = `/${version}/`
 
                 const nav = options.siteConfig.themeConfig.nav
-                nav.splice(nav.length - 3, 3)
+                nav.splice(nav.length - 1, 1)
                 for (const navItem of nav) {
                     if (navItem.text.startsWith('版本')) {
                         navItem.text = `版本: ${version}`
@@ -61,8 +61,6 @@ CLI({
                     dest,
                     ...options,
                 }).then(() => {
-                    fs.unlinkSync(`${dest}/changelog.html`)
-                    fs.unlinkSync(`${dest}/ecosystem.html`)
                     fs.rmdirSync(`${dest}/legacy`, { recursive: true })
                 })
             })

@@ -27,6 +27,8 @@ sidebar: auto
 
 ### 移除
 
+- **事件**：移除讨论组消息事件
+- **API**：移除 `send_discuss_msg` `set_discuss_leave` API
 - **消息段**：移除 `rich` 富文本消息段，使用 XML 和 JSON 消息段替代
 
 ## v10

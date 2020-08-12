@@ -530,7 +530,7 @@
 | `protocol_version` | string | CQHTTP 协议版本，如 `v11` |
 | …… | - | CQHTTP 实现自行添加的其它内容 |
 
-## `set_restart_plugin` 重启 CQHTTP
+## `set_restart` 重启 CQHTTP
 
 由于重启 CQHTTP 同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需要异步地重启，接口返回的 `status` 是 `async`。
 
@@ -544,23 +544,9 @@
 
 无
 
-## `clean_data_dir` 清理数据目录
+## `clean_cache` 清理缓存
 
-用于清理积攒了太多旧文件的数据目录，如 `image`。
-
-### 参数
-
-| 字段名 | 数据类型 | 默认值 | 说明 |
-| ----- | ------- | ----- | --- |
-| `data_dir` | string | - | 收到清理的目录名，支持 `image`、`record`、`show`、`bface` |
-
-### 响应数据
-
-无
-
-## `clean_plugin_log` 清理日志
-
-用于清空 CQHTTP 的日志文件。
+用于清理积攒了太多的缓存文件。
 
 ### 参数
 

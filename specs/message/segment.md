@@ -143,7 +143,7 @@
 [CQ:dice]
 ```
 
-## 戳一戳
+## 窗口抖动（戳一戳）
 
 ```json
 {
@@ -155,6 +155,28 @@
 ```
 [CQ:shake]
 ```
+
+## 戳一戳
+
+```json
+{
+    "type": "poke",
+    "data": {
+        "type": "126",
+        "id": "2003"
+    }
+}
+```
+
+```
+[CQ:poke,type=126,id=2003]
+```
+
+| 参数名 | 收 | 发 | 可能的值 | 说明 |
+| --- | --- | --- | --- | --- |
+| `type` | ✓ | ✓ | 见 [Mirai 的 PokeMessage 类](https://github.com/mamoe/mirai/blob/f5eefae7ecee84d18a66afce3f89b89fe1584b78/mirai-core/src/commonMain/kotlin/net.mamoe.mirai/message/data/HummerMessage.kt#L49) | 类型 |
+| `id` | ✓ | ✓ | 同上 | ID |
+| `name` | ✓ |  | 同上 | 表情名 |
 
 ## 匿名发消息 <Badge text="发"/>
 

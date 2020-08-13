@@ -527,7 +527,7 @@
 | ----- | ------- | --- |
 | `app_name` | string | 应用标识，如 `mirai-native` |
 | `app_version` | string | 应用版本，如 `1.2.3` |
-| `protocol_version` | string | CQHTTP 协议版本，如 `v11` |
+| `protocol_version` | string | CQHTTP 标准版本，如 `v11` |
 | …… | - | CQHTTP 实现自行添加的其它内容 |
 
 ## `set_restart` 重启 CQHTTP

@@ -4,11 +4,11 @@ sidebar: auto
 
 # 生态
 
-在曾经的 CQHTTP 插件基础上，大量富有创造力的开发者们写出了许多优秀的 SDK、开发框架和机器人应用，成为 CKYU 和 CQHTTP 插件生态的一部分。现在 CKYU 已经画上句号，成为历史，基于 CQHTTP 插件（本文档中改称为 CQHTTP 协议）的项目仍然可以通过各类 CQHTTP 兼容项目（本文档中称为 CQHTTP 实现）来获得新生。
+在曾经的 CQHTTP 插件基础上，大量富有创造力的开发者们写出了许多优秀的 SDK、开发框架和机器人应用，成为 CKYU 和 CQHTTP 插件生态的一部分。现在 CKYU 已经画上句号，成为历史，基于 CQHTTP 插件（本文档中改称为 CQHTTP 标准）的项目仍然可以通过各类 CQHTTP 兼容项目（本文档中称为 CQHTTP 实现）来获得新生。
 
 ## CQHTTP 实现
 
-理论上，基于 CQHTTP 协议开发的**任何** SDK、框架和机器人应用，都可以无缝地在下面的不同实现中切换。当然，在一小部分细节上各实现可能有一些不同，这也是本项目希望推动解决的问题。
+理论上，基于 CQHTTP 标准开发的**任何** SDK、框架和机器人应用，都可以无缝地在下面的不同实现中切换。当然，在一小部分细节上各实现可能有一些不同，这也是本项目希望推动解决的问题。
 
 | 项目地址 | 平台 | 核心作者 | 备注 |
 | --- | --- | --- | --- |
@@ -16,10 +16,10 @@ sidebar: auto
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | MiraiGo | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | Mirai | yyuueexxiinngg |  |
 
-除了上面的实现，也欢迎大家在其它各类机器人平台实现 CQHTTP 协议，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
+除了上面的实现，也欢迎大家在其它各类机器人平台实现 CQHTTP 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
 
 :::tip 提示
-CQHTTP 实现可以在 README 中添加徽章 ![Badge](https://img.shields.io/badge/CQHTTP-v11-black) 来表示支持的 CQHTTP 协议版本，徽章图片 URL 是 `https://img.shields.io/badge/CQHTTP-v11-black`，可修改 URL 中的 `v11` 以表示不同版本。
+CQHTTP 实现可以在 README 中添加徽章 ![Badge](https://img.shields.io/badge/CQHTTP-v11-black) 来表示支持的 CQHTTP 标准版本，徽章图片 URL 是 `https://img.shields.io/badge/CQHTTP-v11-black`，可修改 URL 中的 `v11` 以表示不同版本。
 :::
 
 ## SDK／开发框架
@@ -52,7 +52,7 @@ CQHTTP 实现可以在 README 中添加徽章 ![Badge](https://img.shields.io/ba
 
 ## 应用案例
 
-聊天机器人可以用来做很多有意思的事情，这里列出一些基于 CQHTTP 协议的应用案例，欢迎补充。
+聊天机器人可以用来做很多有意思的事情，这里列出一些基于 CQHTTP 标准的应用案例，欢迎补充。
 
 | 项目地址 | 简介 |
 | ------- | --- |

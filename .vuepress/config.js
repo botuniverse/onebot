@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'CQHTTP 协议',
-    description: '一个聊天机器人应用接口协议',
+    title: 'CQHTTP 标准',
+    description: '一个聊天机器人应用接口标准',
     markdown: {
         // lineNumbers: true,
     },
@@ -34,7 +34,7 @@ module.exports = {
                 ]
             },
             { text: '主页', link: '/' },
-            { text: '协议', link: '/specs/' },
+            { text: '标准规范', link: '/specs/' },
             { text: '生态', link: '/ecosystem.html' },
             { text: '更新日志', link: '/changelog.html' },
             { text: '旧文档', link: '/legacy/' },

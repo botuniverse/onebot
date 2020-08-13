@@ -30,6 +30,7 @@ module.exports = {
             {
                 text: '版本: latest', items: [
                     { text: 'latest', link: '/' },
+                    { text: 'v11', link: '/v11/', target: '_blank' },
                     { text: 'v10', link: '/v10/', target: '_blank' },
                 ]
             },

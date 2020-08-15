@@ -1,15 +1,6 @@
 # 隐藏 API
 
-<details>
-<summary>目录</summary>
-<p>
-
-- [`.handle_quick_operation` 对事件执行快速操作](#handle_quick_operation-对事件执行快速操作)
-
-</p>
-</details>
-
-隐藏 API 是不建议一般用户使用的，它们只应该在 OneBot 实现内部或由 SDK 和框架使用，因为不正确的使用可能造成程序运行不正常。
+隐藏 API 是不建议一般用户使用的，它们只应该在 CQHTTP 实现内部或由 SDK 和框架使用，因为不正确的使用可能造成 CQHTTP 运行不正常。
 
 所有隐藏 API 都以点号（`.`）开头。
 
@@ -27,9 +18,3 @@
 ### 响应数据
 
 无
-
-<hr>
-
-| 上一节 | 下一节 |
-| --- | --- |
-| [公开 API](public.md) | [事件概述](../event/README.md) |

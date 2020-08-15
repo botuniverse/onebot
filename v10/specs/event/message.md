@@ -1,15 +1,5 @@
 # 消息事件
 
-<details>
-<summary>目录</summary>
-<p>
-
-- [私聊消息](#私聊消息)
-- [群消息](#群消息)
-
-</p>
-</details>
-
 ## 私聊消息
 
 ### 事件数据
@@ -20,7 +10,7 @@
 | `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type` | string | `message` | 上报类型 |
 | `message_type` | string | `private` | 消息类型 |
-| `sub_type` | string | `friend`、`group`、`other` | 消息子类型，如果是好友则是 `friend`，如果是群临时会话则是 `group` |
+| `sub_type` | string | `friend`、`group`、`discuss`、`other` | 消息子类型，如果是好友则是 `friend`，如果从群或讨论组来的临时会话则分别是 `group`、`discuss` |
 | `message_id` | number (int32) | - | 消息 ID |
 | `user_id` | number (int64) | - | 发送者 QQ 号 |
 | `message` | message | - | 消息内容 |
@@ -102,8 +92,37 @@
 | `ban` | boolean | 把发送者禁言 `ban_duration` 指定时长，对匿名用户也有效 | 不禁言 |
 | `ban_duration` | number | 禁言时长 | 30 分钟 |
 
-<hr>
+## 讨论组消息
 
-| 上一节 | 下一节 |
-| --- | --- |
-| [事件概述](README.md) | [通知事件](notice.md) |
+### 事件数据
+
+| 字段名 | 数据类型 | 可能的值 | 说明 |
+| ----- | ------- | ------- | --- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
+| `post_type` | string | `message` | 上报类型 |
+| `message_type` | string | `discuss` | 消息类型 |
+| `message_id` | number (int32) | - | 消息 ID |
+| `discuss_id` | number (int64) | - | 讨论组 ID |
+| `user_id` | number (int64) | - | 发送者 QQ 号 |
+| `message` | message | - | 消息内容 |
+| `raw_message` | string | - | 原始消息内容 |
+| `font` | number (int32) | - | 字体 |
+| `sender` | object | - | 发送人信息 |
+
+其中 `sender` 字段的内容如下：
+
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------ | ---- |
+| `user_id` | number (int64) | 发送者 QQ 号 |
+| `nickname` | string | 昵称 |
+| `sex` | string | 性别，`male` 或 `female` 或 `unknown` |
+| `age` | number (int32) | 年龄 |
+
+### 快速操作
+
+| 字段名 | 数据类型 | 说明 | 默认情况 |
+| ----- | ------- | --- | ------- |
+| `reply` | message | 要回复的内容 | 不回复 |
+| `auto_escape` | boolean | 消息内容是否作为纯文本发送（即不解析 CQ 码），只在 `reply` 字段是字符串时有效 | 不转义 |
+| `at_sender` | boolean | 是否要在回复开头 at 发送者（自动添加） | at 发送者 |

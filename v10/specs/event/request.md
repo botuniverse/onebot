@@ -1,15 +1,5 @@
 # 请求事件
 
-<details>
-<summary>目录</summary>
-<p>
-
-- [加好友请求](#加好友请求)
-- [加群请求／邀请](#加群请求邀请)
-
-</p>
-</details>
-
 ## 加好友请求
 
 ### 事件数据
@@ -21,7 +11,7 @@
 | `post_type` | string | `request` | 上报类型 |
 | `request_type` | string | `friend` | 请求类型 |
 | `user_id` | number (int64) | - | 发送请求的 QQ 号 |
-| `comment` | string | - | 验证信息 |
+| `comment` | string | - | 验证信息（可能包含 CQ 码，特殊字符被转义） |
 | `flag` | string | - | 请求 flag，在调用处理请求的 API 时需要传入 |
 
 ### 快速操作
@@ -44,7 +34,7 @@
 | `sub_type` | string | `add`、`invite` | 请求子类型，分别表示加群请求、邀请登录号入群 |
 | `group_id` | number (int64) | - | 群号 |
 | `user_id` | number (int64) | - | 发送请求的 QQ 号 |
-| `comment` | string | - | 验证信息 |
+| `comment` | string | - | 验证信息（可能包含 CQ 码，特殊字符被转义） |
 | `flag` | string | - | 请求 flag，在调用处理请求的 API 时需要传入 |
 
 ### 快速操作
@@ -53,9 +43,3 @@
 | ----- | ------- | --- | ------- |
 | `approve` | boolean | 是否同意请求／邀请 | 不处理 |
 | `reason` | string | 拒绝理由（仅在拒绝时有效） | 无理由 |
-
-<hr>
-
-| 上一节 | 下一节 |
-| --- | --- |
-| [通知事件](notice.md) | [元事件](meta.md) |

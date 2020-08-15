@@ -1,19 +1,6 @@
 # API
 
-<details>
-<summary>目录</summary>
-<p>
-
-- [参数](#参数)
-- [响应](#响应)
-- [异步调用](#异步调用)
-- [限速调用](#限速调用)
-- [相关配置](#相关配置)
-
-</p>
-</details>
-
-API 是 OneBot 向用户提供的操作接口，用户可通过 HTTP 请求或 WebSocket 消息等方式调用 API。
+API 是 CQHTTP 向用户提供的操作接口，用户可通过 HTTP 请求或 WebSocket 消息等方式调用 API。
 
 ## 参数
 
@@ -25,7 +12,7 @@ API 调用需要指定 action（要进行的动作）和动作所需的参数。
 
 ## 响应
 
-OneBot 会对每个 API 调用返回一个 JSON 响应（除非是 HTTP 状态码不为 200 的情况），响应中的 `data` 字段包含 API 调用返回的数据内容。在后面的 API 描述中，将只给出 `data` 字段的内容，放在「响应数据」小标题下，而不再赘述 `status`、`retcode` 字段。
+CQHTTP 会对每个 API 调用返回一个 JSON 响应（除非是 HTTP 状态码不为 200 的情况），响应中的 `data` 字段包含 API 调用返回的数据内容。在后面的 API 描述中，将只给出 `data` 字段的内容，放在「响应数据」小标题下，而不再赘述 `status`、`retcode` 字段。
 
 ## 异步调用
 
@@ -46,9 +33,3 @@ OneBot 会对每个 API 调用返回一个 JSON 响应（除非是 HTTP 状态�
 | 配置项 | 默认值 | 说明 |
 | -------- | ------ | --- |
 | `api.rate_limit_interval` | `500` | 限速 API 调用的排队间隔时间，单位毫秒 |
-
-<hr>
-
-| 上一节 | 下一节 |
-| --- | --- |
-| [消息段类型](../message/segment.md) | [公开 API](public.md) |

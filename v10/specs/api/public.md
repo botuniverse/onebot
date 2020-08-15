@@ -1,50 +1,5 @@
 # 公开 API
 
-<details>
-<summary>目录</summary>
-<p>
-
-- [`send_private_msg` 发送私聊消息](#send_private_msg-发送私聊消息)
-- [`send_group_msg` 发送群消息](#send_group_msg-发送群消息)
-- [`send_msg` 发送消息](#send_msg-发送消息)
-- [`delete_msg` 撤回消息](#delete_msg-撤回消息)
-- [`get_msg` 获取消息](#get_msg-获取消息)
-- [`get_forward_msg` 获取合并转发消息](#get_forward_msg-获取合并转发消息)
-- [`send_like` 发送好友赞](#send_like-发送好友赞)
-- [`set_group_kick` 群组踢人](#set_group_kick-群组踢人)
-- [`set_group_ban` 群组单人禁言](#set_group_ban-群组单人禁言)
-- [`set_group_anonymous_ban` 群组匿名用户禁言](#set_group_anonymous_ban-群组匿名用户禁言)
-- [`set_group_whole_ban` 群组全员禁言](#set_group_whole_ban-群组全员禁言)
-- [`set_group_admin` 群组设置管理员](#set_group_admin-群组设置管理员)
-- [`set_group_anonymous` 群组匿名](#set_group_anonymous-群组匿名)
-- [`set_group_card` 设置群名片（群备注）](#set_group_card-设置群名片群备注)
-- [`set_group_name` 设置群名](#set_group_name-设置群名)
-- [`set_group_leave` 退出群组](#set_group_leave-退出群组)
-- [`set_group_special_title` 设置群组专属头衔](#set_group_special_title-设置群组专属头衔)
-- [`set_friend_add_request` 处理加好友请求](#set_friend_add_request-处理加好友请求)
-- [`set_group_add_request` 处理加群请求／邀请](#set_group_add_request-处理加群请求邀请)
-- [`get_login_info` 获取登录号信息](#get_login_info-获取登录号信息)
-- [`get_stranger_info` 获取陌生人信息](#get_stranger_info-获取陌生人信息)
-- [`get_friend_list` 获取好友列表](#get_friend_list-获取好友列表)
-- [`get_group_list` 获取群列表](#get_group_list-获取群列表)
-- [`get_group_info` 获取群信息](#get_group_info-获取群信息)
-- [`get_group_member_info` 获取群成员信息](#get_group_member_info-获取群成员信息)
-- [`get_group_member_list` 获取群成员列表](#get_group_member_list-获取群成员列表)
-- [`get_cookies` 获取 Cookies](#get_cookies-获取-cookies)
-- [`get_csrf_token` 获取 CSRF Token](#get_csrf_token-获取-csrf-token)
-- [`get_credentials` 获取 QQ 相关接口凭证](#get_credentials-获取-qq-相关接口凭证)
-- [`get_record` 获取语音](#get_record-获取语音)
-- [`get_image` 获取图片](#get_image-获取图片)
-- [`can_send_image` 检查是否可以发送图片](#can_send_image-检查是否可以发送图片)
-- [`can_send_record` 检查是否可以发送语音](#can_send_record-检查是否可以发送语音)
-- [`get_status` 获取运行状态](#get_status-获取运行状态)
-- [`get_version_info` 获取版本信息](#get_version_info-获取版本信息)
-- [`set_restart` 重启 OneBot 实现](#set_restart-重启-onebot-实现)
-- [`clean_cache` 清理缓存](#clean_cache-清理缓存)
-
-</p>
-</details>
-
 ## `send_private_msg` 发送私聊消息
 
 ### 参数
@@ -77,15 +32,32 @@
 | ----- | ------- | --- |
 | `message_id` | number (int32) | 消息 ID |
 
+## `send_discuss_msg` 发送讨论组消息
+
+### 参数
+
+| 字段名 | 数据类型 | 默认值 | 说明 |
+| ----- | ------- | ----- | --- |
+| `discuss_id` | number | - | 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得） |
+| `message` | message | - | 要发送的内容 |
+| `auto_escape` | boolean | `false` | 消息内容是否作为纯文本发送（即不解析 CQ 码），只在 `message` 字段是字符串时有效 |
+
+### 响应数据
+
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+| `message_id` | number (int32) | 消息 ID |
+
 ## `send_msg` 发送消息
 
 ### 参数
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `message_type` | string | - | 消息类型，支持 `private`、`group`，分别对应私聊、群组，如不传入，则根据传入的 `*_id` 参数判断 |
+| `message_type` | string | - | 消息类型，支持 `private`、`group`、`discuss`，分别对应私聊、群组、讨论组，如不传入，则根据传入的 `*_id` 参数判断 |
 | `user_id` | number | - | 对方 QQ 号（消息类型为 `private` 时需要） |
 | `group_id` | number | - | 群号（消息类型为 `group` 时需要） |
+| `discuss_id` | number | - | 讨论组 ID（消息类型为 `discuss` 时需要） |
 | `message` | message | - | 要发送的内容 |
 | `auto_escape` | boolean | `false` | 消息内容是否作为纯文本发送（即不解析 CQ 码），只在 `message` 字段是字符串时有效 |
 
@@ -106,39 +78,6 @@
 ### 响应数据
 
 无
-
-## `get_msg` 获取消息
-
-### 参数
-
-| 字段名         | 数据类型  | 说明   |
-| ------------ | ----- | ------ |
-| `message_id` | number (int32) | 消息 ID |
-
-### 响应数据
-
-| 字段名         | 数据类型    | 说明       |
-| ------------ | ------- | ---------- |
-| `time`       | number (int32) | 发送时间   |
-| `message_type` | string | 消息类型，同 [消息事件](../event/message.md) |
-| `message_id` | number (int32) | 消息 ID     |
-| `real_id` | number (int32) | 消息真实 ID     |
-| `sender`     | object  | 发送人信息，同 [消息事件](../event/message.md) |
-| `message`    | message | 消息内容   |
-
-## `get_forward_msg` 获取合并转发消息
-
-### 参数
-
-| 字段名         | 数据类型   | 说明   |
-| ------------ | ------ | ------ |
-| `id` | string | 合并转发 ID |
-
-### 响应数据
-
-| 字段名 | 类型 | 说明 |
-| --- | --- | --- |
-| `message` | message | 消息内容，使用 [消息的数组格式](../message/array.md) 表示，数组中的消息段全部为 [`node` 消息段](../message/segment.md#合并转发自定义节点) |
 
 ## `send_like` 发送好友赞
 
@@ -252,19 +191,6 @@
 
 无
 
-## `set_group_name` 设置群名
-
-### 参数
-
-| 字段名   | 数据类型 | 说明 |
-| -------- | ------ | ---- |
-| `group_id` | number (int64) | 群号 |
-| `group_name` | string | 新群名 |
-
-### 响应数据
-
-无
-
 ## `set_group_leave` 退出群组
 
 ### 参数
@@ -288,6 +214,18 @@
 | `user_id` | number | - | 要设置的 QQ 号 |
 | `special_title` | string | 空 | 专属头衔，不填或空字符串表示删除专属头衔 |
 | `duration` | number | `-1` | 专属头衔有效期，单位秒，-1 表示永久，不过此项似乎没有效果，可能是只有某些特殊的时间长度有效，有待测试 |
+
+### 响应数据
+
+无
+
+## `set_discuss_leave` 退出讨论组
+
+### 参数
+
+| 字段名 | 数据类型 | 默认值 | 说明 |
+| ----- | ------- | ----- | --- |
+| `discuss_id` | number | - | 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得） |
 
 ### 响应数据
 
@@ -489,20 +427,21 @@
 
 ## `get_record` 获取语音
 
-> **提示**：要使用此接口，通常需要安装 ffmpeg，请参考 OneBot 实现的相关说明。
+其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（`data\record` 目录下）。**注意，要使用此接口，需要安装 CKYU 的 [语音组件](https://cqp.cc/t/21132)。**
 
 ### 参数
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `file` | string | - | 收到的语音文件名（消息段的 `file` 参数），如 `0B38145AA44505000B38145AA4450500.silk` |
+| `file` | string | - | 收到的语音文件名（CQ 码的 `file` 参数），如 `0B38145AA44505000B38145AA4450500.silk` |
 | `out_format`  | string | - | 要转换到的格式，目前支持 `mp3`、`amr`、`wma`、`m4a`、`spx`、`ogg`、`wav`、`flac` |
+| `full_path`  | boolean | `false` | 是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议） |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `file` | string | 转换后的语音文件路径，如 `/home/somebody/cqhttp/data/record/0B38145AA44505000B38145AA4450500.mp3` |
+| `file` | string | 转换后的语音文件名或路径，如 `0B38145AA44505000B38145AA4450500.mp3`，如果开启了 `full_path`，则如 `C:\Apps\CoolQ\data\record\0B38145AA44505000B38145AA4450500.mp3` |
 
 ## `get_image` 获取图片
 
@@ -510,13 +449,13 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `file` | string | - | 收到的图片文件名（消息段的 `file` 参数），如 `6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `file` | string | - | 收到的图片文件名（CQ 码的 `file` 参数），如 `6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `file` | string | 下载后的图片文件路径，如 `/home/somebody/cqhttp/data/image/6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
+| `file` | string | 下载后的图片文件路径，如 `C:\Apps\CoolQ\data\image\6B4DE3DFD1BD271E3297859D41C530F5.jpg` |
 
 ## `can_send_image` 检查是否可以发送图片
 
@@ -553,10 +492,10 @@
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
 | `online` | boolean | 当前 QQ 在线，`null` 表示无法查询到在线状态 |
-| `good` | boolean | 状态符合预期，意味着各模块正常运行、功能正常，且 QQ 在线 |
-| …… | - | OneBot 实现自行添加的其它内容 |
+| `good` | boolean | CQHTTP 状态符合预期，意味着各模块正常运行、功能正常，且 QQ 在线 |
+| …… | - | CQHTTP 实现自行添加的其它内容 |
 
-通常情况下建议只使用 `online` 和 `good` 这两个字段来判断运行状态，因为根据 OneBot 实现的不同，其它字段可能完全不同。
+通常情况下建议只使用 `online` 和 `good` 这两个字段来判断运行状态，因为根据 CQHTTP 实现的不同，其它字段可能完全不同。
 
 ## `get_version_info` 获取版本信息
 
@@ -568,14 +507,16 @@
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
-| `app_name` | string | 应用标识，如 `mirai-native` |
-| `app_version` | string | 应用版本，如 `1.2.3` |
-| `protocol_version` | string | OneBot 标准版本，如 `v11` |
-| …… | - | OneBot 实现自行添加的其它内容 |
+| `coolq_directory` | string | （兼容性需求）CKYU 根目录路径 |
+| `coolq_edition` | string | （兼容性需求）CKYU 版本，`air` 或 `pro` |
+| `plugin_version` | string | CQHTTP 版本，例如 `2.1.3` |
+| `plugin_build_number` | number | CQHTTP build 号 |
+| `plugin_build_configuration` | string | CQHTTP 编译配置，`debug` 或 `release` |
 
-## `set_restart` 重启 OneBot 实现
 
-由于重启 OneBot 实现同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需要异步地重启，接口返回的 `status` 是 `async`。
+## `set_restart_plugin` 重启 CQHTTP
+
+由于重启 CQHTTP 同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需要异步地重启，接口返回的 `status` 是 `async`。
 
 ### 参数
 
@@ -587,9 +528,23 @@
 
 无
 
-## `clean_cache` 清理缓存
+## `clean_data_dir` 清理数据目录
 
-用于清理积攒了太多的缓存文件。
+用于清理积攒了太多旧文件的数据目录，如 `image`。
+
+### 参数
+
+| 字段名 | 数据类型 | 默认值 | 说明 |
+| ----- | ------- | ----- | --- |
+| `data_dir` | string | - | 收到清理的目录名，支持 `image`、`record`、`show`、`bface` |
+
+### 响应数据
+
+无
+
+## `clean_plugin_log` 清理日志
+
+用于清空 CQHTTP 的日志文件。
 
 ### 参数
 
@@ -598,9 +553,3 @@
 ### 响应数据
 
 无
-
-<hr>
-
-| 上一节 | 下一节 |
-| --- | --- |
-| [API 概述](README.md) | [隐藏 API](hidden.md) |

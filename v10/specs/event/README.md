@@ -34,7 +34,7 @@
 
 如 [HTTP POST 的快速操作](../communication/http-post.md#快速操作) 中所说，HTTP POST 通信方式下，用户可在服务端返回的响应中指定快速操作，事件支持的快速操作在事件列表的「快速操作」小标题下给出。
 
-在使用正向和反向 WebSocket 的情况下，可以通过 [`.handle_quick_operation`](../api/hidden.md#handle-quick-operation-对事件执行快速操作) API 伪造快速操作。
+在使用正向和反向 WebSocket 的情况下，可以通过 [`.handle_quick_operation`](../api/hidden.md#handle_quick_operation-对事件执行快速操作) API 伪造快速操作。
 
 ## 数据类型
 

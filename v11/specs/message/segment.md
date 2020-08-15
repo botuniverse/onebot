@@ -401,7 +401,7 @@
 
 | 参数名 | 收 | 发 | 可能的值 | 说明 |
 | --- | --- | --- | --- | --- |
-| `id` | ✓ |  | - | 合并转发 ID，需通过 [`get_forward_msg` API](../api/public.md#get-forward-msg-获取合并转发消息) 获取具体内容 |
+| `id` | ✓ |  | - | 合并转发 ID，需通过 [`get_forward_msg` API](../api/public.md#get_forward_msg-获取合并转发消息) 获取具体内容 |
 
 ## 合并转发节点 <Badge text="发"/>
 
@@ -426,7 +426,7 @@
 
 > **注意**
 >
-> 接收时，此消息段不会直接出现在消息事件的 `message` 中，需通过 [`get_forward_msg` API](../api/public.md#get-forward-msg-获取合并转发消息) 获取。
+> 接收时，此消息段不会直接出现在消息事件的 `message` 中，需通过 [`get_forward_msg` API](../api/public.md#get_forward_msg-获取合并转发消息) 获取。
 
 **例 1**
 

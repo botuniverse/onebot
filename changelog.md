@@ -4,7 +4,9 @@
 
 > **在 v11 版本中，CQHTTP 标准改名为 OneBot 标准。**
 
-### 新增
+### 2020-08-13
+
+#### 新增
 
 - **事件**：新增群消息撤回和好友消息撤回事件
 - **API**：新增 `get_msg` `get_forward_msg` `set_group_name` API
@@ -13,7 +15,7 @@
 - **消息段**：新增 XML 和 JSON 消息段
 - **消息段**：新增戳一戳消息段
 
-### 变更
+#### 变更
 
 - **通信**：反向 WebSocket 请求头的 `Authorization` 中，`Token` 改为 `Bearer`，与 HTTP 和正向 WebSocket 一致
 - **事件**：修改请求事件，`comment` 字段不再对特殊字符转义，内容总是原始的纯文本字符串
@@ -26,7 +28,7 @@
 - **消息段**：修改图片消息段，新增 `type` 参数，用于表示闪照
 - **其它**：不再将 `data` 目录暴露给用户，实现可自行决定图片、语音等文件的存放位置
 
-### 移除
+#### 移除
 
 - **事件**：移除讨论组消息事件
 - **API**：移除 `send_discuss_msg` `set_discuss_leave` API
@@ -34,6 +36,8 @@
 - **消息段**：移除 `rich` 富文本消息段，使用 XML 和 JSON 消息段替代
 
 ## v10
+
+### 2020-08-11
 
 - 修改原 CQHTTP 插件 v4.15 文档的表述，形成通用的 CQHTTP 标准
 - 相比原 CQHTTP 插件，移除了数据文件获取接口、隐藏 API `.check_update`、所有试验性 API、`get_status` API 只保留 `online` 和 `good` 两个必选字段

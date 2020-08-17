@@ -6,6 +6,7 @@
 
 ### 2020-08-17
 
+- **API**：修改 `get_group_list` API，新增 `member_count` 和 `max_member_count` 字段，和 `get_group_info` 保持一致
 - **消息段**：新增短视频消息段
 
 ### 2020-08-13

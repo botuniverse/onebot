@@ -26,8 +26,8 @@
 - [`get_login_info` 获取登录号信息](#get_login_info-获取登录号信息)
 - [`get_stranger_info` 获取陌生人信息](#get_stranger_info-获取陌生人信息)
 - [`get_friend_list` 获取好友列表](#get_friend_list-获取好友列表)
-- [`get_group_list` 获取群列表](#get_group_list-获取群列表)
 - [`get_group_info` 获取群信息](#get_group_info-获取群信息)
+- [`get_group_list` 获取群列表](#get_group_list-获取群列表)
 - [`get_group_member_info` 获取群成员信息](#get_group_member_info-获取群成员信息)
 - [`get_group_member_list` 获取群成员列表](#get_group_member_list-获取群成员列表)
 - [`get_cookies` 获取 Cookies](#get_cookies-获取-cookies)
@@ -369,21 +369,6 @@
 | `nickname` | string | 昵称 |
 | `remark` | string | 备注名 |
 
-## `get_group_list` 获取群列表
-
-### 参数
-
-无
-
-### 响应数据
-
-响应内容为 JSON 数组，每个元素如下：
-
-| 字段名 | 数据类型 | 说明 |
-| ----- | ------- | --- |
-| `group_id` | number (int64) | 群号 |
-| `group_name` | string | 群名称 |
-
 ## `get_group_info` 获取群信息
 
 ### 参数
@@ -401,6 +386,16 @@
 | `group_name` | string | 群名称 |
 | `member_count` | number (int32) | 成员数 |
 | `max_member_count` | number (int32) | 最大成员数（群容量） |
+
+## `get_group_list` 获取群列表
+
+### 参数
+
+无
+
+### 响应数据
+
+响应内容为 JSON 数组，每个元素和上面的 `get_group_info` 接口相同。
 
 ## `get_group_member_info` 获取群成员信息
 

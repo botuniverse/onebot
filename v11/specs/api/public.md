@@ -30,6 +30,7 @@
 - [`get_group_list` 获取群列表](#get_group_list-获取群列表)
 - [`get_group_member_info` 获取群成员信息](#get_group_member_info-获取群成员信息)
 - [`get_group_member_list` 获取群成员列表](#get_group_member_list-获取群成员列表)
+- [`get_group_honor_info` 获取群荣誉信息](#get_group_honor_info-获取群荣誉信息)
 - [`get_cookies` 获取 Cookies](#get_cookies-获取-cookies)
 - [`get_csrf_token` 获取 CSRF Token](#get_csrf_token-获取-csrf-token)
 - [`get_credentials` 获取 QQ 相关接口凭证](#get_credentials-获取-qq-相关接口凭证)
@@ -438,6 +439,44 @@
 ### 响应数据
 
 响应内容为 JSON 数组，每个元素的内容和上面的 `get_group_member_info` 接口相同，但对于同一个群组的同一个成员，获取列表时和获取单独的成员信息时，某些字段可能有所不同，例如 `area`、`title` 等字段在获取列表时无法获得，具体应以单独的成员信息为准。
+
+## `get_group_honor_info` 获取群荣誉信息
+
+### 参数
+
+| 字段名 | 数据类型 | 默认值 | 说明 |
+| ----- | ------- | ----- | --- |
+| `type` | string | 空 | 要获取的群荣誉类型，默认全部获取，可以传入 `talkative` `performer` `legend` `strong_newbie` `emotion` 以分别获取单个类型的群荣誉数据 |
+
+### 响应数据
+
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+| `group_id` | number (int64) | 群号 |
+| `current_talkative` | object | 当前龙王，仅 `type` 为空或 `talkative` 时有数据 |
+| `talktive_list` | array | 历史龙王，仅 `type` 为空或 `talkative` 时有数据 |
+| `performer_list` | array | 群聊之火，仅 `type` 为空或 `performer` 时有数据 |
+| `legend_list` | array | 群聊炽焰，仅 `type` 为空或 `legend` 时有数据 |
+| `strong_newbie_list` | array | 冒尖小春笋，仅 `type` 为空或 `strong_newbie` 时有数据 |
+| `emotion_list` | array | 快乐之源，仅 `type` 为空或 `emotion` 时有数据 |
+
+其中 `current_talkative` 字段的内容如下：
+
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+| `user_id` | number (int64) | QQ 号 |
+| `nickname` | string | 昵称 |
+| `avatar` | string | 头像 URL |
+| `day_count` | number (int32) | 持续天数 |
+
+其它各 `*_list` 的每个元素是一个 JSON 对象，内容如下：
+
+| 字段名 | 数据类型 | 说明 |
+| ----- | ------- | --- |
+| `user_id` | number (int64) | QQ 号 |
+| `nickname` | string | 昵称 |
+| `avatar` | string | 头像 URL |
+| `description` | string | 荣誉描述 |
 
 ## `get_cookies` 获取 Cookies
 

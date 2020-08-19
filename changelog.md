@@ -4,6 +4,10 @@
 
 > **在 v11 版本中，CQHTTP 标准改名为 OneBot 标准。**
 
+### 2020-08-19
+
+- **API**：添加 `get_group_honor_info` API，用于获取群荣誉信息
+
 ### 2020-08-17
 
 - **API**：修改 `get_group_list` API，新增 `member_count` 和 `max_member_count` 字段，和 `get_group_info` 保持一致

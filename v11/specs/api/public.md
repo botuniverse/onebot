@@ -455,7 +455,7 @@
 | ----- | ------- | --- |
 | `group_id` | number (int64) | 群号 |
 | `current_talkative` | object | 当前龙王，仅 `type` 为 `talkative` 或 `all` 时有数据 |
-| `talktive_list` | array | 历史龙王，仅 `type` 为 `talkative` 或 `all` 时有数据 |
+| `talkative_list` | array | 历史龙王，仅 `type` 为 `talkative` 或 `all` 时有数据 |
 | `performer_list` | array | 群聊之火，仅 `type` 为 `performer` 或 `all` 时有数据 |
 | `legend_list` | array | 群聊炽焰，仅 `type` 为 `legend` 或 `all` 时有数据 |
 | `strong_newbie_list` | array | 冒尖小春笋，仅 `type` 为 `strong_newbie` 或 `all` 时有数据 |

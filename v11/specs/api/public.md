@@ -446,19 +446,19 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `type` | string | 空 | 要获取的群荣誉类型，默认全部获取，可以传入 `talkative` `performer` `legend` `strong_newbie` `emotion` 以分别获取单个类型的群荣誉数据 |
+| `type` | string | - | 要获取的群荣誉类型，可传入 `talkative` `performer` `legend` `strong_newbie` `emotion` 以分别获取单个类型的群荣誉数据，或传入 `all` 获取所有数据 |
 
 ### 响应数据
 
 | 字段名 | 数据类型 | 说明 |
 | ----- | ------- | --- |
 | `group_id` | number (int64) | 群号 |
-| `current_talkative` | object | 当前龙王，仅 `type` 为空或 `talkative` 时有数据 |
-| `talktive_list` | array | 历史龙王，仅 `type` 为空或 `talkative` 时有数据 |
-| `performer_list` | array | 群聊之火，仅 `type` 为空或 `performer` 时有数据 |
-| `legend_list` | array | 群聊炽焰，仅 `type` 为空或 `legend` 时有数据 |
-| `strong_newbie_list` | array | 冒尖小春笋，仅 `type` 为空或 `strong_newbie` 时有数据 |
-| `emotion_list` | array | 快乐之源，仅 `type` 为空或 `emotion` 时有数据 |
+| `current_talkative` | object | 当前龙王，仅 `type` 为 `talkative` 或 `all` 时有数据 |
+| `talktive_list` | array | 历史龙王，仅 `type` 为 `talkative` 或 `all` 时有数据 |
+| `performer_list` | array | 群聊之火，仅 `type` 为 `performer` 或 `all` 时有数据 |
+| `legend_list` | array | 群聊炽焰，仅 `type` 为 `legend` 或 `all` 时有数据 |
+| `strong_newbie_list` | array | 冒尖小春笋，仅 `type` 为 `strong_newbie` 或 `all` 时有数据 |
+| `emotion_list` | array | 快乐之源，仅 `type` 为 `emotion` 或 `all` 时有数据 |
 
 其中 `current_talkative` 字段的内容如下：
 

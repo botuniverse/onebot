@@ -434,7 +434,7 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
-| `group_id` | number | - | 群号 |
+| `group_id` | number (int64) | - | 群号 |
 
 ### 响应数据
 
@@ -446,6 +446,7 @@
 
 | 字段名 | 数据类型 | 默认值 | 说明 |
 | ----- | ------- | ----- | --- |
+| `group_id` | number (int64) | - | 群号 |
 | `type` | string | - | 要获取的群荣誉类型，可传入 `talkative` `performer` `legend` `strong_newbie` `emotion` 以分别获取单个类型的群荣誉数据，或传入 `all` 获取所有数据 |
 
 ### 响应数据

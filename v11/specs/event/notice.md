@@ -151,6 +151,7 @@
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `poke` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
 | `user_id`     | int64  |                | 发送者 QQ 号 |
 | `target_id` | int64 | | 被戳者 QQ 号 |
 
@@ -163,6 +164,7 @@
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `lucky_king` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
 | `user_id`     | int64  |                | 红包发送者id |
 | `target_id` | int64 | | 运气王 QQ 号 |
 
@@ -175,6 +177,7 @@
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `honor` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
 | `honor_type` | int64 | `talkative`、`performer`、`emotion` | 荣誉类型，分别表示龙王、群聊之火、快乐源泉 |
 | `user_id`     | int64  |   | 成员 QQ 号 |
 

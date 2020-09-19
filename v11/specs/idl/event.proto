@@ -1,0 +1,166 @@
+syntax = "proto3";
+package onebot;
+import "base.proto";
+
+message PrivateMessageEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string message_type = 4;
+  string sub_type = 5;
+  int32 message_id = 6;
+  int64 user_id = 7;
+  Message message = 8;
+  string raw_message = 9;
+  int32 font = 10;
+  Sender sender = 11;
+  message Sender{
+    int64 user_id = 1;
+    string nickname = 2;
+    string sex = 3;
+    int32 age = 4;
+  }
+}
+
+message GroupMessageEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string message_type = 4;
+  string sub_type = 5;
+  int32 message_id = 6;
+  int64 group_id = 7;
+  int64 user_id = 8;
+  Anonymous anonymous = 9;
+  Message message = 10;
+  string raw_message = 11;
+  int32 font = 12;
+  Sender sender = 13;
+  message Anonymous{
+    int64 id = 1;
+    string name = 2;
+    string flag = 3;
+  }
+  message Sender{
+    int64 user_id = 1;
+    string nickname = 2;
+    string card = 3;
+    string sex = 4;
+    int32 age = 5;
+    string area = 6;
+    string level = 7;
+    string role = 8;
+    string title = 9;
+  }
+}
+
+message GroupUploadNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  int64 group_id = 5;
+  int64 user_id = 6;
+  File file = 7;
+  message File{
+    string id = 1;
+    string name = 2;
+    int64 size = 3;
+    int64 busid = 4;
+  }
+}
+
+
+message GroupAdminNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  string sub_type = 5;
+  int64 group_id = 6;
+  int64 user_id = 7;
+}
+
+message GroupDecreaseNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  string sub_type = 5;
+  int64 group_id = 6;
+  int64 operator_id = 7;
+  int64 user_id = 8;
+}
+
+message GroupIncreaseNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  string sub_type = 5;
+  int64 group_id = 6;
+  int64 operator_id = 7;
+  int64 user_id = 8;
+}
+
+message GroupBanNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  string sub_type = 5;
+  int64 group_id = 6;
+  int64 operator_id = 7;
+  int64 user_id = 8;
+  int64 duration = 9;
+}
+
+message FriendAddNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  int64 user_id = 5;
+}
+
+message GroupRecallNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  int64 group_id = 5;
+  int64 user_id = 6;
+  int64 operator_id = 7;
+  int64 message_id = 8;
+}
+
+message FriendRecallNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+  int64 user_id = 5;
+  int64 message_id = 6;
+}
+
+message FriendRequestEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string request_type = 4;
+  int64 user_id = 5;
+  string comment = 6;
+  string flag = 7;
+}
+
+message GroupRequestEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string request_type = 4;
+  string sub_type = 5;
+  int64 group_id = 6;
+  int64 user_id = 7;
+  string comment = 8;
+  string flag = 9;
+}

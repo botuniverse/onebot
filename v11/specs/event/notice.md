@@ -12,6 +12,9 @@
 - [好友添加](#好友添加)
 - [群消息撤回](#群消息撤回)
 - [好友消息撤回](#好友消息撤回)
+- [群内戳一戳](#群内戳一戳)
+- [群红包运气王](#群红包运气王)
+- [群成员荣誉变更](#群成员荣誉变更)
 
 </p>
 </details>
@@ -138,6 +141,45 @@
 | `notice_type` | string | `friend_recall`| 通知类型       |
 | `user_id`     | number (int64)  |                | 好友 QQ 号        |
 | `message_id`  | number (int64)  |                | 被撤回的消息 ID |
+
+## 群内戳一戳
+
+### 上报数据
+
+| 字段          | 类型   | 可能的值       | 说明           |
+| ------------- | ------ | -------------- | -------------- |
+| `post_type`   | string | `notice`       | 上报类型       |
+| `notice_type` | string | `notify` | 消息类型       |
+| `sub_type` | string | `poke` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
+| `user_id`     | int64  |                | 发送者 QQ 号 |
+| `target_id` | int64 | | 被戳者 QQ 号 |
+
+## 群红包运气王
+
+### 上报数据
+
+| 字段          | 类型   | 可能的值       | 说明           |
+| ------------- | ------ | -------------- | -------------- |
+| `post_type`   | string | `notice`       | 上报类型       |
+| `notice_type` | string | `notify` | 消息类型       |
+| `sub_type` | string | `lucky_king` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
+| `user_id`     | int64  |                | 红包发送者 QQ 号 |
+| `target_id` | int64 | | 运气王 QQ 号 |
+
+## 群成员荣誉变更
+
+### 上报数据
+
+| 字段          | 类型   | 可能的值       | 说明           |
+| ------------- | ------ | -------------- | -------------- |
+| `post_type`   | string | `notice`       | 上报类型       |
+| `notice_type` | string | `notify` | 消息类型       |
+| `sub_type` | string | `honor` | 提示类型 |
+| `group_id` | int64 |  | 群号 |
+| `honor_type` | string | `talkative`、`performer`、`emotion` | 荣誉类型，分别表示龙王、群聊之火、快乐源泉 |
+| `user_id`     | int64  |   | 成员 QQ 号 |
 
 <hr>
 

@@ -1,6 +1,6 @@
 syntax = "proto3";
 package onebot;
-import "base.proto";
+import "onebot_base.proto";
 
 // 在序列化成protobuf时，不知道post_type是什么，可以先解析成BaseEvent，获取到post_type，然后解析成BaseMessageEvent/BaseNoticeEvent/BaseRequestEvent，最后解析成对应event
 // 在序列化成json时，不需要BaseEvent过渡
@@ -36,7 +36,7 @@ message PrivateMessageEvent{
   string sub_type = 5;
   int32 message_id = 6;
   int64 user_id = 7;
-  Message message = 8;
+  repeated Message message = 8;
   string raw_message = 9;
   int32 font = 10;
   Sender sender = 11;
@@ -58,7 +58,7 @@ message GroupMessageEvent{
   int64 group_id = 7;
   int64 user_id = 8;
   Anonymous anonymous = 9;
-  Message message = 10;
+  repeated Message message = 10;
   string raw_message = 11;
   int32 font = 12;
   Sender sender = 13;

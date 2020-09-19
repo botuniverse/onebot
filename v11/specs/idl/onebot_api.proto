@@ -1,6 +1,6 @@
 syntax = "proto3";
 package onebot;
-import "base.proto";
+import "onebot_base.proto";
 
 message BaseApiReq{
   string action = 101;
@@ -13,7 +13,7 @@ message BaseApiResp{
 
 message SendPrivateMsgReq{
   int64 user_id = 1;
-  Message message = 2;
+  repeated Message message = 2;
   bool auto_escape = 3;
   string action = 101;
   string echo = 102;
@@ -26,7 +26,7 @@ message SendPrivateMsgResp{
 
 message SendGroupMsgReq{
   int64 group_id = 1;
-  Message message = 2;
+  repeated Message message = 2;
   bool auto_escape = 3;
   string action = 101;
   string echo = 102;

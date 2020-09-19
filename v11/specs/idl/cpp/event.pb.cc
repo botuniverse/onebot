@@ -20,6 +20,22 @@ extern PROTOBUF_INTERNAL_EXPORT_event_2eproto ::PROTOBUF_NAMESPACE_ID::internal:
 extern PROTOBUF_INTERNAL_EXPORT_base_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Message_base_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_event_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PrivateMessageEvent_Sender_event_2eproto;
 namespace onebot {
+class BaseEventDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BaseEvent> _instance;
+} _BaseEvent_default_instance_;
+class BaseMessageEventDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BaseMessageEvent> _instance;
+} _BaseMessageEvent_default_instance_;
+class BaseNoticeEventDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BaseNoticeEvent> _instance;
+} _BaseNoticeEvent_default_instance_;
+class BaseRequestEventDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BaseRequestEvent> _instance;
+} _BaseRequestEvent_default_instance_;
 class PrivateMessageEvent_SenderDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PrivateMessageEvent_Sender> _instance;
@@ -85,6 +101,62 @@ class GroupRequestEventDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GroupRequestEvent> _instance;
 } _GroupRequestEvent_default_instance_;
 }  // namespace onebot
+static void InitDefaultsscc_info_BaseEvent_event_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::onebot::_BaseEvent_default_instance_;
+    new (ptr) ::onebot::BaseEvent();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::onebot::BaseEvent::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BaseEvent_event_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BaseEvent_event_2eproto}, {}};
+
+static void InitDefaultsscc_info_BaseMessageEvent_event_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::onebot::_BaseMessageEvent_default_instance_;
+    new (ptr) ::onebot::BaseMessageEvent();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::onebot::BaseMessageEvent::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BaseMessageEvent_event_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BaseMessageEvent_event_2eproto}, {}};
+
+static void InitDefaultsscc_info_BaseNoticeEvent_event_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::onebot::_BaseNoticeEvent_default_instance_;
+    new (ptr) ::onebot::BaseNoticeEvent();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::onebot::BaseNoticeEvent::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BaseNoticeEvent_event_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BaseNoticeEvent_event_2eproto}, {}};
+
+static void InitDefaultsscc_info_BaseRequestEvent_event_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::onebot::_BaseRequestEvent_default_instance_;
+    new (ptr) ::onebot::BaseRequestEvent();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::onebot::BaseRequestEvent::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BaseRequestEvent_event_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BaseRequestEvent_event_2eproto}, {}};
+
 static void InitDefaultsscc_info_FriendAddNoticeEvent_event_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -315,11 +387,46 @@ static void InitDefaultsscc_info_PrivateMessageEvent_Sender_event_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PrivateMessageEvent_Sender_event_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PrivateMessageEvent_Sender_event_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_event_2eproto[16];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_event_2eproto[20];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_event_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_event_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_event_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseEvent, time_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseEvent, self_id_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseEvent, post_type_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseMessageEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseMessageEvent, time_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseMessageEvent, self_id_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseMessageEvent, post_type_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseMessageEvent, message_type_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseNoticeEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseNoticeEvent, time_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseNoticeEvent, self_id_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseNoticeEvent, post_type_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseNoticeEvent, notice_type_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseRequestEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseRequestEvent, time_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseRequestEvent, self_id_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseRequestEvent, post_type_),
+  PROTOBUF_FIELD_OFFSET(::onebot::BaseRequestEvent, notice_type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::onebot::PrivateMessageEvent_Sender, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -520,25 +627,33 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_event_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::onebot::GroupRequestEvent, flag_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::onebot::PrivateMessageEvent_Sender)},
-  { 9, -1, sizeof(::onebot::PrivateMessageEvent)},
-  { 25, -1, sizeof(::onebot::GroupMessageEvent_Anonymous)},
-  { 33, -1, sizeof(::onebot::GroupMessageEvent_Sender)},
-  { 47, -1, sizeof(::onebot::GroupMessageEvent)},
-  { 65, -1, sizeof(::onebot::GroupUploadNoticeEvent_File)},
-  { 74, -1, sizeof(::onebot::GroupUploadNoticeEvent)},
-  { 86, -1, sizeof(::onebot::GroupAdminNoticeEvent)},
-  { 98, -1, sizeof(::onebot::GroupDecreaseNoticeEvent)},
-  { 111, -1, sizeof(::onebot::GroupIncreaseNoticeEvent)},
-  { 124, -1, sizeof(::onebot::GroupBanNoticeEvent)},
-  { 138, -1, sizeof(::onebot::FriendAddNoticeEvent)},
-  { 148, -1, sizeof(::onebot::GroupRecallNoticeEvent)},
-  { 161, -1, sizeof(::onebot::FriendRecallNoticeEvent)},
-  { 172, -1, sizeof(::onebot::FriendRequestEvent)},
-  { 184, -1, sizeof(::onebot::GroupRequestEvent)},
+  { 0, -1, sizeof(::onebot::BaseEvent)},
+  { 8, -1, sizeof(::onebot::BaseMessageEvent)},
+  { 17, -1, sizeof(::onebot::BaseNoticeEvent)},
+  { 26, -1, sizeof(::onebot::BaseRequestEvent)},
+  { 35, -1, sizeof(::onebot::PrivateMessageEvent_Sender)},
+  { 44, -1, sizeof(::onebot::PrivateMessageEvent)},
+  { 60, -1, sizeof(::onebot::GroupMessageEvent_Anonymous)},
+  { 68, -1, sizeof(::onebot::GroupMessageEvent_Sender)},
+  { 82, -1, sizeof(::onebot::GroupMessageEvent)},
+  { 100, -1, sizeof(::onebot::GroupUploadNoticeEvent_File)},
+  { 109, -1, sizeof(::onebot::GroupUploadNoticeEvent)},
+  { 121, -1, sizeof(::onebot::GroupAdminNoticeEvent)},
+  { 133, -1, sizeof(::onebot::GroupDecreaseNoticeEvent)},
+  { 146, -1, sizeof(::onebot::GroupIncreaseNoticeEvent)},
+  { 159, -1, sizeof(::onebot::GroupBanNoticeEvent)},
+  { 173, -1, sizeof(::onebot::FriendAddNoticeEvent)},
+  { 183, -1, sizeof(::onebot::GroupRecallNoticeEvent)},
+  { 196, -1, sizeof(::onebot::FriendRecallNoticeEvent)},
+  { 207, -1, sizeof(::onebot::FriendRequestEvent)},
+  { 219, -1, sizeof(::onebot::GroupRequestEvent)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_BaseEvent_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_BaseMessageEvent_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_BaseNoticeEvent_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_BaseRequestEvent_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_PrivateMessageEvent_Sender_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_PrivateMessageEvent_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::onebot::_GroupMessageEvent_Anonymous_default_instance_),
@@ -558,76 +673,89 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_event_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013event.proto\022\006onebot\032\nbase.proto\"\324\002\n\023Pr"
-  "ivateMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_"
-  "id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014message_t"
-  "ype\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\022\n\nmessage_i"
-  "d\030\006 \001(\005\022\017\n\007user_id\030\007 \001(\003\022 \n\007message\030\010 \001("
-  "\0132\017.onebot.Message\022\023\n\013raw_message\030\t \001(\t\022"
-  "\014\n\004font\030\n \001(\005\0222\n\006sender\030\013 \001(\0132\".onebot.P"
-  "rivateMessageEvent.Sender\032E\n\006Sender\022\017\n\007u"
-  "ser_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\013\n\003sex\030\003 "
-  "\001(\t\022\013\n\003age\030\004 \001(\005\"\230\004\n\021GroupMessageEvent\022\014"
+  "\n\013event.proto\022\006onebot\032\nbase.proto\"=\n\tBas"
+  "eEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n"
+  "\tpost_type\030\003 \001(\t\"Z\n\020BaseMessageEvent\022\014\n\004"
+  "time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type"
+  "\030\003 \001(\t\022\024\n\014message_type\030\004 \001(\t\"X\n\017BaseNoti"
+  "ceEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021"
+  "\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\"Y"
+  "\n\020BaseRequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self"
+  "_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_t"
+  "ype\030\004 \001(\t\"\324\002\n\023PrivateMessageEvent\022\014\n\004tim"
+  "e\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 "
+  "\001(\t\022\024\n\014message_type\030\004 \001(\t\022\020\n\010sub_type\030\005 "
+  "\001(\t\022\022\n\nmessage_id\030\006 \001(\005\022\017\n\007user_id\030\007 \001(\003"
+  "\022 \n\007message\030\010 \001(\0132\017.onebot.Message\022\023\n\013ra"
+  "w_message\030\t \001(\t\022\014\n\004font\030\n \001(\005\0222\n\006sender\030"
+  "\013 \001(\0132\".onebot.PrivateMessageEvent.Sende"
+  "r\032E\n\006Sender\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname"
+  "\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\"\230\004\n\021Gro"
+  "upMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030"
+  "\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014message_type"
+  "\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\022\n\nmessage_id\030\006"
+  " \001(\005\022\020\n\010group_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\022"
+  "6\n\tanonymous\030\t \001(\0132#.onebot.GroupMessage"
+  "Event.Anonymous\022 \n\007message\030\n \001(\0132\017.onebo"
+  "t.Message\022\023\n\013raw_message\030\013 \001(\t\022\014\n\004font\030\014"
+  " \001(\005\0220\n\006sender\030\r \001(\0132 .onebot.GroupMessa"
+  "geEvent.Sender\0323\n\tAnonymous\022\n\n\002id\030\001 \001(\003\022"
+  "\014\n\004name\030\002 \001(\t\022\014\n\004flag\030\003 \001(\t\032\215\001\n\006Sender\022\017"
+  "\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\014\n\004car"
+  "d\030\003 \001(\t\022\013\n\003sex\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004are"
+  "a\030\006 \001(\t\022\r\n\005level\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022\r\n\005"
+  "title\030\t \001(\t\"\364\001\n\026GroupUploadNoticeEvent\022\014"
   "\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_ty"
-  "pe\030\003 \001(\t\022\024\n\014message_type\030\004 \001(\t\022\020\n\010sub_ty"
-  "pe\030\005 \001(\t\022\022\n\nmessage_id\030\006 \001(\005\022\020\n\010group_id"
-  "\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\0226\n\tanonymous\030\t \001"
-  "(\0132#.onebot.GroupMessageEvent.Anonymous\022"
-  " \n\007message\030\n \001(\0132\017.onebot.Message\022\023\n\013raw"
-  "_message\030\013 \001(\t\022\014\n\004font\030\014 \001(\005\0220\n\006sender\030\r"
-  " \001(\0132 .onebot.GroupMessageEvent.Sender\0323"
-  "\n\tAnonymous\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\014\n"
-  "\004flag\030\003 \001(\t\032\215\001\n\006Sender\022\017\n\007user_id\030\001 \001(\003\022"
-  "\020\n\010nickname\030\002 \001(\t\022\014\n\004card\030\003 \001(\t\022\013\n\003sex\030\004"
-  " \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004area\030\006 \001(\t\022\r\n\005level"
-  "\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022\r\n\005title\030\t \001(\t\"\364\001\n\026"
-  "GroupUploadNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007"
-  "self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013noti"
-  "ce_type\030\004 \001(\t\022\020\n\010group_id\030\005 \001(\003\022\017\n\007user_"
-  "id\030\006 \001(\003\0221\n\004file\030\007 \001(\0132#.onebot.GroupUpl"
-  "oadNoticeEvent.File\032=\n\004File\022\n\n\002id\030\001 \001(\t\022"
-  "\014\n\004name\030\002 \001(\t\022\014\n\004size\030\003 \001(\003\022\r\n\005busid\030\004 \001"
-  "(\003\"\223\001\n\025GroupAdminNoticeEvent\022\014\n\004time\030\001 \001"
-  "(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023"
-  "\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n"
-  "\010group_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001(\003\"\253\001\n\030Gro"
-  "upDecreaseNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007s"
-  "elf_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notic"
-  "e_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_"
-  "id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id"
-  "\030\010 \001(\003\"\253\001\n\030GroupIncreaseNoticeEvent\022\014\n\004t"
-  "ime\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030"
-  "\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type\030\005"
-  " \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operator_id\030\007 "
-  "\001(\003\022\017\n\007user_id\030\010 \001(\003\"\270\001\n\023GroupBanNoticeE"
+  "pe\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010group_i"
+  "d\030\005 \001(\003\022\017\n\007user_id\030\006 \001(\003\0221\n\004file\030\007 \001(\0132#"
+  ".onebot.GroupUploadNoticeEvent.File\032=\n\004F"
+  "ile\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004size\030\003 "
+  "\001(\003\022\r\n\005busid\030\004 \001(\003\"\223\001\n\025GroupAdminNoticeE"
   "vent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tp"
   "ost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010s"
-  "ub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013opera"
-  "tor_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\022\020\n\010duratio"
-  "n\030\t \001(\003\"n\n\024FriendAddNoticeEvent\022\014\n\004time\030"
-  "\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001("
-  "\t\022\023\n\013notice_type\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\""
-  "\253\001\n\026GroupRecallNoticeEvent\022\014\n\004time\030\001 \001(\003"
-  "\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013"
-  "notice_type\030\004 \001(\t\022\020\n\010group_id\030\005 \001(\003\022\017\n\007u"
-  "ser_id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\022\n\nmes"
-  "sage_id\030\010 \001(\003\"\205\001\n\027FriendRecallNoticeEven"
-  "t\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost"
-  "_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\017\n\007user"
-  "_id\030\005 \001(\003\022\022\n\nmessage_id\030\006 \001(\003\"\214\001\n\022Friend"
-  "RequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 "
-  "\001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014request_type\030\004"
-  " \001(\t\022\017\n\007user_id\030\005 \001(\003\022\017\n\007comment\030\006 \001(\t\022\014"
-  "\n\004flag\030\007 \001(\t\"\257\001\n\021GroupRequestEvent\022\014\n\004ti"
-  "me\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003"
-  " \001(\t\022\024\n\014request_type\030\004 \001(\t\022\020\n\010sub_type\030\005"
-  " \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001(\003\022"
-  "\017\n\007comment\030\010 \001(\t\022\014\n\004flag\030\t \001(\tb\006proto3"
+  "ub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017\n\007user_"
+  "id\030\007 \001(\003\"\253\001\n\030GroupDecreaseNoticeEvent\022\014\n"
+  "\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_typ"
+  "e\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type"
+  "\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operator_id\030"
+  "\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\253\001\n\030GroupIncrease"
+  "NoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001"
+  "(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001"
+  "(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023"
+  "\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\270\001\n"
+  "\023GroupBanNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007se"
+  "lf_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice"
+  "_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_i"
+  "d\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030"
+  "\010 \001(\003\022\020\n\010duration\030\t \001(\003\"n\n\024FriendAddNoti"
+  "ceEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021"
+  "\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\017"
+  "\n\007user_id\030\005 \001(\003\"\253\001\n\026GroupRecallNoticeEve"
+  "nt\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpos"
+  "t_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010gro"
+  "up_id\030\005 \001(\003\022\017\n\007user_id\030\006 \001(\003\022\023\n\013operator"
+  "_id\030\007 \001(\003\022\022\n\nmessage_id\030\010 \001(\003\"\205\001\n\027Friend"
+  "RecallNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_"
+  "id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_ty"
+  "pe\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\022\022\n\nmessage_id\030"
+  "\006 \001(\003\"\214\001\n\022FriendRequestEvent\022\014\n\004time\030\001 \001"
+  "(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024"
+  "\n\014request_type\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\022\017\n"
+  "\007comment\030\006 \001(\t\022\014\n\004flag\030\007 \001(\t\"\257\001\n\021GroupRe"
+  "questEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001("
+  "\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014request_type\030\004 \001"
+  "(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017"
+  "\n\007user_id\030\007 \001(\003\022\017\n\007comment\030\010 \001(\t\022\014\n\004flag"
+  "\030\t \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_event_2eproto_deps[1] = {
   &::descriptor_table_base_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_event_2eproto_sccs[16] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_event_2eproto_sccs[20] = {
+  &scc_info_BaseEvent_event_2eproto.base,
+  &scc_info_BaseMessageEvent_event_2eproto.base,
+  &scc_info_BaseNoticeEvent_event_2eproto.base,
+  &scc_info_BaseRequestEvent_event_2eproto.base,
   &scc_info_FriendAddNoticeEvent_event_2eproto.base,
   &scc_info_FriendRecallNoticeEvent_event_2eproto.base,
   &scc_info_FriendRequestEvent_event_2eproto.base,
@@ -647,15 +775,1209 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_eve
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_event_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_event_2eproto = {
-  false, false, descriptor_table_protodef_event_2eproto, "event.proto", 2598,
-  &descriptor_table_event_2eproto_once, descriptor_table_event_2eproto_sccs, descriptor_table_event_2eproto_deps, 16, 1,
+  false, false, descriptor_table_protodef_event_2eproto, "event.proto", 2934,
+  &descriptor_table_event_2eproto_once, descriptor_table_event_2eproto_sccs, descriptor_table_event_2eproto_deps, 20, 1,
   schemas, file_default_instances, TableStruct_event_2eproto::offsets,
-  file_level_metadata_event_2eproto, 16, file_level_enum_descriptors_event_2eproto, file_level_service_descriptors_event_2eproto,
+  file_level_metadata_event_2eproto, 20, file_level_enum_descriptors_event_2eproto, file_level_service_descriptors_event_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_event_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_event_2eproto)), true);
 namespace onebot {
+
+// ===================================================================
+
+void BaseEvent::InitAsDefaultInstance() {
+}
+class BaseEvent::_Internal {
+ public:
+};
+
+BaseEvent::BaseEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onebot.BaseEvent)
+}
+BaseEvent::BaseEvent(const BaseEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_post_type().empty()) {
+    post_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_post_type(),
+      GetArena());
+  }
+  ::memcpy(&time_, &from.time_,
+    static_cast<size_t>(reinterpret_cast<char*>(&self_id_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  // @@protoc_insertion_point(copy_constructor:onebot.BaseEvent)
+}
+
+void BaseEvent::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BaseEvent_event_2eproto.base);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+}
+
+BaseEvent::~BaseEvent() {
+  // @@protoc_insertion_point(destructor:onebot.BaseEvent)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BaseEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  post_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void BaseEvent::ArenaDtor(void* object) {
+  BaseEvent* _this = reinterpret_cast< BaseEvent* >(object);
+  (void)_this;
+}
+void BaseEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BaseEvent::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BaseEvent& BaseEvent::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BaseEvent_event_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BaseEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:onebot.BaseEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  post_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BaseEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int64 time = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 self_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          self_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string post_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_post_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseEvent.post_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BaseEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:onebot.BaseEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_time(), target);
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_self_id(), target);
+  }
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_post_type().data(), static_cast<int>(this->_internal_post_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseEvent.post_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_post_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:onebot.BaseEvent)
+  return target;
+}
+
+size_t BaseEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:onebot.BaseEvent)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_post_type());
+  }
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_time());
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_self_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BaseEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:onebot.BaseEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BaseEvent* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BaseEvent>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:onebot.BaseEvent)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:onebot.BaseEvent)
+    MergeFrom(*source);
+  }
+}
+
+void BaseEvent::MergeFrom(const BaseEvent& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:onebot.BaseEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.post_type().size() > 0) {
+    _internal_set_post_type(from._internal_post_type());
+  }
+  if (from.time() != 0) {
+    _internal_set_time(from._internal_time());
+  }
+  if (from.self_id() != 0) {
+    _internal_set_self_id(from._internal_self_id());
+  }
+}
+
+void BaseEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:onebot.BaseEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BaseEvent::CopyFrom(const BaseEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onebot.BaseEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BaseEvent::IsInitialized() const {
+  return true;
+}
+
+void BaseEvent::InternalSwap(BaseEvent* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  post_type_.Swap(&other->post_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BaseEvent, self_id_)
+      + sizeof(BaseEvent::self_id_)
+      - PROTOBUF_FIELD_OFFSET(BaseEvent, time_)>(
+          reinterpret_cast<char*>(&time_),
+          reinterpret_cast<char*>(&other->time_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BaseEvent::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void BaseMessageEvent::InitAsDefaultInstance() {
+}
+class BaseMessageEvent::_Internal {
+ public:
+};
+
+BaseMessageEvent::BaseMessageEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onebot.BaseMessageEvent)
+}
+BaseMessageEvent::BaseMessageEvent(const BaseMessageEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_post_type().empty()) {
+    post_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_post_type(),
+      GetArena());
+  }
+  message_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_message_type().empty()) {
+    message_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message_type(),
+      GetArena());
+  }
+  ::memcpy(&time_, &from.time_,
+    static_cast<size_t>(reinterpret_cast<char*>(&self_id_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  // @@protoc_insertion_point(copy_constructor:onebot.BaseMessageEvent)
+}
+
+void BaseMessageEvent::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BaseMessageEvent_event_2eproto.base);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+}
+
+BaseMessageEvent::~BaseMessageEvent() {
+  // @@protoc_insertion_point(destructor:onebot.BaseMessageEvent)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BaseMessageEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  post_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  message_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void BaseMessageEvent::ArenaDtor(void* object) {
+  BaseMessageEvent* _this = reinterpret_cast< BaseMessageEvent* >(object);
+  (void)_this;
+}
+void BaseMessageEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BaseMessageEvent::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BaseMessageEvent& BaseMessageEvent::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BaseMessageEvent_event_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BaseMessageEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:onebot.BaseMessageEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  post_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BaseMessageEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int64 time = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 self_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          self_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string post_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_post_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseMessageEvent.post_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string message_type = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_message_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseMessageEvent.message_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BaseMessageEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:onebot.BaseMessageEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_time(), target);
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_self_id(), target);
+  }
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_post_type().data(), static_cast<int>(this->_internal_post_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseMessageEvent.post_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_post_type(), target);
+  }
+
+  // string message_type = 4;
+  if (this->message_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message_type().data(), static_cast<int>(this->_internal_message_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseMessageEvent.message_type");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_message_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:onebot.BaseMessageEvent)
+  return target;
+}
+
+size_t BaseMessageEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:onebot.BaseMessageEvent)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_post_type());
+  }
+
+  // string message_type = 4;
+  if (this->message_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message_type());
+  }
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_time());
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_self_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BaseMessageEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:onebot.BaseMessageEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BaseMessageEvent* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BaseMessageEvent>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:onebot.BaseMessageEvent)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:onebot.BaseMessageEvent)
+    MergeFrom(*source);
+  }
+}
+
+void BaseMessageEvent::MergeFrom(const BaseMessageEvent& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:onebot.BaseMessageEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.post_type().size() > 0) {
+    _internal_set_post_type(from._internal_post_type());
+  }
+  if (from.message_type().size() > 0) {
+    _internal_set_message_type(from._internal_message_type());
+  }
+  if (from.time() != 0) {
+    _internal_set_time(from._internal_time());
+  }
+  if (from.self_id() != 0) {
+    _internal_set_self_id(from._internal_self_id());
+  }
+}
+
+void BaseMessageEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:onebot.BaseMessageEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BaseMessageEvent::CopyFrom(const BaseMessageEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onebot.BaseMessageEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BaseMessageEvent::IsInitialized() const {
+  return true;
+}
+
+void BaseMessageEvent::InternalSwap(BaseMessageEvent* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  post_type_.Swap(&other->post_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_type_.Swap(&other->message_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BaseMessageEvent, self_id_)
+      + sizeof(BaseMessageEvent::self_id_)
+      - PROTOBUF_FIELD_OFFSET(BaseMessageEvent, time_)>(
+          reinterpret_cast<char*>(&time_),
+          reinterpret_cast<char*>(&other->time_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BaseMessageEvent::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void BaseNoticeEvent::InitAsDefaultInstance() {
+}
+class BaseNoticeEvent::_Internal {
+ public:
+};
+
+BaseNoticeEvent::BaseNoticeEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onebot.BaseNoticeEvent)
+}
+BaseNoticeEvent::BaseNoticeEvent(const BaseNoticeEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_post_type().empty()) {
+    post_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_post_type(),
+      GetArena());
+  }
+  notice_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_notice_type().empty()) {
+    notice_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_notice_type(),
+      GetArena());
+  }
+  ::memcpy(&time_, &from.time_,
+    static_cast<size_t>(reinterpret_cast<char*>(&self_id_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  // @@protoc_insertion_point(copy_constructor:onebot.BaseNoticeEvent)
+}
+
+void BaseNoticeEvent::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BaseNoticeEvent_event_2eproto.base);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  notice_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+}
+
+BaseNoticeEvent::~BaseNoticeEvent() {
+  // @@protoc_insertion_point(destructor:onebot.BaseNoticeEvent)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BaseNoticeEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  post_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  notice_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void BaseNoticeEvent::ArenaDtor(void* object) {
+  BaseNoticeEvent* _this = reinterpret_cast< BaseNoticeEvent* >(object);
+  (void)_this;
+}
+void BaseNoticeEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BaseNoticeEvent::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BaseNoticeEvent& BaseNoticeEvent::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BaseNoticeEvent_event_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BaseNoticeEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:onebot.BaseNoticeEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  post_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  notice_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BaseNoticeEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int64 time = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 self_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          self_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string post_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_post_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseNoticeEvent.post_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string notice_type = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_notice_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseNoticeEvent.notice_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BaseNoticeEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:onebot.BaseNoticeEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_time(), target);
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_self_id(), target);
+  }
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_post_type().data(), static_cast<int>(this->_internal_post_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseNoticeEvent.post_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_post_type(), target);
+  }
+
+  // string notice_type = 4;
+  if (this->notice_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_notice_type().data(), static_cast<int>(this->_internal_notice_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseNoticeEvent.notice_type");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_notice_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:onebot.BaseNoticeEvent)
+  return target;
+}
+
+size_t BaseNoticeEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:onebot.BaseNoticeEvent)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_post_type());
+  }
+
+  // string notice_type = 4;
+  if (this->notice_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_notice_type());
+  }
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_time());
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_self_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BaseNoticeEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:onebot.BaseNoticeEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BaseNoticeEvent* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BaseNoticeEvent>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:onebot.BaseNoticeEvent)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:onebot.BaseNoticeEvent)
+    MergeFrom(*source);
+  }
+}
+
+void BaseNoticeEvent::MergeFrom(const BaseNoticeEvent& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:onebot.BaseNoticeEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.post_type().size() > 0) {
+    _internal_set_post_type(from._internal_post_type());
+  }
+  if (from.notice_type().size() > 0) {
+    _internal_set_notice_type(from._internal_notice_type());
+  }
+  if (from.time() != 0) {
+    _internal_set_time(from._internal_time());
+  }
+  if (from.self_id() != 0) {
+    _internal_set_self_id(from._internal_self_id());
+  }
+}
+
+void BaseNoticeEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:onebot.BaseNoticeEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BaseNoticeEvent::CopyFrom(const BaseNoticeEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onebot.BaseNoticeEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BaseNoticeEvent::IsInitialized() const {
+  return true;
+}
+
+void BaseNoticeEvent::InternalSwap(BaseNoticeEvent* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  post_type_.Swap(&other->post_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  notice_type_.Swap(&other->notice_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BaseNoticeEvent, self_id_)
+      + sizeof(BaseNoticeEvent::self_id_)
+      - PROTOBUF_FIELD_OFFSET(BaseNoticeEvent, time_)>(
+          reinterpret_cast<char*>(&time_),
+          reinterpret_cast<char*>(&other->time_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BaseNoticeEvent::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void BaseRequestEvent::InitAsDefaultInstance() {
+}
+class BaseRequestEvent::_Internal {
+ public:
+};
+
+BaseRequestEvent::BaseRequestEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:onebot.BaseRequestEvent)
+}
+BaseRequestEvent::BaseRequestEvent(const BaseRequestEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_post_type().empty()) {
+    post_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_post_type(),
+      GetArena());
+  }
+  notice_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_notice_type().empty()) {
+    notice_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_notice_type(),
+      GetArena());
+  }
+  ::memcpy(&time_, &from.time_,
+    static_cast<size_t>(reinterpret_cast<char*>(&self_id_) -
+    reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  // @@protoc_insertion_point(copy_constructor:onebot.BaseRequestEvent)
+}
+
+void BaseRequestEvent::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_BaseRequestEvent_event_2eproto.base);
+  post_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  notice_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+}
+
+BaseRequestEvent::~BaseRequestEvent() {
+  // @@protoc_insertion_point(destructor:onebot.BaseRequestEvent)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void BaseRequestEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  post_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  notice_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void BaseRequestEvent::ArenaDtor(void* object) {
+  BaseRequestEvent* _this = reinterpret_cast< BaseRequestEvent* >(object);
+  (void)_this;
+}
+void BaseRequestEvent::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void BaseRequestEvent::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const BaseRequestEvent& BaseRequestEvent::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BaseRequestEvent_event_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void BaseRequestEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:onebot.BaseRequestEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  post_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  notice_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&time_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&self_id_) -
+      reinterpret_cast<char*>(&time_)) + sizeof(self_id_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BaseRequestEvent::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int64 time = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          time_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int64 self_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          self_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string post_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_post_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseRequestEvent.post_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string notice_type = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_notice_type();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "onebot.BaseRequestEvent.notice_type"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* BaseRequestEvent::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:onebot.BaseRequestEvent)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_time(), target);
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_self_id(), target);
+  }
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_post_type().data(), static_cast<int>(this->_internal_post_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseRequestEvent.post_type");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_post_type(), target);
+  }
+
+  // string notice_type = 4;
+  if (this->notice_type().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_notice_type().data(), static_cast<int>(this->_internal_notice_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "onebot.BaseRequestEvent.notice_type");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_notice_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:onebot.BaseRequestEvent)
+  return target;
+}
+
+size_t BaseRequestEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:onebot.BaseRequestEvent)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string post_type = 3;
+  if (this->post_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_post_type());
+  }
+
+  // string notice_type = 4;
+  if (this->notice_type().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_notice_type());
+  }
+
+  // int64 time = 1;
+  if (this->time() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_time());
+  }
+
+  // int64 self_id = 2;
+  if (this->self_id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_self_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void BaseRequestEvent::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:onebot.BaseRequestEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  const BaseRequestEvent* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BaseRequestEvent>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:onebot.BaseRequestEvent)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:onebot.BaseRequestEvent)
+    MergeFrom(*source);
+  }
+}
+
+void BaseRequestEvent::MergeFrom(const BaseRequestEvent& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:onebot.BaseRequestEvent)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.post_type().size() > 0) {
+    _internal_set_post_type(from._internal_post_type());
+  }
+  if (from.notice_type().size() > 0) {
+    _internal_set_notice_type(from._internal_notice_type());
+  }
+  if (from.time() != 0) {
+    _internal_set_time(from._internal_time());
+  }
+  if (from.self_id() != 0) {
+    _internal_set_self_id(from._internal_self_id());
+  }
+}
+
+void BaseRequestEvent::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:onebot.BaseRequestEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void BaseRequestEvent::CopyFrom(const BaseRequestEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:onebot.BaseRequestEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BaseRequestEvent::IsInitialized() const {
+  return true;
+}
+
+void BaseRequestEvent::InternalSwap(BaseRequestEvent* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  post_type_.Swap(&other->post_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  notice_type_.Swap(&other->notice_type_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BaseRequestEvent, self_id_)
+      + sizeof(BaseRequestEvent::self_id_)
+      - PROTOBUF_FIELD_OFFSET(BaseRequestEvent, time_)>(
+          reinterpret_cast<char*>(&time_),
+          reinterpret_cast<char*>(&other->time_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BaseRequestEvent::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
 
 // ===================================================================
 
@@ -7215,6 +8537,18 @@ void GroupRequestEvent::InternalSwap(GroupRequestEvent* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace onebot
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::onebot::BaseEvent* Arena::CreateMaybeMessage< ::onebot::BaseEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::onebot::BaseEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::onebot::BaseMessageEvent* Arena::CreateMaybeMessage< ::onebot::BaseMessageEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::onebot::BaseMessageEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::onebot::BaseNoticeEvent* Arena::CreateMaybeMessage< ::onebot::BaseNoticeEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::onebot::BaseNoticeEvent >(arena);
+}
+template<> PROTOBUF_NOINLINE ::onebot::BaseRequestEvent* Arena::CreateMaybeMessage< ::onebot::BaseRequestEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::onebot::BaseRequestEvent >(arena);
+}
 template<> PROTOBUF_NOINLINE ::onebot::PrivateMessageEvent_Sender* Arena::CreateMaybeMessage< ::onebot::PrivateMessageEvent_Sender >(Arena* arena) {
   return Arena::CreateMessageInternal< ::onebot::PrivateMessageEvent_Sender >(arena);
 }

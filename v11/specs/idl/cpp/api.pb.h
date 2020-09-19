@@ -51,7 +51,7 @@ struct TableStruct_api_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[82]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[84]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -59,6 +59,12 @@ struct TableStruct_api_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_api_2eproto;
 namespace onebot {
+class BaseApiReq;
+class BaseApiReqDefaultTypeInternal;
+extern BaseApiReqDefaultTypeInternal _BaseApiReq_default_instance_;
+class BaseApiResp;
+class BaseApiRespDefaultTypeInternal;
+extern BaseApiRespDefaultTypeInternal _BaseApiResp_default_instance_;
 class CanSendImageReq;
 class CanSendImageReqDefaultTypeInternal;
 extern CanSendImageReqDefaultTypeInternal _CanSendImageReq_default_instance_;
@@ -307,6 +313,8 @@ class SetRestartRespDefaultTypeInternal;
 extern SetRestartRespDefaultTypeInternal _SetRestartResp_default_instance_;
 }  // namespace onebot
 PROTOBUF_NAMESPACE_OPEN
+template<> ::onebot::BaseApiReq* Arena::CreateMaybeMessage<::onebot::BaseApiReq>(Arena*);
+template<> ::onebot::BaseApiResp* Arena::CreateMaybeMessage<::onebot::BaseApiResp>(Arena*);
 template<> ::onebot::CanSendImageReq* Arena::CreateMaybeMessage<::onebot::CanSendImageReq>(Arena*);
 template<> ::onebot::CanSendImageResp* Arena::CreateMaybeMessage<::onebot::CanSendImageResp>(Arena*);
 template<> ::onebot::CanSendRecordReq* Arena::CreateMaybeMessage<::onebot::CanSendRecordReq>(Arena*);
@@ -394,6 +402,330 @@ namespace onebot {
 
 // ===================================================================
 
+class BaseApiReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:onebot.BaseApiReq) */ {
+ public:
+  inline BaseApiReq() : BaseApiReq(nullptr) {};
+  virtual ~BaseApiReq();
+
+  BaseApiReq(const BaseApiReq& from);
+  BaseApiReq(BaseApiReq&& from) noexcept
+    : BaseApiReq() {
+    *this = ::std::move(from);
+  }
+
+  inline BaseApiReq& operator=(const BaseApiReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BaseApiReq& operator=(BaseApiReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BaseApiReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BaseApiReq* internal_default_instance() {
+    return reinterpret_cast<const BaseApiReq*>(
+               &_BaseApiReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(BaseApiReq& a, BaseApiReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BaseApiReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(BaseApiReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BaseApiReq* New() const final {
+    return CreateMaybeMessage<BaseApiReq>(nullptr);
+  }
+
+  BaseApiReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BaseApiReq>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BaseApiReq& from);
+  void MergeFrom(const BaseApiReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BaseApiReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "onebot.BaseApiReq";
+  }
+  protected:
+  explicit BaseApiReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_api_2eproto);
+    return ::descriptor_table_api_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
+  // @@protoc_insertion_point(class_scope:onebot.BaseApiReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_api_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BaseApiResp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:onebot.BaseApiResp) */ {
+ public:
+  inline BaseApiResp() : BaseApiResp(nullptr) {};
+  virtual ~BaseApiResp();
+
+  BaseApiResp(const BaseApiResp& from);
+  BaseApiResp(BaseApiResp&& from) noexcept
+    : BaseApiResp() {
+    *this = ::std::move(from);
+  }
+
+  inline BaseApiResp& operator=(const BaseApiResp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BaseApiResp& operator=(BaseApiResp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BaseApiResp& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BaseApiResp* internal_default_instance() {
+    return reinterpret_cast<const BaseApiResp*>(
+               &_BaseApiResp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(BaseApiResp& a, BaseApiResp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BaseApiResp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(BaseApiResp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BaseApiResp* New() const final {
+    return CreateMaybeMessage<BaseApiResp>(nullptr);
+  }
+
+  BaseApiResp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BaseApiResp>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BaseApiResp& from);
+  void MergeFrom(const BaseApiResp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BaseApiResp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "onebot.BaseApiResp";
+  }
+  protected:
+  explicit BaseApiResp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_api_2eproto);
+    return ::descriptor_table_api_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
+  // @@protoc_insertion_point(class_scope:onebot.BaseApiResp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_api_2eproto;
+};
+// -------------------------------------------------------------------
+
 class SendPrivateMsgReq PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:onebot.SendPrivateMsgReq) */ {
  public:
@@ -436,7 +768,7 @@ class SendPrivateMsgReq PROTOBUF_FINAL :
                &_SendPrivateMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    2;
 
   friend void swap(SendPrivateMsgReq& a, SendPrivateMsgReq& b) {
     a.Swap(&b);
@@ -507,10 +839,44 @@ class SendPrivateMsgReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageFieldNumber = 2,
     kUserIdFieldNumber = 1,
     kAutoEscapeFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // .onebot.Message message = 2;
   bool has_message() const;
   private:
@@ -554,6 +920,8 @@ class SendPrivateMsgReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::Message* message_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   bool auto_escape_;
@@ -604,7 +972,7 @@ class SendPrivateMsgResp PROTOBUF_FINAL :
                &_SendPrivateMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    3;
 
   friend void swap(SendPrivateMsgResp& a, SendPrivateMsgResp& b) {
     a.Swap(&b);
@@ -675,8 +1043,42 @@ class SendPrivateMsgResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 message_id = 1;
   void clear_message_id();
   ::PROTOBUF_NAMESPACE_ID::int32 message_id() const;
@@ -693,6 +1095,8 @@ class SendPrivateMsgResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 message_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -741,7 +1145,7 @@ class SendGroupMsgReq PROTOBUF_FINAL :
                &_SendGroupMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    4;
 
   friend void swap(SendGroupMsgReq& a, SendGroupMsgReq& b) {
     a.Swap(&b);
@@ -812,10 +1216,44 @@ class SendGroupMsgReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageFieldNumber = 2,
     kGroupIdFieldNumber = 1,
     kAutoEscapeFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // .onebot.Message message = 2;
   bool has_message() const;
   private:
@@ -859,6 +1297,8 @@ class SendGroupMsgReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::Message* message_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   bool auto_escape_;
@@ -909,7 +1349,7 @@ class SendGroupMsgResp PROTOBUF_FINAL :
                &_SendGroupMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    5;
 
   friend void swap(SendGroupMsgResp& a, SendGroupMsgResp& b) {
     a.Swap(&b);
@@ -980,8 +1420,42 @@ class SendGroupMsgResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 message_id = 1;
   void clear_message_id();
   ::PROTOBUF_NAMESPACE_ID::int32 message_id() const;
@@ -998,6 +1472,8 @@ class SendGroupMsgResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 message_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -1046,7 +1522,7 @@ class SendMsgReq PROTOBUF_FINAL :
                &_SendMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    6;
 
   friend void swap(SendMsgReq& a, SendMsgReq& b) {
     a.Swap(&b);
@@ -1118,6 +1594,8 @@ class SendMsgReq PROTOBUF_FINAL :
 
   enum : int {
     kMessageTypeFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageFieldNumber = 4,
     kUserIdFieldNumber = 2,
     kGroupIdFieldNumber = 3,
@@ -1137,6 +1615,38 @@ class SendMsgReq PROTOBUF_FINAL :
   const std::string& _internal_message_type() const;
   void _internal_set_message_type(const std::string& value);
   std::string* _internal_mutable_message_type();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // .onebot.Message message = 4;
@@ -1192,6 +1702,8 @@ class SendMsgReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::Message* message_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
@@ -1243,7 +1755,7 @@ class SendMsgResp PROTOBUF_FINAL :
                &_SendMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    7;
 
   friend void swap(SendMsgResp& a, SendMsgResp& b) {
     a.Swap(&b);
@@ -1314,8 +1826,42 @@ class SendMsgResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 message_id = 1;
   void clear_message_id();
   ::PROTOBUF_NAMESPACE_ID::int32 message_id() const;
@@ -1332,6 +1878,8 @@ class SendMsgResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 message_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -1380,7 +1928,7 @@ class DeleteMsgReq PROTOBUF_FINAL :
                &_DeleteMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    8;
 
   friend void swap(DeleteMsgReq& a, DeleteMsgReq& b) {
     a.Swap(&b);
@@ -1451,8 +1999,42 @@ class DeleteMsgReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 message_id = 1;
   void clear_message_id();
   ::PROTOBUF_NAMESPACE_ID::int32 message_id() const;
@@ -1469,6 +2051,8 @@ class DeleteMsgReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 message_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -1517,7 +2101,7 @@ class DeleteMsgResp PROTOBUF_FINAL :
                &_DeleteMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    9;
 
   friend void swap(DeleteMsgResp& a, DeleteMsgResp& b) {
     a.Swap(&b);
@@ -1587,6 +2171,42 @@ class DeleteMsgResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.DeleteMsgResp)
  private:
   class _Internal;
@@ -1594,6 +2214,8 @@ class DeleteMsgResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -1641,7 +2263,7 @@ class GetMsgReq PROTOBUF_FINAL :
                &_GetMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    10;
 
   friend void swap(GetMsgReq& a, GetMsgReq& b) {
     a.Swap(&b);
@@ -1712,8 +2334,42 @@ class GetMsgReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kMessageIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 message_id = 1;
   void clear_message_id();
   ::PROTOBUF_NAMESPACE_ID::int32 message_id() const;
@@ -1730,6 +2386,8 @@ class GetMsgReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 message_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -1778,7 +2436,7 @@ class GetMsgResp_Sender PROTOBUF_FINAL :
                &_GetMsgResp_Sender_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    11;
 
   friend void swap(GetMsgResp_Sender& a, GetMsgResp_Sender& b) {
     a.Swap(&b);
@@ -2052,7 +2710,7 @@ class GetMsgResp PROTOBUF_FINAL :
                &_GetMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    12;
 
   friend void swap(GetMsgResp& a, GetMsgResp& b) {
     a.Swap(&b);
@@ -2126,6 +2784,8 @@ class GetMsgResp PROTOBUF_FINAL :
 
   enum : int {
     kMessageTypeFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kSenderFieldNumber = 5,
     kMessageFieldNumber = 6,
     kTimeFieldNumber = 1,
@@ -2146,6 +2806,38 @@ class GetMsgResp PROTOBUF_FINAL :
   const std::string& _internal_message_type() const;
   void _internal_set_message_type(const std::string& value);
   std::string* _internal_mutable_message_type();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // .onebot.GetMsgResp.Sender sender = 5;
@@ -2219,6 +2911,8 @@ class GetMsgResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::GetMsgResp_Sender* sender_;
   ::onebot::Message* message_;
   ::PROTOBUF_NAMESPACE_ID::int32 time_;
@@ -2271,7 +2965,7 @@ class GetForwardMsgReq PROTOBUF_FINAL :
                &_GetForwardMsgReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    13;
 
   friend void swap(GetForwardMsgReq& a, GetForwardMsgReq& b) {
     a.Swap(&b);
@@ -2343,6 +3037,8 @@ class GetForwardMsgReq PROTOBUF_FINAL :
 
   enum : int {
     kIdFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string id = 1;
   void clear_id();
@@ -2360,6 +3056,38 @@ class GetForwardMsgReq PROTOBUF_FINAL :
   std::string* _internal_mutable_id();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetForwardMsgReq)
  private:
   class _Internal;
@@ -2368,6 +3096,8 @@ class GetForwardMsgReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -2415,7 +3145,7 @@ class GetForwardMsgResp PROTOBUF_FINAL :
                &_GetForwardMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    14;
 
   friend void swap(GetForwardMsgResp& a, GetForwardMsgResp& b) {
     a.Swap(&b);
@@ -2485,6 +3215,42 @@ class GetForwardMsgResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetForwardMsgResp)
  private:
   class _Internal;
@@ -2492,6 +3258,8 @@ class GetForwardMsgResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -2539,7 +3307,7 @@ class SendLikeReq PROTOBUF_FINAL :
                &_SendLikeReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    15;
 
   friend void swap(SendLikeReq& a, SendLikeReq& b) {
     a.Swap(&b);
@@ -2610,9 +3378,43 @@ class SendLikeReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kUserIdFieldNumber = 1,
     kTimesFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 user_id = 1;
   void clear_user_id();
   ::PROTOBUF_NAMESPACE_ID::int64 user_id() const;
@@ -2638,6 +3440,8 @@ class SendLikeReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 times_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2687,7 +3491,7 @@ class SendListResp PROTOBUF_FINAL :
                &_SendListResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    16;
 
   friend void swap(SendListResp& a, SendListResp& b) {
     a.Swap(&b);
@@ -2757,6 +3561,42 @@ class SendListResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SendListResp)
  private:
   class _Internal;
@@ -2764,6 +3604,8 @@ class SendListResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -2811,7 +3653,7 @@ class SetGroupKickReq PROTOBUF_FINAL :
                &_SetGroupKickReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    17;
 
   friend void swap(SetGroupKickReq& a, SetGroupKickReq& b) {
     a.Swap(&b);
@@ -2882,10 +3724,44 @@ class SetGroupKickReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kRejectAddRequestFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -2920,6 +3796,8 @@ class SetGroupKickReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   bool reject_add_request_;
@@ -2970,7 +3848,7 @@ class SetGroupKickResp PROTOBUF_FINAL :
                &_SetGroupKickResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    18;
 
   friend void swap(SetGroupKickResp& a, SetGroupKickResp& b) {
     a.Swap(&b);
@@ -3040,6 +3918,42 @@ class SetGroupKickResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupKickResp)
  private:
   class _Internal;
@@ -3047,6 +3961,8 @@ class SetGroupKickResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -3094,7 +4010,7 @@ class SetGroupBanReq PROTOBUF_FINAL :
                &_SetGroupBanReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    19;
 
   friend void swap(SetGroupBanReq& a, SetGroupBanReq& b) {
     a.Swap(&b);
@@ -3165,10 +4081,44 @@ class SetGroupBanReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kDurationFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -3203,6 +4153,8 @@ class SetGroupBanReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 duration_;
@@ -3253,7 +4205,7 @@ class SetGroupBanResp PROTOBUF_FINAL :
                &_SetGroupBanResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    20;
 
   friend void swap(SetGroupBanResp& a, SetGroupBanResp& b) {
     a.Swap(&b);
@@ -3323,6 +4275,42 @@ class SetGroupBanResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupBanResp)
  private:
   class _Internal;
@@ -3330,6 +4318,8 @@ class SetGroupBanResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -3377,7 +4367,7 @@ class SetGroupAnonymousBanReq_Anonymous PROTOBUF_FINAL :
                &_SetGroupAnonymousBanReq_Anonymous_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    21;
 
   friend void swap(SetGroupAnonymousBanReq_Anonymous& a, SetGroupAnonymousBanReq_Anonymous& b) {
     a.Swap(&b);
@@ -3550,7 +4540,7 @@ class SetGroupAnonymousBanReq PROTOBUF_FINAL :
                &_SetGroupAnonymousBanReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    22;
 
   friend void swap(SetGroupAnonymousBanReq& a, SetGroupAnonymousBanReq& b) {
     a.Swap(&b);
@@ -3625,6 +4615,8 @@ class SetGroupAnonymousBanReq PROTOBUF_FINAL :
   enum : int {
     kAnonymousFlagFieldNumber = 3,
     kFlagFieldNumber = 4,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kAnonymousFieldNumber = 2,
     kGroupIdFieldNumber = 1,
     kDurationFieldNumber = 5,
@@ -3659,6 +4651,38 @@ class SetGroupAnonymousBanReq PROTOBUF_FINAL :
   const std::string& _internal_flag() const;
   void _internal_set_flag(const std::string& value);
   std::string* _internal_mutable_flag();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // .onebot.SetGroupAnonymousBanReq.Anonymous anonymous = 2;
@@ -3706,6 +4730,8 @@ class SetGroupAnonymousBanReq PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr anonymous_flag_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr flag_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::SetGroupAnonymousBanReq_Anonymous* anonymous_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 duration_;
@@ -3756,7 +4782,7 @@ class SetGroupAnonymousBanResp PROTOBUF_FINAL :
                &_SetGroupAnonymousBanResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    23;
 
   friend void swap(SetGroupAnonymousBanResp& a, SetGroupAnonymousBanResp& b) {
     a.Swap(&b);
@@ -3826,6 +4852,42 @@ class SetGroupAnonymousBanResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupAnonymousBanResp)
  private:
   class _Internal;
@@ -3833,6 +4895,8 @@ class SetGroupAnonymousBanResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -3880,7 +4944,7 @@ class SetGroupWholeBanReq PROTOBUF_FINAL :
                &_SetGroupWholeBanReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    24;
 
   friend void swap(SetGroupWholeBanReq& a, SetGroupWholeBanReq& b) {
     a.Swap(&b);
@@ -3951,9 +5015,43 @@ class SetGroupWholeBanReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kEnableFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -3979,6 +5077,8 @@ class SetGroupWholeBanReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   bool enable_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4028,7 +5128,7 @@ class SetGroupWholeBanResp PROTOBUF_FINAL :
                &_SetGroupWholeBanResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    25;
 
   friend void swap(SetGroupWholeBanResp& a, SetGroupWholeBanResp& b) {
     a.Swap(&b);
@@ -4098,6 +5198,42 @@ class SetGroupWholeBanResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupWholeBanResp)
  private:
   class _Internal;
@@ -4105,6 +5241,8 @@ class SetGroupWholeBanResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -4152,7 +5290,7 @@ class SetGroupAdminReq PROTOBUF_FINAL :
                &_SetGroupAdminReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    26;
 
   friend void swap(SetGroupAdminReq& a, SetGroupAdminReq& b) {
     a.Swap(&b);
@@ -4223,10 +5361,44 @@ class SetGroupAdminReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kEnableFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -4261,6 +5433,8 @@ class SetGroupAdminReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   bool enable_;
@@ -4311,7 +5485,7 @@ class SetGroupAdminResp PROTOBUF_FINAL :
                &_SetGroupAdminResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    27;
 
   friend void swap(SetGroupAdminResp& a, SetGroupAdminResp& b) {
     a.Swap(&b);
@@ -4381,6 +5555,42 @@ class SetGroupAdminResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupAdminResp)
  private:
   class _Internal;
@@ -4388,6 +5598,8 @@ class SetGroupAdminResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -4435,7 +5647,7 @@ class SetGroupAnonymousReq PROTOBUF_FINAL :
                &_SetGroupAnonymousReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    28;
 
   friend void swap(SetGroupAnonymousReq& a, SetGroupAnonymousReq& b) {
     a.Swap(&b);
@@ -4506,9 +5718,43 @@ class SetGroupAnonymousReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kEnableFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -4534,6 +5780,8 @@ class SetGroupAnonymousReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   bool enable_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4583,7 +5831,7 @@ class SetGroupAnonymousResp PROTOBUF_FINAL :
                &_SetGroupAnonymousResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    29;
 
   friend void swap(SetGroupAnonymousResp& a, SetGroupAnonymousResp& b) {
     a.Swap(&b);
@@ -4653,6 +5901,42 @@ class SetGroupAnonymousResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupAnonymousResp)
  private:
   class _Internal;
@@ -4660,6 +5944,8 @@ class SetGroupAnonymousResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -4707,7 +5993,7 @@ class SetGroupNameReq PROTOBUF_FINAL :
                &_SetGroupNameReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    30;
 
   friend void swap(SetGroupNameReq& a, SetGroupNameReq& b) {
     a.Swap(&b);
@@ -4779,6 +6065,8 @@ class SetGroupNameReq PROTOBUF_FINAL :
 
   enum : int {
     kGroupNameFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
   };
   // string group_name = 2;
@@ -4795,6 +6083,38 @@ class SetGroupNameReq PROTOBUF_FINAL :
   const std::string& _internal_group_name() const;
   void _internal_set_group_name(const std::string& value);
   std::string* _internal_mutable_group_name();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int64 group_id = 1;
@@ -4814,6 +6134,8 @@ class SetGroupNameReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -4862,7 +6184,7 @@ class SetGroupNameResp PROTOBUF_FINAL :
                &_SetGroupNameResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    31;
 
   friend void swap(SetGroupNameResp& a, SetGroupNameResp& b) {
     a.Swap(&b);
@@ -4932,6 +6254,42 @@ class SetGroupNameResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupNameResp)
  private:
   class _Internal;
@@ -4939,6 +6297,8 @@ class SetGroupNameResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -4986,7 +6346,7 @@ class SetGroupLeaveReq PROTOBUF_FINAL :
                &_SetGroupLeaveReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    32;
 
   friend void swap(SetGroupLeaveReq& a, SetGroupLeaveReq& b) {
     a.Swap(&b);
@@ -5057,9 +6417,43 @@ class SetGroupLeaveReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kIsDismissFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -5085,6 +6479,8 @@ class SetGroupLeaveReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   bool is_dismiss_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -5134,7 +6530,7 @@ class SetGroupLeaveResp PROTOBUF_FINAL :
                &_SetGroupLeaveResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    33;
 
   friend void swap(SetGroupLeaveResp& a, SetGroupLeaveResp& b) {
     a.Swap(&b);
@@ -5204,6 +6600,42 @@ class SetGroupLeaveResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupLeaveResp)
  private:
   class _Internal;
@@ -5211,6 +6643,8 @@ class SetGroupLeaveResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -5258,7 +6692,7 @@ class SetGroupSpecialTitleReq PROTOBUF_FINAL :
                &_SetGroupSpecialTitleReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    34;
 
   friend void swap(SetGroupSpecialTitleReq& a, SetGroupSpecialTitleReq& b) {
     a.Swap(&b);
@@ -5330,6 +6764,8 @@ class SetGroupSpecialTitleReq PROTOBUF_FINAL :
 
   enum : int {
     kSpecialTitleFieldNumber = 3,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kDurationFieldNumber = 4,
@@ -5348,6 +6784,38 @@ class SetGroupSpecialTitleReq PROTOBUF_FINAL :
   const std::string& _internal_special_title() const;
   void _internal_set_special_title(const std::string& value);
   std::string* _internal_mutable_special_title();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int64 group_id = 1;
@@ -5385,6 +6853,8 @@ class SetGroupSpecialTitleReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr special_title_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 duration_;
@@ -5435,7 +6905,7 @@ class SetGroupSpecialTitleResp PROTOBUF_FINAL :
                &_SetGroupSpecialTitleResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    33;
+    35;
 
   friend void swap(SetGroupSpecialTitleResp& a, SetGroupSpecialTitleResp& b) {
     a.Swap(&b);
@@ -5505,6 +6975,42 @@ class SetGroupSpecialTitleResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupSpecialTitleResp)
  private:
   class _Internal;
@@ -5512,6 +7018,8 @@ class SetGroupSpecialTitleResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -5559,7 +7067,7 @@ class SetFriendAddRequestReq PROTOBUF_FINAL :
                &_SetFriendAddRequestReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    34;
+    36;
 
   friend void swap(SetFriendAddRequestReq& a, SetFriendAddRequestReq& b) {
     a.Swap(&b);
@@ -5632,6 +7140,8 @@ class SetFriendAddRequestReq PROTOBUF_FINAL :
   enum : int {
     kFlagFieldNumber = 1,
     kRemarkFieldNumber = 3,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kApproveFieldNumber = 2,
   };
   // string flag = 1;
@@ -5666,6 +7176,38 @@ class SetFriendAddRequestReq PROTOBUF_FINAL :
   std::string* _internal_mutable_remark();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // bool approve = 2;
   void clear_approve();
   bool approve() const;
@@ -5684,6 +7226,8 @@ class SetFriendAddRequestReq PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr flag_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr remark_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   bool approve_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -5732,7 +7276,7 @@ class SetFriendAddRequestResp PROTOBUF_FINAL :
                &_SetFriendAddRequestResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    37;
 
   friend void swap(SetFriendAddRequestResp& a, SetFriendAddRequestResp& b) {
     a.Swap(&b);
@@ -5802,6 +7346,42 @@ class SetFriendAddRequestResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetFriendAddRequestResp)
  private:
   class _Internal;
@@ -5809,6 +7389,8 @@ class SetFriendAddRequestResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -5856,7 +7438,7 @@ class SetGroupAddRequestReq PROTOBUF_FINAL :
                &_SetGroupAddRequestReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    36;
+    38;
 
   friend void swap(SetGroupAddRequestReq& a, SetGroupAddRequestReq& b) {
     a.Swap(&b);
@@ -5931,6 +7513,8 @@ class SetGroupAddRequestReq PROTOBUF_FINAL :
     kSubTypeFieldNumber = 2,
     kTypeFieldNumber = 3,
     kReasonFieldNumber = 5,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kApproveFieldNumber = 4,
   };
   // string flag = 1;
@@ -5997,6 +7581,38 @@ class SetGroupAddRequestReq PROTOBUF_FINAL :
   std::string* _internal_mutable_reason();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // bool approve = 4;
   void clear_approve();
   bool approve() const;
@@ -6017,6 +7633,8 @@ class SetGroupAddRequestReq PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sub_type_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr type_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reason_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   bool approve_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -6065,7 +7683,7 @@ class SetGroupAddRequestResp PROTOBUF_FINAL :
                &_SetGroupAddRequestResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    39;
 
   friend void swap(SetGroupAddRequestResp& a, SetGroupAddRequestResp& b) {
     a.Swap(&b);
@@ -6135,6 +7753,42 @@ class SetGroupAddRequestResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetGroupAddRequestResp)
  private:
   class _Internal;
@@ -6142,6 +7796,8 @@ class SetGroupAddRequestResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -6189,7 +7845,7 @@ class GetLoginInfoReq PROTOBUF_FINAL :
                &_GetLoginInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    40;
 
   friend void swap(GetLoginInfoReq& a, GetLoginInfoReq& b) {
     a.Swap(&b);
@@ -6259,6 +7915,42 @@ class GetLoginInfoReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetLoginInfoReq)
  private:
   class _Internal;
@@ -6266,6 +7958,8 @@ class GetLoginInfoReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -6313,7 +8007,7 @@ class GetLoginInfoResp PROTOBUF_FINAL :
                &_GetLoginInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    41;
 
   friend void swap(GetLoginInfoResp& a, GetLoginInfoResp& b) {
     a.Swap(&b);
@@ -6385,6 +8079,8 @@ class GetLoginInfoResp PROTOBUF_FINAL :
 
   enum : int {
     kNicknameFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kUserIdFieldNumber = 1,
   };
   // string nickname = 2;
@@ -6401,6 +8097,38 @@ class GetLoginInfoResp PROTOBUF_FINAL :
   const std::string& _internal_nickname() const;
   void _internal_set_nickname(const std::string& value);
   std::string* _internal_mutable_nickname();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int64 user_id = 1;
@@ -6420,6 +8148,8 @@ class GetLoginInfoResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nickname_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -6468,7 +8198,7 @@ class GetStrangerInfoReq PROTOBUF_FINAL :
                &_GetStrangerInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    42;
 
   friend void swap(GetStrangerInfoReq& a, GetStrangerInfoReq& b) {
     a.Swap(&b);
@@ -6539,9 +8269,43 @@ class GetStrangerInfoReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kUserIdFieldNumber = 1,
     kNoCacheFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 user_id = 1;
   void clear_user_id();
   ::PROTOBUF_NAMESPACE_ID::int64 user_id() const;
@@ -6567,6 +8331,8 @@ class GetStrangerInfoReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   bool no_cache_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6616,7 +8382,7 @@ class GetStrangerInfoResp PROTOBUF_FINAL :
                &_GetStrangerInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    43;
 
   friend void swap(GetStrangerInfoResp& a, GetStrangerInfoResp& b) {
     a.Swap(&b);
@@ -6689,6 +8455,8 @@ class GetStrangerInfoResp PROTOBUF_FINAL :
   enum : int {
     kNicknameFieldNumber = 2,
     kSexFieldNumber = 3,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kUserIdFieldNumber = 1,
     kAgeFieldNumber = 4,
   };
@@ -6724,6 +8492,38 @@ class GetStrangerInfoResp PROTOBUF_FINAL :
   std::string* _internal_mutable_sex();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 user_id = 1;
   void clear_user_id();
   ::PROTOBUF_NAMESPACE_ID::int64 user_id() const;
@@ -6751,6 +8551,8 @@ class GetStrangerInfoResp PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr nickname_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sex_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 age_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6800,7 +8602,7 @@ class GetFriendListReq PROTOBUF_FINAL :
                &_GetFriendListReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    44;
 
   friend void swap(GetFriendListReq& a, GetFriendListReq& b) {
     a.Swap(&b);
@@ -6870,6 +8672,42 @@ class GetFriendListReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetFriendListReq)
  private:
   class _Internal;
@@ -6877,6 +8715,8 @@ class GetFriendListReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -6924,7 +8764,7 @@ class GetFriendListResp_Friend PROTOBUF_FINAL :
                &_GetFriendListResp_Friend_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    45;
 
   friend void swap(GetFriendListResp_Friend& a, GetFriendListResp_Friend& b) {
     a.Swap(&b);
@@ -7097,7 +8937,7 @@ class GetFriendListResp PROTOBUF_FINAL :
                &_GetFriendListResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    46;
 
   friend void swap(GetFriendListResp& a, GetFriendListResp& b) {
     a.Swap(&b);
@@ -7171,6 +9011,8 @@ class GetFriendListResp PROTOBUF_FINAL :
 
   enum : int {
     kFriendListFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // repeated .onebot.GetFriendListResp.Friend friend_list = 1;
   int friend_list_size() const;
@@ -7190,6 +9032,38 @@ class GetFriendListResp PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetFriendListResp_Friend >&
       friend_list() const;
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetFriendListResp)
  private:
   class _Internal;
@@ -7198,6 +9072,8 @@ class GetFriendListResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetFriendListResp_Friend > friend_list_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -7245,7 +9121,7 @@ class GetGroupInfoReq PROTOBUF_FINAL :
                &_GetGroupInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    47;
 
   friend void swap(GetGroupInfoReq& a, GetGroupInfoReq& b) {
     a.Swap(&b);
@@ -7316,9 +9192,43 @@ class GetGroupInfoReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kNoCacheFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -7344,6 +9254,8 @@ class GetGroupInfoReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   bool no_cache_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -7393,7 +9305,7 @@ class GetGroupInfoResp PROTOBUF_FINAL :
                &_GetGroupInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    48;
 
   friend void swap(GetGroupInfoResp& a, GetGroupInfoResp& b) {
     a.Swap(&b);
@@ -7465,6 +9377,8 @@ class GetGroupInfoResp PROTOBUF_FINAL :
 
   enum : int {
     kGroupNameFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kMemberCountFieldNumber = 3,
     kMaxMemberCountFieldNumber = 4,
@@ -7483,6 +9397,38 @@ class GetGroupInfoResp PROTOBUF_FINAL :
   const std::string& _internal_group_name() const;
   void _internal_set_group_name(const std::string& value);
   std::string* _internal_mutable_group_name();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int64 group_id = 1;
@@ -7520,6 +9466,8 @@ class GetGroupInfoResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr group_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 member_count_;
   ::PROTOBUF_NAMESPACE_ID::int32 max_member_count_;
@@ -7570,7 +9518,7 @@ class GetGroupListReq PROTOBUF_FINAL :
                &_GetGroupListReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    49;
 
   friend void swap(GetGroupListReq& a, GetGroupListReq& b) {
     a.Swap(&b);
@@ -7640,6 +9588,42 @@ class GetGroupListReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetGroupListReq)
  private:
   class _Internal;
@@ -7647,6 +9631,8 @@ class GetGroupListReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -7694,7 +9680,7 @@ class GetGroupListResp_Group PROTOBUF_FINAL :
                &_GetGroupListResp_Group_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    50;
 
   friend void swap(GetGroupListResp_Group& a, GetGroupListResp_Group& b) {
     a.Swap(&b);
@@ -7871,7 +9857,7 @@ class GetGroupListResp PROTOBUF_FINAL :
                &_GetGroupListResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    51;
 
   friend void swap(GetGroupListResp& a, GetGroupListResp& b) {
     a.Swap(&b);
@@ -7945,6 +9931,8 @@ class GetGroupListResp PROTOBUF_FINAL :
 
   enum : int {
     kGroupListFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // repeated .onebot.GetGroupListResp.Group group_list = 1;
   int group_list_size() const;
@@ -7964,6 +9952,38 @@ class GetGroupListResp PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupListResp_Group >&
       group_list() const;
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetGroupListResp)
  private:
   class _Internal;
@@ -7972,6 +9992,8 @@ class GetGroupListResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupListResp_Group > group_list_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -8019,7 +10041,7 @@ class GetGroupMemberInfoReq PROTOBUF_FINAL :
                &_GetGroupMemberInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    52;
 
   friend void swap(GetGroupMemberInfoReq& a, GetGroupMemberInfoReq& b) {
     a.Swap(&b);
@@ -8090,10 +10112,44 @@ class GetGroupMemberInfoReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kNoCacheFieldNumber = 3,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -8128,6 +10184,8 @@ class GetGroupMemberInfoReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   bool no_cache_;
@@ -8178,7 +10236,7 @@ class GetGroupMemberInfoResp PROTOBUF_FINAL :
                &_GetGroupMemberInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    53;
 
   friend void swap(GetGroupMemberInfoResp& a, GetGroupMemberInfoResp& b) {
     a.Swap(&b);
@@ -8256,6 +10314,8 @@ class GetGroupMemberInfoResp PROTOBUF_FINAL :
     kLevelFieldNumber = 10,
     kRoleFieldNumber = 11,
     kTitleFieldNumber = 13,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
     kUserIdFieldNumber = 2,
     kAgeFieldNumber = 6,
@@ -8377,6 +10437,38 @@ class GetGroupMemberInfoResp PROTOBUF_FINAL :
   std::string* _internal_mutable_title();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -8463,6 +10555,8 @@ class GetGroupMemberInfoResp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr level_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr role_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 user_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 age_;
@@ -8518,7 +10612,7 @@ class GetGroupMemberListReq PROTOBUF_FINAL :
                &_GetGroupMemberListReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    54;
 
   friend void swap(GetGroupMemberListReq& a, GetGroupMemberListReq& b) {
     a.Swap(&b);
@@ -8589,8 +10683,42 @@ class GetGroupMemberListReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   ::PROTOBUF_NAMESPACE_ID::int64 group_id() const;
@@ -8607,6 +10735,8 @@ class GetGroupMemberListReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -8655,7 +10785,7 @@ class GetGroupMemberListResp_GroupMember PROTOBUF_FINAL :
                &_GetGroupMemberListResp_GroupMember_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    55;
 
   friend void swap(GetGroupMemberListResp_GroupMember& a, GetGroupMemberListResp_GroupMember& b) {
     a.Swap(&b);
@@ -8995,7 +11125,7 @@ class GetGroupMemberListResp PROTOBUF_FINAL :
                &_GetGroupMemberListResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    56;
 
   friend void swap(GetGroupMemberListResp& a, GetGroupMemberListResp& b) {
     a.Swap(&b);
@@ -9069,6 +11199,8 @@ class GetGroupMemberListResp PROTOBUF_FINAL :
 
   enum : int {
     kGroupMemberListFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // repeated .onebot.GetGroupMemberListResp.GroupMember group_member_list = 1;
   int group_member_list_size() const;
@@ -9088,6 +11220,38 @@ class GetGroupMemberListResp PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupMemberListResp_GroupMember >&
       group_member_list() const;
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetGroupMemberListResp)
  private:
   class _Internal;
@@ -9096,6 +11260,8 @@ class GetGroupMemberListResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupMemberListResp_GroupMember > group_member_list_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -9143,7 +11309,7 @@ class GetGroupHonorInfoReq PROTOBUF_FINAL :
                &_GetGroupHonorInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    57;
 
   friend void swap(GetGroupHonorInfoReq& a, GetGroupHonorInfoReq& b) {
     a.Swap(&b);
@@ -9215,6 +11381,8 @@ class GetGroupHonorInfoReq PROTOBUF_FINAL :
 
   enum : int {
     kTypeFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kGroupIdFieldNumber = 1,
   };
   // string type = 2;
@@ -9231,6 +11399,38 @@ class GetGroupHonorInfoReq PROTOBUF_FINAL :
   const std::string& _internal_type() const;
   void _internal_set_type(const std::string& value);
   std::string* _internal_mutable_type();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int64 group_id = 1;
@@ -9250,6 +11450,8 @@ class GetGroupHonorInfoReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr type_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -9298,7 +11500,7 @@ class GetGroupHonorInfoResp_CurrentTalkative PROTOBUF_FINAL :
                &_GetGroupHonorInfoResp_CurrentTalkative_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    58;
 
   friend void swap(GetGroupHonorInfoResp_CurrentTalkative& a, GetGroupHonorInfoResp_CurrentTalkative& b) {
     a.Swap(&b);
@@ -9482,7 +11684,7 @@ class GetGroupHonorInfoResp_Honor PROTOBUF_FINAL :
                &_GetGroupHonorInfoResp_Honor_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    59;
 
   friend void swap(GetGroupHonorInfoResp_Honor& a, GetGroupHonorInfoResp_Honor& b) {
     a.Swap(&b);
@@ -9673,7 +11875,7 @@ class GetGroupHonorInfoResp PROTOBUF_FINAL :
                &_GetGroupHonorInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    60;
 
   friend void swap(GetGroupHonorInfoResp& a, GetGroupHonorInfoResp& b) {
     a.Swap(&b);
@@ -9752,6 +11954,8 @@ class GetGroupHonorInfoResp PROTOBUF_FINAL :
     kLegendListFieldNumber = 5,
     kStrongNewbieListFieldNumber = 6,
     kEmotionListFieldNumber = 7,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kCurrentTalkativeFieldNumber = 2,
     kGroupIdFieldNumber = 1,
   };
@@ -9845,6 +12049,38 @@ class GetGroupHonorInfoResp PROTOBUF_FINAL :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupHonorInfoResp_Honor >&
       emotion_list() const;
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // .onebot.GetGroupHonorInfoResp.CurrentTalkative current_talkative = 2;
   bool has_current_talkative() const;
   private:
@@ -9884,6 +12120,8 @@ class GetGroupHonorInfoResp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupHonorInfoResp_Honor > legend_list_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupHonorInfoResp_Honor > strong_newbie_list_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::onebot::GetGroupHonorInfoResp_Honor > emotion_list_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::onebot::GetGroupHonorInfoResp_CurrentTalkative* current_talkative_;
   ::PROTOBUF_NAMESPACE_ID::int64 group_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -9933,7 +12171,7 @@ class GetCookiesReq PROTOBUF_FINAL :
                &_GetCookiesReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    61;
 
   friend void swap(GetCookiesReq& a, GetCookiesReq& b) {
     a.Swap(&b);
@@ -10005,6 +12243,8 @@ class GetCookiesReq PROTOBUF_FINAL :
 
   enum : int {
     kDomainFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string domain = 1;
   void clear_domain();
@@ -10022,6 +12262,38 @@ class GetCookiesReq PROTOBUF_FINAL :
   std::string* _internal_mutable_domain();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetCookiesReq)
  private:
   class _Internal;
@@ -10030,6 +12302,8 @@ class GetCookiesReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr domain_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -10077,7 +12351,7 @@ class GetCookiesResp PROTOBUF_FINAL :
                &_GetCookiesResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    62;
 
   friend void swap(GetCookiesResp& a, GetCookiesResp& b) {
     a.Swap(&b);
@@ -10149,6 +12423,8 @@ class GetCookiesResp PROTOBUF_FINAL :
 
   enum : int {
     kCookiesFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string cookies = 1;
   void clear_cookies();
@@ -10166,6 +12442,38 @@ class GetCookiesResp PROTOBUF_FINAL :
   std::string* _internal_mutable_cookies();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetCookiesResp)
  private:
   class _Internal;
@@ -10174,6 +12482,8 @@ class GetCookiesResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cookies_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -10221,7 +12531,7 @@ class GetCsrfTokenReq PROTOBUF_FINAL :
                &_GetCsrfTokenReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    63;
 
   friend void swap(GetCsrfTokenReq& a, GetCsrfTokenReq& b) {
     a.Swap(&b);
@@ -10291,6 +12601,42 @@ class GetCsrfTokenReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetCsrfTokenReq)
  private:
   class _Internal;
@@ -10298,6 +12644,8 @@ class GetCsrfTokenReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -10345,7 +12693,7 @@ class GetCsrfTokenResp PROTOBUF_FINAL :
                &_GetCsrfTokenResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    62;
+    64;
 
   friend void swap(GetCsrfTokenResp& a, GetCsrfTokenResp& b) {
     a.Swap(&b);
@@ -10416,8 +12764,42 @@ class GetCsrfTokenResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kTokenFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 token = 1;
   void clear_token();
   ::PROTOBUF_NAMESPACE_ID::int32 token() const;
@@ -10434,6 +12816,8 @@ class GetCsrfTokenResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 token_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -10482,7 +12866,7 @@ class GetCredentialsReq PROTOBUF_FINAL :
                &_GetCredentialsReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    63;
+    65;
 
   friend void swap(GetCredentialsReq& a, GetCredentialsReq& b) {
     a.Swap(&b);
@@ -10554,6 +12938,8 @@ class GetCredentialsReq PROTOBUF_FINAL :
 
   enum : int {
     kDomainFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string domain = 1;
   void clear_domain();
@@ -10571,6 +12957,38 @@ class GetCredentialsReq PROTOBUF_FINAL :
   std::string* _internal_mutable_domain();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetCredentialsReq)
  private:
   class _Internal;
@@ -10579,6 +12997,8 @@ class GetCredentialsReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr domain_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -10626,7 +13046,7 @@ class GetCredentialsResp PROTOBUF_FINAL :
                &_GetCredentialsResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    66;
 
   friend void swap(GetCredentialsResp& a, GetCredentialsResp& b) {
     a.Swap(&b);
@@ -10698,6 +13118,8 @@ class GetCredentialsResp PROTOBUF_FINAL :
 
   enum : int {
     kCookiesFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kCsrfTokenFieldNumber = 2,
   };
   // string cookies = 1;
@@ -10714,6 +13136,38 @@ class GetCredentialsResp PROTOBUF_FINAL :
   const std::string& _internal_cookies() const;
   void _internal_set_cookies(const std::string& value);
   std::string* _internal_mutable_cookies();
+  public:
+
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
   public:
 
   // int32 csrf_token = 2;
@@ -10733,6 +13187,8 @@ class GetCredentialsResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cookies_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 csrf_token_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -10781,7 +13237,7 @@ class GetRecordReq PROTOBUF_FINAL :
                &_GetRecordReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    65;
+    67;
 
   friend void swap(GetRecordReq& a, GetRecordReq& b) {
     a.Swap(&b);
@@ -10854,6 +13310,8 @@ class GetRecordReq PROTOBUF_FINAL :
   enum : int {
     kFileFieldNumber = 1,
     kOutFormatFieldNumber = 2,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string file = 1;
   void clear_file();
@@ -10887,6 +13345,38 @@ class GetRecordReq PROTOBUF_FINAL :
   std::string* _internal_mutable_out_format();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetRecordReq)
  private:
   class _Internal;
@@ -10896,6 +13386,8 @@ class GetRecordReq PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr out_format_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -10943,7 +13435,7 @@ class GetRecordResp PROTOBUF_FINAL :
                &_GetRecordResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    66;
+    68;
 
   friend void swap(GetRecordResp& a, GetRecordResp& b) {
     a.Swap(&b);
@@ -11015,6 +13507,8 @@ class GetRecordResp PROTOBUF_FINAL :
 
   enum : int {
     kFileFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string file = 1;
   void clear_file();
@@ -11032,6 +13526,38 @@ class GetRecordResp PROTOBUF_FINAL :
   std::string* _internal_mutable_file();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetRecordResp)
  private:
   class _Internal;
@@ -11040,6 +13566,8 @@ class GetRecordResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -11087,7 +13615,7 @@ class GetImageReq PROTOBUF_FINAL :
                &_GetImageReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    67;
+    69;
 
   friend void swap(GetImageReq& a, GetImageReq& b) {
     a.Swap(&b);
@@ -11159,6 +13687,8 @@ class GetImageReq PROTOBUF_FINAL :
 
   enum : int {
     kFileFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string file = 1;
   void clear_file();
@@ -11176,6 +13706,38 @@ class GetImageReq PROTOBUF_FINAL :
   std::string* _internal_mutable_file();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetImageReq)
  private:
   class _Internal;
@@ -11184,6 +13746,8 @@ class GetImageReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -11231,7 +13795,7 @@ class GetImageResp PROTOBUF_FINAL :
                &_GetImageResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    68;
+    70;
 
   friend void swap(GetImageResp& a, GetImageResp& b) {
     a.Swap(&b);
@@ -11303,6 +13867,8 @@ class GetImageResp PROTOBUF_FINAL :
 
   enum : int {
     kFileFieldNumber = 1,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // string file = 1;
   void clear_file();
@@ -11320,6 +13886,38 @@ class GetImageResp PROTOBUF_FINAL :
   std::string* _internal_mutable_file();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetImageResp)
  private:
   class _Internal;
@@ -11328,6 +13926,8 @@ class GetImageResp PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr file_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -11375,7 +13975,7 @@ class CanSendImageReq PROTOBUF_FINAL :
                &_CanSendImageReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    69;
+    71;
 
   friend void swap(CanSendImageReq& a, CanSendImageReq& b) {
     a.Swap(&b);
@@ -11445,6 +14045,42 @@ class CanSendImageReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.CanSendImageReq)
  private:
   class _Internal;
@@ -11452,6 +14088,8 @@ class CanSendImageReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -11499,7 +14137,7 @@ class CanSendImageResp PROTOBUF_FINAL :
                &_CanSendImageResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    70;
+    72;
 
   friend void swap(CanSendImageResp& a, CanSendImageResp& b) {
     a.Swap(&b);
@@ -11570,8 +14208,42 @@ class CanSendImageResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kYesFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // bool yes = 1;
   void clear_yes();
   bool yes() const;
@@ -11588,6 +14260,8 @@ class CanSendImageResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   bool yes_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -11636,7 +14310,7 @@ class CanSendRecordReq PROTOBUF_FINAL :
                &_CanSendRecordReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    71;
+    73;
 
   friend void swap(CanSendRecordReq& a, CanSendRecordReq& b) {
     a.Swap(&b);
@@ -11706,6 +14380,42 @@ class CanSendRecordReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.CanSendRecordReq)
  private:
   class _Internal;
@@ -11713,6 +14423,8 @@ class CanSendRecordReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -11760,7 +14472,7 @@ class CanSendRecordResp PROTOBUF_FINAL :
                &_CanSendRecordResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    72;
+    74;
 
   friend void swap(CanSendRecordResp& a, CanSendRecordResp& b) {
     a.Swap(&b);
@@ -11831,8 +14543,42 @@ class CanSendRecordResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kYesFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // bool yes = 1;
   void clear_yes();
   bool yes() const;
@@ -11849,6 +14595,8 @@ class CanSendRecordResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   bool yes_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -11897,7 +14645,7 @@ class GetStatusReq PROTOBUF_FINAL :
                &_GetStatusReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    73;
+    75;
 
   friend void swap(GetStatusReq& a, GetStatusReq& b) {
     a.Swap(&b);
@@ -11967,6 +14715,42 @@ class GetStatusReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetStatusReq)
  private:
   class _Internal;
@@ -11974,6 +14758,8 @@ class GetStatusReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -12021,7 +14807,7 @@ class GetStatusResp PROTOBUF_FINAL :
                &_GetStatusResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    74;
+    76;
 
   friend void swap(GetStatusResp& a, GetStatusResp& b) {
     a.Swap(&b);
@@ -12092,9 +14878,43 @@ class GetStatusResp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kOnlineFieldNumber = 1,
     kGoodFieldNumber = 2,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // bool online = 1;
   void clear_online();
   bool online() const;
@@ -12120,6 +14940,8 @@ class GetStatusResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   bool online_;
   bool good_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -12169,7 +14991,7 @@ class GetVersionInfoReq PROTOBUF_FINAL :
                &_GetVersionInfoReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    75;
+    77;
 
   friend void swap(GetVersionInfoReq& a, GetVersionInfoReq& b) {
     a.Swap(&b);
@@ -12239,6 +15061,42 @@ class GetVersionInfoReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetVersionInfoReq)
  private:
   class _Internal;
@@ -12246,6 +15104,8 @@ class GetVersionInfoReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -12277,7 +15137,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_api_2eproto);
-    return ::descriptor_table_api_2eproto.file_level_metadata[76];
+    return ::descriptor_table_api_2eproto.file_level_metadata[78];
   }
 
   public:
@@ -12327,7 +15187,7 @@ class GetVersionInfoResp PROTOBUF_FINAL :
                &_GetVersionInfoResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    77;
+    79;
 
   friend void swap(GetVersionInfoResp& a, GetVersionInfoResp& b) {
     a.Swap(&b);
@@ -12403,6 +15263,8 @@ class GetVersionInfoResp PROTOBUF_FINAL :
     kAppNameFieldNumber = 1,
     kAppVersionFieldNumber = 2,
     kProtocolVersionFieldNumber = 3,
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
   };
   // map<string, string> extra = 4;
   int extra_size() const;
@@ -12469,6 +15331,38 @@ class GetVersionInfoResp PROTOBUF_FINAL :
   std::string* _internal_mutable_protocol_version();
   public:
 
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.GetVersionInfoResp)
  private:
   class _Internal;
@@ -12485,6 +15379,8 @@ class GetVersionInfoResp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr app_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr app_version_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr protocol_version_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -12532,7 +15428,7 @@ class SetRestartReq PROTOBUF_FINAL :
                &_SetRestartReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    78;
+    80;
 
   friend void swap(SetRestartReq& a, SetRestartReq& b) {
     a.Swap(&b);
@@ -12603,8 +15499,42 @@ class SetRestartReq PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
     kDelayFieldNumber = 1,
   };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // int32 delay = 1;
   void clear_delay();
   ::PROTOBUF_NAMESPACE_ID::int32 delay() const;
@@ -12621,6 +15551,8 @@ class SetRestartReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   ::PROTOBUF_NAMESPACE_ID::int32 delay_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
@@ -12669,7 +15601,7 @@ class SetRestartResp PROTOBUF_FINAL :
                &_SetRestartResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    79;
+    81;
 
   friend void swap(SetRestartResp& a, SetRestartResp& b) {
     a.Swap(&b);
@@ -12739,6 +15671,42 @@ class SetRestartResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.SetRestartResp)
  private:
   class _Internal;
@@ -12746,6 +15714,8 @@ class SetRestartResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -12793,7 +15763,7 @@ class CleanCacheReq PROTOBUF_FINAL :
                &_CleanCacheReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    80;
+    82;
 
   friend void swap(CleanCacheReq& a, CleanCacheReq& b) {
     a.Swap(&b);
@@ -12863,6 +15833,42 @@ class CleanCacheReq PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.CleanCacheReq)
  private:
   class _Internal;
@@ -12870,6 +15876,8 @@ class CleanCacheReq PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -12917,7 +15925,7 @@ class CleanCacheResp PROTOBUF_FINAL :
                &_CleanCacheResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    81;
+    83;
 
   friend void swap(CleanCacheResp& a, CleanCacheResp& b) {
     a.Swap(&b);
@@ -12987,6 +15995,42 @@ class CleanCacheResp PROTOBUF_FINAL :
 
   // accessors -------------------------------------------------------
 
+  enum : int {
+    kActionFieldNumber = 101,
+    kEchoFieldNumber = 102,
+  };
+  // string action = 101;
+  void clear_action();
+  const std::string& action() const;
+  void set_action(const std::string& value);
+  void set_action(std::string&& value);
+  void set_action(const char* value);
+  void set_action(const char* value, size_t size);
+  std::string* mutable_action();
+  std::string* release_action();
+  void set_allocated_action(std::string* action);
+  private:
+  const std::string& _internal_action() const;
+  void _internal_set_action(const std::string& value);
+  std::string* _internal_mutable_action();
+  public:
+
+  // string echo = 102;
+  void clear_echo();
+  const std::string& echo() const;
+  void set_echo(const std::string& value);
+  void set_echo(std::string&& value);
+  void set_echo(const char* value);
+  void set_echo(const char* value, size_t size);
+  std::string* mutable_echo();
+  std::string* release_echo();
+  void set_allocated_echo(std::string* echo);
+  private:
+  const std::string& _internal_echo() const;
+  void _internal_set_echo(const std::string& value);
+  std::string* _internal_mutable_echo();
+  public:
+
   // @@protoc_insertion_point(class_scope:onebot.CleanCacheResp)
  private:
   class _Internal;
@@ -12994,6 +16038,8 @@ class CleanCacheResp PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_api_2eproto;
 };
@@ -13006,6 +16052,262 @@ class CleanCacheResp PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// BaseApiReq
+
+// string action = 101;
+inline void BaseApiReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& BaseApiReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.BaseApiReq.action)
+  return _internal_action();
+}
+inline void BaseApiReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.BaseApiReq.action)
+}
+inline std::string* BaseApiReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.BaseApiReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& BaseApiReq::_internal_action() const {
+  return action_.Get();
+}
+inline void BaseApiReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void BaseApiReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.BaseApiReq.action)
+}
+inline void BaseApiReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.BaseApiReq.action)
+}
+inline void BaseApiReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.BaseApiReq.action)
+}
+inline std::string* BaseApiReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* BaseApiReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.BaseApiReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BaseApiReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.BaseApiReq.action)
+}
+
+// string echo = 102;
+inline void BaseApiReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& BaseApiReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.BaseApiReq.echo)
+  return _internal_echo();
+}
+inline void BaseApiReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.BaseApiReq.echo)
+}
+inline std::string* BaseApiReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.BaseApiReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& BaseApiReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void BaseApiReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void BaseApiReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.BaseApiReq.echo)
+}
+inline void BaseApiReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.BaseApiReq.echo)
+}
+inline void BaseApiReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.BaseApiReq.echo)
+}
+inline std::string* BaseApiReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* BaseApiReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.BaseApiReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BaseApiReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.BaseApiReq.echo)
+}
+
+// -------------------------------------------------------------------
+
+// BaseApiResp
+
+// string action = 101;
+inline void BaseApiResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& BaseApiResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.BaseApiResp.action)
+  return _internal_action();
+}
+inline void BaseApiResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.BaseApiResp.action)
+}
+inline std::string* BaseApiResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.BaseApiResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& BaseApiResp::_internal_action() const {
+  return action_.Get();
+}
+inline void BaseApiResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void BaseApiResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.BaseApiResp.action)
+}
+inline void BaseApiResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.BaseApiResp.action)
+}
+inline void BaseApiResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.BaseApiResp.action)
+}
+inline std::string* BaseApiResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* BaseApiResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.BaseApiResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BaseApiResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.BaseApiResp.action)
+}
+
+// string echo = 102;
+inline void BaseApiResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& BaseApiResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.BaseApiResp.echo)
+  return _internal_echo();
+}
+inline void BaseApiResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.BaseApiResp.echo)
+}
+inline std::string* BaseApiResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.BaseApiResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& BaseApiResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void BaseApiResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void BaseApiResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.BaseApiResp.echo)
+}
+inline void BaseApiResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.BaseApiResp.echo)
+}
+inline void BaseApiResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.BaseApiResp.echo)
+}
+inline std::string* BaseApiResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* BaseApiResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.BaseApiResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void BaseApiResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.BaseApiResp.echo)
+}
+
+// -------------------------------------------------------------------
+
 // SendPrivateMsgReq
 
 // int64 user_id = 1;
@@ -13125,6 +16427,130 @@ inline void SendPrivateMsgReq::set_auto_escape(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgReq.auto_escape)
 }
 
+// string action = 101;
+inline void SendPrivateMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendPrivateMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendPrivateMsgReq.action)
+  return _internal_action();
+}
+inline void SendPrivateMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgReq.action)
+}
+inline std::string* SendPrivateMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendPrivateMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendPrivateMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SendPrivateMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendPrivateMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendPrivateMsgReq.action)
+}
+inline void SendPrivateMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendPrivateMsgReq.action)
+}
+inline void SendPrivateMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendPrivateMsgReq.action)
+}
+inline std::string* SendPrivateMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendPrivateMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendPrivateMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendPrivateMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendPrivateMsgReq.action)
+}
+
+// string echo = 102;
+inline void SendPrivateMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendPrivateMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendPrivateMsgReq.echo)
+  return _internal_echo();
+}
+inline void SendPrivateMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgReq.echo)
+}
+inline std::string* SendPrivateMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendPrivateMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendPrivateMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendPrivateMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendPrivateMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendPrivateMsgReq.echo)
+}
+inline void SendPrivateMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendPrivateMsgReq.echo)
+}
+inline void SendPrivateMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendPrivateMsgReq.echo)
+}
+inline std::string* SendPrivateMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendPrivateMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendPrivateMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendPrivateMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendPrivateMsgReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SendPrivateMsgResp
@@ -13147,6 +16573,130 @@ inline void SendPrivateMsgResp::_internal_set_message_id(::PROTOBUF_NAMESPACE_ID
 inline void SendPrivateMsgResp::set_message_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_message_id(value);
   // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgResp.message_id)
+}
+
+// string action = 101;
+inline void SendPrivateMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendPrivateMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendPrivateMsgResp.action)
+  return _internal_action();
+}
+inline void SendPrivateMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgResp.action)
+}
+inline std::string* SendPrivateMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendPrivateMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendPrivateMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SendPrivateMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendPrivateMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendPrivateMsgResp.action)
+}
+inline void SendPrivateMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendPrivateMsgResp.action)
+}
+inline void SendPrivateMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendPrivateMsgResp.action)
+}
+inline std::string* SendPrivateMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendPrivateMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendPrivateMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendPrivateMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendPrivateMsgResp.action)
+}
+
+// string echo = 102;
+inline void SendPrivateMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendPrivateMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendPrivateMsgResp.echo)
+  return _internal_echo();
+}
+inline void SendPrivateMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendPrivateMsgResp.echo)
+}
+inline std::string* SendPrivateMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendPrivateMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendPrivateMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendPrivateMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendPrivateMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendPrivateMsgResp.echo)
+}
+inline void SendPrivateMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendPrivateMsgResp.echo)
+}
+inline void SendPrivateMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendPrivateMsgResp.echo)
+}
+inline std::string* SendPrivateMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendPrivateMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendPrivateMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendPrivateMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendPrivateMsgResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -13270,6 +16820,130 @@ inline void SendGroupMsgReq::set_auto_escape(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SendGroupMsgReq.auto_escape)
 }
 
+// string action = 101;
+inline void SendGroupMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendGroupMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendGroupMsgReq.action)
+  return _internal_action();
+}
+inline void SendGroupMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendGroupMsgReq.action)
+}
+inline std::string* SendGroupMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendGroupMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendGroupMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SendGroupMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendGroupMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendGroupMsgReq.action)
+}
+inline void SendGroupMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendGroupMsgReq.action)
+}
+inline void SendGroupMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendGroupMsgReq.action)
+}
+inline std::string* SendGroupMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendGroupMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendGroupMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendGroupMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendGroupMsgReq.action)
+}
+
+// string echo = 102;
+inline void SendGroupMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendGroupMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendGroupMsgReq.echo)
+  return _internal_echo();
+}
+inline void SendGroupMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendGroupMsgReq.echo)
+}
+inline std::string* SendGroupMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendGroupMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendGroupMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendGroupMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendGroupMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendGroupMsgReq.echo)
+}
+inline void SendGroupMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendGroupMsgReq.echo)
+}
+inline void SendGroupMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendGroupMsgReq.echo)
+}
+inline std::string* SendGroupMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendGroupMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendGroupMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendGroupMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendGroupMsgReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SendGroupMsgResp
@@ -13292,6 +16966,130 @@ inline void SendGroupMsgResp::_internal_set_message_id(::PROTOBUF_NAMESPACE_ID::
 inline void SendGroupMsgResp::set_message_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_message_id(value);
   // @@protoc_insertion_point(field_set:onebot.SendGroupMsgResp.message_id)
+}
+
+// string action = 101;
+inline void SendGroupMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendGroupMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendGroupMsgResp.action)
+  return _internal_action();
+}
+inline void SendGroupMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendGroupMsgResp.action)
+}
+inline std::string* SendGroupMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendGroupMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendGroupMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SendGroupMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendGroupMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendGroupMsgResp.action)
+}
+inline void SendGroupMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendGroupMsgResp.action)
+}
+inline void SendGroupMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendGroupMsgResp.action)
+}
+inline std::string* SendGroupMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendGroupMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendGroupMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendGroupMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendGroupMsgResp.action)
+}
+
+// string echo = 102;
+inline void SendGroupMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendGroupMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendGroupMsgResp.echo)
+  return _internal_echo();
+}
+inline void SendGroupMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendGroupMsgResp.echo)
+}
+inline std::string* SendGroupMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendGroupMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendGroupMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendGroupMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendGroupMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendGroupMsgResp.echo)
+}
+inline void SendGroupMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendGroupMsgResp.echo)
+}
+inline void SendGroupMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendGroupMsgResp.echo)
+}
+inline std::string* SendGroupMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendGroupMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendGroupMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendGroupMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendGroupMsgResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -13497,6 +17295,130 @@ inline void SendMsgReq::set_auto_escape(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SendMsgReq.auto_escape)
 }
 
+// string action = 101;
+inline void SendMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendMsgReq.action)
+  return _internal_action();
+}
+inline void SendMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendMsgReq.action)
+}
+inline std::string* SendMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SendMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendMsgReq.action)
+}
+inline void SendMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendMsgReq.action)
+}
+inline void SendMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendMsgReq.action)
+}
+inline std::string* SendMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendMsgReq.action)
+}
+
+// string echo = 102;
+inline void SendMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendMsgReq.echo)
+  return _internal_echo();
+}
+inline void SendMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendMsgReq.echo)
+}
+inline std::string* SendMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendMsgReq.echo)
+}
+inline void SendMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendMsgReq.echo)
+}
+inline void SendMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendMsgReq.echo)
+}
+inline std::string* SendMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendMsgReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SendMsgResp
@@ -13519,6 +17441,130 @@ inline void SendMsgResp::_internal_set_message_id(::PROTOBUF_NAMESPACE_ID::int32
 inline void SendMsgResp::set_message_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_message_id(value);
   // @@protoc_insertion_point(field_set:onebot.SendMsgResp.message_id)
+}
+
+// string action = 101;
+inline void SendMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendMsgResp.action)
+  return _internal_action();
+}
+inline void SendMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendMsgResp.action)
+}
+inline std::string* SendMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SendMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendMsgResp.action)
+}
+inline void SendMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendMsgResp.action)
+}
+inline void SendMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendMsgResp.action)
+}
+inline std::string* SendMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendMsgResp.action)
+}
+
+// string echo = 102;
+inline void SendMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendMsgResp.echo)
+  return _internal_echo();
+}
+inline void SendMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendMsgResp.echo)
+}
+inline std::string* SendMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendMsgResp.echo)
+}
+inline void SendMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendMsgResp.echo)
+}
+inline void SendMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendMsgResp.echo)
+}
+inline std::string* SendMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendMsgResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -13545,9 +17591,257 @@ inline void DeleteMsgReq::set_message_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:onebot.DeleteMsgReq.message_id)
 }
 
+// string action = 101;
+inline void DeleteMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& DeleteMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.DeleteMsgReq.action)
+  return _internal_action();
+}
+inline void DeleteMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.DeleteMsgReq.action)
+}
+inline std::string* DeleteMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.DeleteMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& DeleteMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void DeleteMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void DeleteMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.DeleteMsgReq.action)
+}
+inline void DeleteMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.DeleteMsgReq.action)
+}
+inline void DeleteMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.DeleteMsgReq.action)
+}
+inline std::string* DeleteMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* DeleteMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.DeleteMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void DeleteMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.DeleteMsgReq.action)
+}
+
+// string echo = 102;
+inline void DeleteMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& DeleteMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.DeleteMsgReq.echo)
+  return _internal_echo();
+}
+inline void DeleteMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.DeleteMsgReq.echo)
+}
+inline std::string* DeleteMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.DeleteMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& DeleteMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void DeleteMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void DeleteMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.DeleteMsgReq.echo)
+}
+inline void DeleteMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.DeleteMsgReq.echo)
+}
+inline void DeleteMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.DeleteMsgReq.echo)
+}
+inline std::string* DeleteMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* DeleteMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.DeleteMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void DeleteMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.DeleteMsgReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // DeleteMsgResp
+
+// string action = 101;
+inline void DeleteMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& DeleteMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.DeleteMsgResp.action)
+  return _internal_action();
+}
+inline void DeleteMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.DeleteMsgResp.action)
+}
+inline std::string* DeleteMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.DeleteMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& DeleteMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void DeleteMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void DeleteMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.DeleteMsgResp.action)
+}
+inline void DeleteMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.DeleteMsgResp.action)
+}
+inline void DeleteMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.DeleteMsgResp.action)
+}
+inline std::string* DeleteMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* DeleteMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.DeleteMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void DeleteMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.DeleteMsgResp.action)
+}
+
+// string echo = 102;
+inline void DeleteMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& DeleteMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.DeleteMsgResp.echo)
+  return _internal_echo();
+}
+inline void DeleteMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.DeleteMsgResp.echo)
+}
+inline std::string* DeleteMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.DeleteMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& DeleteMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void DeleteMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void DeleteMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.DeleteMsgResp.echo)
+}
+inline void DeleteMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.DeleteMsgResp.echo)
+}
+inline void DeleteMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.DeleteMsgResp.echo)
+}
+inline std::string* DeleteMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* DeleteMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.DeleteMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void DeleteMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.DeleteMsgResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -13571,6 +17865,130 @@ inline void GetMsgReq::_internal_set_message_id(::PROTOBUF_NAMESPACE_ID::int32 v
 inline void GetMsgReq::set_message_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_message_id(value);
   // @@protoc_insertion_point(field_set:onebot.GetMsgReq.message_id)
+}
+
+// string action = 101;
+inline void GetMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetMsgReq.action)
+  return _internal_action();
+}
+inline void GetMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetMsgReq.action)
+}
+inline std::string* GetMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetMsgReq.action)
+}
+inline void GetMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetMsgReq.action)
+}
+inline void GetMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetMsgReq.action)
+}
+inline std::string* GetMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetMsgReq.action)
+}
+
+// string echo = 102;
+inline void GetMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetMsgReq.echo)
+  return _internal_echo();
+}
+inline void GetMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetMsgReq.echo)
+}
+inline std::string* GetMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetMsgReq.echo)
+}
+inline void GetMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetMsgReq.echo)
+}
+inline void GetMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetMsgReq.echo)
+}
+inline std::string* GetMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetMsgReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -14337,6 +18755,130 @@ inline void GetMsgResp::set_allocated_message(::onebot::Message* message) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetMsgResp.message)
 }
 
+// string action = 101;
+inline void GetMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetMsgResp.action)
+  return _internal_action();
+}
+inline void GetMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetMsgResp.action)
+}
+inline std::string* GetMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetMsgResp.action)
+}
+inline void GetMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetMsgResp.action)
+}
+inline void GetMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetMsgResp.action)
+}
+inline std::string* GetMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetMsgResp.action)
+}
+
+// string echo = 102;
+inline void GetMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetMsgResp.echo)
+  return _internal_echo();
+}
+inline void GetMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetMsgResp.echo)
+}
+inline std::string* GetMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetMsgResp.echo)
+}
+inline void GetMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetMsgResp.echo)
+}
+inline void GetMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetMsgResp.echo)
+}
+inline std::string* GetMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetMsgResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetForwardMsgReq
@@ -14403,9 +18945,257 @@ inline void GetForwardMsgReq::set_allocated_id(std::string* id) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetForwardMsgReq.id)
 }
 
+// string action = 101;
+inline void GetForwardMsgReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetForwardMsgReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetForwardMsgReq.action)
+  return _internal_action();
+}
+inline void GetForwardMsgReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetForwardMsgReq.action)
+}
+inline std::string* GetForwardMsgReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetForwardMsgReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetForwardMsgReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetForwardMsgReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetForwardMsgReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetForwardMsgReq.action)
+}
+inline void GetForwardMsgReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetForwardMsgReq.action)
+}
+inline void GetForwardMsgReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetForwardMsgReq.action)
+}
+inline std::string* GetForwardMsgReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetForwardMsgReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetForwardMsgReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetForwardMsgReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetForwardMsgReq.action)
+}
+
+// string echo = 102;
+inline void GetForwardMsgReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetForwardMsgReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetForwardMsgReq.echo)
+  return _internal_echo();
+}
+inline void GetForwardMsgReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetForwardMsgReq.echo)
+}
+inline std::string* GetForwardMsgReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetForwardMsgReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetForwardMsgReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetForwardMsgReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetForwardMsgReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetForwardMsgReq.echo)
+}
+inline void GetForwardMsgReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetForwardMsgReq.echo)
+}
+inline void GetForwardMsgReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetForwardMsgReq.echo)
+}
+inline std::string* GetForwardMsgReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetForwardMsgReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetForwardMsgReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetForwardMsgReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetForwardMsgReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetForwardMsgResp
+
+// string action = 101;
+inline void GetForwardMsgResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetForwardMsgResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetForwardMsgResp.action)
+  return _internal_action();
+}
+inline void GetForwardMsgResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetForwardMsgResp.action)
+}
+inline std::string* GetForwardMsgResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetForwardMsgResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetForwardMsgResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetForwardMsgResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetForwardMsgResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetForwardMsgResp.action)
+}
+inline void GetForwardMsgResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetForwardMsgResp.action)
+}
+inline void GetForwardMsgResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetForwardMsgResp.action)
+}
+inline std::string* GetForwardMsgResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetForwardMsgResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetForwardMsgResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetForwardMsgResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetForwardMsgResp.action)
+}
+
+// string echo = 102;
+inline void GetForwardMsgResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetForwardMsgResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetForwardMsgResp.echo)
+  return _internal_echo();
+}
+inline void GetForwardMsgResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetForwardMsgResp.echo)
+}
+inline std::string* GetForwardMsgResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetForwardMsgResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetForwardMsgResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetForwardMsgResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetForwardMsgResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetForwardMsgResp.echo)
+}
+inline void GetForwardMsgResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetForwardMsgResp.echo)
+}
+inline void GetForwardMsgResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetForwardMsgResp.echo)
+}
+inline std::string* GetForwardMsgResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetForwardMsgResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetForwardMsgResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetForwardMsgResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetForwardMsgResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -14451,9 +19241,257 @@ inline void SendLikeReq::set_times(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:onebot.SendLikeReq.times)
 }
 
+// string action = 101;
+inline void SendLikeReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendLikeReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendLikeReq.action)
+  return _internal_action();
+}
+inline void SendLikeReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendLikeReq.action)
+}
+inline std::string* SendLikeReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendLikeReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendLikeReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SendLikeReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendLikeReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendLikeReq.action)
+}
+inline void SendLikeReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendLikeReq.action)
+}
+inline void SendLikeReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendLikeReq.action)
+}
+inline std::string* SendLikeReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendLikeReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendLikeReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendLikeReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendLikeReq.action)
+}
+
+// string echo = 102;
+inline void SendLikeReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendLikeReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendLikeReq.echo)
+  return _internal_echo();
+}
+inline void SendLikeReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendLikeReq.echo)
+}
+inline std::string* SendLikeReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendLikeReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendLikeReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendLikeReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendLikeReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendLikeReq.echo)
+}
+inline void SendLikeReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendLikeReq.echo)
+}
+inline void SendLikeReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendLikeReq.echo)
+}
+inline std::string* SendLikeReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendLikeReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendLikeReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendLikeReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendLikeReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SendListResp
+
+// string action = 101;
+inline void SendListResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendListResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SendListResp.action)
+  return _internal_action();
+}
+inline void SendListResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SendListResp.action)
+}
+inline std::string* SendListResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendListResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SendListResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SendListResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendListResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendListResp.action)
+}
+inline void SendListResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendListResp.action)
+}
+inline void SendListResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendListResp.action)
+}
+inline std::string* SendListResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendListResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SendListResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendListResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendListResp.action)
+}
+
+// string echo = 102;
+inline void SendListResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SendListResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SendListResp.echo)
+  return _internal_echo();
+}
+inline void SendListResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SendListResp.echo)
+}
+inline std::string* SendListResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SendListResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SendListResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SendListResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SendListResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SendListResp.echo)
+}
+inline void SendListResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SendListResp.echo)
+}
+inline void SendListResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SendListResp.echo)
+}
+inline std::string* SendListResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SendListResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SendListResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SendListResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SendListResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -14519,9 +19557,257 @@ inline void SetGroupKickReq::set_reject_add_request(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupKickReq.reject_add_request)
 }
 
+// string action = 101;
+inline void SetGroupKickReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupKickReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupKickReq.action)
+  return _internal_action();
+}
+inline void SetGroupKickReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupKickReq.action)
+}
+inline std::string* SetGroupKickReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupKickReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupKickReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupKickReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupKickReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupKickReq.action)
+}
+inline void SetGroupKickReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupKickReq.action)
+}
+inline void SetGroupKickReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupKickReq.action)
+}
+inline std::string* SetGroupKickReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupKickReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupKickReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupKickReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupKickReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupKickReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupKickReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupKickReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupKickReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupKickReq.echo)
+}
+inline std::string* SetGroupKickReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupKickReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupKickReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupKickReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupKickReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupKickReq.echo)
+}
+inline void SetGroupKickReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupKickReq.echo)
+}
+inline void SetGroupKickReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupKickReq.echo)
+}
+inline std::string* SetGroupKickReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupKickReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupKickReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupKickReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupKickReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupKickResp
+
+// string action = 101;
+inline void SetGroupKickResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupKickResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupKickResp.action)
+  return _internal_action();
+}
+inline void SetGroupKickResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupKickResp.action)
+}
+inline std::string* SetGroupKickResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupKickResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupKickResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupKickResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupKickResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupKickResp.action)
+}
+inline void SetGroupKickResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupKickResp.action)
+}
+inline void SetGroupKickResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupKickResp.action)
+}
+inline std::string* SetGroupKickResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupKickResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupKickResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupKickResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupKickResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupKickResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupKickResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupKickResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupKickResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupKickResp.echo)
+}
+inline std::string* SetGroupKickResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupKickResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupKickResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupKickResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupKickResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupKickResp.echo)
+}
+inline void SetGroupKickResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupKickResp.echo)
+}
+inline void SetGroupKickResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupKickResp.echo)
+}
+inline std::string* SetGroupKickResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupKickResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupKickResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupKickResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupKickResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -14587,9 +19873,257 @@ inline void SetGroupBanReq::set_duration(::PROTOBUF_NAMESPACE_ID::int64 value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupBanReq.duration)
 }
 
+// string action = 101;
+inline void SetGroupBanReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupBanReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupBanReq.action)
+  return _internal_action();
+}
+inline void SetGroupBanReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupBanReq.action)
+}
+inline std::string* SetGroupBanReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupBanReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupBanReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupBanReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupBanReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupBanReq.action)
+}
+inline void SetGroupBanReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupBanReq.action)
+}
+inline void SetGroupBanReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupBanReq.action)
+}
+inline std::string* SetGroupBanReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupBanReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupBanReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupBanReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupBanReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupBanReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupBanReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupBanReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupBanReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupBanReq.echo)
+}
+inline std::string* SetGroupBanReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupBanReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupBanReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupBanReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupBanReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupBanReq.echo)
+}
+inline void SetGroupBanReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupBanReq.echo)
+}
+inline void SetGroupBanReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupBanReq.echo)
+}
+inline std::string* SetGroupBanReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupBanReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupBanReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupBanReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupBanReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupBanResp
+
+// string action = 101;
+inline void SetGroupBanResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupBanResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupBanResp.action)
+  return _internal_action();
+}
+inline void SetGroupBanResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupBanResp.action)
+}
+inline std::string* SetGroupBanResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupBanResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupBanResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupBanResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupBanResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupBanResp.action)
+}
+inline void SetGroupBanResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupBanResp.action)
+}
+inline void SetGroupBanResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupBanResp.action)
+}
+inline std::string* SetGroupBanResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupBanResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupBanResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupBanResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupBanResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupBanResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupBanResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupBanResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupBanResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupBanResp.echo)
+}
+inline std::string* SetGroupBanResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupBanResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupBanResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupBanResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupBanResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupBanResp.echo)
+}
+inline void SetGroupBanResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupBanResp.echo)
+}
+inline void SetGroupBanResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupBanResp.echo)
+}
+inline std::string* SetGroupBanResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupBanResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupBanResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupBanResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupBanResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -14990,9 +20524,257 @@ inline void SetGroupAnonymousBanReq::set_duration(::PROTOBUF_NAMESPACE_ID::int64
   // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousBanReq.duration)
 }
 
+// string action = 101;
+inline void SetGroupAnonymousBanReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousBanReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousBanReq.action)
+  return _internal_action();
+}
+inline void SetGroupAnonymousBanReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousBanReq.action)
+}
+inline std::string* SetGroupAnonymousBanReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousBanReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAnonymousBanReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAnonymousBanReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousBanReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousBanReq.action)
+}
+inline void SetGroupAnonymousBanReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousBanReq.action)
+}
+inline void SetGroupAnonymousBanReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousBanReq.action)
+}
+inline std::string* SetGroupAnonymousBanReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousBanReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousBanReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousBanReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousBanReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupAnonymousBanReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousBanReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousBanReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupAnonymousBanReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousBanReq.echo)
+}
+inline std::string* SetGroupAnonymousBanReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousBanReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAnonymousBanReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAnonymousBanReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousBanReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousBanReq.echo)
+}
+inline void SetGroupAnonymousBanReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousBanReq.echo)
+}
+inline void SetGroupAnonymousBanReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousBanReq.echo)
+}
+inline std::string* SetGroupAnonymousBanReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousBanReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousBanReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousBanReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousBanReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupAnonymousBanResp
+
+// string action = 101;
+inline void SetGroupAnonymousBanResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousBanResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousBanResp.action)
+  return _internal_action();
+}
+inline void SetGroupAnonymousBanResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousBanResp.action)
+}
+inline std::string* SetGroupAnonymousBanResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousBanResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAnonymousBanResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAnonymousBanResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousBanResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousBanResp.action)
+}
+inline void SetGroupAnonymousBanResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousBanResp.action)
+}
+inline void SetGroupAnonymousBanResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousBanResp.action)
+}
+inline std::string* SetGroupAnonymousBanResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousBanResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousBanResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousBanResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousBanResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupAnonymousBanResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousBanResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousBanResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupAnonymousBanResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousBanResp.echo)
+}
+inline std::string* SetGroupAnonymousBanResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousBanResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAnonymousBanResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAnonymousBanResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousBanResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousBanResp.echo)
+}
+inline void SetGroupAnonymousBanResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousBanResp.echo)
+}
+inline void SetGroupAnonymousBanResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousBanResp.echo)
+}
+inline std::string* SetGroupAnonymousBanResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousBanResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousBanResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousBanResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousBanResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15038,9 +20820,257 @@ inline void SetGroupWholeBanReq::set_enable(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupWholeBanReq.enable)
 }
 
+// string action = 101;
+inline void SetGroupWholeBanReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupWholeBanReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupWholeBanReq.action)
+  return _internal_action();
+}
+inline void SetGroupWholeBanReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupWholeBanReq.action)
+}
+inline std::string* SetGroupWholeBanReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupWholeBanReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupWholeBanReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupWholeBanReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupWholeBanReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupWholeBanReq.action)
+}
+inline void SetGroupWholeBanReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupWholeBanReq.action)
+}
+inline void SetGroupWholeBanReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupWholeBanReq.action)
+}
+inline std::string* SetGroupWholeBanReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupWholeBanReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupWholeBanReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupWholeBanReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupWholeBanReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupWholeBanReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupWholeBanReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupWholeBanReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupWholeBanReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupWholeBanReq.echo)
+}
+inline std::string* SetGroupWholeBanReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupWholeBanReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupWholeBanReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupWholeBanReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupWholeBanReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupWholeBanReq.echo)
+}
+inline void SetGroupWholeBanReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupWholeBanReq.echo)
+}
+inline void SetGroupWholeBanReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupWholeBanReq.echo)
+}
+inline std::string* SetGroupWholeBanReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupWholeBanReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupWholeBanReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupWholeBanReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupWholeBanReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupWholeBanResp
+
+// string action = 101;
+inline void SetGroupWholeBanResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupWholeBanResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupWholeBanResp.action)
+  return _internal_action();
+}
+inline void SetGroupWholeBanResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupWholeBanResp.action)
+}
+inline std::string* SetGroupWholeBanResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupWholeBanResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupWholeBanResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupWholeBanResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupWholeBanResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupWholeBanResp.action)
+}
+inline void SetGroupWholeBanResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupWholeBanResp.action)
+}
+inline void SetGroupWholeBanResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupWholeBanResp.action)
+}
+inline std::string* SetGroupWholeBanResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupWholeBanResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupWholeBanResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupWholeBanResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupWholeBanResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupWholeBanResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupWholeBanResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupWholeBanResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupWholeBanResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupWholeBanResp.echo)
+}
+inline std::string* SetGroupWholeBanResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupWholeBanResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupWholeBanResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupWholeBanResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupWholeBanResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupWholeBanResp.echo)
+}
+inline void SetGroupWholeBanResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupWholeBanResp.echo)
+}
+inline void SetGroupWholeBanResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupWholeBanResp.echo)
+}
+inline std::string* SetGroupWholeBanResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupWholeBanResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupWholeBanResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupWholeBanResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupWholeBanResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15106,9 +21136,257 @@ inline void SetGroupAdminReq::set_enable(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupAdminReq.enable)
 }
 
+// string action = 101;
+inline void SetGroupAdminReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAdminReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAdminReq.action)
+  return _internal_action();
+}
+inline void SetGroupAdminReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAdminReq.action)
+}
+inline std::string* SetGroupAdminReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAdminReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAdminReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAdminReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAdminReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAdminReq.action)
+}
+inline void SetGroupAdminReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAdminReq.action)
+}
+inline void SetGroupAdminReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAdminReq.action)
+}
+inline std::string* SetGroupAdminReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAdminReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAdminReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAdminReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAdminReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupAdminReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAdminReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAdminReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupAdminReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAdminReq.echo)
+}
+inline std::string* SetGroupAdminReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAdminReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAdminReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAdminReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAdminReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAdminReq.echo)
+}
+inline void SetGroupAdminReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAdminReq.echo)
+}
+inline void SetGroupAdminReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAdminReq.echo)
+}
+inline std::string* SetGroupAdminReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAdminReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAdminReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAdminReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAdminReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupAdminResp
+
+// string action = 101;
+inline void SetGroupAdminResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAdminResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAdminResp.action)
+  return _internal_action();
+}
+inline void SetGroupAdminResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAdminResp.action)
+}
+inline std::string* SetGroupAdminResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAdminResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAdminResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAdminResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAdminResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAdminResp.action)
+}
+inline void SetGroupAdminResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAdminResp.action)
+}
+inline void SetGroupAdminResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAdminResp.action)
+}
+inline std::string* SetGroupAdminResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAdminResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAdminResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAdminResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAdminResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupAdminResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAdminResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAdminResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupAdminResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAdminResp.echo)
+}
+inline std::string* SetGroupAdminResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAdminResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAdminResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAdminResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAdminResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAdminResp.echo)
+}
+inline void SetGroupAdminResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAdminResp.echo)
+}
+inline void SetGroupAdminResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAdminResp.echo)
+}
+inline std::string* SetGroupAdminResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAdminResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAdminResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAdminResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAdminResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15154,9 +21432,257 @@ inline void SetGroupAnonymousReq::set_enable(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousReq.enable)
 }
 
+// string action = 101;
+inline void SetGroupAnonymousReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousReq.action)
+  return _internal_action();
+}
+inline void SetGroupAnonymousReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousReq.action)
+}
+inline std::string* SetGroupAnonymousReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAnonymousReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAnonymousReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousReq.action)
+}
+inline void SetGroupAnonymousReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousReq.action)
+}
+inline void SetGroupAnonymousReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousReq.action)
+}
+inline std::string* SetGroupAnonymousReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupAnonymousReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupAnonymousReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousReq.echo)
+}
+inline std::string* SetGroupAnonymousReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAnonymousReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAnonymousReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousReq.echo)
+}
+inline void SetGroupAnonymousReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousReq.echo)
+}
+inline void SetGroupAnonymousReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousReq.echo)
+}
+inline std::string* SetGroupAnonymousReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupAnonymousResp
+
+// string action = 101;
+inline void SetGroupAnonymousResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousResp.action)
+  return _internal_action();
+}
+inline void SetGroupAnonymousResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousResp.action)
+}
+inline std::string* SetGroupAnonymousResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAnonymousResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAnonymousResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousResp.action)
+}
+inline void SetGroupAnonymousResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousResp.action)
+}
+inline void SetGroupAnonymousResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousResp.action)
+}
+inline std::string* SetGroupAnonymousResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupAnonymousResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAnonymousResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAnonymousResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupAnonymousResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAnonymousResp.echo)
+}
+inline std::string* SetGroupAnonymousResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAnonymousResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAnonymousResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAnonymousResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAnonymousResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAnonymousResp.echo)
+}
+inline void SetGroupAnonymousResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAnonymousResp.echo)
+}
+inline void SetGroupAnonymousResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAnonymousResp.echo)
+}
+inline std::string* SetGroupAnonymousResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAnonymousResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAnonymousResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAnonymousResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAnonymousResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15244,9 +21770,257 @@ inline void SetGroupNameReq::set_allocated_group_name(std::string* group_name) {
   // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupNameReq.group_name)
 }
 
+// string action = 101;
+inline void SetGroupNameReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupNameReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupNameReq.action)
+  return _internal_action();
+}
+inline void SetGroupNameReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupNameReq.action)
+}
+inline std::string* SetGroupNameReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupNameReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupNameReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupNameReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupNameReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupNameReq.action)
+}
+inline void SetGroupNameReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupNameReq.action)
+}
+inline void SetGroupNameReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupNameReq.action)
+}
+inline std::string* SetGroupNameReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupNameReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupNameReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupNameReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupNameReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupNameReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupNameReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupNameReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupNameReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupNameReq.echo)
+}
+inline std::string* SetGroupNameReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupNameReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupNameReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupNameReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupNameReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupNameReq.echo)
+}
+inline void SetGroupNameReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupNameReq.echo)
+}
+inline void SetGroupNameReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupNameReq.echo)
+}
+inline std::string* SetGroupNameReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupNameReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupNameReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupNameReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupNameReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupNameResp
+
+// string action = 101;
+inline void SetGroupNameResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupNameResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupNameResp.action)
+  return _internal_action();
+}
+inline void SetGroupNameResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupNameResp.action)
+}
+inline std::string* SetGroupNameResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupNameResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupNameResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupNameResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupNameResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupNameResp.action)
+}
+inline void SetGroupNameResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupNameResp.action)
+}
+inline void SetGroupNameResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupNameResp.action)
+}
+inline std::string* SetGroupNameResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupNameResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupNameResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupNameResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupNameResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupNameResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupNameResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupNameResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupNameResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupNameResp.echo)
+}
+inline std::string* SetGroupNameResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupNameResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupNameResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupNameResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupNameResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupNameResp.echo)
+}
+inline void SetGroupNameResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupNameResp.echo)
+}
+inline void SetGroupNameResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupNameResp.echo)
+}
+inline std::string* SetGroupNameResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupNameResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupNameResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupNameResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupNameResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15292,9 +22066,257 @@ inline void SetGroupLeaveReq::set_is_dismiss(bool value) {
   // @@protoc_insertion_point(field_set:onebot.SetGroupLeaveReq.is_dismiss)
 }
 
+// string action = 101;
+inline void SetGroupLeaveReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupLeaveReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupLeaveReq.action)
+  return _internal_action();
+}
+inline void SetGroupLeaveReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupLeaveReq.action)
+}
+inline std::string* SetGroupLeaveReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupLeaveReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupLeaveReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupLeaveReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupLeaveReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupLeaveReq.action)
+}
+inline void SetGroupLeaveReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupLeaveReq.action)
+}
+inline void SetGroupLeaveReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupLeaveReq.action)
+}
+inline std::string* SetGroupLeaveReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupLeaveReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupLeaveReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupLeaveReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupLeaveReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupLeaveReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupLeaveReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupLeaveReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupLeaveReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupLeaveReq.echo)
+}
+inline std::string* SetGroupLeaveReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupLeaveReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupLeaveReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupLeaveReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupLeaveReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupLeaveReq.echo)
+}
+inline void SetGroupLeaveReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupLeaveReq.echo)
+}
+inline void SetGroupLeaveReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupLeaveReq.echo)
+}
+inline std::string* SetGroupLeaveReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupLeaveReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupLeaveReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupLeaveReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupLeaveReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupLeaveResp
+
+// string action = 101;
+inline void SetGroupLeaveResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupLeaveResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupLeaveResp.action)
+  return _internal_action();
+}
+inline void SetGroupLeaveResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupLeaveResp.action)
+}
+inline std::string* SetGroupLeaveResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupLeaveResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupLeaveResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupLeaveResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupLeaveResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupLeaveResp.action)
+}
+inline void SetGroupLeaveResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupLeaveResp.action)
+}
+inline void SetGroupLeaveResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupLeaveResp.action)
+}
+inline std::string* SetGroupLeaveResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupLeaveResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupLeaveResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupLeaveResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupLeaveResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupLeaveResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupLeaveResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupLeaveResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupLeaveResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupLeaveResp.echo)
+}
+inline std::string* SetGroupLeaveResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupLeaveResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupLeaveResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupLeaveResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupLeaveResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupLeaveResp.echo)
+}
+inline void SetGroupLeaveResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupLeaveResp.echo)
+}
+inline void SetGroupLeaveResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupLeaveResp.echo)
+}
+inline std::string* SetGroupLeaveResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupLeaveResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupLeaveResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupLeaveResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupLeaveResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15422,9 +22444,257 @@ inline void SetGroupSpecialTitleReq::set_duration(::PROTOBUF_NAMESPACE_ID::int64
   // @@protoc_insertion_point(field_set:onebot.SetGroupSpecialTitleReq.duration)
 }
 
+// string action = 101;
+inline void SetGroupSpecialTitleReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupSpecialTitleReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupSpecialTitleReq.action)
+  return _internal_action();
+}
+inline void SetGroupSpecialTitleReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupSpecialTitleReq.action)
+}
+inline std::string* SetGroupSpecialTitleReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupSpecialTitleReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupSpecialTitleReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupSpecialTitleReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupSpecialTitleReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupSpecialTitleReq.action)
+}
+inline void SetGroupSpecialTitleReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupSpecialTitleReq.action)
+}
+inline void SetGroupSpecialTitleReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupSpecialTitleReq.action)
+}
+inline std::string* SetGroupSpecialTitleReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupSpecialTitleReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupSpecialTitleReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupSpecialTitleReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupSpecialTitleReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupSpecialTitleReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupSpecialTitleReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupSpecialTitleReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupSpecialTitleReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupSpecialTitleReq.echo)
+}
+inline std::string* SetGroupSpecialTitleReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupSpecialTitleReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupSpecialTitleReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupSpecialTitleReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupSpecialTitleReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupSpecialTitleReq.echo)
+}
+inline void SetGroupSpecialTitleReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupSpecialTitleReq.echo)
+}
+inline void SetGroupSpecialTitleReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupSpecialTitleReq.echo)
+}
+inline std::string* SetGroupSpecialTitleReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupSpecialTitleReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupSpecialTitleReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupSpecialTitleReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupSpecialTitleReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupSpecialTitleResp
+
+// string action = 101;
+inline void SetGroupSpecialTitleResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupSpecialTitleResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupSpecialTitleResp.action)
+  return _internal_action();
+}
+inline void SetGroupSpecialTitleResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupSpecialTitleResp.action)
+}
+inline std::string* SetGroupSpecialTitleResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupSpecialTitleResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupSpecialTitleResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupSpecialTitleResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupSpecialTitleResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupSpecialTitleResp.action)
+}
+inline void SetGroupSpecialTitleResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupSpecialTitleResp.action)
+}
+inline void SetGroupSpecialTitleResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupSpecialTitleResp.action)
+}
+inline std::string* SetGroupSpecialTitleResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupSpecialTitleResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupSpecialTitleResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupSpecialTitleResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupSpecialTitleResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupSpecialTitleResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupSpecialTitleResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupSpecialTitleResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupSpecialTitleResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupSpecialTitleResp.echo)
+}
+inline std::string* SetGroupSpecialTitleResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupSpecialTitleResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupSpecialTitleResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupSpecialTitleResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupSpecialTitleResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupSpecialTitleResp.echo)
+}
+inline void SetGroupSpecialTitleResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupSpecialTitleResp.echo)
+}
+inline void SetGroupSpecialTitleResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupSpecialTitleResp.echo)
+}
+inline std::string* SetGroupSpecialTitleResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupSpecialTitleResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupSpecialTitleResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupSpecialTitleResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupSpecialTitleResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15574,9 +22844,257 @@ inline void SetFriendAddRequestReq::set_allocated_remark(std::string* remark) {
   // @@protoc_insertion_point(field_set_allocated:onebot.SetFriendAddRequestReq.remark)
 }
 
+// string action = 101;
+inline void SetFriendAddRequestReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetFriendAddRequestReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetFriendAddRequestReq.action)
+  return _internal_action();
+}
+inline void SetFriendAddRequestReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetFriendAddRequestReq.action)
+}
+inline std::string* SetFriendAddRequestReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetFriendAddRequestReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetFriendAddRequestReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetFriendAddRequestReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetFriendAddRequestReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetFriendAddRequestReq.action)
+}
+inline void SetFriendAddRequestReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetFriendAddRequestReq.action)
+}
+inline void SetFriendAddRequestReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetFriendAddRequestReq.action)
+}
+inline std::string* SetFriendAddRequestReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetFriendAddRequestReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetFriendAddRequestReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetFriendAddRequestReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetFriendAddRequestReq.action)
+}
+
+// string echo = 102;
+inline void SetFriendAddRequestReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetFriendAddRequestReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetFriendAddRequestReq.echo)
+  return _internal_echo();
+}
+inline void SetFriendAddRequestReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetFriendAddRequestReq.echo)
+}
+inline std::string* SetFriendAddRequestReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetFriendAddRequestReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetFriendAddRequestReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetFriendAddRequestReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetFriendAddRequestReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetFriendAddRequestReq.echo)
+}
+inline void SetFriendAddRequestReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetFriendAddRequestReq.echo)
+}
+inline void SetFriendAddRequestReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetFriendAddRequestReq.echo)
+}
+inline std::string* SetFriendAddRequestReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetFriendAddRequestReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetFriendAddRequestReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetFriendAddRequestReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetFriendAddRequestReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetFriendAddRequestResp
+
+// string action = 101;
+inline void SetFriendAddRequestResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetFriendAddRequestResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetFriendAddRequestResp.action)
+  return _internal_action();
+}
+inline void SetFriendAddRequestResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetFriendAddRequestResp.action)
+}
+inline std::string* SetFriendAddRequestResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetFriendAddRequestResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetFriendAddRequestResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetFriendAddRequestResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetFriendAddRequestResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetFriendAddRequestResp.action)
+}
+inline void SetFriendAddRequestResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetFriendAddRequestResp.action)
+}
+inline void SetFriendAddRequestResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetFriendAddRequestResp.action)
+}
+inline std::string* SetFriendAddRequestResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetFriendAddRequestResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetFriendAddRequestResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetFriendAddRequestResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetFriendAddRequestResp.action)
+}
+
+// string echo = 102;
+inline void SetFriendAddRequestResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetFriendAddRequestResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetFriendAddRequestResp.echo)
+  return _internal_echo();
+}
+inline void SetFriendAddRequestResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetFriendAddRequestResp.echo)
+}
+inline std::string* SetFriendAddRequestResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetFriendAddRequestResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetFriendAddRequestResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetFriendAddRequestResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetFriendAddRequestResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetFriendAddRequestResp.echo)
+}
+inline void SetFriendAddRequestResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetFriendAddRequestResp.echo)
+}
+inline void SetFriendAddRequestResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetFriendAddRequestResp.echo)
+}
+inline std::string* SetFriendAddRequestResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetFriendAddRequestResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetFriendAddRequestResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetFriendAddRequestResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetFriendAddRequestResp.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15850,13 +23368,385 @@ inline void SetGroupAddRequestReq::set_allocated_reason(std::string* reason) {
   // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAddRequestReq.reason)
 }
 
+// string action = 101;
+inline void SetGroupAddRequestReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAddRequestReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAddRequestReq.action)
+  return _internal_action();
+}
+inline void SetGroupAddRequestReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAddRequestReq.action)
+}
+inline std::string* SetGroupAddRequestReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAddRequestReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAddRequestReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAddRequestReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAddRequestReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAddRequestReq.action)
+}
+inline void SetGroupAddRequestReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAddRequestReq.action)
+}
+inline void SetGroupAddRequestReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAddRequestReq.action)
+}
+inline std::string* SetGroupAddRequestReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAddRequestReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAddRequestReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAddRequestReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAddRequestReq.action)
+}
+
+// string echo = 102;
+inline void SetGroupAddRequestReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAddRequestReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAddRequestReq.echo)
+  return _internal_echo();
+}
+inline void SetGroupAddRequestReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAddRequestReq.echo)
+}
+inline std::string* SetGroupAddRequestReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAddRequestReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAddRequestReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAddRequestReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAddRequestReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAddRequestReq.echo)
+}
+inline void SetGroupAddRequestReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAddRequestReq.echo)
+}
+inline void SetGroupAddRequestReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAddRequestReq.echo)
+}
+inline std::string* SetGroupAddRequestReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAddRequestReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAddRequestReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAddRequestReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAddRequestReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetGroupAddRequestResp
 
+// string action = 101;
+inline void SetGroupAddRequestResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAddRequestResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAddRequestResp.action)
+  return _internal_action();
+}
+inline void SetGroupAddRequestResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAddRequestResp.action)
+}
+inline std::string* SetGroupAddRequestResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAddRequestResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetGroupAddRequestResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetGroupAddRequestResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAddRequestResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAddRequestResp.action)
+}
+inline void SetGroupAddRequestResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAddRequestResp.action)
+}
+inline void SetGroupAddRequestResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAddRequestResp.action)
+}
+inline std::string* SetGroupAddRequestResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAddRequestResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAddRequestResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAddRequestResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAddRequestResp.action)
+}
+
+// string echo = 102;
+inline void SetGroupAddRequestResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetGroupAddRequestResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetGroupAddRequestResp.echo)
+  return _internal_echo();
+}
+inline void SetGroupAddRequestResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetGroupAddRequestResp.echo)
+}
+inline std::string* SetGroupAddRequestResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetGroupAddRequestResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetGroupAddRequestResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetGroupAddRequestResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetGroupAddRequestResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetGroupAddRequestResp.echo)
+}
+inline void SetGroupAddRequestResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetGroupAddRequestResp.echo)
+}
+inline void SetGroupAddRequestResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetGroupAddRequestResp.echo)
+}
+inline std::string* SetGroupAddRequestResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetGroupAddRequestResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetGroupAddRequestResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetGroupAddRequestResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetGroupAddRequestResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetLoginInfoReq
+
+// string action = 101;
+inline void GetLoginInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetLoginInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetLoginInfoReq.action)
+  return _internal_action();
+}
+inline void GetLoginInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetLoginInfoReq.action)
+}
+inline std::string* GetLoginInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetLoginInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetLoginInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetLoginInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetLoginInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetLoginInfoReq.action)
+}
+inline void GetLoginInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetLoginInfoReq.action)
+}
+inline void GetLoginInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetLoginInfoReq.action)
+}
+inline std::string* GetLoginInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetLoginInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetLoginInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetLoginInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetLoginInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetLoginInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetLoginInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetLoginInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetLoginInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetLoginInfoReq.echo)
+}
+inline std::string* GetLoginInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetLoginInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetLoginInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetLoginInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetLoginInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetLoginInfoReq.echo)
+}
+inline void GetLoginInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetLoginInfoReq.echo)
+}
+inline void GetLoginInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetLoginInfoReq.echo)
+}
+inline std::string* GetLoginInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetLoginInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetLoginInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetLoginInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetLoginInfoReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -15944,6 +23834,130 @@ inline void GetLoginInfoResp::set_allocated_nickname(std::string* nickname) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetLoginInfoResp.nickname)
 }
 
+// string action = 101;
+inline void GetLoginInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetLoginInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetLoginInfoResp.action)
+  return _internal_action();
+}
+inline void GetLoginInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetLoginInfoResp.action)
+}
+inline std::string* GetLoginInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetLoginInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetLoginInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetLoginInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetLoginInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetLoginInfoResp.action)
+}
+inline void GetLoginInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetLoginInfoResp.action)
+}
+inline void GetLoginInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetLoginInfoResp.action)
+}
+inline std::string* GetLoginInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetLoginInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetLoginInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetLoginInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetLoginInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetLoginInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetLoginInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetLoginInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetLoginInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetLoginInfoResp.echo)
+}
+inline std::string* GetLoginInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetLoginInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetLoginInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetLoginInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetLoginInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetLoginInfoResp.echo)
+}
+inline void GetLoginInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetLoginInfoResp.echo)
+}
+inline void GetLoginInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetLoginInfoResp.echo)
+}
+inline std::string* GetLoginInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetLoginInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetLoginInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetLoginInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetLoginInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetStrangerInfoReq
@@ -15986,6 +24000,130 @@ inline void GetStrangerInfoReq::_internal_set_no_cache(bool value) {
 inline void GetStrangerInfoReq::set_no_cache(bool value) {
   _internal_set_no_cache(value);
   // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoReq.no_cache)
+}
+
+// string action = 101;
+inline void GetStrangerInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStrangerInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStrangerInfoReq.action)
+  return _internal_action();
+}
+inline void GetStrangerInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoReq.action)
+}
+inline std::string* GetStrangerInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStrangerInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetStrangerInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetStrangerInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStrangerInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStrangerInfoReq.action)
+}
+inline void GetStrangerInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStrangerInfoReq.action)
+}
+inline void GetStrangerInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStrangerInfoReq.action)
+}
+inline std::string* GetStrangerInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStrangerInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetStrangerInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStrangerInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStrangerInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetStrangerInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStrangerInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStrangerInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetStrangerInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoReq.echo)
+}
+inline std::string* GetStrangerInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStrangerInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetStrangerInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetStrangerInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStrangerInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStrangerInfoReq.echo)
+}
+inline void GetStrangerInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStrangerInfoReq.echo)
+}
+inline void GetStrangerInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStrangerInfoReq.echo)
+}
+inline std::string* GetStrangerInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStrangerInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetStrangerInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStrangerInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStrangerInfoReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -16156,9 +24294,257 @@ inline void GetStrangerInfoResp::set_age(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoResp.age)
 }
 
+// string action = 101;
+inline void GetStrangerInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStrangerInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStrangerInfoResp.action)
+  return _internal_action();
+}
+inline void GetStrangerInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoResp.action)
+}
+inline std::string* GetStrangerInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStrangerInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetStrangerInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetStrangerInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStrangerInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStrangerInfoResp.action)
+}
+inline void GetStrangerInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStrangerInfoResp.action)
+}
+inline void GetStrangerInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStrangerInfoResp.action)
+}
+inline std::string* GetStrangerInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStrangerInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetStrangerInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStrangerInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStrangerInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetStrangerInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStrangerInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStrangerInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetStrangerInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStrangerInfoResp.echo)
+}
+inline std::string* GetStrangerInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStrangerInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetStrangerInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetStrangerInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStrangerInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStrangerInfoResp.echo)
+}
+inline void GetStrangerInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStrangerInfoResp.echo)
+}
+inline void GetStrangerInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStrangerInfoResp.echo)
+}
+inline std::string* GetStrangerInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStrangerInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetStrangerInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStrangerInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStrangerInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetFriendListReq
+
+// string action = 101;
+inline void GetFriendListReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetFriendListReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetFriendListReq.action)
+  return _internal_action();
+}
+inline void GetFriendListReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetFriendListReq.action)
+}
+inline std::string* GetFriendListReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetFriendListReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetFriendListReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetFriendListReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetFriendListReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetFriendListReq.action)
+}
+inline void GetFriendListReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetFriendListReq.action)
+}
+inline void GetFriendListReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetFriendListReq.action)
+}
+inline std::string* GetFriendListReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetFriendListReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetFriendListReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetFriendListReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetFriendListReq.action)
+}
+
+// string echo = 102;
+inline void GetFriendListReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetFriendListReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetFriendListReq.echo)
+  return _internal_echo();
+}
+inline void GetFriendListReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetFriendListReq.echo)
+}
+inline std::string* GetFriendListReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetFriendListReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetFriendListReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetFriendListReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetFriendListReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetFriendListReq.echo)
+}
+inline void GetFriendListReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetFriendListReq.echo)
+}
+inline void GetFriendListReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetFriendListReq.echo)
+}
+inline std::string* GetFriendListReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetFriendListReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetFriendListReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetFriendListReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetFriendListReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -16351,6 +24737,130 @@ GetFriendListResp::friend_list() const {
   return friend_list_;
 }
 
+// string action = 101;
+inline void GetFriendListResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetFriendListResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetFriendListResp.action)
+  return _internal_action();
+}
+inline void GetFriendListResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetFriendListResp.action)
+}
+inline std::string* GetFriendListResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetFriendListResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetFriendListResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetFriendListResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetFriendListResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetFriendListResp.action)
+}
+inline void GetFriendListResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetFriendListResp.action)
+}
+inline void GetFriendListResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetFriendListResp.action)
+}
+inline std::string* GetFriendListResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetFriendListResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetFriendListResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetFriendListResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetFriendListResp.action)
+}
+
+// string echo = 102;
+inline void GetFriendListResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetFriendListResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetFriendListResp.echo)
+  return _internal_echo();
+}
+inline void GetFriendListResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetFriendListResp.echo)
+}
+inline std::string* GetFriendListResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetFriendListResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetFriendListResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetFriendListResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetFriendListResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetFriendListResp.echo)
+}
+inline void GetFriendListResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetFriendListResp.echo)
+}
+inline void GetFriendListResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetFriendListResp.echo)
+}
+inline std::string* GetFriendListResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetFriendListResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetFriendListResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetFriendListResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetFriendListResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetGroupInfoReq
@@ -16393,6 +24903,130 @@ inline void GetGroupInfoReq::_internal_set_no_cache(bool value) {
 inline void GetGroupInfoReq::set_no_cache(bool value) {
   _internal_set_no_cache(value);
   // @@protoc_insertion_point(field_set:onebot.GetGroupInfoReq.no_cache)
+}
+
+// string action = 101;
+inline void GetGroupInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupInfoReq.action)
+  return _internal_action();
+}
+inline void GetGroupInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupInfoReq.action)
+}
+inline std::string* GetGroupInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupInfoReq.action)
+}
+inline void GetGroupInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupInfoReq.action)
+}
+inline void GetGroupInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupInfoReq.action)
+}
+inline std::string* GetGroupInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetGroupInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetGroupInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupInfoReq.echo)
+}
+inline std::string* GetGroupInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupInfoReq.echo)
+}
+inline void GetGroupInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupInfoReq.echo)
+}
+inline void GetGroupInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupInfoReq.echo)
+}
+inline std::string* GetGroupInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupInfoReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -16521,9 +25155,257 @@ inline void GetGroupInfoResp::set_max_member_count(::PROTOBUF_NAMESPACE_ID::int3
   // @@protoc_insertion_point(field_set:onebot.GetGroupInfoResp.max_member_count)
 }
 
+// string action = 101;
+inline void GetGroupInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupInfoResp.action)
+  return _internal_action();
+}
+inline void GetGroupInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupInfoResp.action)
+}
+inline std::string* GetGroupInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupInfoResp.action)
+}
+inline void GetGroupInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupInfoResp.action)
+}
+inline void GetGroupInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupInfoResp.action)
+}
+inline std::string* GetGroupInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetGroupInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetGroupInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupInfoResp.echo)
+}
+inline std::string* GetGroupInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupInfoResp.echo)
+}
+inline void GetGroupInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupInfoResp.echo)
+}
+inline void GetGroupInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupInfoResp.echo)
+}
+inline std::string* GetGroupInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetGroupListReq
+
+// string action = 101;
+inline void GetGroupListReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupListReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupListReq.action)
+  return _internal_action();
+}
+inline void GetGroupListReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupListReq.action)
+}
+inline std::string* GetGroupListReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupListReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupListReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupListReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupListReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupListReq.action)
+}
+inline void GetGroupListReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupListReq.action)
+}
+inline void GetGroupListReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupListReq.action)
+}
+inline std::string* GetGroupListReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupListReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupListReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupListReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupListReq.action)
+}
+
+// string echo = 102;
+inline void GetGroupListReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupListReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupListReq.echo)
+  return _internal_echo();
+}
+inline void GetGroupListReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupListReq.echo)
+}
+inline std::string* GetGroupListReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupListReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupListReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupListReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupListReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupListReq.echo)
+}
+inline void GetGroupListReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupListReq.echo)
+}
+inline void GetGroupListReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupListReq.echo)
+}
+inline std::string* GetGroupListReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupListReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupListReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupListReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupListReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -16694,6 +25576,130 @@ GetGroupListResp::group_list() const {
   return group_list_;
 }
 
+// string action = 101;
+inline void GetGroupListResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupListResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupListResp.action)
+  return _internal_action();
+}
+inline void GetGroupListResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupListResp.action)
+}
+inline std::string* GetGroupListResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupListResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupListResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupListResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupListResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupListResp.action)
+}
+inline void GetGroupListResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupListResp.action)
+}
+inline void GetGroupListResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupListResp.action)
+}
+inline std::string* GetGroupListResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupListResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupListResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupListResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupListResp.action)
+}
+
+// string echo = 102;
+inline void GetGroupListResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupListResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupListResp.echo)
+  return _internal_echo();
+}
+inline void GetGroupListResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupListResp.echo)
+}
+inline std::string* GetGroupListResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupListResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupListResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupListResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupListResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupListResp.echo)
+}
+inline void GetGroupListResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupListResp.echo)
+}
+inline void GetGroupListResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupListResp.echo)
+}
+inline std::string* GetGroupListResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupListResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupListResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupListResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupListResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetGroupMemberInfoReq
@@ -16756,6 +25762,130 @@ inline void GetGroupMemberInfoReq::_internal_set_no_cache(bool value) {
 inline void GetGroupMemberInfoReq::set_no_cache(bool value) {
   _internal_set_no_cache(value);
   // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoReq.no_cache)
+}
+
+// string action = 101;
+inline void GetGroupMemberInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberInfoReq.action)
+  return _internal_action();
+}
+inline void GetGroupMemberInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoReq.action)
+}
+inline std::string* GetGroupMemberInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupMemberInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupMemberInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberInfoReq.action)
+}
+inline void GetGroupMemberInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberInfoReq.action)
+}
+inline void GetGroupMemberInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberInfoReq.action)
+}
+inline std::string* GetGroupMemberInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetGroupMemberInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetGroupMemberInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoReq.echo)
+}
+inline std::string* GetGroupMemberInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupMemberInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupMemberInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberInfoReq.echo)
+}
+inline void GetGroupMemberInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberInfoReq.echo)
+}
+inline void GetGroupMemberInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberInfoReq.echo)
+}
+inline std::string* GetGroupMemberInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberInfoReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -17356,6 +26486,130 @@ inline void GetGroupMemberInfoResp::set_card_changeable(bool value) {
   // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoResp.card_changeable)
 }
 
+// string action = 101;
+inline void GetGroupMemberInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberInfoResp.action)
+  return _internal_action();
+}
+inline void GetGroupMemberInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoResp.action)
+}
+inline std::string* GetGroupMemberInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupMemberInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupMemberInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberInfoResp.action)
+}
+inline void GetGroupMemberInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberInfoResp.action)
+}
+inline void GetGroupMemberInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberInfoResp.action)
+}
+inline std::string* GetGroupMemberInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetGroupMemberInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetGroupMemberInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberInfoResp.echo)
+}
+inline std::string* GetGroupMemberInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupMemberInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupMemberInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberInfoResp.echo)
+}
+inline void GetGroupMemberInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberInfoResp.echo)
+}
+inline void GetGroupMemberInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberInfoResp.echo)
+}
+inline std::string* GetGroupMemberInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetGroupMemberListReq
@@ -17378,6 +26632,130 @@ inline void GetGroupMemberListReq::_internal_set_group_id(::PROTOBUF_NAMESPACE_I
 inline void GetGroupMemberListReq::set_group_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_group_id(value);
   // @@protoc_insertion_point(field_set:onebot.GetGroupMemberListReq.group_id)
+}
+
+// string action = 101;
+inline void GetGroupMemberListReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberListReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberListReq.action)
+  return _internal_action();
+}
+inline void GetGroupMemberListReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberListReq.action)
+}
+inline std::string* GetGroupMemberListReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberListReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupMemberListReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupMemberListReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberListReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberListReq.action)
+}
+inline void GetGroupMemberListReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberListReq.action)
+}
+inline void GetGroupMemberListReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberListReq.action)
+}
+inline std::string* GetGroupMemberListReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberListReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberListReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberListReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberListReq.action)
+}
+
+// string echo = 102;
+inline void GetGroupMemberListReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberListReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberListReq.echo)
+  return _internal_echo();
+}
+inline void GetGroupMemberListReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberListReq.echo)
+}
+inline std::string* GetGroupMemberListReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberListReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupMemberListReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupMemberListReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberListReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberListReq.echo)
+}
+inline void GetGroupMemberListReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberListReq.echo)
+}
+inline void GetGroupMemberListReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberListReq.echo)
+}
+inline std::string* GetGroupMemberListReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberListReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberListReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberListReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberListReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -18021,6 +27399,130 @@ GetGroupMemberListResp::group_member_list() const {
   return group_member_list_;
 }
 
+// string action = 101;
+inline void GetGroupMemberListResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberListResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberListResp.action)
+  return _internal_action();
+}
+inline void GetGroupMemberListResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberListResp.action)
+}
+inline std::string* GetGroupMemberListResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberListResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupMemberListResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupMemberListResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberListResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberListResp.action)
+}
+inline void GetGroupMemberListResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberListResp.action)
+}
+inline void GetGroupMemberListResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberListResp.action)
+}
+inline std::string* GetGroupMemberListResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberListResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberListResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberListResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberListResp.action)
+}
+
+// string echo = 102;
+inline void GetGroupMemberListResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupMemberListResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupMemberListResp.echo)
+  return _internal_echo();
+}
+inline void GetGroupMemberListResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupMemberListResp.echo)
+}
+inline std::string* GetGroupMemberListResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupMemberListResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupMemberListResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupMemberListResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupMemberListResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupMemberListResp.echo)
+}
+inline void GetGroupMemberListResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupMemberListResp.echo)
+}
+inline void GetGroupMemberListResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupMemberListResp.echo)
+}
+inline std::string* GetGroupMemberListResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupMemberListResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupMemberListResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupMemberListResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupMemberListResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetGroupHonorInfoReq
@@ -18105,6 +27607,130 @@ inline void GetGroupHonorInfoReq::set_allocated_type(std::string* type) {
   type_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), type,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupHonorInfoReq.type)
+}
+
+// string action = 101;
+inline void GetGroupHonorInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupHonorInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupHonorInfoReq.action)
+  return _internal_action();
+}
+inline void GetGroupHonorInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupHonorInfoReq.action)
+}
+inline std::string* GetGroupHonorInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupHonorInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupHonorInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupHonorInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupHonorInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupHonorInfoReq.action)
+}
+inline void GetGroupHonorInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupHonorInfoReq.action)
+}
+inline void GetGroupHonorInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupHonorInfoReq.action)
+}
+inline std::string* GetGroupHonorInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupHonorInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupHonorInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupHonorInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupHonorInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetGroupHonorInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupHonorInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupHonorInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetGroupHonorInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupHonorInfoReq.echo)
+}
+inline std::string* GetGroupHonorInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupHonorInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupHonorInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupHonorInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupHonorInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupHonorInfoReq.echo)
+}
+inline void GetGroupHonorInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupHonorInfoReq.echo)
+}
+inline void GetGroupHonorInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupHonorInfoReq.echo)
+}
+inline std::string* GetGroupHonorInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupHonorInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupHonorInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupHonorInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupHonorInfoReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -18787,6 +28413,130 @@ GetGroupHonorInfoResp::emotion_list() const {
   return emotion_list_;
 }
 
+// string action = 101;
+inline void GetGroupHonorInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupHonorInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupHonorInfoResp.action)
+  return _internal_action();
+}
+inline void GetGroupHonorInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupHonorInfoResp.action)
+}
+inline std::string* GetGroupHonorInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupHonorInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetGroupHonorInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetGroupHonorInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupHonorInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupHonorInfoResp.action)
+}
+inline void GetGroupHonorInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupHonorInfoResp.action)
+}
+inline void GetGroupHonorInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupHonorInfoResp.action)
+}
+inline std::string* GetGroupHonorInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupHonorInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupHonorInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupHonorInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupHonorInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetGroupHonorInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetGroupHonorInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetGroupHonorInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetGroupHonorInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetGroupHonorInfoResp.echo)
+}
+inline std::string* GetGroupHonorInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetGroupHonorInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetGroupHonorInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetGroupHonorInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetGroupHonorInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetGroupHonorInfoResp.echo)
+}
+inline void GetGroupHonorInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetGroupHonorInfoResp.echo)
+}
+inline void GetGroupHonorInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetGroupHonorInfoResp.echo)
+}
+inline std::string* GetGroupHonorInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetGroupHonorInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetGroupHonorInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetGroupHonorInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetGroupHonorInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetCookiesReq
@@ -18851,6 +28601,130 @@ inline void GetCookiesReq::set_allocated_domain(std::string* domain) {
   domain_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), domain,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesReq.domain)
+}
+
+// string action = 101;
+inline void GetCookiesReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCookiesReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCookiesReq.action)
+  return _internal_action();
+}
+inline void GetCookiesReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCookiesReq.action)
+}
+inline std::string* GetCookiesReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCookiesReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCookiesReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCookiesReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCookiesReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCookiesReq.action)
+}
+inline void GetCookiesReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCookiesReq.action)
+}
+inline void GetCookiesReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCookiesReq.action)
+}
+inline std::string* GetCookiesReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCookiesReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCookiesReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCookiesReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesReq.action)
+}
+
+// string echo = 102;
+inline void GetCookiesReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCookiesReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCookiesReq.echo)
+  return _internal_echo();
+}
+inline void GetCookiesReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCookiesReq.echo)
+}
+inline std::string* GetCookiesReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCookiesReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCookiesReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCookiesReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCookiesReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCookiesReq.echo)
+}
+inline void GetCookiesReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCookiesReq.echo)
+}
+inline void GetCookiesReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCookiesReq.echo)
+}
+inline std::string* GetCookiesReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCookiesReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCookiesReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCookiesReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -18919,9 +28793,257 @@ inline void GetCookiesResp::set_allocated_cookies(std::string* cookies) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesResp.cookies)
 }
 
+// string action = 101;
+inline void GetCookiesResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCookiesResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCookiesResp.action)
+  return _internal_action();
+}
+inline void GetCookiesResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCookiesResp.action)
+}
+inline std::string* GetCookiesResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCookiesResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCookiesResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCookiesResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCookiesResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCookiesResp.action)
+}
+inline void GetCookiesResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCookiesResp.action)
+}
+inline void GetCookiesResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCookiesResp.action)
+}
+inline std::string* GetCookiesResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCookiesResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCookiesResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCookiesResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesResp.action)
+}
+
+// string echo = 102;
+inline void GetCookiesResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCookiesResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCookiesResp.echo)
+  return _internal_echo();
+}
+inline void GetCookiesResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCookiesResp.echo)
+}
+inline std::string* GetCookiesResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCookiesResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCookiesResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCookiesResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCookiesResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCookiesResp.echo)
+}
+inline void GetCookiesResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCookiesResp.echo)
+}
+inline void GetCookiesResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCookiesResp.echo)
+}
+inline std::string* GetCookiesResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCookiesResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCookiesResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCookiesResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCookiesResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetCsrfTokenReq
+
+// string action = 101;
+inline void GetCsrfTokenReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCsrfTokenReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCsrfTokenReq.action)
+  return _internal_action();
+}
+inline void GetCsrfTokenReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCsrfTokenReq.action)
+}
+inline std::string* GetCsrfTokenReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCsrfTokenReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCsrfTokenReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCsrfTokenReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCsrfTokenReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCsrfTokenReq.action)
+}
+inline void GetCsrfTokenReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCsrfTokenReq.action)
+}
+inline void GetCsrfTokenReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCsrfTokenReq.action)
+}
+inline std::string* GetCsrfTokenReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCsrfTokenReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCsrfTokenReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCsrfTokenReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCsrfTokenReq.action)
+}
+
+// string echo = 102;
+inline void GetCsrfTokenReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCsrfTokenReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCsrfTokenReq.echo)
+  return _internal_echo();
+}
+inline void GetCsrfTokenReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCsrfTokenReq.echo)
+}
+inline std::string* GetCsrfTokenReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCsrfTokenReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCsrfTokenReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCsrfTokenReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCsrfTokenReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCsrfTokenReq.echo)
+}
+inline void GetCsrfTokenReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCsrfTokenReq.echo)
+}
+inline void GetCsrfTokenReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCsrfTokenReq.echo)
+}
+inline std::string* GetCsrfTokenReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCsrfTokenReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCsrfTokenReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCsrfTokenReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCsrfTokenReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -18945,6 +29067,130 @@ inline void GetCsrfTokenResp::_internal_set_token(::PROTOBUF_NAMESPACE_ID::int32
 inline void GetCsrfTokenResp::set_token(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_token(value);
   // @@protoc_insertion_point(field_set:onebot.GetCsrfTokenResp.token)
+}
+
+// string action = 101;
+inline void GetCsrfTokenResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCsrfTokenResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCsrfTokenResp.action)
+  return _internal_action();
+}
+inline void GetCsrfTokenResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCsrfTokenResp.action)
+}
+inline std::string* GetCsrfTokenResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCsrfTokenResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCsrfTokenResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCsrfTokenResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCsrfTokenResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCsrfTokenResp.action)
+}
+inline void GetCsrfTokenResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCsrfTokenResp.action)
+}
+inline void GetCsrfTokenResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCsrfTokenResp.action)
+}
+inline std::string* GetCsrfTokenResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCsrfTokenResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCsrfTokenResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCsrfTokenResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCsrfTokenResp.action)
+}
+
+// string echo = 102;
+inline void GetCsrfTokenResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCsrfTokenResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCsrfTokenResp.echo)
+  return _internal_echo();
+}
+inline void GetCsrfTokenResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCsrfTokenResp.echo)
+}
+inline std::string* GetCsrfTokenResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCsrfTokenResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCsrfTokenResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCsrfTokenResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCsrfTokenResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCsrfTokenResp.echo)
+}
+inline void GetCsrfTokenResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCsrfTokenResp.echo)
+}
+inline void GetCsrfTokenResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCsrfTokenResp.echo)
+}
+inline std::string* GetCsrfTokenResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCsrfTokenResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCsrfTokenResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCsrfTokenResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCsrfTokenResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -19011,6 +29257,130 @@ inline void GetCredentialsReq::set_allocated_domain(std::string* domain) {
   domain_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), domain,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:onebot.GetCredentialsReq.domain)
+}
+
+// string action = 101;
+inline void GetCredentialsReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCredentialsReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCredentialsReq.action)
+  return _internal_action();
+}
+inline void GetCredentialsReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCredentialsReq.action)
+}
+inline std::string* GetCredentialsReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCredentialsReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCredentialsReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCredentialsReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCredentialsReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCredentialsReq.action)
+}
+inline void GetCredentialsReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCredentialsReq.action)
+}
+inline void GetCredentialsReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCredentialsReq.action)
+}
+inline std::string* GetCredentialsReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCredentialsReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCredentialsReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCredentialsReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCredentialsReq.action)
+}
+
+// string echo = 102;
+inline void GetCredentialsReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCredentialsReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCredentialsReq.echo)
+  return _internal_echo();
+}
+inline void GetCredentialsReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCredentialsReq.echo)
+}
+inline std::string* GetCredentialsReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCredentialsReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCredentialsReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCredentialsReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCredentialsReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCredentialsReq.echo)
+}
+inline void GetCredentialsReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCredentialsReq.echo)
+}
+inline void GetCredentialsReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCredentialsReq.echo)
+}
+inline std::string* GetCredentialsReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCredentialsReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCredentialsReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCredentialsReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCredentialsReq.echo)
 }
 
 // -------------------------------------------------------------------
@@ -19097,6 +29467,130 @@ inline void GetCredentialsResp::_internal_set_csrf_token(::PROTOBUF_NAMESPACE_ID
 inline void GetCredentialsResp::set_csrf_token(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_csrf_token(value);
   // @@protoc_insertion_point(field_set:onebot.GetCredentialsResp.csrf_token)
+}
+
+// string action = 101;
+inline void GetCredentialsResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCredentialsResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCredentialsResp.action)
+  return _internal_action();
+}
+inline void GetCredentialsResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCredentialsResp.action)
+}
+inline std::string* GetCredentialsResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCredentialsResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetCredentialsResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetCredentialsResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCredentialsResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCredentialsResp.action)
+}
+inline void GetCredentialsResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCredentialsResp.action)
+}
+inline void GetCredentialsResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCredentialsResp.action)
+}
+inline std::string* GetCredentialsResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCredentialsResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetCredentialsResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCredentialsResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCredentialsResp.action)
+}
+
+// string echo = 102;
+inline void GetCredentialsResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetCredentialsResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetCredentialsResp.echo)
+  return _internal_echo();
+}
+inline void GetCredentialsResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetCredentialsResp.echo)
+}
+inline std::string* GetCredentialsResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetCredentialsResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetCredentialsResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetCredentialsResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetCredentialsResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetCredentialsResp.echo)
+}
+inline void GetCredentialsResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetCredentialsResp.echo)
+}
+inline void GetCredentialsResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetCredentialsResp.echo)
+}
+inline std::string* GetCredentialsResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetCredentialsResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetCredentialsResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetCredentialsResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetCredentialsResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -19227,6 +29721,130 @@ inline void GetRecordReq::set_allocated_out_format(std::string* out_format) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordReq.out_format)
 }
 
+// string action = 101;
+inline void GetRecordReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetRecordReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetRecordReq.action)
+  return _internal_action();
+}
+inline void GetRecordReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetRecordReq.action)
+}
+inline std::string* GetRecordReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetRecordReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetRecordReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetRecordReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetRecordReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetRecordReq.action)
+}
+inline void GetRecordReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetRecordReq.action)
+}
+inline void GetRecordReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetRecordReq.action)
+}
+inline std::string* GetRecordReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetRecordReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetRecordReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetRecordReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordReq.action)
+}
+
+// string echo = 102;
+inline void GetRecordReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetRecordReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetRecordReq.echo)
+  return _internal_echo();
+}
+inline void GetRecordReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetRecordReq.echo)
+}
+inline std::string* GetRecordReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetRecordReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetRecordReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetRecordReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetRecordReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetRecordReq.echo)
+}
+inline void GetRecordReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetRecordReq.echo)
+}
+inline void GetRecordReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetRecordReq.echo)
+}
+inline std::string* GetRecordReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetRecordReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetRecordReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetRecordReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetRecordResp
@@ -19291,6 +29909,130 @@ inline void GetRecordResp::set_allocated_file(std::string* file) {
   file_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), file,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordResp.file)
+}
+
+// string action = 101;
+inline void GetRecordResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetRecordResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetRecordResp.action)
+  return _internal_action();
+}
+inline void GetRecordResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetRecordResp.action)
+}
+inline std::string* GetRecordResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetRecordResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetRecordResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetRecordResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetRecordResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetRecordResp.action)
+}
+inline void GetRecordResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetRecordResp.action)
+}
+inline void GetRecordResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetRecordResp.action)
+}
+inline std::string* GetRecordResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetRecordResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetRecordResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetRecordResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordResp.action)
+}
+
+// string echo = 102;
+inline void GetRecordResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetRecordResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetRecordResp.echo)
+  return _internal_echo();
+}
+inline void GetRecordResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetRecordResp.echo)
+}
+inline std::string* GetRecordResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetRecordResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetRecordResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetRecordResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetRecordResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetRecordResp.echo)
+}
+inline void GetRecordResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetRecordResp.echo)
+}
+inline void GetRecordResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetRecordResp.echo)
+}
+inline std::string* GetRecordResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetRecordResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetRecordResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetRecordResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetRecordResp.echo)
 }
 
 // -------------------------------------------------------------------
@@ -19359,6 +30101,130 @@ inline void GetImageReq::set_allocated_file(std::string* file) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetImageReq.file)
 }
 
+// string action = 101;
+inline void GetImageReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetImageReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetImageReq.action)
+  return _internal_action();
+}
+inline void GetImageReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetImageReq.action)
+}
+inline std::string* GetImageReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetImageReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetImageReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetImageReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetImageReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetImageReq.action)
+}
+inline void GetImageReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetImageReq.action)
+}
+inline void GetImageReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetImageReq.action)
+}
+inline std::string* GetImageReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetImageReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetImageReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetImageReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetImageReq.action)
+}
+
+// string echo = 102;
+inline void GetImageReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetImageReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetImageReq.echo)
+  return _internal_echo();
+}
+inline void GetImageReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetImageReq.echo)
+}
+inline std::string* GetImageReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetImageReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetImageReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetImageReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetImageReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetImageReq.echo)
+}
+inline void GetImageReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetImageReq.echo)
+}
+inline void GetImageReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetImageReq.echo)
+}
+inline std::string* GetImageReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetImageReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetImageReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetImageReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetImageReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetImageResp
@@ -19425,9 +30291,257 @@ inline void GetImageResp::set_allocated_file(std::string* file) {
   // @@protoc_insertion_point(field_set_allocated:onebot.GetImageResp.file)
 }
 
+// string action = 101;
+inline void GetImageResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetImageResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetImageResp.action)
+  return _internal_action();
+}
+inline void GetImageResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetImageResp.action)
+}
+inline std::string* GetImageResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetImageResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetImageResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetImageResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetImageResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetImageResp.action)
+}
+inline void GetImageResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetImageResp.action)
+}
+inline void GetImageResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetImageResp.action)
+}
+inline std::string* GetImageResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetImageResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetImageResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetImageResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetImageResp.action)
+}
+
+// string echo = 102;
+inline void GetImageResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetImageResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetImageResp.echo)
+  return _internal_echo();
+}
+inline void GetImageResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetImageResp.echo)
+}
+inline std::string* GetImageResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetImageResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetImageResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetImageResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetImageResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetImageResp.echo)
+}
+inline void GetImageResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetImageResp.echo)
+}
+inline void GetImageResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetImageResp.echo)
+}
+inline std::string* GetImageResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetImageResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetImageResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetImageResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetImageResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // CanSendImageReq
+
+// string action = 101;
+inline void CanSendImageReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendImageReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendImageReq.action)
+  return _internal_action();
+}
+inline void CanSendImageReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendImageReq.action)
+}
+inline std::string* CanSendImageReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendImageReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CanSendImageReq::_internal_action() const {
+  return action_.Get();
+}
+inline void CanSendImageReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendImageReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendImageReq.action)
+}
+inline void CanSendImageReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendImageReq.action)
+}
+inline void CanSendImageReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendImageReq.action)
+}
+inline std::string* CanSendImageReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendImageReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendImageReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendImageReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendImageReq.action)
+}
+
+// string echo = 102;
+inline void CanSendImageReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendImageReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendImageReq.echo)
+  return _internal_echo();
+}
+inline void CanSendImageReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendImageReq.echo)
+}
+inline std::string* CanSendImageReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendImageReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CanSendImageReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CanSendImageReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendImageReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendImageReq.echo)
+}
+inline void CanSendImageReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendImageReq.echo)
+}
+inline void CanSendImageReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendImageReq.echo)
+}
+inline std::string* CanSendImageReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendImageReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendImageReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendImageReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendImageReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -19453,9 +30567,257 @@ inline void CanSendImageResp::set_yes(bool value) {
   // @@protoc_insertion_point(field_set:onebot.CanSendImageResp.yes)
 }
 
+// string action = 101;
+inline void CanSendImageResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendImageResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendImageResp.action)
+  return _internal_action();
+}
+inline void CanSendImageResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendImageResp.action)
+}
+inline std::string* CanSendImageResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendImageResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CanSendImageResp::_internal_action() const {
+  return action_.Get();
+}
+inline void CanSendImageResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendImageResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendImageResp.action)
+}
+inline void CanSendImageResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendImageResp.action)
+}
+inline void CanSendImageResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendImageResp.action)
+}
+inline std::string* CanSendImageResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendImageResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendImageResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendImageResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendImageResp.action)
+}
+
+// string echo = 102;
+inline void CanSendImageResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendImageResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendImageResp.echo)
+  return _internal_echo();
+}
+inline void CanSendImageResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendImageResp.echo)
+}
+inline std::string* CanSendImageResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendImageResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CanSendImageResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CanSendImageResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendImageResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendImageResp.echo)
+}
+inline void CanSendImageResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendImageResp.echo)
+}
+inline void CanSendImageResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendImageResp.echo)
+}
+inline std::string* CanSendImageResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendImageResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendImageResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendImageResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendImageResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // CanSendRecordReq
+
+// string action = 101;
+inline void CanSendRecordReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendRecordReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendRecordReq.action)
+  return _internal_action();
+}
+inline void CanSendRecordReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendRecordReq.action)
+}
+inline std::string* CanSendRecordReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendRecordReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CanSendRecordReq::_internal_action() const {
+  return action_.Get();
+}
+inline void CanSendRecordReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendRecordReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendRecordReq.action)
+}
+inline void CanSendRecordReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendRecordReq.action)
+}
+inline void CanSendRecordReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendRecordReq.action)
+}
+inline std::string* CanSendRecordReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendRecordReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendRecordReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendRecordReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendRecordReq.action)
+}
+
+// string echo = 102;
+inline void CanSendRecordReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendRecordReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendRecordReq.echo)
+  return _internal_echo();
+}
+inline void CanSendRecordReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendRecordReq.echo)
+}
+inline std::string* CanSendRecordReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendRecordReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CanSendRecordReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CanSendRecordReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendRecordReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendRecordReq.echo)
+}
+inline void CanSendRecordReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendRecordReq.echo)
+}
+inline void CanSendRecordReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendRecordReq.echo)
+}
+inline std::string* CanSendRecordReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendRecordReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendRecordReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendRecordReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendRecordReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -19481,9 +30843,257 @@ inline void CanSendRecordResp::set_yes(bool value) {
   // @@protoc_insertion_point(field_set:onebot.CanSendRecordResp.yes)
 }
 
+// string action = 101;
+inline void CanSendRecordResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendRecordResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendRecordResp.action)
+  return _internal_action();
+}
+inline void CanSendRecordResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendRecordResp.action)
+}
+inline std::string* CanSendRecordResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendRecordResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CanSendRecordResp::_internal_action() const {
+  return action_.Get();
+}
+inline void CanSendRecordResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendRecordResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendRecordResp.action)
+}
+inline void CanSendRecordResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendRecordResp.action)
+}
+inline void CanSendRecordResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendRecordResp.action)
+}
+inline std::string* CanSendRecordResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendRecordResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendRecordResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendRecordResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendRecordResp.action)
+}
+
+// string echo = 102;
+inline void CanSendRecordResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CanSendRecordResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CanSendRecordResp.echo)
+  return _internal_echo();
+}
+inline void CanSendRecordResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CanSendRecordResp.echo)
+}
+inline std::string* CanSendRecordResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CanSendRecordResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CanSendRecordResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CanSendRecordResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CanSendRecordResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CanSendRecordResp.echo)
+}
+inline void CanSendRecordResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CanSendRecordResp.echo)
+}
+inline void CanSendRecordResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CanSendRecordResp.echo)
+}
+inline std::string* CanSendRecordResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CanSendRecordResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CanSendRecordResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CanSendRecordResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CanSendRecordResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetStatusReq
+
+// string action = 101;
+inline void GetStatusReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStatusReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStatusReq.action)
+  return _internal_action();
+}
+inline void GetStatusReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStatusReq.action)
+}
+inline std::string* GetStatusReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStatusReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetStatusReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetStatusReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStatusReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStatusReq.action)
+}
+inline void GetStatusReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStatusReq.action)
+}
+inline void GetStatusReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStatusReq.action)
+}
+inline std::string* GetStatusReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStatusReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetStatusReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStatusReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStatusReq.action)
+}
+
+// string echo = 102;
+inline void GetStatusReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStatusReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStatusReq.echo)
+  return _internal_echo();
+}
+inline void GetStatusReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStatusReq.echo)
+}
+inline std::string* GetStatusReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStatusReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetStatusReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetStatusReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStatusReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStatusReq.echo)
+}
+inline void GetStatusReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStatusReq.echo)
+}
+inline void GetStatusReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStatusReq.echo)
+}
+inline std::string* GetStatusReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStatusReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetStatusReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStatusReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStatusReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -19529,9 +31139,257 @@ inline void GetStatusResp::set_good(bool value) {
   // @@protoc_insertion_point(field_set:onebot.GetStatusResp.good)
 }
 
+// string action = 101;
+inline void GetStatusResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStatusResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStatusResp.action)
+  return _internal_action();
+}
+inline void GetStatusResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStatusResp.action)
+}
+inline std::string* GetStatusResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStatusResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetStatusResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetStatusResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStatusResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStatusResp.action)
+}
+inline void GetStatusResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStatusResp.action)
+}
+inline void GetStatusResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStatusResp.action)
+}
+inline std::string* GetStatusResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStatusResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetStatusResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStatusResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStatusResp.action)
+}
+
+// string echo = 102;
+inline void GetStatusResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetStatusResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetStatusResp.echo)
+  return _internal_echo();
+}
+inline void GetStatusResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetStatusResp.echo)
+}
+inline std::string* GetStatusResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetStatusResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetStatusResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetStatusResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetStatusResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetStatusResp.echo)
+}
+inline void GetStatusResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetStatusResp.echo)
+}
+inline void GetStatusResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetStatusResp.echo)
+}
+inline std::string* GetStatusResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetStatusResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetStatusResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetStatusResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetStatusResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // GetVersionInfoReq
+
+// string action = 101;
+inline void GetVersionInfoReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetVersionInfoReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetVersionInfoReq.action)
+  return _internal_action();
+}
+inline void GetVersionInfoReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetVersionInfoReq.action)
+}
+inline std::string* GetVersionInfoReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetVersionInfoReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetVersionInfoReq::_internal_action() const {
+  return action_.Get();
+}
+inline void GetVersionInfoReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetVersionInfoReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetVersionInfoReq.action)
+}
+inline void GetVersionInfoReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetVersionInfoReq.action)
+}
+inline void GetVersionInfoReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetVersionInfoReq.action)
+}
+inline std::string* GetVersionInfoReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetVersionInfoReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetVersionInfoReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetVersionInfoReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetVersionInfoReq.action)
+}
+
+// string echo = 102;
+inline void GetVersionInfoReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetVersionInfoReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetVersionInfoReq.echo)
+  return _internal_echo();
+}
+inline void GetVersionInfoReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetVersionInfoReq.echo)
+}
+inline std::string* GetVersionInfoReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetVersionInfoReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetVersionInfoReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetVersionInfoReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetVersionInfoReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetVersionInfoReq.echo)
+}
+inline void GetVersionInfoReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetVersionInfoReq.echo)
+}
+inline void GetVersionInfoReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetVersionInfoReq.echo)
+}
+inline std::string* GetVersionInfoReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetVersionInfoReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetVersionInfoReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetVersionInfoReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetVersionInfoReq.echo)
+}
 
 // -------------------------------------------------------------------
 
@@ -19754,6 +31612,130 @@ GetVersionInfoResp::mutable_extra() {
   return _internal_mutable_extra();
 }
 
+// string action = 101;
+inline void GetVersionInfoResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetVersionInfoResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.GetVersionInfoResp.action)
+  return _internal_action();
+}
+inline void GetVersionInfoResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.GetVersionInfoResp.action)
+}
+inline std::string* GetVersionInfoResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetVersionInfoResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& GetVersionInfoResp::_internal_action() const {
+  return action_.Get();
+}
+inline void GetVersionInfoResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetVersionInfoResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetVersionInfoResp.action)
+}
+inline void GetVersionInfoResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetVersionInfoResp.action)
+}
+inline void GetVersionInfoResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetVersionInfoResp.action)
+}
+inline std::string* GetVersionInfoResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetVersionInfoResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.GetVersionInfoResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetVersionInfoResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetVersionInfoResp.action)
+}
+
+// string echo = 102;
+inline void GetVersionInfoResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& GetVersionInfoResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.GetVersionInfoResp.echo)
+  return _internal_echo();
+}
+inline void GetVersionInfoResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.GetVersionInfoResp.echo)
+}
+inline std::string* GetVersionInfoResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.GetVersionInfoResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& GetVersionInfoResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void GetVersionInfoResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void GetVersionInfoResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.GetVersionInfoResp.echo)
+}
+inline void GetVersionInfoResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.GetVersionInfoResp.echo)
+}
+inline void GetVersionInfoResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.GetVersionInfoResp.echo)
+}
+inline std::string* GetVersionInfoResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* GetVersionInfoResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.GetVersionInfoResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void GetVersionInfoResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.GetVersionInfoResp.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetRestartReq
@@ -19778,21 +31760,521 @@ inline void SetRestartReq::set_delay(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:onebot.SetRestartReq.delay)
 }
 
+// string action = 101;
+inline void SetRestartReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetRestartReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetRestartReq.action)
+  return _internal_action();
+}
+inline void SetRestartReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetRestartReq.action)
+}
+inline std::string* SetRestartReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetRestartReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetRestartReq::_internal_action() const {
+  return action_.Get();
+}
+inline void SetRestartReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetRestartReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetRestartReq.action)
+}
+inline void SetRestartReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetRestartReq.action)
+}
+inline void SetRestartReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetRestartReq.action)
+}
+inline std::string* SetRestartReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetRestartReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetRestartReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetRestartReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetRestartReq.action)
+}
+
+// string echo = 102;
+inline void SetRestartReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetRestartReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetRestartReq.echo)
+  return _internal_echo();
+}
+inline void SetRestartReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetRestartReq.echo)
+}
+inline std::string* SetRestartReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetRestartReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetRestartReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetRestartReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetRestartReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetRestartReq.echo)
+}
+inline void SetRestartReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetRestartReq.echo)
+}
+inline void SetRestartReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetRestartReq.echo)
+}
+inline std::string* SetRestartReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetRestartReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetRestartReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetRestartReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetRestartReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // SetRestartResp
+
+// string action = 101;
+inline void SetRestartResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetRestartResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.SetRestartResp.action)
+  return _internal_action();
+}
+inline void SetRestartResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.SetRestartResp.action)
+}
+inline std::string* SetRestartResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetRestartResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& SetRestartResp::_internal_action() const {
+  return action_.Get();
+}
+inline void SetRestartResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetRestartResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetRestartResp.action)
+}
+inline void SetRestartResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetRestartResp.action)
+}
+inline void SetRestartResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetRestartResp.action)
+}
+inline std::string* SetRestartResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetRestartResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.SetRestartResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetRestartResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetRestartResp.action)
+}
+
+// string echo = 102;
+inline void SetRestartResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SetRestartResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.SetRestartResp.echo)
+  return _internal_echo();
+}
+inline void SetRestartResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.SetRestartResp.echo)
+}
+inline std::string* SetRestartResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.SetRestartResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& SetRestartResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void SetRestartResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SetRestartResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.SetRestartResp.echo)
+}
+inline void SetRestartResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.SetRestartResp.echo)
+}
+inline void SetRestartResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.SetRestartResp.echo)
+}
+inline std::string* SetRestartResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SetRestartResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.SetRestartResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SetRestartResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.SetRestartResp.echo)
+}
 
 // -------------------------------------------------------------------
 
 // CleanCacheReq
 
+// string action = 101;
+inline void CleanCacheReq::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CleanCacheReq::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CleanCacheReq.action)
+  return _internal_action();
+}
+inline void CleanCacheReq::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CleanCacheReq.action)
+}
+inline std::string* CleanCacheReq::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CleanCacheReq.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CleanCacheReq::_internal_action() const {
+  return action_.Get();
+}
+inline void CleanCacheReq::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CleanCacheReq::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CleanCacheReq.action)
+}
+inline void CleanCacheReq::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CleanCacheReq.action)
+}
+inline void CleanCacheReq::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CleanCacheReq.action)
+}
+inline std::string* CleanCacheReq::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CleanCacheReq::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CleanCacheReq.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CleanCacheReq::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CleanCacheReq.action)
+}
+
+// string echo = 102;
+inline void CleanCacheReq::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CleanCacheReq::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CleanCacheReq.echo)
+  return _internal_echo();
+}
+inline void CleanCacheReq::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CleanCacheReq.echo)
+}
+inline std::string* CleanCacheReq::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CleanCacheReq.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CleanCacheReq::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CleanCacheReq::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CleanCacheReq::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CleanCacheReq.echo)
+}
+inline void CleanCacheReq::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CleanCacheReq.echo)
+}
+inline void CleanCacheReq::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CleanCacheReq.echo)
+}
+inline std::string* CleanCacheReq::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CleanCacheReq::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CleanCacheReq.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CleanCacheReq::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CleanCacheReq.echo)
+}
+
 // -------------------------------------------------------------------
 
 // CleanCacheResp
 
+// string action = 101;
+inline void CleanCacheResp::clear_action() {
+  action_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CleanCacheResp::action() const {
+  // @@protoc_insertion_point(field_get:onebot.CleanCacheResp.action)
+  return _internal_action();
+}
+inline void CleanCacheResp::set_action(const std::string& value) {
+  _internal_set_action(value);
+  // @@protoc_insertion_point(field_set:onebot.CleanCacheResp.action)
+}
+inline std::string* CleanCacheResp::mutable_action() {
+  // @@protoc_insertion_point(field_mutable:onebot.CleanCacheResp.action)
+  return _internal_mutable_action();
+}
+inline const std::string& CleanCacheResp::_internal_action() const {
+  return action_.Get();
+}
+inline void CleanCacheResp::_internal_set_action(const std::string& value) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CleanCacheResp::set_action(std::string&& value) {
+  
+  action_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CleanCacheResp.action)
+}
+inline void CleanCacheResp::set_action(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CleanCacheResp.action)
+}
+inline void CleanCacheResp::set_action(const char* value,
+    size_t size) {
+  
+  action_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CleanCacheResp.action)
+}
+inline std::string* CleanCacheResp::_internal_mutable_action() {
+  
+  return action_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CleanCacheResp::release_action() {
+  // @@protoc_insertion_point(field_release:onebot.CleanCacheResp.action)
+  return action_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CleanCacheResp::set_allocated_action(std::string* action) {
+  if (action != nullptr) {
+    
+  } else {
+    
+  }
+  action_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), action,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CleanCacheResp.action)
+}
+
+// string echo = 102;
+inline void CleanCacheResp::clear_echo() {
+  echo_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& CleanCacheResp::echo() const {
+  // @@protoc_insertion_point(field_get:onebot.CleanCacheResp.echo)
+  return _internal_echo();
+}
+inline void CleanCacheResp::set_echo(const std::string& value) {
+  _internal_set_echo(value);
+  // @@protoc_insertion_point(field_set:onebot.CleanCacheResp.echo)
+}
+inline std::string* CleanCacheResp::mutable_echo() {
+  // @@protoc_insertion_point(field_mutable:onebot.CleanCacheResp.echo)
+  return _internal_mutable_echo();
+}
+inline const std::string& CleanCacheResp::_internal_echo() const {
+  return echo_.Get();
+}
+inline void CleanCacheResp::_internal_set_echo(const std::string& value) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void CleanCacheResp::set_echo(std::string&& value) {
+  
+  echo_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:onebot.CleanCacheResp.echo)
+}
+inline void CleanCacheResp::set_echo(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:onebot.CleanCacheResp.echo)
+}
+inline void CleanCacheResp::set_echo(const char* value,
+    size_t size) {
+  
+  echo_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:onebot.CleanCacheResp.echo)
+}
+inline std::string* CleanCacheResp::_internal_mutable_echo() {
+  
+  return echo_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* CleanCacheResp::release_echo() {
+  // @@protoc_insertion_point(field_release:onebot.CleanCacheResp.echo)
+  return echo_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void CleanCacheResp::set_allocated_echo(std::string* echo) {
+  if (echo != nullptr) {
+    
+  } else {
+    
+  }
+  echo_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), echo,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:onebot.CleanCacheResp.echo)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

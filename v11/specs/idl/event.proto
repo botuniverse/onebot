@@ -2,6 +2,32 @@ syntax = "proto3";
 package onebot;
 import "base.proto";
 
+// 在序列化成protobuf时，不知道post_type是什么，可以先解析成BaseEvent，获取到post_type，然后解析成BaseMessageEvent/BaseNoticeEvent/BaseRequestEvent，最后解析成对应event
+// 在序列化成json时，不需要BaseEvent过渡
+message BaseEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+}
+message BaseMessageEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string message_type = 4;
+}
+message BaseNoticeEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+}
+message BaseRequestEvent{
+  int64 time = 1;
+  int64 self_id = 2;
+  string post_type = 3;
+  string notice_type = 4;
+}
+
 message PrivateMessageEvent{
   int64 time = 1;
   int64 self_id = 2;

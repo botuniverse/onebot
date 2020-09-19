@@ -14,6 +14,1442 @@ public final class Api {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface BaseApiReqOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseApiReq)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
+  }
+  /**
+   * Protobuf type {@code onebot.BaseApiReq}
+   */
+  public static final class BaseApiReq extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseApiReq)
+      BaseApiReqOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseApiReq.newBuilder() to construct.
+    private BaseApiReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseApiReq() {
+      action_ = "";
+      echo_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseApiReq();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseApiReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Api.internal_static_onebot_BaseApiReq_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Api.internal_static_onebot_BaseApiReq_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Api.BaseApiReq.class, onebot.Api.BaseApiReq.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Api.BaseApiReq)) {
+        return super.equals(obj);
+      }
+      onebot.Api.BaseApiReq other = (onebot.Api.BaseApiReq) obj;
+
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Api.BaseApiReq parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiReq parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiReq parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiReq parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Api.BaseApiReq prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code onebot.BaseApiReq}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseApiReq)
+        onebot.Api.BaseApiReqOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Api.internal_static_onebot_BaseApiReq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Api.internal_static_onebot_BaseApiReq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Api.BaseApiReq.class, onebot.Api.BaseApiReq.Builder.class);
+      }
+
+      // Construct using onebot.Api.BaseApiReq.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = "";
+
+        echo_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Api.internal_static_onebot_BaseApiReq_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiReq getDefaultInstanceForType() {
+        return onebot.Api.BaseApiReq.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiReq build() {
+        onebot.Api.BaseApiReq result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiReq buildPartial() {
+        onebot.Api.BaseApiReq result = new onebot.Api.BaseApiReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Api.BaseApiReq) {
+          return mergeFrom((onebot.Api.BaseApiReq)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Api.BaseApiReq other) {
+        if (other == onebot.Api.BaseApiReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Api.BaseApiReq parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Api.BaseApiReq) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseApiReq)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseApiReq)
+    private static final onebot.Api.BaseApiReq DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Api.BaseApiReq();
+    }
+
+    public static onebot.Api.BaseApiReq getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseApiReq>
+        PARSER = new com.google.protobuf.AbstractParser<BaseApiReq>() {
+      @java.lang.Override
+      public BaseApiReq parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseApiReq(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseApiReq> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseApiReq> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Api.BaseApiReq getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BaseApiRespOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseApiResp)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
+  }
+  /**
+   * Protobuf type {@code onebot.BaseApiResp}
+   */
+  public static final class BaseApiResp extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseApiResp)
+      BaseApiRespOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseApiResp.newBuilder() to construct.
+    private BaseApiResp(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseApiResp() {
+      action_ = "";
+      echo_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseApiResp();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseApiResp(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Api.internal_static_onebot_BaseApiResp_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Api.internal_static_onebot_BaseApiResp_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Api.BaseApiResp.class, onebot.Api.BaseApiResp.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Api.BaseApiResp)) {
+        return super.equals(obj);
+      }
+      onebot.Api.BaseApiResp other = (onebot.Api.BaseApiResp) obj;
+
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Api.BaseApiResp parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiResp parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiResp parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Api.BaseApiResp parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Api.BaseApiResp prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code onebot.BaseApiResp}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseApiResp)
+        onebot.Api.BaseApiRespOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Api.internal_static_onebot_BaseApiResp_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Api.internal_static_onebot_BaseApiResp_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Api.BaseApiResp.class, onebot.Api.BaseApiResp.Builder.class);
+      }
+
+      // Construct using onebot.Api.BaseApiResp.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = "";
+
+        echo_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Api.internal_static_onebot_BaseApiResp_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiResp getDefaultInstanceForType() {
+        return onebot.Api.BaseApiResp.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiResp build() {
+        onebot.Api.BaseApiResp result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Api.BaseApiResp buildPartial() {
+        onebot.Api.BaseApiResp result = new onebot.Api.BaseApiResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Api.BaseApiResp) {
+          return mergeFrom((onebot.Api.BaseApiResp)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Api.BaseApiResp other) {
+        if (other == onebot.Api.BaseApiResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Api.BaseApiResp parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Api.BaseApiResp) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseApiResp)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseApiResp)
+    private static final onebot.Api.BaseApiResp DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Api.BaseApiResp();
+    }
+
+    public static onebot.Api.BaseApiResp getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseApiResp>
+        PARSER = new com.google.protobuf.AbstractParser<BaseApiResp>() {
+      @java.lang.Override
+      public BaseApiResp parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseApiResp(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseApiResp> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseApiResp> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Api.BaseApiResp getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SendPrivateMsgReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SendPrivateMsgReq)
       com.google.protobuf.MessageOrBuilder {
@@ -44,6 +1480,30 @@ public final class Api {
      * @return The autoEscape.
      */
     boolean getAutoEscape();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendPrivateMsgReq}
@@ -58,6 +1518,8 @@ public final class Api {
       super(builder);
     }
     private SendPrivateMsgReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -111,6 +1573,18 @@ public final class Api {
             case 24: {
 
               autoEscape_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -193,6 +1667,82 @@ public final class Api {
       return autoEscape_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -216,6 +1766,12 @@ public final class Api {
       if (autoEscape_ != false) {
         output.writeBool(3, autoEscape_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -236,6 +1792,12 @@ public final class Api {
       if (autoEscape_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, autoEscape_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -261,6 +1823,10 @@ public final class Api {
       }
       if (getAutoEscape()
           != other.getAutoEscape()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -282,6 +1848,10 @@ public final class Api {
       hash = (37 * hash) + AUTO_ESCAPE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAutoEscape());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -425,6 +1995,10 @@ public final class Api {
         }
         autoEscape_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -458,6 +2032,8 @@ public final class Api {
           result.message_ = messageBuilder_.build();
         }
         result.autoEscape_ = autoEscape_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -514,6 +2090,14 @@ public final class Api {
         }
         if (other.getAutoEscape() != false) {
           setAutoEscape(other.getAutoEscape());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -724,6 +2308,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -786,6 +2522,30 @@ public final class Api {
      * @return The messageId.
      */
     int getMessageId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendPrivateMsgResp}
@@ -800,6 +2560,8 @@ public final class Api {
       super(builder);
     }
     private SendPrivateMsgResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -835,6 +2597,18 @@ public final class Api {
             case 8: {
 
               messageId_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -880,6 +2654,82 @@ public final class Api {
       return messageId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -897,6 +2747,12 @@ public final class Api {
       if (messageId_ != 0) {
         output.writeInt32(1, messageId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -909,6 +2765,12 @@ public final class Api {
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, messageId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -927,6 +2789,10 @@ public final class Api {
 
       if (getMessageId()
           != other.getMessageId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -940,6 +2806,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMessageId();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1075,6 +2945,10 @@ public final class Api {
         super.clear();
         messageId_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -1102,6 +2976,8 @@ public final class Api {
       public onebot.Api.SendPrivateMsgResp buildPartial() {
         onebot.Api.SendPrivateMsgResp result = new onebot.Api.SendPrivateMsgResp(this);
         result.messageId_ = messageId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -1152,6 +3028,14 @@ public final class Api {
         if (other == onebot.Api.SendPrivateMsgResp.getDefaultInstance()) return this;
         if (other.getMessageId() != 0) {
           setMessageId(other.getMessageId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1209,6 +3093,158 @@ public final class Api {
       public Builder clearMessageId() {
         
         messageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -1295,6 +3331,30 @@ public final class Api {
      * @return The autoEscape.
      */
     boolean getAutoEscape();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendGroupMsgReq}
@@ -1309,6 +3369,8 @@ public final class Api {
       super(builder);
     }
     private SendGroupMsgReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -1362,6 +3424,18 @@ public final class Api {
             case 24: {
 
               autoEscape_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -1444,6 +3518,82 @@ public final class Api {
       return autoEscape_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1467,6 +3617,12 @@ public final class Api {
       if (autoEscape_ != false) {
         output.writeBool(3, autoEscape_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1487,6 +3643,12 @@ public final class Api {
       if (autoEscape_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, autoEscape_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1512,6 +3674,10 @@ public final class Api {
       }
       if (getAutoEscape()
           != other.getAutoEscape()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1533,6 +3699,10 @@ public final class Api {
       hash = (37 * hash) + AUTO_ESCAPE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAutoEscape());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1676,6 +3846,10 @@ public final class Api {
         }
         autoEscape_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -1709,6 +3883,8 @@ public final class Api {
           result.message_ = messageBuilder_.build();
         }
         result.autoEscape_ = autoEscape_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -1765,6 +3941,14 @@ public final class Api {
         }
         if (other.getAutoEscape() != false) {
           setAutoEscape(other.getAutoEscape());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1975,6 +4159,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2037,6 +4373,30 @@ public final class Api {
      * @return The messageId.
      */
     int getMessageId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendGroupMsgResp}
@@ -2051,6 +4411,8 @@ public final class Api {
       super(builder);
     }
     private SendGroupMsgResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -2086,6 +4448,18 @@ public final class Api {
             case 8: {
 
               messageId_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -2131,6 +4505,82 @@ public final class Api {
       return messageId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2148,6 +4598,12 @@ public final class Api {
       if (messageId_ != 0) {
         output.writeInt32(1, messageId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2160,6 +4616,12 @@ public final class Api {
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, messageId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2178,6 +4640,10 @@ public final class Api {
 
       if (getMessageId()
           != other.getMessageId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2191,6 +4657,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMessageId();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2326,6 +4796,10 @@ public final class Api {
         super.clear();
         messageId_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -2353,6 +4827,8 @@ public final class Api {
       public onebot.Api.SendGroupMsgResp buildPartial() {
         onebot.Api.SendGroupMsgResp result = new onebot.Api.SendGroupMsgResp(this);
         result.messageId_ = messageId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -2403,6 +4879,14 @@ public final class Api {
         if (other == onebot.Api.SendGroupMsgResp.getDefaultInstance()) return this;
         if (other.getMessageId() != 0) {
           setMessageId(other.getMessageId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2460,6 +4944,158 @@ public final class Api {
       public Builder clearMessageId() {
         
         messageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -2564,6 +5200,30 @@ public final class Api {
      * @return The autoEscape.
      */
     boolean getAutoEscape();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendMsgReq}
@@ -2579,6 +5239,8 @@ public final class Api {
     }
     private SendMsgReq() {
       messageType_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -2643,6 +5305,18 @@ public final class Api {
             case 40: {
 
               autoEscape_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -2774,6 +5448,82 @@ public final class Api {
       return autoEscape_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2803,6 +5553,12 @@ public final class Api {
       if (autoEscape_ != false) {
         output.writeBool(5, autoEscape_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2830,6 +5586,12 @@ public final class Api {
       if (autoEscape_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, autoEscape_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2859,6 +5621,10 @@ public final class Api {
       }
       if (getAutoEscape()
           != other.getAutoEscape()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2885,6 +5651,10 @@ public final class Api {
       hash = (37 * hash) + AUTO_ESCAPE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAutoEscape());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3032,6 +5802,10 @@ public final class Api {
         }
         autoEscape_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -3067,6 +5841,8 @@ public final class Api {
           result.message_ = messageBuilder_.build();
         }
         result.autoEscape_ = autoEscape_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -3130,6 +5906,14 @@ public final class Api {
         }
         if (other.getAutoEscape() != false) {
           setAutoEscape(other.getAutoEscape());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3447,6 +6231,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3509,6 +6445,30 @@ public final class Api {
      * @return The messageId.
      */
     int getMessageId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendMsgResp}
@@ -3523,6 +6483,8 @@ public final class Api {
       super(builder);
     }
     private SendMsgResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -3558,6 +6520,18 @@ public final class Api {
             case 8: {
 
               messageId_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -3603,6 +6577,82 @@ public final class Api {
       return messageId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3620,6 +6670,12 @@ public final class Api {
       if (messageId_ != 0) {
         output.writeInt32(1, messageId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3632,6 +6688,12 @@ public final class Api {
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, messageId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3650,6 +6712,10 @@ public final class Api {
 
       if (getMessageId()
           != other.getMessageId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3663,6 +6729,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMessageId();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3798,6 +6868,10 @@ public final class Api {
         super.clear();
         messageId_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -3825,6 +6899,8 @@ public final class Api {
       public onebot.Api.SendMsgResp buildPartial() {
         onebot.Api.SendMsgResp result = new onebot.Api.SendMsgResp(this);
         result.messageId_ = messageId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -3875,6 +6951,14 @@ public final class Api {
         if (other == onebot.Api.SendMsgResp.getDefaultInstance()) return this;
         if (other.getMessageId() != 0) {
           setMessageId(other.getMessageId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3932,6 +7016,158 @@ public final class Api {
       public Builder clearMessageId() {
         
         messageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -3997,6 +7233,30 @@ public final class Api {
      * @return The messageId.
      */
     int getMessageId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.DeleteMsgReq}
@@ -4011,6 +7271,8 @@ public final class Api {
       super(builder);
     }
     private DeleteMsgReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -4046,6 +7308,18 @@ public final class Api {
             case 8: {
 
               messageId_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -4091,6 +7365,82 @@ public final class Api {
       return messageId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4108,6 +7458,12 @@ public final class Api {
       if (messageId_ != 0) {
         output.writeInt32(1, messageId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4120,6 +7476,12 @@ public final class Api {
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, messageId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4138,6 +7500,10 @@ public final class Api {
 
       if (getMessageId()
           != other.getMessageId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4151,6 +7517,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMessageId();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4286,6 +7656,10 @@ public final class Api {
         super.clear();
         messageId_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -4313,6 +7687,8 @@ public final class Api {
       public onebot.Api.DeleteMsgReq buildPartial() {
         onebot.Api.DeleteMsgReq result = new onebot.Api.DeleteMsgReq(this);
         result.messageId_ = messageId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -4363,6 +7739,14 @@ public final class Api {
         if (other == onebot.Api.DeleteMsgReq.getDefaultInstance()) return this;
         if (other.getMessageId() != 0) {
           setMessageId(other.getMessageId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4423,6 +7807,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4479,6 +8015,30 @@ public final class Api {
   public interface DeleteMsgRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.DeleteMsgResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.DeleteMsgResp}
@@ -4493,6 +8053,8 @@ public final class Api {
       super(builder);
     }
     private DeleteMsgResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -4525,6 +8087,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4557,6 +8131,82 @@ public final class Api {
               onebot.Api.DeleteMsgResp.class, onebot.Api.DeleteMsgResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4571,6 +8221,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4580,6 +8236,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4595,6 +8257,10 @@ public final class Api {
       }
       onebot.Api.DeleteMsgResp other = (onebot.Api.DeleteMsgResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4606,6 +8272,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4739,6 +8409,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -4765,6 +8439,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.DeleteMsgResp buildPartial() {
         onebot.Api.DeleteMsgResp result = new onebot.Api.DeleteMsgResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -4813,6 +8489,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.DeleteMsgResp other) {
         if (other == onebot.Api.DeleteMsgResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -4839,6 +8523,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -4903,6 +8739,30 @@ public final class Api {
      * @return The messageId.
      */
     int getMessageId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetMsgReq}
@@ -4917,6 +8777,8 @@ public final class Api {
       super(builder);
     }
     private GetMsgReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -4952,6 +8814,18 @@ public final class Api {
             case 8: {
 
               messageId_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -4997,6 +8871,82 @@ public final class Api {
       return messageId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5014,6 +8964,12 @@ public final class Api {
       if (messageId_ != 0) {
         output.writeInt32(1, messageId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5026,6 +8982,12 @@ public final class Api {
       if (messageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, messageId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5044,6 +9006,10 @@ public final class Api {
 
       if (getMessageId()
           != other.getMessageId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5057,6 +9023,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MESSAGE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getMessageId();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5192,6 +9162,10 @@ public final class Api {
         super.clear();
         messageId_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -5219,6 +9193,8 @@ public final class Api {
       public onebot.Api.GetMsgReq buildPartial() {
         onebot.Api.GetMsgReq result = new onebot.Api.GetMsgReq(this);
         result.messageId_ = messageId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -5269,6 +9245,14 @@ public final class Api {
         if (other == onebot.Api.GetMsgReq.getDefaultInstance()) return this;
         if (other.getMessageId() != 0) {
           setMessageId(other.getMessageId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5326,6 +9310,158 @@ public final class Api {
       public Builder clearMessageId() {
         
         messageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -5445,6 +9581,30 @@ public final class Api {
      * <code>.onebot.Message message = 6;</code>
      */
     onebot.Base.MessageOrBuilder getMessageOrBuilder();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetMsgResp}
@@ -5460,6 +9620,8 @@ public final class Api {
     }
     private GetMsgResp() {
       messageType_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -5537,6 +9699,18 @@ public final class Api {
                 message_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -7303,6 +11477,82 @@ public final class Api {
       return getMessage();
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7335,6 +11585,12 @@ public final class Api {
       if (message_ != null) {
         output.writeMessage(6, getMessage());
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7366,6 +11622,12 @@ public final class Api {
       if (message_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getMessage());
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7400,6 +11662,10 @@ public final class Api {
         if (!getMessage()
             .equals(other.getMessage())) return false;
       }
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7427,6 +11693,10 @@ public final class Api {
         hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getMessage().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7580,6 +11850,10 @@ public final class Api {
           message_ = null;
           messageBuilder_ = null;
         }
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -7620,6 +11894,8 @@ public final class Api {
         } else {
           result.message_ = messageBuilder_.build();
         }
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -7686,6 +11962,14 @@ public final class Api {
         }
         if (other.hasMessage()) {
           mergeMessage(other.getMessage());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8122,6 +12406,158 @@ public final class Api {
         }
         return messageBuilder_;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8190,6 +12626,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * <pre>
@@ -8209,6 +12669,8 @@ public final class Api {
     }
     private GetForwardMsgReq() {
       id_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -8245,6 +12707,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               id_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -8317,6 +12791,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8334,6 +12884,12 @@ public final class Api {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8345,6 +12901,12 @@ public final class Api {
       size = 0;
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8363,6 +12925,10 @@ public final class Api {
 
       if (!getId()
           .equals(other.getId())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8376,6 +12942,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8515,6 +13085,10 @@ public final class Api {
         super.clear();
         id_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -8542,6 +13116,8 @@ public final class Api {
       public onebot.Api.GetForwardMsgReq buildPartial() {
         onebot.Api.GetForwardMsgReq result = new onebot.Api.GetForwardMsgReq(this);
         result.id_ = id_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -8592,6 +13168,14 @@ public final class Api {
         if (other == onebot.Api.GetForwardMsgReq.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -8698,6 +13282,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8754,6 +13490,30 @@ public final class Api {
   public interface GetForwardMsgRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetForwardMsgResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetForwardMsgResp}
@@ -8768,6 +13528,8 @@ public final class Api {
       super(builder);
     }
     private GetForwardMsgResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -8800,6 +13562,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8832,6 +13606,82 @@ public final class Api {
               onebot.Api.GetForwardMsgResp.class, onebot.Api.GetForwardMsgResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8846,6 +13696,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8855,6 +13711,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8870,6 +13732,10 @@ public final class Api {
       }
       onebot.Api.GetForwardMsgResp other = (onebot.Api.GetForwardMsgResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8881,6 +13747,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9014,6 +13884,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -9040,6 +13914,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetForwardMsgResp buildPartial() {
         onebot.Api.GetForwardMsgResp result = new onebot.Api.GetForwardMsgResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -9088,6 +13964,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetForwardMsgResp other) {
         if (other == onebot.Api.GetForwardMsgResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9114,6 +13998,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -9184,6 +14220,30 @@ public final class Api {
      * @return The times.
      */
     int getTimes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendLikeReq}
@@ -9198,6 +14258,8 @@ public final class Api {
       super(builder);
     }
     private SendLikeReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -9238,6 +14300,18 @@ public final class Api {
             case 16: {
 
               times_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -9294,6 +14368,82 @@ public final class Api {
       return times_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9314,6 +14464,12 @@ public final class Api {
       if (times_ != 0) {
         output.writeInt32(2, times_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9330,6 +14486,12 @@ public final class Api {
       if (times_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, times_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9350,6 +14512,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getTimes()
           != other.getTimes()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9366,6 +14532,10 @@ public final class Api {
           getUserId());
       hash = (37 * hash) + TIMES_FIELD_NUMBER;
       hash = (53 * hash) + getTimes();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9503,6 +14673,10 @@ public final class Api {
 
         times_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -9531,6 +14705,8 @@ public final class Api {
         onebot.Api.SendLikeReq result = new onebot.Api.SendLikeReq(this);
         result.userId_ = userId_;
         result.times_ = times_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -9584,6 +14760,14 @@ public final class Api {
         }
         if (other.getTimes() != 0) {
           setTimes(other.getTimes());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9675,6 +14859,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9731,6 +15067,30 @@ public final class Api {
   public interface SendListRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SendListResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SendListResp}
@@ -9745,6 +15105,8 @@ public final class Api {
       super(builder);
     }
     private SendListResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -9777,6 +15139,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9809,6 +15183,82 @@ public final class Api {
               onebot.Api.SendListResp.class, onebot.Api.SendListResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9823,6 +15273,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9832,6 +15288,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9847,6 +15309,10 @@ public final class Api {
       }
       onebot.Api.SendListResp other = (onebot.Api.SendListResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9858,6 +15324,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9991,6 +15461,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -10017,6 +15491,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SendListResp buildPartial() {
         onebot.Api.SendListResp result = new onebot.Api.SendListResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -10065,6 +15541,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SendListResp other) {
         if (other == onebot.Api.SendListResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10091,6 +15575,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -10167,6 +15803,30 @@ public final class Api {
      * @return The rejectAddRequest.
      */
     boolean getRejectAddRequest();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupKickReq}
@@ -10181,6 +15841,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupKickReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -10226,6 +15888,18 @@ public final class Api {
             case 24: {
 
               rejectAddRequest_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -10293,6 +15967,82 @@ public final class Api {
       return rejectAddRequest_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10316,6 +16066,12 @@ public final class Api {
       if (rejectAddRequest_ != false) {
         output.writeBool(3, rejectAddRequest_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10336,6 +16092,12 @@ public final class Api {
       if (rejectAddRequest_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, rejectAddRequest_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10358,6 +16120,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getRejectAddRequest()
           != other.getRejectAddRequest()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10378,6 +16144,10 @@ public final class Api {
       hash = (37 * hash) + REJECT_ADD_REQUEST_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getRejectAddRequest());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10517,6 +16287,10 @@ public final class Api {
 
         rejectAddRequest_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -10546,6 +16320,8 @@ public final class Api {
         result.groupId_ = groupId_;
         result.userId_ = userId_;
         result.rejectAddRequest_ = rejectAddRequest_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -10602,6 +16378,14 @@ public final class Api {
         }
         if (other.getRejectAddRequest() != false) {
           setRejectAddRequest(other.getRejectAddRequest());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10724,6 +16508,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10780,6 +16716,30 @@ public final class Api {
   public interface SetGroupKickRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupKickResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupKickResp}
@@ -10794,6 +16754,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupKickResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -10826,6 +16788,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10858,6 +16832,82 @@ public final class Api {
               onebot.Api.SetGroupKickResp.class, onebot.Api.SetGroupKickResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10872,6 +16922,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10881,6 +16937,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10896,6 +16958,10 @@ public final class Api {
       }
       onebot.Api.SetGroupKickResp other = (onebot.Api.SetGroupKickResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10907,6 +16973,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11040,6 +17110,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -11066,6 +17140,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupKickResp buildPartial() {
         onebot.Api.SetGroupKickResp result = new onebot.Api.SetGroupKickResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -11114,6 +17190,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupKickResp other) {
         if (other == onebot.Api.SetGroupKickResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11140,6 +17224,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -11220,6 +17456,30 @@ public final class Api {
      * @return The duration.
      */
     long getDuration();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupBanReq}
@@ -11234,6 +17494,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupBanReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -11279,6 +17541,18 @@ public final class Api {
             case 24: {
 
               duration_ = input.readInt64();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -11350,6 +17624,82 @@ public final class Api {
       return duration_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11373,6 +17723,12 @@ public final class Api {
       if (duration_ != 0L) {
         output.writeInt64(3, duration_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11393,6 +17749,12 @@ public final class Api {
       if (duration_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, duration_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11415,6 +17777,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getDuration()
           != other.getDuration()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11435,6 +17801,10 @@ public final class Api {
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDuration());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11574,6 +17944,10 @@ public final class Api {
 
         duration_ = 0L;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -11603,6 +17977,8 @@ public final class Api {
         result.groupId_ = groupId_;
         result.userId_ = userId_;
         result.duration_ = duration_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -11659,6 +18035,14 @@ public final class Api {
         }
         if (other.getDuration() != 0L) {
           setDuration(other.getDuration());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11793,6 +18177,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11849,6 +18385,30 @@ public final class Api {
   public interface SetGroupBanRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupBanResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupBanResp}
@@ -11863,6 +18423,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupBanResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -11895,6 +18457,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11927,6 +18501,82 @@ public final class Api {
               onebot.Api.SetGroupBanResp.class, onebot.Api.SetGroupBanResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11941,6 +18591,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11950,6 +18606,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11965,6 +18627,10 @@ public final class Api {
       }
       onebot.Api.SetGroupBanResp other = (onebot.Api.SetGroupBanResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11976,6 +18642,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12109,6 +18779,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -12135,6 +18809,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupBanResp buildPartial() {
         onebot.Api.SetGroupBanResp result = new onebot.Api.SetGroupBanResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -12183,6 +18859,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupBanResp other) {
         if (other == onebot.Api.SetGroupBanResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12209,6 +18893,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -12318,6 +19154,30 @@ public final class Api {
      * @return The duration.
      */
     long getDuration();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAnonymousBanReq}
@@ -12334,6 +19194,8 @@ public final class Api {
     private SetGroupAnonymousBanReq() {
       anonymousFlag_ = "";
       flag_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -12399,6 +19261,18 @@ public final class Api {
             case 40: {
 
               duration_ = input.readInt64();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -13346,6 +20220,82 @@ public final class Api {
       return duration_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13375,6 +20325,12 @@ public final class Api {
       if (duration_ != 0L) {
         output.writeInt64(5, duration_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13401,6 +20357,12 @@ public final class Api {
       if (duration_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(5, duration_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13430,6 +20392,10 @@ public final class Api {
           .equals(other.getFlag())) return false;
       if (getDuration()
           != other.getDuration()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13455,6 +20421,10 @@ public final class Api {
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDuration());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -13602,6 +20572,10 @@ public final class Api {
 
         duration_ = 0L;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -13637,6 +20611,8 @@ public final class Api {
         result.anonymousFlag_ = anonymousFlag_;
         result.flag_ = flag_;
         result.duration_ = duration_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -13701,6 +20677,14 @@ public final class Api {
         }
         if (other.getDuration() != 0L) {
           setDuration(other.getDuration());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14063,6 +21047,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14119,6 +21255,30 @@ public final class Api {
   public interface SetGroupAnonymousBanRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupAnonymousBanResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAnonymousBanResp}
@@ -14133,6 +21293,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAnonymousBanResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -14165,6 +21327,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -14197,6 +21371,82 @@ public final class Api {
               onebot.Api.SetGroupAnonymousBanResp.class, onebot.Api.SetGroupAnonymousBanResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14211,6 +21461,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14220,6 +21476,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -14235,6 +21497,10 @@ public final class Api {
       }
       onebot.Api.SetGroupAnonymousBanResp other = (onebot.Api.SetGroupAnonymousBanResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14246,6 +21512,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14379,6 +21649,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -14405,6 +21679,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupAnonymousBanResp buildPartial() {
         onebot.Api.SetGroupAnonymousBanResp result = new onebot.Api.SetGroupAnonymousBanResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -14453,6 +21729,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupAnonymousBanResp other) {
         if (other == onebot.Api.SetGroupAnonymousBanResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -14479,6 +21763,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -14549,6 +21985,30 @@ public final class Api {
      * @return The enable.
      */
     boolean getEnable();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupWholeBanReq}
@@ -14563,6 +22023,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupWholeBanReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -14603,6 +22065,18 @@ public final class Api {
             case 16: {
 
               enable_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -14659,6 +22133,82 @@ public final class Api {
       return enable_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14679,6 +22229,12 @@ public final class Api {
       if (enable_ != false) {
         output.writeBool(2, enable_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -14695,6 +22251,12 @@ public final class Api {
       if (enable_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, enable_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14715,6 +22277,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (getEnable()
           != other.getEnable()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -14732,6 +22298,10 @@ public final class Api {
       hash = (37 * hash) + ENABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnable());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -14869,6 +22439,10 @@ public final class Api {
 
         enable_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -14897,6 +22471,8 @@ public final class Api {
         onebot.Api.SetGroupWholeBanReq result = new onebot.Api.SetGroupWholeBanReq(this);
         result.groupId_ = groupId_;
         result.enable_ = enable_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -14950,6 +22526,14 @@ public final class Api {
         }
         if (other.getEnable() != false) {
           setEnable(other.getEnable());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15041,6 +22625,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15097,6 +22833,30 @@ public final class Api {
   public interface SetGroupWholeBanRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupWholeBanResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupWholeBanResp}
@@ -15111,6 +22871,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupWholeBanResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -15143,6 +22905,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15175,6 +22949,82 @@ public final class Api {
               onebot.Api.SetGroupWholeBanResp.class, onebot.Api.SetGroupWholeBanResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15189,6 +23039,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15198,6 +23054,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -15213,6 +23075,10 @@ public final class Api {
       }
       onebot.Api.SetGroupWholeBanResp other = (onebot.Api.SetGroupWholeBanResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15224,6 +23090,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15357,6 +23227,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -15383,6 +23257,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupWholeBanResp buildPartial() {
         onebot.Api.SetGroupWholeBanResp result = new onebot.Api.SetGroupWholeBanResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -15431,6 +23307,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupWholeBanResp other) {
         if (other == onebot.Api.SetGroupWholeBanResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -15457,6 +23341,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -15533,6 +23569,30 @@ public final class Api {
      * @return The enable.
      */
     boolean getEnable();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAdminReq}
@@ -15547,6 +23607,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAdminReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -15592,6 +23654,18 @@ public final class Api {
             case 24: {
 
               enable_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -15659,6 +23733,82 @@ public final class Api {
       return enable_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15682,6 +23832,12 @@ public final class Api {
       if (enable_ != false) {
         output.writeBool(3, enable_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15702,6 +23858,12 @@ public final class Api {
       if (enable_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, enable_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15724,6 +23886,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getEnable()
           != other.getEnable()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15744,6 +23910,10 @@ public final class Api {
       hash = (37 * hash) + ENABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnable());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15883,6 +24053,10 @@ public final class Api {
 
         enable_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -15912,6 +24086,8 @@ public final class Api {
         result.groupId_ = groupId_;
         result.userId_ = userId_;
         result.enable_ = enable_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -15968,6 +24144,14 @@ public final class Api {
         }
         if (other.getEnable() != false) {
           setEnable(other.getEnable());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16090,6 +24274,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16146,6 +24482,30 @@ public final class Api {
   public interface SetGroupAdminRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupAdminResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAdminResp}
@@ -16160,6 +24520,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAdminResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -16192,6 +24554,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -16224,6 +24598,82 @@ public final class Api {
               onebot.Api.SetGroupAdminResp.class, onebot.Api.SetGroupAdminResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16238,6 +24688,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16247,6 +24703,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -16262,6 +24724,10 @@ public final class Api {
       }
       onebot.Api.SetGroupAdminResp other = (onebot.Api.SetGroupAdminResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16273,6 +24739,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16406,6 +24876,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -16432,6 +24906,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupAdminResp buildPartial() {
         onebot.Api.SetGroupAdminResp result = new onebot.Api.SetGroupAdminResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -16480,6 +24956,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupAdminResp other) {
         if (other == onebot.Api.SetGroupAdminResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -16506,6 +24990,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -16576,6 +25212,30 @@ public final class Api {
      * @return The enable.
      */
     boolean getEnable();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAnonymousReq}
@@ -16590,6 +25250,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAnonymousReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -16630,6 +25292,18 @@ public final class Api {
             case 16: {
 
               enable_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -16686,6 +25360,82 @@ public final class Api {
       return enable_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16706,6 +25456,12 @@ public final class Api {
       if (enable_ != false) {
         output.writeBool(2, enable_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16722,6 +25478,12 @@ public final class Api {
       if (enable_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, enable_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16742,6 +25504,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (getEnable()
           != other.getEnable()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16759,6 +25525,10 @@ public final class Api {
       hash = (37 * hash) + ENABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEnable());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16896,6 +25666,10 @@ public final class Api {
 
         enable_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -16924,6 +25698,8 @@ public final class Api {
         onebot.Api.SetGroupAnonymousReq result = new onebot.Api.SetGroupAnonymousReq(this);
         result.groupId_ = groupId_;
         result.enable_ = enable_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -16977,6 +25753,14 @@ public final class Api {
         }
         if (other.getEnable() != false) {
           setEnable(other.getEnable());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17068,6 +25852,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17124,6 +26060,30 @@ public final class Api {
   public interface SetGroupAnonymousRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupAnonymousResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAnonymousResp}
@@ -17138,6 +26098,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAnonymousResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -17170,6 +26132,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -17202,6 +26176,82 @@ public final class Api {
               onebot.Api.SetGroupAnonymousResp.class, onebot.Api.SetGroupAnonymousResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17216,6 +26266,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17225,6 +26281,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17240,6 +26302,10 @@ public final class Api {
       }
       onebot.Api.SetGroupAnonymousResp other = (onebot.Api.SetGroupAnonymousResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17251,6 +26317,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17384,6 +26454,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -17410,6 +26484,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupAnonymousResp buildPartial() {
         onebot.Api.SetGroupAnonymousResp result = new onebot.Api.SetGroupAnonymousResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -17458,6 +26534,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupAnonymousResp other) {
         if (other == onebot.Api.SetGroupAnonymousResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -17484,6 +26568,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -17560,6 +26796,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getGroupNameBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupNameReq}
@@ -17575,6 +26835,8 @@ public final class Api {
     }
     private SetGroupNameReq() {
       groupName_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -17616,6 +26878,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               groupName_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -17699,6 +26973,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17719,6 +27069,12 @@ public final class Api {
       if (!getGroupNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupName_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17734,6 +27090,12 @@ public final class Api {
       }
       if (!getGroupNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, groupName_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17754,6 +27116,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (!getGroupName()
           .equals(other.getGroupName())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17770,6 +27136,10 @@ public final class Api {
           getGroupId());
       hash = (37 * hash) + GROUP_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getGroupName().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17907,6 +27277,10 @@ public final class Api {
 
         groupName_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -17935,6 +27309,8 @@ public final class Api {
         onebot.Api.SetGroupNameReq result = new onebot.Api.SetGroupNameReq(this);
         result.groupId_ = groupId_;
         result.groupName_ = groupName_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -17988,6 +27364,14 @@ public final class Api {
         }
         if (!other.getGroupName().isEmpty()) {
           groupName_ = other.groupName_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -18125,6 +27509,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -18181,6 +27717,30 @@ public final class Api {
   public interface SetGroupNameRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupNameResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupNameResp}
@@ -18195,6 +27755,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupNameResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -18227,6 +27789,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -18259,6 +27833,82 @@ public final class Api {
               onebot.Api.SetGroupNameResp.class, onebot.Api.SetGroupNameResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18273,6 +27923,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -18282,6 +27938,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18297,6 +27959,10 @@ public final class Api {
       }
       onebot.Api.SetGroupNameResp other = (onebot.Api.SetGroupNameResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18308,6 +27974,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18441,6 +28111,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -18467,6 +28141,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupNameResp buildPartial() {
         onebot.Api.SetGroupNameResp result = new onebot.Api.SetGroupNameResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -18515,6 +28191,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupNameResp other) {
         if (other == onebot.Api.SetGroupNameResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -18541,6 +28225,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -18611,6 +28447,30 @@ public final class Api {
      * @return The isDismiss.
      */
     boolean getIsDismiss();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupLeaveReq}
@@ -18625,6 +28485,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupLeaveReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -18665,6 +28527,18 @@ public final class Api {
             case 16: {
 
               isDismiss_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -18721,6 +28595,82 @@ public final class Api {
       return isDismiss_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18741,6 +28691,12 @@ public final class Api {
       if (isDismiss_ != false) {
         output.writeBool(2, isDismiss_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -18757,6 +28713,12 @@ public final class Api {
       if (isDismiss_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, isDismiss_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18777,6 +28739,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (getIsDismiss()
           != other.getIsDismiss()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -18794,6 +28760,10 @@ public final class Api {
       hash = (37 * hash) + IS_DISMISS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDismiss());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18931,6 +28901,10 @@ public final class Api {
 
         isDismiss_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -18959,6 +28933,8 @@ public final class Api {
         onebot.Api.SetGroupLeaveReq result = new onebot.Api.SetGroupLeaveReq(this);
         result.groupId_ = groupId_;
         result.isDismiss_ = isDismiss_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -19012,6 +28988,14 @@ public final class Api {
         }
         if (other.getIsDismiss() != false) {
           setIsDismiss(other.getIsDismiss());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19103,6 +29087,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19159,6 +29295,30 @@ public final class Api {
   public interface SetGroupLeaveRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupLeaveResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupLeaveResp}
@@ -19173,6 +29333,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupLeaveResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -19205,6 +29367,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -19237,6 +29411,82 @@ public final class Api {
               onebot.Api.SetGroupLeaveResp.class, onebot.Api.SetGroupLeaveResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19251,6 +29501,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19260,6 +29516,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19275,6 +29537,10 @@ public final class Api {
       }
       onebot.Api.SetGroupLeaveResp other = (onebot.Api.SetGroupLeaveResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19286,6 +29552,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19419,6 +29689,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -19445,6 +29719,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupLeaveResp buildPartial() {
         onebot.Api.SetGroupLeaveResp result = new onebot.Api.SetGroupLeaveResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -19493,6 +29769,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupLeaveResp other) {
         if (other == onebot.Api.SetGroupLeaveResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -19519,6 +29803,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -19607,6 +30043,30 @@ public final class Api {
      * @return The duration.
      */
     long getDuration();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupSpecialTitleReq}
@@ -19622,6 +30082,8 @@ public final class Api {
     }
     private SetGroupSpecialTitleReq() {
       specialTitle_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -19673,6 +30135,18 @@ public final class Api {
             case 32: {
 
               duration_ = input.readInt64();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -19778,6 +30252,82 @@ public final class Api {
       return duration_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19804,6 +30354,12 @@ public final class Api {
       if (duration_ != 0L) {
         output.writeInt64(4, duration_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19828,6 +30384,12 @@ public final class Api {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(4, duration_);
       }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -19851,6 +30413,10 @@ public final class Api {
           .equals(other.getSpecialTitle())) return false;
       if (getDuration()
           != other.getDuration()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19873,6 +30439,10 @@ public final class Api {
       hash = (37 * hash) + DURATION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDuration());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20014,6 +30584,10 @@ public final class Api {
 
         duration_ = 0L;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -20044,6 +30618,8 @@ public final class Api {
         result.userId_ = userId_;
         result.specialTitle_ = specialTitle_;
         result.duration_ = duration_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -20104,6 +30680,14 @@ public final class Api {
         }
         if (other.getDuration() != 0L) {
           setDuration(other.getDuration());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20302,6 +30886,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -20358,6 +31094,30 @@ public final class Api {
   public interface SetGroupSpecialTitleRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupSpecialTitleResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupSpecialTitleResp}
@@ -20372,6 +31132,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupSpecialTitleResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -20404,6 +31166,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -20436,6 +31210,82 @@ public final class Api {
               onebot.Api.SetGroupSpecialTitleResp.class, onebot.Api.SetGroupSpecialTitleResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20450,6 +31300,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20459,6 +31315,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -20474,6 +31336,10 @@ public final class Api {
       }
       onebot.Api.SetGroupSpecialTitleResp other = (onebot.Api.SetGroupSpecialTitleResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20485,6 +31351,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20618,6 +31488,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -20644,6 +31518,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupSpecialTitleResp buildPartial() {
         onebot.Api.SetGroupSpecialTitleResp result = new onebot.Api.SetGroupSpecialTitleResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -20692,6 +31568,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupSpecialTitleResp other) {
         if (other == onebot.Api.SetGroupSpecialTitleResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -20718,6 +31602,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -20806,6 +31842,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getRemarkBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetFriendAddRequestReq}
@@ -20822,6 +31882,8 @@ public final class Api {
     private SetFriendAddRequestReq() {
       flag_ = "";
       remark_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -20869,6 +31931,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               remark_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -20990,6 +32064,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21013,6 +32163,12 @@ public final class Api {
       if (!getRemarkBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, remark_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21031,6 +32187,12 @@ public final class Api {
       }
       if (!getRemarkBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, remark_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21053,6 +32215,10 @@ public final class Api {
           != other.getApprove()) return false;
       if (!getRemark()
           .equals(other.getRemark())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21071,6 +32237,10 @@ public final class Api {
           getApprove());
       hash = (37 * hash) + REMARK_FIELD_NUMBER;
       hash = (53 * hash) + getRemark().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -21210,6 +32380,10 @@ public final class Api {
 
         remark_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -21239,6 +32413,8 @@ public final class Api {
         result.flag_ = flag_;
         result.approve_ = approve_;
         result.remark_ = remark_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -21296,6 +32472,14 @@ public final class Api {
         }
         if (!other.getRemark().isEmpty()) {
           remark_ = other.remark_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -21509,6 +32693,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21565,6 +32901,30 @@ public final class Api {
   public interface SetFriendAddRequestRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetFriendAddRequestResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetFriendAddRequestResp}
@@ -21579,6 +32939,8 @@ public final class Api {
       super(builder);
     }
     private SetFriendAddRequestResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -21611,6 +32973,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -21643,6 +33017,82 @@ public final class Api {
               onebot.Api.SetFriendAddRequestResp.class, onebot.Api.SetFriendAddRequestResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21657,6 +33107,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -21666,6 +33122,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -21681,6 +33143,10 @@ public final class Api {
       }
       onebot.Api.SetFriendAddRequestResp other = (onebot.Api.SetFriendAddRequestResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21692,6 +33158,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -21825,6 +33295,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -21851,6 +33325,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetFriendAddRequestResp buildPartial() {
         onebot.Api.SetFriendAddRequestResp result = new onebot.Api.SetFriendAddRequestResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -21899,6 +33375,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetFriendAddRequestResp other) {
         if (other == onebot.Api.SetFriendAddRequestResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -21925,6 +33409,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -22037,6 +33673,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getReasonBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAddRequestReq}
@@ -22055,6 +33715,8 @@ public final class Api {
       subType_ = "";
       type_ = "";
       reason_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -22114,6 +33776,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               reason_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -22311,6 +33985,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -22340,6 +34090,12 @@ public final class Api {
       if (!getReasonBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, reason_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22364,6 +34120,12 @@ public final class Api {
       }
       if (!getReasonBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, reason_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22390,6 +34152,10 @@ public final class Api {
           != other.getApprove()) return false;
       if (!getReason()
           .equals(other.getReason())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -22412,6 +34178,10 @@ public final class Api {
           getApprove());
       hash = (37 * hash) + REASON_FIELD_NUMBER;
       hash = (53 * hash) + getReason().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -22555,6 +34325,10 @@ public final class Api {
 
         reason_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -22586,6 +34360,8 @@ public final class Api {
         result.type_ = type_;
         result.approve_ = approve_;
         result.reason_ = reason_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -22651,6 +34427,14 @@ public final class Api {
         }
         if (!other.getReason().isEmpty()) {
           reason_ = other.reason_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -23016,6 +34800,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -23072,6 +35008,30 @@ public final class Api {
   public interface SetGroupAddRequestRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetGroupAddRequestResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetGroupAddRequestResp}
@@ -23086,6 +35046,8 @@ public final class Api {
       super(builder);
     }
     private SetGroupAddRequestResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -23118,6 +35080,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23150,6 +35124,82 @@ public final class Api {
               onebot.Api.SetGroupAddRequestResp.class, onebot.Api.SetGroupAddRequestResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -23164,6 +35214,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23173,6 +35229,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23188,6 +35250,10 @@ public final class Api {
       }
       onebot.Api.SetGroupAddRequestResp other = (onebot.Api.SetGroupAddRequestResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -23199,6 +35265,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -23332,6 +35402,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -23358,6 +35432,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetGroupAddRequestResp buildPartial() {
         onebot.Api.SetGroupAddRequestResp result = new onebot.Api.SetGroupAddRequestResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -23406,6 +35482,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetGroupAddRequestResp other) {
         if (other == onebot.Api.SetGroupAddRequestResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -23432,6 +35516,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -23490,6 +35726,30 @@ public final class Api {
   public interface GetLoginInfoReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetLoginInfoReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetLoginInfoReq}
@@ -23504,6 +35764,8 @@ public final class Api {
       super(builder);
     }
     private GetLoginInfoReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -23536,6 +35798,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23568,6 +35842,82 @@ public final class Api {
               onebot.Api.GetLoginInfoReq.class, onebot.Api.GetLoginInfoReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -23582,6 +35932,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23591,6 +35947,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23606,6 +35968,10 @@ public final class Api {
       }
       onebot.Api.GetLoginInfoReq other = (onebot.Api.GetLoginInfoReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -23617,6 +35983,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -23750,6 +36120,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -23776,6 +36150,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetLoginInfoReq buildPartial() {
         onebot.Api.GetLoginInfoReq result = new onebot.Api.GetLoginInfoReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -23824,6 +36200,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetLoginInfoReq other) {
         if (other == onebot.Api.GetLoginInfoReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -23850,6 +36234,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -23926,6 +36462,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getNicknameBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetLoginInfoResp}
@@ -23941,6 +36501,8 @@ public final class Api {
     }
     private GetLoginInfoResp() {
       nickname_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -23982,6 +36544,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               nickname_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -24065,6 +36639,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24085,6 +36735,12 @@ public final class Api {
       if (!getNicknameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nickname_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -24100,6 +36756,12 @@ public final class Api {
       }
       if (!getNicknameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nickname_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24120,6 +36782,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (!getNickname()
           .equals(other.getNickname())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24136,6 +36802,10 @@ public final class Api {
           getUserId());
       hash = (37 * hash) + NICKNAME_FIELD_NUMBER;
       hash = (53 * hash) + getNickname().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24273,6 +36943,10 @@ public final class Api {
 
         nickname_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -24301,6 +36975,8 @@ public final class Api {
         onebot.Api.GetLoginInfoResp result = new onebot.Api.GetLoginInfoResp(this);
         result.userId_ = userId_;
         result.nickname_ = nickname_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -24354,6 +37030,14 @@ public final class Api {
         }
         if (!other.getNickname().isEmpty()) {
           nickname_ = other.nickname_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -24491,6 +37175,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24559,6 +37395,30 @@ public final class Api {
      * @return The noCache.
      */
     boolean getNoCache();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetStrangerInfoReq}
@@ -24573,6 +37433,8 @@ public final class Api {
       super(builder);
     }
     private GetStrangerInfoReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -24613,6 +37475,18 @@ public final class Api {
             case 16: {
 
               noCache_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -24669,6 +37543,82 @@ public final class Api {
       return noCache_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24689,6 +37639,12 @@ public final class Api {
       if (noCache_ != false) {
         output.writeBool(2, noCache_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -24705,6 +37661,12 @@ public final class Api {
       if (noCache_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, noCache_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -24725,6 +37687,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getNoCache()
           != other.getNoCache()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -24742,6 +37708,10 @@ public final class Api {
       hash = (37 * hash) + NO_CACHE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNoCache());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -24879,6 +37849,10 @@ public final class Api {
 
         noCache_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -24907,6 +37881,8 @@ public final class Api {
         onebot.Api.GetStrangerInfoReq result = new onebot.Api.GetStrangerInfoReq(this);
         result.userId_ = userId_;
         result.noCache_ = noCache_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -24960,6 +37936,14 @@ public final class Api {
         }
         if (other.getNoCache() != false) {
           setNoCache(other.getNoCache());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25048,6 +38032,158 @@ public final class Api {
       public Builder clearNoCache() {
         
         noCache_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -25143,6 +38279,30 @@ public final class Api {
      * @return The age.
      */
     int getAge();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetStrangerInfoResp}
@@ -25159,6 +38319,8 @@ public final class Api {
     private GetStrangerInfoResp() {
       nickname_ = "";
       sex_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -25211,6 +38373,18 @@ public final class Api {
             case 32: {
 
               age_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -25343,6 +38517,82 @@ public final class Api {
       return age_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -25369,6 +38619,12 @@ public final class Api {
       if (age_ != 0) {
         output.writeInt32(4, age_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -25391,6 +38647,12 @@ public final class Api {
       if (age_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, age_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -25415,6 +38677,10 @@ public final class Api {
           .equals(other.getSex())) return false;
       if (getAge()
           != other.getAge()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -25435,6 +38701,10 @@ public final class Api {
       hash = (53 * hash) + getSex().hashCode();
       hash = (37 * hash) + AGE_FIELD_NUMBER;
       hash = (53 * hash) + getAge();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25576,6 +38846,10 @@ public final class Api {
 
         age_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -25606,6 +38880,8 @@ public final class Api {
         result.nickname_ = nickname_;
         result.sex_ = sex_;
         result.age_ = age_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -25667,6 +38943,14 @@ public final class Api {
         }
         if (other.getAge() != 0) {
           setAge(other.getAge());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -25910,6 +39194,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -25966,6 +39402,30 @@ public final class Api {
   public interface GetFriendListReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetFriendListReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetFriendListReq}
@@ -25980,6 +39440,8 @@ public final class Api {
       super(builder);
     }
     private GetFriendListReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -26012,6 +39474,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -26044,6 +39518,82 @@ public final class Api {
               onebot.Api.GetFriendListReq.class, onebot.Api.GetFriendListReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -26058,6 +39608,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -26067,6 +39623,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -26082,6 +39644,10 @@ public final class Api {
       }
       onebot.Api.GetFriendListReq other = (onebot.Api.GetFriendListReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -26093,6 +39659,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -26226,6 +39796,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -26252,6 +39826,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetFriendListReq buildPartial() {
         onebot.Api.GetFriendListReq result = new onebot.Api.GetFriendListReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -26300,6 +39876,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetFriendListReq other) {
         if (other == onebot.Api.GetFriendListReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -26326,6 +39910,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -26408,6 +40144,30 @@ public final class Api {
      */
     onebot.Api.GetFriendListResp.FriendOrBuilder getFriendListOrBuilder(
         int index);
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetFriendListResp}
@@ -26423,6 +40183,8 @@ public final class Api {
     }
     private GetFriendListResp() {
       friendList_ = java.util.Collections.emptyList();
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -26463,6 +40225,18 @@ public final class Api {
               }
               friendList_.add(
                   input.readMessage(onebot.Api.GetFriendListResp.Friend.parser(), extensionRegistry));
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -27329,6 +41103,82 @@ public final class Api {
       return friendList_.get(index);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -27346,6 +41196,12 @@ public final class Api {
       for (int i = 0; i < friendList_.size(); i++) {
         output.writeMessage(1, friendList_.get(i));
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -27358,6 +41214,12 @@ public final class Api {
       for (int i = 0; i < friendList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, friendList_.get(i));
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -27376,6 +41238,10 @@ public final class Api {
 
       if (!getFriendListList()
           .equals(other.getFriendListList())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -27391,6 +41257,10 @@ public final class Api {
         hash = (37 * hash) + FRIEND_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFriendListList().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -27531,6 +41401,10 @@ public final class Api {
         } else {
           friendListBuilder_.clear();
         }
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -27567,6 +41441,8 @@ public final class Api {
         } else {
           result.friendList_ = friendListBuilder_.build();
         }
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -27640,6 +41516,14 @@ public final class Api {
               friendListBuilder_.addAllMessages(other.friendList_);
             }
           }
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -27910,6 +41794,158 @@ public final class Api {
         }
         return friendListBuilder_;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -27978,6 +42014,30 @@ public final class Api {
      * @return The noCache.
      */
     boolean getNoCache();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupInfoReq}
@@ -27992,6 +42052,8 @@ public final class Api {
       super(builder);
     }
     private GetGroupInfoReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -28032,6 +42094,18 @@ public final class Api {
             case 16: {
 
               noCache_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -28088,6 +42162,82 @@ public final class Api {
       return noCache_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -28108,6 +42258,12 @@ public final class Api {
       if (noCache_ != false) {
         output.writeBool(2, noCache_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28124,6 +42280,12 @@ public final class Api {
       if (noCache_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, noCache_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28144,6 +42306,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (getNoCache()
           != other.getNoCache()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -28161,6 +42327,10 @@ public final class Api {
       hash = (37 * hash) + NO_CACHE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNoCache());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -28298,6 +42468,10 @@ public final class Api {
 
         noCache_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -28326,6 +42500,8 @@ public final class Api {
         onebot.Api.GetGroupInfoReq result = new onebot.Api.GetGroupInfoReq(this);
         result.groupId_ = groupId_;
         result.noCache_ = noCache_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -28379,6 +42555,14 @@ public final class Api {
         }
         if (other.getNoCache() != false) {
           setNoCache(other.getNoCache());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -28470,6 +42654,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28556,6 +42892,30 @@ public final class Api {
      * @return The maxMemberCount.
      */
     int getMaxMemberCount();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupInfoResp}
@@ -28571,6 +42931,8 @@ public final class Api {
     }
     private GetGroupInfoResp() {
       groupName_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -28622,6 +42984,18 @@ public final class Api {
             case 32: {
 
               maxMemberCount_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -28727,6 +43101,82 @@ public final class Api {
       return maxMemberCount_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -28753,6 +43203,12 @@ public final class Api {
       if (maxMemberCount_ != 0) {
         output.writeInt32(4, maxMemberCount_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28777,6 +43233,12 @@ public final class Api {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, maxMemberCount_);
       }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -28800,6 +43262,10 @@ public final class Api {
           != other.getMemberCount()) return false;
       if (getMaxMemberCount()
           != other.getMaxMemberCount()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -28820,6 +43286,10 @@ public final class Api {
       hash = (53 * hash) + getMemberCount();
       hash = (37 * hash) + MAX_MEMBER_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getMaxMemberCount();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -28961,6 +43431,10 @@ public final class Api {
 
         maxMemberCount_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -28991,6 +43465,8 @@ public final class Api {
         result.groupName_ = groupName_;
         result.memberCount_ = memberCount_;
         result.maxMemberCount_ = maxMemberCount_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -29051,6 +43527,14 @@ public final class Api {
         }
         if (other.getMaxMemberCount() != 0) {
           setMaxMemberCount(other.getMaxMemberCount());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -29249,6 +43733,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29305,6 +43941,30 @@ public final class Api {
   public interface GetGroupListReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetGroupListReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupListReq}
@@ -29319,6 +43979,8 @@ public final class Api {
       super(builder);
     }
     private GetGroupListReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -29351,6 +44013,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -29383,6 +44057,82 @@ public final class Api {
               onebot.Api.GetGroupListReq.class, onebot.Api.GetGroupListReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29397,6 +44147,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -29406,6 +44162,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -29421,6 +44183,10 @@ public final class Api {
       }
       onebot.Api.GetGroupListReq other = (onebot.Api.GetGroupListReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -29432,6 +44198,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -29565,6 +44335,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -29591,6 +44365,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetGroupListReq buildPartial() {
         onebot.Api.GetGroupListReq result = new onebot.Api.GetGroupListReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -29639,6 +44415,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetGroupListReq other) {
         if (other == onebot.Api.GetGroupListReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -29665,6 +44449,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -29747,6 +44683,30 @@ public final class Api {
      */
     onebot.Api.GetGroupListResp.GroupOrBuilder getGroupListOrBuilder(
         int index);
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupListResp}
@@ -29762,6 +44722,8 @@ public final class Api {
     }
     private GetGroupListResp() {
       groupList_ = java.util.Collections.emptyList();
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -29802,6 +44764,18 @@ public final class Api {
               }
               groupList_.add(
                   input.readMessage(onebot.Api.GetGroupListResp.Group.parser(), extensionRegistry));
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -30658,6 +45632,82 @@ public final class Api {
       return groupList_.get(index);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -30675,6 +45725,12 @@ public final class Api {
       for (int i = 0; i < groupList_.size(); i++) {
         output.writeMessage(1, groupList_.get(i));
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -30687,6 +45743,12 @@ public final class Api {
       for (int i = 0; i < groupList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, groupList_.get(i));
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -30705,6 +45767,10 @@ public final class Api {
 
       if (!getGroupListList()
           .equals(other.getGroupListList())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -30720,6 +45786,10 @@ public final class Api {
         hash = (37 * hash) + GROUP_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getGroupListList().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -30860,6 +45930,10 @@ public final class Api {
         } else {
           groupListBuilder_.clear();
         }
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -30896,6 +45970,8 @@ public final class Api {
         } else {
           result.groupList_ = groupListBuilder_.build();
         }
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -30969,6 +46045,14 @@ public final class Api {
               groupListBuilder_.addAllMessages(other.groupList_);
             }
           }
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -31239,6 +46323,158 @@ public final class Api {
         }
         return groupListBuilder_;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -31313,6 +46549,30 @@ public final class Api {
      * @return The noCache.
      */
     boolean getNoCache();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupMemberInfoReq}
@@ -31327,6 +46587,8 @@ public final class Api {
       super(builder);
     }
     private GetGroupMemberInfoReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -31372,6 +46634,18 @@ public final class Api {
             case 24: {
 
               noCache_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -31439,6 +46713,82 @@ public final class Api {
       return noCache_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -31462,6 +46812,12 @@ public final class Api {
       if (noCache_ != false) {
         output.writeBool(3, noCache_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -31482,6 +46838,12 @@ public final class Api {
       if (noCache_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, noCache_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -31504,6 +46866,10 @@ public final class Api {
           != other.getUserId()) return false;
       if (getNoCache()
           != other.getNoCache()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -31524,6 +46890,10 @@ public final class Api {
       hash = (37 * hash) + NO_CACHE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNoCache());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -31663,6 +47033,10 @@ public final class Api {
 
         noCache_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -31692,6 +47066,8 @@ public final class Api {
         result.groupId_ = groupId_;
         result.userId_ = userId_;
         result.noCache_ = noCache_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -31748,6 +47124,14 @@ public final class Api {
         }
         if (other.getNoCache() != false) {
           setNoCache(other.getNoCache());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -31867,6 +47251,158 @@ public final class Api {
       public Builder clearNoCache() {
         
         noCache_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -32058,6 +47594,30 @@ public final class Api {
      * @return The cardChangeable.
      */
     boolean getCardChangeable();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupMemberInfoResp}
@@ -32079,6 +47639,8 @@ public final class Api {
       level_ = "";
       role_ = "";
       title_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -32191,6 +47753,18 @@ public final class Api {
             case 120: {
 
               cardChangeable_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -32579,6 +48153,82 @@ public final class Api {
       return cardChangeable_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -32637,6 +48287,12 @@ public final class Api {
       }
       if (cardChangeable_ != false) {
         output.writeBool(15, cardChangeable_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
       }
       unknownFields.writeTo(output);
     }
@@ -32700,6 +48356,12 @@ public final class Api {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, cardChangeable_);
       }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -32745,6 +48407,10 @@ public final class Api {
           != other.getTitleExpireTime()) return false;
       if (getCardChangeable()
           != other.getCardChangeable()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -32790,6 +48456,10 @@ public final class Api {
       hash = (37 * hash) + CARD_CHANGEABLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCardChangeable());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -32953,6 +48623,10 @@ public final class Api {
 
         cardChangeable_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -32994,6 +48668,8 @@ public final class Api {
         result.title_ = title_;
         result.titleExpireTime_ = titleExpireTime_;
         result.cardChangeable_ = cardChangeable_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -33093,6 +48769,14 @@ public final class Api {
         }
         if (other.getCardChangeable() != false) {
           setCardChangeable(other.getCardChangeable());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -33902,6 +49586,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33964,6 +49800,30 @@ public final class Api {
      * @return The groupId.
      */
     long getGroupId();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupMemberListReq}
@@ -33978,6 +49838,8 @@ public final class Api {
       super(builder);
     }
     private GetGroupMemberListReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -34013,6 +49875,18 @@ public final class Api {
             case 8: {
 
               groupId_ = input.readInt64();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -34058,6 +49932,82 @@ public final class Api {
       return groupId_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -34075,6 +50025,12 @@ public final class Api {
       if (groupId_ != 0L) {
         output.writeInt64(1, groupId_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -34087,6 +50043,12 @@ public final class Api {
       if (groupId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(1, groupId_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -34105,6 +50067,10 @@ public final class Api {
 
       if (getGroupId()
           != other.getGroupId()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -34119,6 +50085,10 @@ public final class Api {
       hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getGroupId());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -34254,6 +50224,10 @@ public final class Api {
         super.clear();
         groupId_ = 0L;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -34281,6 +50255,8 @@ public final class Api {
       public onebot.Api.GetGroupMemberListReq buildPartial() {
         onebot.Api.GetGroupMemberListReq result = new onebot.Api.GetGroupMemberListReq(this);
         result.groupId_ = groupId_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -34331,6 +50307,14 @@ public final class Api {
         if (other == onebot.Api.GetGroupMemberListReq.getDefaultInstance()) return this;
         if (other.getGroupId() != 0L) {
           setGroupId(other.getGroupId());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -34388,6 +50372,158 @@ public final class Api {
       public Builder clearGroupId() {
         
         groupId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -34471,6 +50607,30 @@ public final class Api {
      */
     onebot.Api.GetGroupMemberListResp.GroupMemberOrBuilder getGroupMemberListOrBuilder(
         int index);
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupMemberListResp}
@@ -34486,6 +50646,8 @@ public final class Api {
     }
     private GetGroupMemberListResp() {
       groupMemberList_ = java.util.Collections.emptyList();
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -34526,6 +50688,18 @@ public final class Api {
               }
               groupMemberList_.add(
                   input.readMessage(onebot.Api.GetGroupMemberListResp.GroupMember.parser(), extensionRegistry));
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -36635,6 +52809,82 @@ public final class Api {
       return groupMemberList_.get(index);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -36652,6 +52902,12 @@ public final class Api {
       for (int i = 0; i < groupMemberList_.size(); i++) {
         output.writeMessage(1, groupMemberList_.get(i));
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -36664,6 +52920,12 @@ public final class Api {
       for (int i = 0; i < groupMemberList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, groupMemberList_.get(i));
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -36682,6 +52944,10 @@ public final class Api {
 
       if (!getGroupMemberListList()
           .equals(other.getGroupMemberListList())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -36697,6 +52963,10 @@ public final class Api {
         hash = (37 * hash) + GROUP_MEMBER_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getGroupMemberListList().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -36837,6 +53107,10 @@ public final class Api {
         } else {
           groupMemberListBuilder_.clear();
         }
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -36873,6 +53147,8 @@ public final class Api {
         } else {
           result.groupMemberList_ = groupMemberListBuilder_.build();
         }
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -36946,6 +53222,14 @@ public final class Api {
               groupMemberListBuilder_.addAllMessages(other.groupMemberList_);
             }
           }
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -37216,6 +53500,158 @@ public final class Api {
         }
         return groupMemberListBuilder_;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -37290,6 +53726,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getTypeBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupHonorInfoReq}
@@ -37305,6 +53765,8 @@ public final class Api {
     }
     private GetGroupHonorInfoReq() {
       type_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -37346,6 +53808,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               type_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -37429,6 +53903,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37449,6 +53999,12 @@ public final class Api {
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -37464,6 +54020,12 @@ public final class Api {
       }
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -37484,6 +54046,10 @@ public final class Api {
           != other.getGroupId()) return false;
       if (!getType()
           .equals(other.getType())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -37500,6 +54066,10 @@ public final class Api {
           getGroupId());
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -37637,6 +54207,10 @@ public final class Api {
 
         type_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -37665,6 +54239,8 @@ public final class Api {
         onebot.Api.GetGroupHonorInfoReq result = new onebot.Api.GetGroupHonorInfoReq(this);
         result.groupId_ = groupId_;
         result.type_ = type_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -37718,6 +54294,14 @@ public final class Api {
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -37852,6 +54436,158 @@ public final class Api {
   checkByteStringIsUtf8(value);
         
         type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -38052,6 +54788,30 @@ public final class Api {
      */
     onebot.Api.GetGroupHonorInfoResp.HonorOrBuilder getEmotionListOrBuilder(
         int index);
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetGroupHonorInfoResp}
@@ -38071,6 +54831,8 @@ public final class Api {
       legendList_ = java.util.Collections.emptyList();
       strongNewbieList_ = java.util.Collections.emptyList();
       emotionList_ = java.util.Collections.emptyList();
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -38165,6 +54927,18 @@ public final class Api {
               }
               emotionList_.add(
                   input.readMessage(onebot.Api.GetGroupHonorInfoResp.Honor.parser(), extensionRegistry));
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -40249,6 +57023,82 @@ public final class Api {
       return emotionList_.get(index);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -40283,6 +57133,12 @@ public final class Api {
       }
       for (int i = 0; i < emotionList_.size(); i++) {
         output.writeMessage(7, emotionList_.get(i));
+      }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
       }
       unknownFields.writeTo(output);
     }
@@ -40321,6 +57177,12 @@ public final class Api {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, emotionList_.get(i));
       }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -40353,6 +57215,10 @@ public final class Api {
           .equals(other.getStrongNewbieListList())) return false;
       if (!getEmotionListList()
           .equals(other.getEmotionListList())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -40391,6 +57257,10 @@ public final class Api {
         hash = (37 * hash) + EMOTION_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getEmotionListList().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -40567,6 +57437,10 @@ public final class Api {
         } else {
           emotionListBuilder_.clear();
         }
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -40645,6 +57519,8 @@ public final class Api {
         } else {
           result.emotionList_ = emotionListBuilder_.build();
         }
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -40828,6 +57704,14 @@ public final class Api {
               emotionListBuilder_.addAllMessages(other.emotionList_);
             }
           }
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -42208,6 +59092,158 @@ public final class Api {
         }
         return emotionListBuilder_;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -42276,6 +59312,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getDomainBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCookiesReq}
@@ -42291,6 +59351,8 @@ public final class Api {
     }
     private GetCookiesReq() {
       domain_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -42327,6 +59389,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               domain_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -42399,6 +59473,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -42416,6 +59566,12 @@ public final class Api {
       if (!getDomainBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -42427,6 +59583,12 @@ public final class Api {
       size = 0;
       if (!getDomainBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -42445,6 +59607,10 @@ public final class Api {
 
       if (!getDomain()
           .equals(other.getDomain())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -42458,6 +59624,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
       hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -42593,6 +59763,10 @@ public final class Api {
         super.clear();
         domain_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -42620,6 +59794,8 @@ public final class Api {
       public onebot.Api.GetCookiesReq buildPartial() {
         onebot.Api.GetCookiesReq result = new onebot.Api.GetCookiesReq(this);
         result.domain_ = domain_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -42670,6 +59846,14 @@ public final class Api {
         if (other == onebot.Api.GetCookiesReq.getDefaultInstance()) return this;
         if (!other.getDomain().isEmpty()) {
           domain_ = other.domain_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -42776,6 +59960,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -42844,6 +60180,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getCookiesBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCookiesResp}
@@ -42859,6 +60219,8 @@ public final class Api {
     }
     private GetCookiesResp() {
       cookies_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -42895,6 +60257,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               cookies_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -42967,6 +60341,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -42984,6 +60434,12 @@ public final class Api {
       if (!getCookiesBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cookies_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -42995,6 +60451,12 @@ public final class Api {
       size = 0;
       if (!getCookiesBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cookies_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -43013,6 +60475,10 @@ public final class Api {
 
       if (!getCookies()
           .equals(other.getCookies())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43026,6 +60492,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + COOKIES_FIELD_NUMBER;
       hash = (53 * hash) + getCookies().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43161,6 +60631,10 @@ public final class Api {
         super.clear();
         cookies_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -43188,6 +60662,8 @@ public final class Api {
       public onebot.Api.GetCookiesResp buildPartial() {
         onebot.Api.GetCookiesResp result = new onebot.Api.GetCookiesResp(this);
         result.cookies_ = cookies_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -43238,6 +60714,14 @@ public final class Api {
         if (other == onebot.Api.GetCookiesResp.getDefaultInstance()) return this;
         if (!other.getCookies().isEmpty()) {
           cookies_ = other.cookies_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -43344,6 +60828,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -43400,6 +61036,30 @@ public final class Api {
   public interface GetCsrfTokenReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetCsrfTokenReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCsrfTokenReq}
@@ -43414,6 +61074,8 @@ public final class Api {
       super(builder);
     }
     private GetCsrfTokenReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -43446,6 +61108,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -43478,6 +61152,82 @@ public final class Api {
               onebot.Api.GetCsrfTokenReq.class, onebot.Api.GetCsrfTokenReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -43492,6 +61242,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -43501,6 +61257,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -43516,6 +61278,10 @@ public final class Api {
       }
       onebot.Api.GetCsrfTokenReq other = (onebot.Api.GetCsrfTokenReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43527,6 +61293,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43660,6 +61430,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -43686,6 +61460,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetCsrfTokenReq buildPartial() {
         onebot.Api.GetCsrfTokenReq result = new onebot.Api.GetCsrfTokenReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -43734,6 +61510,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetCsrfTokenReq other) {
         if (other == onebot.Api.GetCsrfTokenReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -43760,6 +61544,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -43824,6 +61760,30 @@ public final class Api {
      * @return The token.
      */
     int getToken();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCsrfTokenResp}
@@ -43838,6 +61798,8 @@ public final class Api {
       super(builder);
     }
     private GetCsrfTokenResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -43873,6 +61835,18 @@ public final class Api {
             case 8: {
 
               token_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -43918,6 +61892,82 @@ public final class Api {
       return token_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -43935,6 +61985,12 @@ public final class Api {
       if (token_ != 0) {
         output.writeInt32(1, token_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -43947,6 +62003,12 @@ public final class Api {
       if (token_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, token_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -43965,6 +62027,10 @@ public final class Api {
 
       if (getToken()
           != other.getToken()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43978,6 +62044,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getToken();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -44113,6 +62183,10 @@ public final class Api {
         super.clear();
         token_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -44140,6 +62214,8 @@ public final class Api {
       public onebot.Api.GetCsrfTokenResp buildPartial() {
         onebot.Api.GetCsrfTokenResp result = new onebot.Api.GetCsrfTokenResp(this);
         result.token_ = token_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -44190,6 +62266,14 @@ public final class Api {
         if (other == onebot.Api.GetCsrfTokenResp.getDefaultInstance()) return this;
         if (other.getToken() != 0) {
           setToken(other.getToken());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -44247,6 +62331,158 @@ public final class Api {
       public Builder clearToken() {
         
         token_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
         onChanged();
         return this;
       }
@@ -44318,6 +62554,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getDomainBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCredentialsReq}
@@ -44333,6 +62593,8 @@ public final class Api {
     }
     private GetCredentialsReq() {
       domain_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -44369,6 +62631,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               domain_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -44441,6 +62715,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -44458,6 +62808,12 @@ public final class Api {
       if (!getDomainBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domain_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -44469,6 +62825,12 @@ public final class Api {
       size = 0;
       if (!getDomainBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domain_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -44487,6 +62849,10 @@ public final class Api {
 
       if (!getDomain()
           .equals(other.getDomain())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -44500,6 +62866,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
       hash = (53 * hash) + getDomain().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -44635,6 +63005,10 @@ public final class Api {
         super.clear();
         domain_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -44662,6 +63036,8 @@ public final class Api {
       public onebot.Api.GetCredentialsReq buildPartial() {
         onebot.Api.GetCredentialsReq result = new onebot.Api.GetCredentialsReq(this);
         result.domain_ = domain_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -44712,6 +63088,14 @@ public final class Api {
         if (other == onebot.Api.GetCredentialsReq.getDefaultInstance()) return this;
         if (!other.getDomain().isEmpty()) {
           domain_ = other.domain_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -44818,6 +63202,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -44892,6 +63428,30 @@ public final class Api {
      * @return The csrfToken.
      */
     int getCsrfToken();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetCredentialsResp}
@@ -44907,6 +63467,8 @@ public final class Api {
     }
     private GetCredentialsResp() {
       cookies_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -44948,6 +63510,18 @@ public final class Api {
             case 16: {
 
               csrfToken_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -45031,6 +63605,82 @@ public final class Api {
       return csrfToken_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -45051,6 +63701,12 @@ public final class Api {
       if (csrfToken_ != 0) {
         output.writeInt32(2, csrfToken_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -45066,6 +63722,12 @@ public final class Api {
       if (csrfToken_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, csrfToken_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -45086,6 +63748,10 @@ public final class Api {
           .equals(other.getCookies())) return false;
       if (getCsrfToken()
           != other.getCsrfToken()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -45101,6 +63767,10 @@ public final class Api {
       hash = (53 * hash) + getCookies().hashCode();
       hash = (37 * hash) + CSRF_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getCsrfToken();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -45238,6 +63908,10 @@ public final class Api {
 
         csrfToken_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -45266,6 +63940,8 @@ public final class Api {
         onebot.Api.GetCredentialsResp result = new onebot.Api.GetCredentialsResp(this);
         result.cookies_ = cookies_;
         result.csrfToken_ = csrfToken_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -45320,6 +63996,14 @@ public final class Api {
         }
         if (other.getCsrfToken() != 0) {
           setCsrfToken(other.getCsrfToken());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -45456,6 +64140,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -45536,6 +64372,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getOutFormatBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetRecordReq}
@@ -45552,6 +64412,8 @@ public final class Api {
     private GetRecordReq() {
       file_ = "";
       outFormat_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -45594,6 +64456,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               outFormat_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -45704,6 +64578,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -45724,6 +64674,12 @@ public final class Api {
       if (!getOutFormatBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outFormat_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -45738,6 +64694,12 @@ public final class Api {
       }
       if (!getOutFormatBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outFormat_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -45758,6 +64720,10 @@ public final class Api {
           .equals(other.getFile())) return false;
       if (!getOutFormat()
           .equals(other.getOutFormat())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -45773,6 +64739,10 @@ public final class Api {
       hash = (53 * hash) + getFile().hashCode();
       hash = (37 * hash) + OUT_FORMAT_FIELD_NUMBER;
       hash = (53 * hash) + getOutFormat().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -45910,6 +64880,10 @@ public final class Api {
 
         outFormat_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -45938,6 +64912,8 @@ public final class Api {
         onebot.Api.GetRecordReq result = new onebot.Api.GetRecordReq(this);
         result.file_ = file_;
         result.outFormat_ = outFormat_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -45992,6 +64968,14 @@ public final class Api {
         }
         if (!other.getOutFormat().isEmpty()) {
           outFormat_ = other.outFormat_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -46174,6 +65158,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -46242,6 +65378,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getFileBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetRecordResp}
@@ -46257,6 +65417,8 @@ public final class Api {
     }
     private GetRecordResp() {
       file_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -46293,6 +65455,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               file_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -46365,6 +65539,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46382,6 +65632,12 @@ public final class Api {
       if (!getFileBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, file_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -46393,6 +65649,12 @@ public final class Api {
       size = 0;
       if (!getFileBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, file_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -46411,6 +65673,10 @@ public final class Api {
 
       if (!getFile()
           .equals(other.getFile())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -46424,6 +65690,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILE_FIELD_NUMBER;
       hash = (53 * hash) + getFile().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -46559,6 +65829,10 @@ public final class Api {
         super.clear();
         file_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -46586,6 +65860,8 @@ public final class Api {
       public onebot.Api.GetRecordResp buildPartial() {
         onebot.Api.GetRecordResp result = new onebot.Api.GetRecordResp(this);
         result.file_ = file_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -46636,6 +65912,14 @@ public final class Api {
         if (other == onebot.Api.GetRecordResp.getDefaultInstance()) return this;
         if (!other.getFile().isEmpty()) {
           file_ = other.file_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -46742,6 +66026,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -46810,6 +66246,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getFileBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetImageReq}
@@ -46825,6 +66285,8 @@ public final class Api {
     }
     private GetImageReq() {
       file_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -46861,6 +66323,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               file_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -46933,6 +66407,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46950,6 +66500,12 @@ public final class Api {
       if (!getFileBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, file_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -46961,6 +66517,12 @@ public final class Api {
       size = 0;
       if (!getFileBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, file_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -46979,6 +66541,10 @@ public final class Api {
 
       if (!getFile()
           .equals(other.getFile())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -46992,6 +66558,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILE_FIELD_NUMBER;
       hash = (53 * hash) + getFile().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -47127,6 +66697,10 @@ public final class Api {
         super.clear();
         file_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -47154,6 +66728,8 @@ public final class Api {
       public onebot.Api.GetImageReq buildPartial() {
         onebot.Api.GetImageReq result = new onebot.Api.GetImageReq(this);
         result.file_ = file_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -47204,6 +66780,14 @@ public final class Api {
         if (other == onebot.Api.GetImageReq.getDefaultInstance()) return this;
         if (!other.getFile().isEmpty()) {
           file_ = other.file_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -47310,6 +66894,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -47378,6 +67114,30 @@ public final class Api {
      */
     com.google.protobuf.ByteString
         getFileBytes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetImageResp}
@@ -47393,6 +67153,8 @@ public final class Api {
     }
     private GetImageResp() {
       file_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -47429,6 +67191,18 @@ public final class Api {
               java.lang.String s = input.readStringRequireUtf8();
 
               file_ = s;
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -47501,6 +67275,82 @@ public final class Api {
       }
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -47518,6 +67368,12 @@ public final class Api {
       if (!getFileBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, file_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -47529,6 +67385,12 @@ public final class Api {
       size = 0;
       if (!getFileBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, file_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -47547,6 +67409,10 @@ public final class Api {
 
       if (!getFile()
           .equals(other.getFile())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -47560,6 +67426,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FILE_FIELD_NUMBER;
       hash = (53 * hash) + getFile().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -47695,6 +67565,10 @@ public final class Api {
         super.clear();
         file_ = "";
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -47722,6 +67596,8 @@ public final class Api {
       public onebot.Api.GetImageResp buildPartial() {
         onebot.Api.GetImageResp result = new onebot.Api.GetImageResp(this);
         result.file_ = file_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -47772,6 +67648,14 @@ public final class Api {
         if (other == onebot.Api.GetImageResp.getDefaultInstance()) return this;
         if (!other.getFile().isEmpty()) {
           file_ = other.file_;
+          onChanged();
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -47878,6 +67762,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -47934,6 +67970,30 @@ public final class Api {
   public interface CanSendImageReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.CanSendImageReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CanSendImageReq}
@@ -47948,6 +68008,8 @@ public final class Api {
       super(builder);
     }
     private CanSendImageReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -47980,6 +68042,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -48012,6 +68086,82 @@ public final class Api {
               onebot.Api.CanSendImageReq.class, onebot.Api.CanSendImageReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -48026,6 +68176,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -48035,6 +68191,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -48050,6 +68212,10 @@ public final class Api {
       }
       onebot.Api.CanSendImageReq other = (onebot.Api.CanSendImageReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -48061,6 +68227,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -48194,6 +68364,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -48220,6 +68394,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.CanSendImageReq buildPartial() {
         onebot.Api.CanSendImageReq result = new onebot.Api.CanSendImageReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -48268,6 +68444,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.CanSendImageReq other) {
         if (other == onebot.Api.CanSendImageReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -48294,6 +68478,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -48358,6 +68694,30 @@ public final class Api {
      * @return The yes.
      */
     boolean getYes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CanSendImageResp}
@@ -48372,6 +68732,8 @@ public final class Api {
       super(builder);
     }
     private CanSendImageResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -48407,6 +68769,18 @@ public final class Api {
             case 8: {
 
               yes_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -48452,6 +68826,82 @@ public final class Api {
       return yes_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -48469,6 +68919,12 @@ public final class Api {
       if (yes_ != false) {
         output.writeBool(1, yes_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -48481,6 +68937,12 @@ public final class Api {
       if (yes_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, yes_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -48499,6 +68961,10 @@ public final class Api {
 
       if (getYes()
           != other.getYes()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -48513,6 +68979,10 @@ public final class Api {
       hash = (37 * hash) + YES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getYes());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -48648,6 +69118,10 @@ public final class Api {
         super.clear();
         yes_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -48675,6 +69149,8 @@ public final class Api {
       public onebot.Api.CanSendImageResp buildPartial() {
         onebot.Api.CanSendImageResp result = new onebot.Api.CanSendImageResp(this);
         result.yes_ = yes_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -48725,6 +69201,14 @@ public final class Api {
         if (other == onebot.Api.CanSendImageResp.getDefaultInstance()) return this;
         if (other.getYes() != false) {
           setYes(other.getYes());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -48785,6 +69269,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -48841,6 +69477,30 @@ public final class Api {
   public interface CanSendRecordReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.CanSendRecordReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CanSendRecordReq}
@@ -48855,6 +69515,8 @@ public final class Api {
       super(builder);
     }
     private CanSendRecordReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -48887,6 +69549,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -48919,6 +69593,82 @@ public final class Api {
               onebot.Api.CanSendRecordReq.class, onebot.Api.CanSendRecordReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -48933,6 +69683,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -48942,6 +69698,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -48957,6 +69719,10 @@ public final class Api {
       }
       onebot.Api.CanSendRecordReq other = (onebot.Api.CanSendRecordReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -48968,6 +69734,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -49101,6 +69871,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -49127,6 +69901,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.CanSendRecordReq buildPartial() {
         onebot.Api.CanSendRecordReq result = new onebot.Api.CanSendRecordReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -49175,6 +69951,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.CanSendRecordReq other) {
         if (other == onebot.Api.CanSendRecordReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -49201,6 +69985,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -49265,6 +70201,30 @@ public final class Api {
      * @return The yes.
      */
     boolean getYes();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CanSendRecordResp}
@@ -49279,6 +70239,8 @@ public final class Api {
       super(builder);
     }
     private CanSendRecordResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -49314,6 +70276,18 @@ public final class Api {
             case 8: {
 
               yes_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -49359,6 +70333,82 @@ public final class Api {
       return yes_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -49376,6 +70426,12 @@ public final class Api {
       if (yes_ != false) {
         output.writeBool(1, yes_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -49388,6 +70444,12 @@ public final class Api {
       if (yes_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, yes_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -49406,6 +70468,10 @@ public final class Api {
 
       if (getYes()
           != other.getYes()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -49420,6 +70486,10 @@ public final class Api {
       hash = (37 * hash) + YES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getYes());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -49555,6 +70625,10 @@ public final class Api {
         super.clear();
         yes_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -49582,6 +70656,8 @@ public final class Api {
       public onebot.Api.CanSendRecordResp buildPartial() {
         onebot.Api.CanSendRecordResp result = new onebot.Api.CanSendRecordResp(this);
         result.yes_ = yes_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -49632,6 +70708,14 @@ public final class Api {
         if (other == onebot.Api.CanSendRecordResp.getDefaultInstance()) return this;
         if (other.getYes() != false) {
           setYes(other.getYes());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -49692,6 +70776,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -49748,6 +70984,30 @@ public final class Api {
   public interface GetStatusReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetStatusReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetStatusReq}
@@ -49762,6 +71022,8 @@ public final class Api {
       super(builder);
     }
     private GetStatusReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -49794,6 +71056,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -49826,6 +71100,82 @@ public final class Api {
               onebot.Api.GetStatusReq.class, onebot.Api.GetStatusReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -49840,6 +71190,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -49849,6 +71205,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -49864,6 +71226,10 @@ public final class Api {
       }
       onebot.Api.GetStatusReq other = (onebot.Api.GetStatusReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -49875,6 +71241,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -50008,6 +71378,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -50034,6 +71408,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetStatusReq buildPartial() {
         onebot.Api.GetStatusReq result = new onebot.Api.GetStatusReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -50082,6 +71458,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetStatusReq other) {
         if (other == onebot.Api.GetStatusReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -50108,6 +71492,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -50178,6 +71714,30 @@ public final class Api {
      * @return The good.
      */
     boolean getGood();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetStatusResp}
@@ -50192,6 +71752,8 @@ public final class Api {
       super(builder);
     }
     private GetStatusResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -50232,6 +71794,18 @@ public final class Api {
             case 16: {
 
               good_ = input.readBool();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -50288,6 +71862,82 @@ public final class Api {
       return good_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -50308,6 +71958,12 @@ public final class Api {
       if (good_ != false) {
         output.writeBool(2, good_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -50324,6 +71980,12 @@ public final class Api {
       if (good_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, good_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -50344,6 +72006,10 @@ public final class Api {
           != other.getOnline()) return false;
       if (getGood()
           != other.getGood()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -50361,6 +72027,10 @@ public final class Api {
       hash = (37 * hash) + GOOD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getGood());
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -50498,6 +72168,10 @@ public final class Api {
 
         good_ = false;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -50526,6 +72200,8 @@ public final class Api {
         onebot.Api.GetStatusResp result = new onebot.Api.GetStatusResp(this);
         result.online_ = online_;
         result.good_ = good_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -50579,6 +72255,14 @@ public final class Api {
         }
         if (other.getGood() != false) {
           setGood(other.getGood());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -50670,6 +72354,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -50726,6 +72562,30 @@ public final class Api {
   public interface GetVersionInfoReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.GetVersionInfoReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetVersionInfoReq}
@@ -50740,6 +72600,8 @@ public final class Api {
       super(builder);
     }
     private GetVersionInfoReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -50772,6 +72634,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -50804,6 +72678,82 @@ public final class Api {
               onebot.Api.GetVersionInfoReq.class, onebot.Api.GetVersionInfoReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -50818,6 +72768,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -50827,6 +72783,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -50842,6 +72804,10 @@ public final class Api {
       }
       onebot.Api.GetVersionInfoReq other = (onebot.Api.GetVersionInfoReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -50853,6 +72819,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -50986,6 +72956,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -51012,6 +72986,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.GetVersionInfoReq buildPartial() {
         onebot.Api.GetVersionInfoReq result = new onebot.Api.GetVersionInfoReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -51060,6 +73036,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.GetVersionInfoReq other) {
         if (other == onebot.Api.GetVersionInfoReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -51086,6 +73070,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -51214,6 +73350,30 @@ public final class Api {
 
     java.lang.String getExtraOrThrow(
         java.lang.String key);
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.GetVersionInfoResp}
@@ -51231,6 +73391,8 @@ public final class Api {
       appName_ = "";
       appVersion_ = "";
       protocolVersion_ = "";
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -51293,6 +73455,18 @@ public final class Api {
                   ExtraDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               extra_.getMutableMap().put(
                   extra__.getKey(), extra__.getValue());
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -51534,6 +73708,82 @@ public final class Api {
       return map.get(key);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -51563,6 +73813,12 @@ public final class Api {
           internalGetExtra(),
           ExtraDefaultEntryHolder.defaultEntry,
           4);
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -51591,6 +73847,12 @@ public final class Api {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(4, extra__);
       }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -51614,6 +73876,10 @@ public final class Api {
           .equals(other.getProtocolVersion())) return false;
       if (!internalGetExtra().equals(
           other.internalGetExtra())) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -51635,6 +73901,10 @@ public final class Api {
         hash = (37 * hash) + EXTRA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetExtra().hashCode();
       }
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -51797,6 +74067,10 @@ public final class Api {
         protocolVersion_ = "";
 
         internalGetMutableExtra().clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -51829,6 +74103,8 @@ public final class Api {
         result.protocolVersion_ = protocolVersion_;
         result.extra_ = internalGetExtra();
         result.extra_.makeImmutable();
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -51891,6 +74167,14 @@ public final class Api {
         }
         internalGetMutableExtra().mergeFrom(
             other.internalGetExtra());
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -52276,6 +74560,158 @@ public final class Api {
             .putAll(values);
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -52338,6 +74774,30 @@ public final class Api {
      * @return The delay.
      */
     int getDelay();
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetRestartReq}
@@ -52352,6 +74812,8 @@ public final class Api {
       super(builder);
     }
     private SetRestartReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -52387,6 +74849,18 @@ public final class Api {
             case 8: {
 
               delay_ = input.readInt32();
+              break;
+            }
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
               break;
             }
             default: {
@@ -52432,6 +74906,82 @@ public final class Api {
       return delay_;
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52449,6 +74999,12 @@ public final class Api {
       if (delay_ != 0) {
         output.writeInt32(1, delay_);
       }
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -52461,6 +75017,12 @@ public final class Api {
       if (delay_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, delay_);
+      }
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -52479,6 +75041,10 @@ public final class Api {
 
       if (getDelay()
           != other.getDelay()) return false;
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -52492,6 +75058,10 @@ public final class Api {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DELAY_FIELD_NUMBER;
       hash = (53 * hash) + getDelay();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -52627,6 +75197,10 @@ public final class Api {
         super.clear();
         delay_ = 0;
 
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -52654,6 +75228,8 @@ public final class Api {
       public onebot.Api.SetRestartReq buildPartial() {
         onebot.Api.SetRestartReq result = new onebot.Api.SetRestartReq(this);
         result.delay_ = delay_;
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -52704,6 +75280,14 @@ public final class Api {
         if (other == onebot.Api.SetRestartReq.getDefaultInstance()) return this;
         if (other.getDelay() != 0) {
           setDelay(other.getDelay());
+        }
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -52764,6 +75348,158 @@ public final class Api {
         onChanged();
         return this;
       }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -52820,6 +75556,30 @@ public final class Api {
   public interface SetRestartRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.SetRestartResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.SetRestartResp}
@@ -52834,6 +75594,8 @@ public final class Api {
       super(builder);
     }
     private SetRestartResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -52866,6 +75628,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -52898,6 +75672,82 @@ public final class Api {
               onebot.Api.SetRestartResp.class, onebot.Api.SetRestartResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52912,6 +75762,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -52921,6 +75777,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -52936,6 +75798,10 @@ public final class Api {
       }
       onebot.Api.SetRestartResp other = (onebot.Api.SetRestartResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -52947,6 +75813,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -53080,6 +75950,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -53106,6 +75980,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.SetRestartResp buildPartial() {
         onebot.Api.SetRestartResp result = new onebot.Api.SetRestartResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -53154,6 +76030,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.SetRestartResp other) {
         if (other == onebot.Api.SetRestartResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -53180,6 +76064,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -53238,6 +76274,30 @@ public final class Api {
   public interface CleanCacheReqOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.CleanCacheReq)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CleanCacheReq}
@@ -53252,6 +76312,8 @@ public final class Api {
       super(builder);
     }
     private CleanCacheReq() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -53284,6 +76346,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -53316,6 +76390,82 @@ public final class Api {
               onebot.Api.CleanCacheReq.class, onebot.Api.CleanCacheReq.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -53330,6 +76480,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -53339,6 +76495,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -53354,6 +76516,10 @@ public final class Api {
       }
       onebot.Api.CleanCacheReq other = (onebot.Api.CleanCacheReq) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -53365,6 +76531,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -53498,6 +76668,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -53524,6 +76698,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.CleanCacheReq buildPartial() {
         onebot.Api.CleanCacheReq result = new onebot.Api.CleanCacheReq(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -53572,6 +76748,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.CleanCacheReq other) {
         if (other == onebot.Api.CleanCacheReq.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -53598,6 +76782,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -53656,6 +76992,30 @@ public final class Api {
   public interface CleanCacheRespOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.CleanCacheResp)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    java.lang.String getAction();
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    com.google.protobuf.ByteString
+        getActionBytes();
+
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    java.lang.String getEcho();
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    com.google.protobuf.ByteString
+        getEchoBytes();
   }
   /**
    * Protobuf type {@code onebot.CleanCacheResp}
@@ -53670,6 +77030,8 @@ public final class Api {
       super(builder);
     }
     private CleanCacheResp() {
+      action_ = "";
+      echo_ = "";
     }
 
     @java.lang.Override
@@ -53702,6 +77064,18 @@ public final class Api {
             case 0:
               done = true;
               break;
+            case 810: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              action_ = s;
+              break;
+            }
+            case 818: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              echo_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -53734,6 +77108,82 @@ public final class Api {
               onebot.Api.CleanCacheResp.class, onebot.Api.CleanCacheResp.Builder.class);
     }
 
+    public static final int ACTION_FIELD_NUMBER = 101;
+    private volatile java.lang.Object action_;
+    /**
+     * <code>string action = 101;</code>
+     * @return The action.
+     */
+    @java.lang.Override
+    public java.lang.String getAction() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        action_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string action = 101;</code>
+     * @return The bytes for action.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getActionBytes() {
+      java.lang.Object ref = action_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        action_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ECHO_FIELD_NUMBER = 102;
+    private volatile java.lang.Object echo_;
+    /**
+     * <code>string echo = 102;</code>
+     * @return The echo.
+     */
+    @java.lang.Override
+    public java.lang.String getEcho() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        echo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string echo = 102;</code>
+     * @return The bytes for echo.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEchoBytes() {
+      java.lang.Object ref = echo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        echo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -53748,6 +77198,12 @@ public final class Api {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getActionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 102, echo_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -53757,6 +77213,12 @@ public final class Api {
       if (size != -1) return size;
 
       size = 0;
+      if (!getActionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(101, action_);
+      }
+      if (!getEchoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(102, echo_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -53772,6 +77234,10 @@ public final class Api {
       }
       onebot.Api.CleanCacheResp other = (onebot.Api.CleanCacheResp) obj;
 
+      if (!getAction()
+          .equals(other.getAction())) return false;
+      if (!getEcho()
+          .equals(other.getEcho())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -53783,6 +77249,10 @@ public final class Api {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getAction().hashCode();
+      hash = (37 * hash) + ECHO_FIELD_NUMBER;
+      hash = (53 * hash) + getEcho().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -53916,6 +77386,10 @@ public final class Api {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        action_ = "";
+
+        echo_ = "";
+
         return this;
       }
 
@@ -53942,6 +77416,8 @@ public final class Api {
       @java.lang.Override
       public onebot.Api.CleanCacheResp buildPartial() {
         onebot.Api.CleanCacheResp result = new onebot.Api.CleanCacheResp(this);
+        result.action_ = action_;
+        result.echo_ = echo_;
         onBuilt();
         return result;
       }
@@ -53990,6 +77466,14 @@ public final class Api {
 
       public Builder mergeFrom(onebot.Api.CleanCacheResp other) {
         if (other == onebot.Api.CleanCacheResp.getDefaultInstance()) return this;
+        if (!other.getAction().isEmpty()) {
+          action_ = other.action_;
+          onChanged();
+        }
+        if (!other.getEcho().isEmpty()) {
+          echo_ = other.echo_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -54016,6 +77500,158 @@ public final class Api {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private java.lang.Object action_ = "";
+      /**
+       * <code>string action = 101;</code>
+       * @return The action.
+       */
+      public java.lang.String getAction() {
+        java.lang.Object ref = action_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          action_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return The bytes for action.
+       */
+      public com.google.protobuf.ByteString
+          getActionBytes() {
+        java.lang.Object ref = action_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          action_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAction(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAction() {
+        
+        action_ = getDefaultInstance().getAction();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string action = 101;</code>
+       * @param value The bytes for action to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        action_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object echo_ = "";
+      /**
+       * <code>string echo = 102;</code>
+       * @return The echo.
+       */
+      public java.lang.String getEcho() {
+        java.lang.Object ref = echo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          echo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return The bytes for echo.
+       */
+      public com.google.protobuf.ByteString
+          getEchoBytes() {
+        java.lang.Object ref = echo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          echo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEcho(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        echo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEcho() {
+        
+        echo_ = getDefaultInstance().getEcho();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string echo = 102;</code>
+       * @param value The bytes for echo to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEchoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        echo_ = value;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -54071,6 +77707,16 @@ public final class Api {
 
   }
 
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseApiReq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseApiReq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseApiResp_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseApiResp_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onebot_SendPrivateMsgReq_descriptor;
   private static final 
@@ -54490,202 +78136,272 @@ public final class Api {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\tapi.proto\022\006onebot\032\nbase.proto\"[\n\021SendP" +
-      "rivateMsgReq\022\017\n\007user_id\030\001 \001(\003\022 \n\007message" +
-      "\030\002 \001(\0132\017.onebot.Message\022\023\n\013auto_escape\030\003" +
-      " \001(\010\"(\n\022SendPrivateMsgResp\022\022\n\nmessage_id" +
-      "\030\001 \001(\005\"Z\n\017SendGroupMsgReq\022\020\n\010group_id\030\001 " +
-      "\001(\003\022 \n\007message\030\002 \001(\0132\017.onebot.Message\022\023\n" +
-      "\013auto_escape\030\003 \001(\010\"&\n\020SendGroupMsgResp\022\022" +
-      "\n\nmessage_id\030\001 \001(\005\"|\n\nSendMsgReq\022\024\n\014mess" +
-      "age_type\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\003\022\020\n\010group" +
-      "_id\030\003 \001(\003\022 \n\007message\030\004 \001(\0132\017.onebot.Mess" +
-      "age\022\023\n\013auto_escape\030\005 \001(\010\"!\n\013SendMsgResp\022" +
-      "\022\n\nmessage_id\030\001 \001(\005\"\"\n\014DeleteMsgReq\022\022\n\nm" +
-      "essage_id\030\001 \001(\005\"\017\n\rDeleteMsgResp\"\037\n\tGetM" +
-      "sgReq\022\022\n\nmessage_id\030\001 \001(\005\"\262\002\n\nGetMsgResp" +
+      "\n\tapi.proto\022\006onebot\032\nbase.proto\"*\n\nBaseA" +
+      "piReq\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"+\n\013B" +
+      "aseApiResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t" +
+      "\"y\n\021SendPrivateMsgReq\022\017\n\007user_id\030\001 \001(\003\022 " +
+      "\n\007message\030\002 \001(\0132\017.onebot.Message\022\023\n\013auto" +
+      "_escape\030\003 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f " +
+      "\001(\t\"F\n\022SendPrivateMsgResp\022\022\n\nmessage_id\030" +
+      "\001 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"x\n\017S" +
+      "endGroupMsgReq\022\020\n\010group_id\030\001 \001(\003\022 \n\007mess" +
+      "age\030\002 \001(\0132\017.onebot.Message\022\023\n\013auto_escap" +
+      "e\030\003 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"D\n" +
+      "\020SendGroupMsgResp\022\022\n\nmessage_id\030\001 \001(\005\022\016\n" +
+      "\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"\232\001\n\nSendMsgR" +
+      "eq\022\024\n\014message_type\030\001 \001(\t\022\017\n\007user_id\030\002 \001(" +
+      "\003\022\020\n\010group_id\030\003 \001(\003\022 \n\007message\030\004 \001(\0132\017.o" +
+      "nebot.Message\022\023\n\013auto_escape\030\005 \001(\010\022\016\n\006ac" +
+      "tion\030e \001(\t\022\014\n\004echo\030f \001(\t\"?\n\013SendMsgResp\022" +
+      "\022\n\nmessage_id\030\001 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004e" +
+      "cho\030f \001(\t\"@\n\014DeleteMsgReq\022\022\n\nmessage_id\030" +
+      "\001 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"-\n\rD" +
+      "eleteMsgResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001" +
+      "(\t\"=\n\tGetMsgReq\022\022\n\nmessage_id\030\001 \001(\005\022\016\n\006a" +
+      "ction\030e \001(\t\022\014\n\004echo\030f \001(\t\"\320\002\n\nGetMsgResp" +
       "\022\014\n\004time\030\001 \001(\005\022\024\n\014message_type\030\002 \001(\t\022\022\n\n" +
       "message_id\030\003 \001(\005\022\017\n\007real_id\030\004 \001(\005\022)\n\006sen" +
       "der\030\005 \001(\0132\031.onebot.GetMsgResp.Sender\022 \n\007" +
-      "message\030\006 \001(\0132\017.onebot.Message\032\215\001\n\006Sende" +
-      "r\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\014\n\004" +
-      "card\030\003 \001(\t\022\013\n\003sex\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004" +
-      "area\030\006 \001(\t\022\r\n\005level\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022" +
-      "\r\n\005title\030\t \001(\t\"\036\n\020GetForwardMsgReq\022\n\n\002id" +
-      "\030\001 \001(\t\"\023\n\021GetForwardMsgResp\"-\n\013SendLikeR" +
-      "eq\022\017\n\007user_id\030\001 \001(\003\022\r\n\005times\030\002 \001(\005\"\016\n\014Se" +
-      "ndListResp\"P\n\017SetGroupKickReq\022\020\n\010group_i" +
-      "d\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\032\n\022reject_add_r" +
-      "equest\030\003 \001(\010\"\022\n\020SetGroupKickResp\"E\n\016SetG" +
-      "roupBanReq\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030" +
-      "\002 \001(\003\022\020\n\010duration\030\003 \001(\003\"\021\n\017SetGroupBanRe" +
-      "sp\"\326\001\n\027SetGroupAnonymousBanReq\022\020\n\010group_" +
-      "id\030\001 \001(\003\022<\n\tanonymous\030\002 \001(\0132).onebot.Set" +
-      "GroupAnonymousBanReq.Anonymous\022\026\n\016anonym" +
-      "ous_flag\030\003 \001(\t\022\014\n\004flag\030\004 \001(\t\022\020\n\010duration" +
-      "\030\005 \001(\003\0323\n\tAnonymous\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030" +
-      "\002 \001(\t\022\014\n\004flag\030\003 \001(\t\"\032\n\030SetGroupAnonymous" +
-      "BanResp\"7\n\023SetGroupWholeBanReq\022\020\n\010group_" +
-      "id\030\001 \001(\003\022\016\n\006enable\030\002 \001(\010\"\026\n\024SetGroupWhol" +
-      "eBanResp\"E\n\020SetGroupAdminReq\022\020\n\010group_id" +
-      "\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\016\n\006enable\030\003 \001(\010\"" +
-      "\023\n\021SetGroupAdminResp\"8\n\024SetGroupAnonymou" +
-      "sReq\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enable\030\002 \001(\010\"\027" +
-      "\n\025SetGroupAnonymousResp\"7\n\017SetGroupNameR" +
-      "eq\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t" +
-      "\"\022\n\020SetGroupNameResp\"8\n\020SetGroupLeaveReq" +
-      "\022\020\n\010group_id\030\001 \001(\003\022\022\n\nis_dismiss\030\002 \001(\010\"\023" +
-      "\n\021SetGroupLeaveResp\"e\n\027SetGroupSpecialTi" +
-      "tleReq\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(" +
-      "\003\022\025\n\rspecial_title\030\003 \001(\t\022\020\n\010duration\030\004 \001" +
-      "(\003\"\032\n\030SetGroupSpecialTitleResp\"G\n\026SetFri" +
-      "endAddRequestReq\022\014\n\004flag\030\001 \001(\t\022\017\n\007approv" +
-      "e\030\002 \001(\010\022\016\n\006remark\030\003 \001(\t\"\031\n\027SetFriendAddR" +
-      "equestResp\"f\n\025SetGroupAddRequestReq\022\014\n\004f" +
-      "lag\030\001 \001(\t\022\020\n\010sub_type\030\002 \001(\t\022\014\n\004type\030\003 \001(" +
-      "\t\022\017\n\007approve\030\004 \001(\010\022\016\n\006reason\030\005 \001(\t\"\030\n\026Se" +
-      "tGroupAddRequestResp\"\021\n\017GetLoginInfoReq\"" +
-      "5\n\020GetLoginInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010" +
-      "nickname\030\002 \001(\t\"7\n\022GetStrangerInfoReq\022\017\n\007" +
-      "user_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"R\n\023GetSt" +
-      "rangerInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickn" +
-      "ame\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\"\022\n\020G" +
-      "etFriendListReq\"\207\001\n\021GetFriendListResp\0225\n" +
-      "\013friend_list\030\001 \003(\0132 .onebot.GetFriendLis" +
-      "tResp.Friend\032;\n\006Friend\022\017\n\007user_id\030\001 \001(\003\022" +
-      "\020\n\010nickname\030\002 \001(\t\022\016\n\006remark\030\003 \001(\t\"5\n\017Get" +
-      "GroupInfoReq\022\020\n\010group_id\030\001 \001(\003\022\020\n\010no_cac" +
-      "he\030\002 \001(\010\"h\n\020GetGroupInfoResp\022\020\n\010group_id" +
-      "\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\022\024\n\014member_cou" +
-      "nt\030\003 \001(\005\022\030\n\020max_member_count\030\004 \001(\005\"\021\n\017Ge" +
-      "tGroupListReq\"\245\001\n\020GetGroupListResp\0222\n\ngr" +
-      "oup_list\030\001 \003(\0132\036.onebot.GetGroupListResp" +
-      ".Group\032]\n\005Group\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngro" +
-      "up_name\030\002 \001(\t\022\024\n\014member_count\030\003 \001(\005\022\030\n\020m" +
-      "ax_member_count\030\004 \001(\005\"L\n\025GetGroupMemberI" +
-      "nfoReq\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(" +
-      "\003\022\020\n\010no_cache\030\003 \001(\010\"\242\002\n\026GetGroupMemberIn" +
-      "foResp\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(" +
-      "\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004card\030\004 \001(\t\022\013\n\003sex" +
-      "\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004area\030\007 \001(\t\022\021\n\tjoi" +
-      "n_time\030\010 \001(\005\022\026\n\016last_sent_time\030\t \001(\005\022\r\n\005" +
-      "level\030\n \001(\t\022\014\n\004role\030\013 \001(\t\022\022\n\nunfriendly\030" +
-      "\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021title_expire_tim" +
-      "e\030\016 \001(\005\022\027\n\017card_changeable\030\017 \001(\010\")\n\025GetG" +
-      "roupMemberListReq\022\020\n\010group_id\030\001 \001(\003\"\371\002\n\026" +
-      "GetGroupMemberListResp\022E\n\021group_member_l" +
-      "ist\030\001 \003(\0132*.onebot.GetGroupMemberListRes" +
-      "p.GroupMember\032\227\002\n\013GroupMember\022\020\n\010group_i" +
+      "message\030\006 \001(\0132\017.onebot.Message\022\016\n\006action" +
+      "\030e \001(\t\022\014\n\004echo\030f \001(\t\032\215\001\n\006Sender\022\017\n\007user_" +
+      "id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\014\n\004card\030\003 \001(\t" +
+      "\022\013\n\003sex\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004area\030\006 \001(\t" +
+      "\022\r\n\005level\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022\r\n\005title\030\t" +
+      " \001(\t\"<\n\020GetForwardMsgReq\022\n\n\002id\030\001 \001(\t\022\016\n\006" +
+      "action\030e \001(\t\022\014\n\004echo\030f \001(\t\"1\n\021GetForward" +
+      "MsgResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"K\n" +
+      "\013SendLikeReq\022\017\n\007user_id\030\001 \001(\003\022\r\n\005times\030\002" +
+      " \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\",\n\014Se" +
+      "ndListResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t" +
+      "\"n\n\017SetGroupKickReq\022\020\n\010group_id\030\001 \001(\003\022\017\n" +
+      "\007user_id\030\002 \001(\003\022\032\n\022reject_add_request\030\003 \001" +
+      "(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"0\n\020SetG" +
+      "roupKickResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001" +
+      "(\t\"c\n\016SetGroupBanReq\022\020\n\010group_id\030\001 \001(\003\022\017" +
+      "\n\007user_id\030\002 \001(\003\022\020\n\010duration\030\003 \001(\003\022\016\n\006act" +
+      "ion\030e \001(\t\022\014\n\004echo\030f \001(\t\"/\n\017SetGroupBanRe" +
+      "sp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"\364\001\n\027Set" +
+      "GroupAnonymousBanReq\022\020\n\010group_id\030\001 \001(\003\022<" +
+      "\n\tanonymous\030\002 \001(\0132).onebot.SetGroupAnony" +
+      "mousBanReq.Anonymous\022\026\n\016anonymous_flag\030\003" +
+      " \001(\t\022\014\n\004flag\030\004 \001(\t\022\020\n\010duration\030\005 \001(\003\022\016\n\006" +
+      "action\030e \001(\t\022\014\n\004echo\030f \001(\t\0323\n\tAnonymous\022" +
+      "\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\014\n\004flag\030\003 \001(\t\"" +
+      "8\n\030SetGroupAnonymousBanResp\022\016\n\006action\030e " +
+      "\001(\t\022\014\n\004echo\030f \001(\t\"U\n\023SetGroupWholeBanReq" +
+      "\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enable\030\002 \001(\010\022\016\n\006ac" +
+      "tion\030e \001(\t\022\014\n\004echo\030f \001(\t\"4\n\024SetGroupWhol" +
+      "eBanResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"c" +
+      "\n\020SetGroupAdminReq\022\020\n\010group_id\030\001 \001(\003\022\017\n\007" +
+      "user_id\030\002 \001(\003\022\016\n\006enable\030\003 \001(\010\022\016\n\006action\030" +
+      "e \001(\t\022\014\n\004echo\030f \001(\t\"1\n\021SetGroupAdminResp" +
+      "\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"V\n\024SetGro" +
+      "upAnonymousReq\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enab" +
+      "le\030\002 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"5" +
+      "\n\025SetGroupAnonymousResp\022\016\n\006action\030e \001(\t\022" +
+      "\014\n\004echo\030f \001(\t\"U\n\017SetGroupNameReq\022\020\n\010grou" +
+      "p_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\022\016\n\006action" +
+      "\030e \001(\t\022\014\n\004echo\030f \001(\t\"0\n\020SetGroupNameResp" +
+      "\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"V\n\020SetGro" +
+      "upLeaveReq\022\020\n\010group_id\030\001 \001(\003\022\022\n\nis_dismi" +
+      "ss\030\002 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"1" +
+      "\n\021SetGroupLeaveResp\022\016\n\006action\030e \001(\t\022\014\n\004e" +
+      "cho\030f \001(\t\"\203\001\n\027SetGroupSpecialTitleReq\022\020\n" +
+      "\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\025\n\rspec" +
+      "ial_title\030\003 \001(\t\022\020\n\010duration\030\004 \001(\003\022\016\n\006act" +
+      "ion\030e \001(\t\022\014\n\004echo\030f \001(\t\"8\n\030SetGroupSpeci" +
+      "alTitleResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(" +
+      "\t\"e\n\026SetFriendAddRequestReq\022\014\n\004flag\030\001 \001(" +
+      "\t\022\017\n\007approve\030\002 \001(\010\022\016\n\006remark\030\003 \001(\t\022\016\n\006ac" +
+      "tion\030e \001(\t\022\014\n\004echo\030f \001(\t\"7\n\027SetFriendAdd" +
+      "RequestResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(" +
+      "\t\"\204\001\n\025SetGroupAddRequestReq\022\014\n\004flag\030\001 \001(" +
+      "\t\022\020\n\010sub_type\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022\017\n\007app" +
+      "rove\030\004 \001(\010\022\016\n\006reason\030\005 \001(\t\022\016\n\006action\030e \001" +
+      "(\t\022\014\n\004echo\030f \001(\t\"6\n\026SetGroupAddRequestRe" +
+      "sp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"/\n\017GetL" +
+      "oginInfoReq\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(" +
+      "\t\"S\n\020GetLoginInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020" +
+      "\n\010nickname\030\002 \001(\t\022\016\n\006action\030e \001(\t\022\014\n\004echo" +
+      "\030f \001(\t\"U\n\022GetStrangerInfoReq\022\017\n\007user_id\030" +
+      "\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\022\016\n\006action\030e \001(\t\022" +
+      "\014\n\004echo\030f \001(\t\"p\n\023GetStrangerInfoResp\022\017\n\007" +
+      "user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\013\n\003sex\030\003" +
+      " \001(\t\022\013\n\003age\030\004 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004ech" +
+      "o\030f \001(\t\"0\n\020GetFriendListReq\022\016\n\006action\030e " +
+      "\001(\t\022\014\n\004echo\030f \001(\t\"\245\001\n\021GetFriendListResp\022" +
+      "5\n\013friend_list\030\001 \003(\0132 .onebot.GetFriendL" +
+      "istResp.Friend\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f" +
+      " \001(\t\032;\n\006Friend\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickn" +
+      "ame\030\002 \001(\t\022\016\n\006remark\030\003 \001(\t\"S\n\017GetGroupInf" +
+      "oReq\022\020\n\010group_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010" +
+      "\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"\206\001\n\020GetGr" +
+      "oupInfoResp\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_n" +
+      "ame\030\002 \001(\t\022\024\n\014member_count\030\003 \001(\005\022\030\n\020max_m" +
+      "ember_count\030\004 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004ech" +
+      "o\030f \001(\t\"/\n\017GetGroupListReq\022\016\n\006action\030e \001" +
+      "(\t\022\014\n\004echo\030f \001(\t\"\303\001\n\020GetGroupListResp\0222\n" +
+      "\ngroup_list\030\001 \003(\0132\036.onebot.GetGroupListR" +
+      "esp.Group\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\032" +
+      "]\n\005Group\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_name" +
+      "\030\002 \001(\t\022\024\n\014member_count\030\003 \001(\005\022\030\n\020max_memb" +
+      "er_count\030\004 \001(\005\"j\n\025GetGroupMemberInfoReq\022" +
+      "\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\020\n\010no" +
+      "_cache\030\003 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001" +
+      "(\t\"\300\002\n\026GetGroupMemberInfoResp\022\020\n\010group_i" +
       "d\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\020\n\010nickname\030\003 \001" +
       "(\t\022\014\n\004card\030\004 \001(\t\022\013\n\003sex\030\005 \001(\t\022\013\n\003age\030\006 \001" +
       "(\005\022\014\n\004area\030\007 \001(\t\022\021\n\tjoin_time\030\010 \001(\005\022\026\n\016l" +
       "ast_sent_time\030\t \001(\005\022\r\n\005level\030\n \001(\t\022\014\n\004ro" +
       "le\030\013 \001(\t\022\022\n\nunfriendly\030\014 \001(\010\022\r\n\005title\030\r " +
       "\001(\t\022\031\n\021title_expire_time\030\016 \001(\005\022\027\n\017card_c" +
-      "hangeable\030\017 \001(\010\"6\n\024GetGroupHonorInfoReq\022" +
-      "\020\n\010group_id\030\001 \001(\003\022\014\n\004type\030\002 \001(\t\"\317\004\n\025GetG" +
-      "roupHonorInfoResp\022\020\n\010group_id\030\001 \001(\003\022I\n\021c" +
-      "urrent_talkative\030\002 \001(\0132..onebot.GetGroup" +
-      "HonorInfoResp.CurrentTalkative\022;\n\016talkat" +
-      "ive_list\030\003 \003(\0132#.onebot.GetGroupHonorInf" +
-      "oResp.Honor\022;\n\016performer_list\030\004 \003(\0132#.on" +
-      "ebot.GetGroupHonorInfoResp.Honor\0228\n\013lege" +
-      "nd_list\030\005 \003(\0132#.onebot.GetGroupHonorInfo" +
-      "Resp.Honor\022?\n\022strong_newbie_list\030\006 \003(\0132#" +
-      ".onebot.GetGroupHonorInfoResp.Honor\0229\n\014e" +
-      "motion_list\030\007 \003(\0132#.onebot.GetGroupHonor" +
-      "InfoResp.Honor\032X\n\020CurrentTalkative\022\017\n\007us" +
-      "er_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006avatar\030" +
-      "\003 \001(\t\022\021\n\tday_count\030\004 \001(\005\032O\n\005Honor\022\017\n\007use" +
-      "r_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006avatar\030\003" +
-      " \001(\t\022\023\n\013description\030\004 \001(\t\"\037\n\rGetCookiesR" +
-      "eq\022\016\n\006domain\030\001 \001(\t\"!\n\016GetCookiesResp\022\017\n\007" +
-      "cookies\030\001 \001(\t\"\021\n\017GetCsrfTokenReq\"!\n\020GetC" +
-      "srfTokenResp\022\r\n\005token\030\001 \001(\005\"#\n\021GetCreden" +
-      "tialsReq\022\016\n\006domain\030\001 \001(\t\"9\n\022GetCredentia" +
-      "lsResp\022\017\n\007cookies\030\001 \001(\t\022\022\n\ncsrf_token\030\002 " +
-      "\001(\005\"0\n\014GetRecordReq\022\014\n\004file\030\001 \001(\t\022\022\n\nout" +
-      "_format\030\002 \001(\t\"\035\n\rGetRecordResp\022\014\n\004file\030\001" +
-      " \001(\t\"\033\n\013GetImageReq\022\014\n\004file\030\001 \001(\t\"\034\n\014Get" +
-      "ImageResp\022\014\n\004file\030\001 \001(\t\"\021\n\017CanSendImageR" +
-      "eq\"\037\n\020CanSendImageResp\022\013\n\003yes\030\001 \001(\010\"\022\n\020C" +
-      "anSendRecordReq\" \n\021CanSendRecordResp\022\013\n\003" +
-      "yes\030\001 \001(\010\"\016\n\014GetStatusReq\"-\n\rGetStatusRe" +
-      "sp\022\016\n\006online\030\001 \001(\010\022\014\n\004good\030\002 \001(\010\"\023\n\021GetV" +
-      "ersionInfoReq\"\271\001\n\022GetVersionInfoResp\022\020\n\010" +
-      "app_name\030\001 \001(\t\022\023\n\013app_version\030\002 \001(\t\022\030\n\020p" +
-      "rotocol_version\030\003 \001(\t\0224\n\005extra\030\004 \003(\0132%.o" +
-      "nebot.GetVersionInfoResp.ExtraEntry\032,\n\nE" +
-      "xtraEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\"\036\n\rSetRestartReq\022\r\n\005delay\030\001 \001(\005\"\020\n\016Set" +
-      "RestartResp\"\017\n\rCleanCacheReq\"\020\n\016CleanCac" +
-      "heRespb\006proto3"
+      "hangeable\030\017 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030" +
+      "f \001(\t\"G\n\025GetGroupMemberListReq\022\020\n\010group_" +
+      "id\030\001 \001(\003\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"\227" +
+      "\003\n\026GetGroupMemberListResp\022E\n\021group_membe" +
+      "r_list\030\001 \003(\0132*.onebot.GetGroupMemberList" +
+      "Resp.GroupMember\022\016\n\006action\030e \001(\t\022\014\n\004echo" +
+      "\030f \001(\t\032\227\002\n\013GroupMember\022\020\n\010group_id\030\001 \001(\003" +
+      "\022\017\n\007user_id\030\002 \001(\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004c" +
+      "ard\030\004 \001(\t\022\013\n\003sex\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004a" +
+      "rea\030\007 \001(\t\022\021\n\tjoin_time\030\010 \001(\005\022\026\n\016last_sen" +
+      "t_time\030\t \001(\005\022\r\n\005level\030\n \001(\t\022\014\n\004role\030\013 \001(" +
+      "\t\022\022\n\nunfriendly\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021" +
+      "title_expire_time\030\016 \001(\005\022\027\n\017card_changeab" +
+      "le\030\017 \001(\010\"T\n\024GetGroupHonorInfoReq\022\020\n\010grou" +
+      "p_id\030\001 \001(\003\022\014\n\004type\030\002 \001(\t\022\016\n\006action\030e \001(\t" +
+      "\022\014\n\004echo\030f \001(\t\"\355\004\n\025GetGroupHonorInfoResp" +
+      "\022\020\n\010group_id\030\001 \001(\003\022I\n\021current_talkative\030" +
+      "\002 \001(\0132..onebot.GetGroupHonorInfoResp.Cur" +
+      "rentTalkative\022;\n\016talkative_list\030\003 \003(\0132#." +
+      "onebot.GetGroupHonorInfoResp.Honor\022;\n\016pe" +
+      "rformer_list\030\004 \003(\0132#.onebot.GetGroupHono" +
+      "rInfoResp.Honor\0228\n\013legend_list\030\005 \003(\0132#.o" +
+      "nebot.GetGroupHonorInfoResp.Honor\022?\n\022str" +
+      "ong_newbie_list\030\006 \003(\0132#.onebot.GetGroupH" +
+      "onorInfoResp.Honor\0229\n\014emotion_list\030\007 \003(\013" +
+      "2#.onebot.GetGroupHonorInfoResp.Honor\022\016\n" +
+      "\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\032X\n\020CurrentTa" +
+      "lkative\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001" +
+      "(\t\022\016\n\006avatar\030\003 \001(\t\022\021\n\tday_count\030\004 \001(\005\032O\n" +
+      "\005Honor\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(" +
+      "\t\022\016\n\006avatar\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\"=" +
+      "\n\rGetCookiesReq\022\016\n\006domain\030\001 \001(\t\022\016\n\006actio" +
+      "n\030e \001(\t\022\014\n\004echo\030f \001(\t\"?\n\016GetCookiesResp\022" +
+      "\017\n\007cookies\030\001 \001(\t\022\016\n\006action\030e \001(\t\022\014\n\004echo" +
+      "\030f \001(\t\"/\n\017GetCsrfTokenReq\022\016\n\006action\030e \001(" +
+      "\t\022\014\n\004echo\030f \001(\t\"?\n\020GetCsrfTokenResp\022\r\n\005t" +
+      "oken\030\001 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t" +
+      "\"A\n\021GetCredentialsReq\022\016\n\006domain\030\001 \001(\t\022\016\n" +
+      "\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"W\n\022GetCreden" +
+      "tialsResp\022\017\n\007cookies\030\001 \001(\t\022\022\n\ncsrf_token" +
+      "\030\002 \001(\005\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\"N\n\014" +
+      "GetRecordReq\022\014\n\004file\030\001 \001(\t\022\022\n\nout_format" +
+      "\030\002 \001(\t\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\";\n\r" +
+      "GetRecordResp\022\014\n\004file\030\001 \001(\t\022\016\n\006action\030e " +
+      "\001(\t\022\014\n\004echo\030f \001(\t\"9\n\013GetImageReq\022\014\n\004file" +
+      "\030\001 \001(\t\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\":\n\014" +
+      "GetImageResp\022\014\n\004file\030\001 \001(\t\022\016\n\006action\030e \001" +
+      "(\t\022\014\n\004echo\030f \001(\t\"/\n\017CanSendImageReq\022\016\n\006a" +
+      "ction\030e \001(\t\022\014\n\004echo\030f \001(\t\"=\n\020CanSendImag" +
+      "eResp\022\013\n\003yes\030\001 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004ec" +
+      "ho\030f \001(\t\"0\n\020CanSendRecordReq\022\016\n\006action\030e" +
+      " \001(\t\022\014\n\004echo\030f \001(\t\">\n\021CanSendRecordResp\022" +
+      "\013\n\003yes\030\001 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001" +
+      "(\t\",\n\014GetStatusReq\022\016\n\006action\030e \001(\t\022\014\n\004ec" +
+      "ho\030f \001(\t\"K\n\rGetStatusResp\022\016\n\006online\030\001 \001(" +
+      "\010\022\014\n\004good\030\002 \001(\010\022\016\n\006action\030e \001(\t\022\014\n\004echo\030" +
+      "f \001(\t\"1\n\021GetVersionInfoReq\022\016\n\006action\030e \001" +
+      "(\t\022\014\n\004echo\030f \001(\t\"\327\001\n\022GetVersionInfoResp\022" +
+      "\020\n\010app_name\030\001 \001(\t\022\023\n\013app_version\030\002 \001(\t\022\030" +
+      "\n\020protocol_version\030\003 \001(\t\0224\n\005extra\030\004 \003(\0132" +
+      "%.onebot.GetVersionInfoResp.ExtraEntry\022\016" +
+      "\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\032,\n\nExtraEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"<\n\rSe" +
+      "tRestartReq\022\r\n\005delay\030\001 \001(\005\022\016\n\006action\030e \001" +
+      "(\t\022\014\n\004echo\030f \001(\t\".\n\016SetRestartResp\022\016\n\006ac" +
+      "tion\030e \001(\t\022\014\n\004echo\030f \001(\t\"-\n\rCleanCacheRe" +
+      "q\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\t\".\n\016Clean" +
+      "CacheResp\022\016\n\006action\030e \001(\t\022\014\n\004echo\030f \001(\tb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           onebot.Base.getDescriptor(),
         });
-    internal_static_onebot_SendPrivateMsgReq_descriptor =
+    internal_static_onebot_BaseApiReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_onebot_BaseApiReq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseApiReq_descriptor,
+        new java.lang.String[] { "Action", "Echo", });
+    internal_static_onebot_BaseApiResp_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_onebot_BaseApiResp_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseApiResp_descriptor,
+        new java.lang.String[] { "Action", "Echo", });
+    internal_static_onebot_SendPrivateMsgReq_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_onebot_SendPrivateMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendPrivateMsgReq_descriptor,
-        new java.lang.String[] { "UserId", "Message", "AutoEscape", });
+        new java.lang.String[] { "UserId", "Message", "AutoEscape", "Action", "Echo", });
     internal_static_onebot_SendPrivateMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_onebot_SendPrivateMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendPrivateMsgResp_descriptor,
-        new java.lang.String[] { "MessageId", });
+        new java.lang.String[] { "MessageId", "Action", "Echo", });
     internal_static_onebot_SendGroupMsgReq_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_onebot_SendGroupMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendGroupMsgReq_descriptor,
-        new java.lang.String[] { "GroupId", "Message", "AutoEscape", });
+        new java.lang.String[] { "GroupId", "Message", "AutoEscape", "Action", "Echo", });
     internal_static_onebot_SendGroupMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_onebot_SendGroupMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendGroupMsgResp_descriptor,
-        new java.lang.String[] { "MessageId", });
+        new java.lang.String[] { "MessageId", "Action", "Echo", });
     internal_static_onebot_SendMsgReq_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_onebot_SendMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendMsgReq_descriptor,
-        new java.lang.String[] { "MessageType", "UserId", "GroupId", "Message", "AutoEscape", });
+        new java.lang.String[] { "MessageType", "UserId", "GroupId", "Message", "AutoEscape", "Action", "Echo", });
     internal_static_onebot_SendMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_onebot_SendMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendMsgResp_descriptor,
-        new java.lang.String[] { "MessageId", });
+        new java.lang.String[] { "MessageId", "Action", "Echo", });
     internal_static_onebot_DeleteMsgReq_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_onebot_DeleteMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_DeleteMsgReq_descriptor,
-        new java.lang.String[] { "MessageId", });
+        new java.lang.String[] { "MessageId", "Action", "Echo", });
     internal_static_onebot_DeleteMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_onebot_DeleteMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_DeleteMsgResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetMsgReq_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_onebot_GetMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetMsgReq_descriptor,
-        new java.lang.String[] { "MessageId", });
+        new java.lang.String[] { "MessageId", "Action", "Echo", });
     internal_static_onebot_GetMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_onebot_GetMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetMsgResp_descriptor,
-        new java.lang.String[] { "Time", "MessageType", "MessageId", "RealId", "Sender", "Message", });
+        new java.lang.String[] { "Time", "MessageType", "MessageId", "RealId", "Sender", "Message", "Action", "Echo", });
     internal_static_onebot_GetMsgResp_Sender_descriptor =
       internal_static_onebot_GetMsgResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetMsgResp_Sender_fieldAccessorTable = new
@@ -54693,59 +78409,59 @@ public final class Api {
         internal_static_onebot_GetMsgResp_Sender_descriptor,
         new java.lang.String[] { "UserId", "Nickname", "Card", "Sex", "Age", "Area", "Level", "Role", "Title", });
     internal_static_onebot_GetForwardMsgReq_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_onebot_GetForwardMsgReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetForwardMsgReq_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "Action", "Echo", });
     internal_static_onebot_GetForwardMsgResp_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_onebot_GetForwardMsgResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetForwardMsgResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SendLikeReq_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_onebot_SendLikeReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendLikeReq_descriptor,
-        new java.lang.String[] { "UserId", "Times", });
+        new java.lang.String[] { "UserId", "Times", "Action", "Echo", });
     internal_static_onebot_SendListResp_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_onebot_SendListResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SendListResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupKickReq_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_onebot_SetGroupKickReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupKickReq_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "RejectAddRequest", });
+        new java.lang.String[] { "GroupId", "UserId", "RejectAddRequest", "Action", "Echo", });
     internal_static_onebot_SetGroupKickResp_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_onebot_SetGroupKickResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupKickResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupBanReq_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_onebot_SetGroupBanReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupBanReq_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "Duration", });
+        new java.lang.String[] { "GroupId", "UserId", "Duration", "Action", "Echo", });
     internal_static_onebot_SetGroupBanResp_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_onebot_SetGroupBanResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupBanResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupAnonymousBanReq_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_onebot_SetGroupAnonymousBanReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAnonymousBanReq_descriptor,
-        new java.lang.String[] { "GroupId", "Anonymous", "AnonymousFlag", "Flag", "Duration", });
+        new java.lang.String[] { "GroupId", "Anonymous", "AnonymousFlag", "Flag", "Duration", "Action", "Echo", });
     internal_static_onebot_SetGroupAnonymousBanReq_Anonymous_descriptor =
       internal_static_onebot_SetGroupAnonymousBanReq_descriptor.getNestedTypes().get(0);
     internal_static_onebot_SetGroupAnonymousBanReq_Anonymous_fieldAccessorTable = new
@@ -54753,143 +78469,143 @@ public final class Api {
         internal_static_onebot_SetGroupAnonymousBanReq_Anonymous_descriptor,
         new java.lang.String[] { "Id", "Name", "Flag", });
     internal_static_onebot_SetGroupAnonymousBanResp_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_onebot_SetGroupAnonymousBanResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAnonymousBanResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupWholeBanReq_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_onebot_SetGroupWholeBanReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupWholeBanReq_descriptor,
-        new java.lang.String[] { "GroupId", "Enable", });
+        new java.lang.String[] { "GroupId", "Enable", "Action", "Echo", });
     internal_static_onebot_SetGroupWholeBanResp_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_onebot_SetGroupWholeBanResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupWholeBanResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupAdminReq_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_onebot_SetGroupAdminReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAdminReq_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "Enable", });
+        new java.lang.String[] { "GroupId", "UserId", "Enable", "Action", "Echo", });
     internal_static_onebot_SetGroupAdminResp_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_onebot_SetGroupAdminResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAdminResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupAnonymousReq_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_onebot_SetGroupAnonymousReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAnonymousReq_descriptor,
-        new java.lang.String[] { "GroupId", "Enable", });
+        new java.lang.String[] { "GroupId", "Enable", "Action", "Echo", });
     internal_static_onebot_SetGroupAnonymousResp_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_onebot_SetGroupAnonymousResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAnonymousResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupNameReq_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_onebot_SetGroupNameReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupNameReq_descriptor,
-        new java.lang.String[] { "GroupId", "GroupName", });
+        new java.lang.String[] { "GroupId", "GroupName", "Action", "Echo", });
     internal_static_onebot_SetGroupNameResp_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_onebot_SetGroupNameResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupNameResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupLeaveReq_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_onebot_SetGroupLeaveReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupLeaveReq_descriptor,
-        new java.lang.String[] { "GroupId", "IsDismiss", });
+        new java.lang.String[] { "GroupId", "IsDismiss", "Action", "Echo", });
     internal_static_onebot_SetGroupLeaveResp_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_onebot_SetGroupLeaveResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupLeaveResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupSpecialTitleReq_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_onebot_SetGroupSpecialTitleReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupSpecialTitleReq_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "SpecialTitle", "Duration", });
+        new java.lang.String[] { "GroupId", "UserId", "SpecialTitle", "Duration", "Action", "Echo", });
     internal_static_onebot_SetGroupSpecialTitleResp_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_onebot_SetGroupSpecialTitleResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupSpecialTitleResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetFriendAddRequestReq_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_onebot_SetFriendAddRequestReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetFriendAddRequestReq_descriptor,
-        new java.lang.String[] { "Flag", "Approve", "Remark", });
+        new java.lang.String[] { "Flag", "Approve", "Remark", "Action", "Echo", });
     internal_static_onebot_SetFriendAddRequestResp_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_onebot_SetFriendAddRequestResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetFriendAddRequestResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_SetGroupAddRequestReq_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_onebot_SetGroupAddRequestReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAddRequestReq_descriptor,
-        new java.lang.String[] { "Flag", "SubType", "Type", "Approve", "Reason", });
+        new java.lang.String[] { "Flag", "SubType", "Type", "Approve", "Reason", "Action", "Echo", });
     internal_static_onebot_SetGroupAddRequestResp_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_onebot_SetGroupAddRequestResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetGroupAddRequestResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetLoginInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_onebot_GetLoginInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetLoginInfoReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetLoginInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_onebot_GetLoginInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetLoginInfoResp_descriptor,
-        new java.lang.String[] { "UserId", "Nickname", });
+        new java.lang.String[] { "UserId", "Nickname", "Action", "Echo", });
     internal_static_onebot_GetStrangerInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_onebot_GetStrangerInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetStrangerInfoReq_descriptor,
-        new java.lang.String[] { "UserId", "NoCache", });
+        new java.lang.String[] { "UserId", "NoCache", "Action", "Echo", });
     internal_static_onebot_GetStrangerInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_onebot_GetStrangerInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetStrangerInfoResp_descriptor,
-        new java.lang.String[] { "UserId", "Nickname", "Sex", "Age", });
+        new java.lang.String[] { "UserId", "Nickname", "Sex", "Age", "Action", "Echo", });
     internal_static_onebot_GetFriendListReq_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_onebot_GetFriendListReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetFriendListReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetFriendListResp_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_onebot_GetFriendListResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetFriendListResp_descriptor,
-        new java.lang.String[] { "FriendList", });
+        new java.lang.String[] { "FriendList", "Action", "Echo", });
     internal_static_onebot_GetFriendListResp_Friend_descriptor =
       internal_static_onebot_GetFriendListResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetFriendListResp_Friend_fieldAccessorTable = new
@@ -54897,29 +78613,29 @@ public final class Api {
         internal_static_onebot_GetFriendListResp_Friend_descriptor,
         new java.lang.String[] { "UserId", "Nickname", "Remark", });
     internal_static_onebot_GetGroupInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_onebot_GetGroupInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupInfoReq_descriptor,
-        new java.lang.String[] { "GroupId", "NoCache", });
+        new java.lang.String[] { "GroupId", "NoCache", "Action", "Echo", });
     internal_static_onebot_GetGroupInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_onebot_GetGroupInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupInfoResp_descriptor,
-        new java.lang.String[] { "GroupId", "GroupName", "MemberCount", "MaxMemberCount", });
+        new java.lang.String[] { "GroupId", "GroupName", "MemberCount", "MaxMemberCount", "Action", "Echo", });
     internal_static_onebot_GetGroupListReq_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_onebot_GetGroupListReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupListReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetGroupListResp_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_onebot_GetGroupListResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupListResp_descriptor,
-        new java.lang.String[] { "GroupList", });
+        new java.lang.String[] { "GroupList", "Action", "Echo", });
     internal_static_onebot_GetGroupListResp_Group_descriptor =
       internal_static_onebot_GetGroupListResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetGroupListResp_Group_fieldAccessorTable = new
@@ -54927,29 +78643,29 @@ public final class Api {
         internal_static_onebot_GetGroupListResp_Group_descriptor,
         new java.lang.String[] { "GroupId", "GroupName", "MemberCount", "MaxMemberCount", });
     internal_static_onebot_GetGroupMemberInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_onebot_GetGroupMemberInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupMemberInfoReq_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "NoCache", });
+        new java.lang.String[] { "GroupId", "UserId", "NoCache", "Action", "Echo", });
     internal_static_onebot_GetGroupMemberInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_onebot_GetGroupMemberInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupMemberInfoResp_descriptor,
-        new java.lang.String[] { "GroupId", "UserId", "Nickname", "Card", "Sex", "Age", "Area", "JoinTime", "LastSentTime", "Level", "Role", "Unfriendly", "Title", "TitleExpireTime", "CardChangeable", });
+        new java.lang.String[] { "GroupId", "UserId", "Nickname", "Card", "Sex", "Age", "Area", "JoinTime", "LastSentTime", "Level", "Role", "Unfriendly", "Title", "TitleExpireTime", "CardChangeable", "Action", "Echo", });
     internal_static_onebot_GetGroupMemberListReq_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_onebot_GetGroupMemberListReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupMemberListReq_descriptor,
-        new java.lang.String[] { "GroupId", });
+        new java.lang.String[] { "GroupId", "Action", "Echo", });
     internal_static_onebot_GetGroupMemberListResp_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_onebot_GetGroupMemberListResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupMemberListResp_descriptor,
-        new java.lang.String[] { "GroupMemberList", });
+        new java.lang.String[] { "GroupMemberList", "Action", "Echo", });
     internal_static_onebot_GetGroupMemberListResp_GroupMember_descriptor =
       internal_static_onebot_GetGroupMemberListResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetGroupMemberListResp_GroupMember_fieldAccessorTable = new
@@ -54957,17 +78673,17 @@ public final class Api {
         internal_static_onebot_GetGroupMemberListResp_GroupMember_descriptor,
         new java.lang.String[] { "GroupId", "UserId", "Nickname", "Card", "Sex", "Age", "Area", "JoinTime", "LastSentTime", "Level", "Role", "Unfriendly", "Title", "TitleExpireTime", "CardChangeable", });
     internal_static_onebot_GetGroupHonorInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_onebot_GetGroupHonorInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupHonorInfoReq_descriptor,
-        new java.lang.String[] { "GroupId", "Type", });
+        new java.lang.String[] { "GroupId", "Type", "Action", "Echo", });
     internal_static_onebot_GetGroupHonorInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_onebot_GetGroupHonorInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetGroupHonorInfoResp_descriptor,
-        new java.lang.String[] { "GroupId", "CurrentTalkative", "TalkativeList", "PerformerList", "LegendList", "StrongNewbieList", "EmotionList", });
+        new java.lang.String[] { "GroupId", "CurrentTalkative", "TalkativeList", "PerformerList", "LegendList", "StrongNewbieList", "EmotionList", "Action", "Echo", });
     internal_static_onebot_GetGroupHonorInfoResp_CurrentTalkative_descriptor =
       internal_static_onebot_GetGroupHonorInfoResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetGroupHonorInfoResp_CurrentTalkative_fieldAccessorTable = new
@@ -54981,113 +78697,113 @@ public final class Api {
         internal_static_onebot_GetGroupHonorInfoResp_Honor_descriptor,
         new java.lang.String[] { "UserId", "Nickname", "Avatar", "Description", });
     internal_static_onebot_GetCookiesReq_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_onebot_GetCookiesReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCookiesReq_descriptor,
-        new java.lang.String[] { "Domain", });
+        new java.lang.String[] { "Domain", "Action", "Echo", });
     internal_static_onebot_GetCookiesResp_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_onebot_GetCookiesResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCookiesResp_descriptor,
-        new java.lang.String[] { "Cookies", });
+        new java.lang.String[] { "Cookies", "Action", "Echo", });
     internal_static_onebot_GetCsrfTokenReq_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_onebot_GetCsrfTokenReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCsrfTokenReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetCsrfTokenResp_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_onebot_GetCsrfTokenResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCsrfTokenResp_descriptor,
-        new java.lang.String[] { "Token", });
+        new java.lang.String[] { "Token", "Action", "Echo", });
     internal_static_onebot_GetCredentialsReq_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_onebot_GetCredentialsReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCredentialsReq_descriptor,
-        new java.lang.String[] { "Domain", });
+        new java.lang.String[] { "Domain", "Action", "Echo", });
     internal_static_onebot_GetCredentialsResp_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_onebot_GetCredentialsResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetCredentialsResp_descriptor,
-        new java.lang.String[] { "Cookies", "CsrfToken", });
+        new java.lang.String[] { "Cookies", "CsrfToken", "Action", "Echo", });
     internal_static_onebot_GetRecordReq_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_onebot_GetRecordReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetRecordReq_descriptor,
-        new java.lang.String[] { "File", "OutFormat", });
+        new java.lang.String[] { "File", "OutFormat", "Action", "Echo", });
     internal_static_onebot_GetRecordResp_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_onebot_GetRecordResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetRecordResp_descriptor,
-        new java.lang.String[] { "File", });
+        new java.lang.String[] { "File", "Action", "Echo", });
     internal_static_onebot_GetImageReq_descriptor =
-      getDescriptor().getMessageTypes().get(60);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_onebot_GetImageReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetImageReq_descriptor,
-        new java.lang.String[] { "File", });
+        new java.lang.String[] { "File", "Action", "Echo", });
     internal_static_onebot_GetImageResp_descriptor =
-      getDescriptor().getMessageTypes().get(61);
+      getDescriptor().getMessageTypes().get(63);
     internal_static_onebot_GetImageResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetImageResp_descriptor,
-        new java.lang.String[] { "File", });
+        new java.lang.String[] { "File", "Action", "Echo", });
     internal_static_onebot_CanSendImageReq_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(64);
     internal_static_onebot_CanSendImageReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CanSendImageReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_CanSendImageResp_descriptor =
-      getDescriptor().getMessageTypes().get(63);
+      getDescriptor().getMessageTypes().get(65);
     internal_static_onebot_CanSendImageResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CanSendImageResp_descriptor,
-        new java.lang.String[] { "Yes", });
+        new java.lang.String[] { "Yes", "Action", "Echo", });
     internal_static_onebot_CanSendRecordReq_descriptor =
-      getDescriptor().getMessageTypes().get(64);
+      getDescriptor().getMessageTypes().get(66);
     internal_static_onebot_CanSendRecordReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CanSendRecordReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_CanSendRecordResp_descriptor =
-      getDescriptor().getMessageTypes().get(65);
+      getDescriptor().getMessageTypes().get(67);
     internal_static_onebot_CanSendRecordResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CanSendRecordResp_descriptor,
-        new java.lang.String[] { "Yes", });
+        new java.lang.String[] { "Yes", "Action", "Echo", });
     internal_static_onebot_GetStatusReq_descriptor =
-      getDescriptor().getMessageTypes().get(66);
+      getDescriptor().getMessageTypes().get(68);
     internal_static_onebot_GetStatusReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetStatusReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetStatusResp_descriptor =
-      getDescriptor().getMessageTypes().get(67);
+      getDescriptor().getMessageTypes().get(69);
     internal_static_onebot_GetStatusResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetStatusResp_descriptor,
-        new java.lang.String[] { "Online", "Good", });
+        new java.lang.String[] { "Online", "Good", "Action", "Echo", });
     internal_static_onebot_GetVersionInfoReq_descriptor =
-      getDescriptor().getMessageTypes().get(68);
+      getDescriptor().getMessageTypes().get(70);
     internal_static_onebot_GetVersionInfoReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetVersionInfoReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_GetVersionInfoResp_descriptor =
-      getDescriptor().getMessageTypes().get(69);
+      getDescriptor().getMessageTypes().get(71);
     internal_static_onebot_GetVersionInfoResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GetVersionInfoResp_descriptor,
-        new java.lang.String[] { "AppName", "AppVersion", "ProtocolVersion", "Extra", });
+        new java.lang.String[] { "AppName", "AppVersion", "ProtocolVersion", "Extra", "Action", "Echo", });
     internal_static_onebot_GetVersionInfoResp_ExtraEntry_descriptor =
       internal_static_onebot_GetVersionInfoResp_descriptor.getNestedTypes().get(0);
     internal_static_onebot_GetVersionInfoResp_ExtraEntry_fieldAccessorTable = new
@@ -55095,29 +78811,29 @@ public final class Api {
         internal_static_onebot_GetVersionInfoResp_ExtraEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_onebot_SetRestartReq_descriptor =
-      getDescriptor().getMessageTypes().get(70);
+      getDescriptor().getMessageTypes().get(72);
     internal_static_onebot_SetRestartReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetRestartReq_descriptor,
-        new java.lang.String[] { "Delay", });
+        new java.lang.String[] { "Delay", "Action", "Echo", });
     internal_static_onebot_SetRestartResp_descriptor =
-      getDescriptor().getMessageTypes().get(71);
+      getDescriptor().getMessageTypes().get(73);
     internal_static_onebot_SetRestartResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_SetRestartResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_CleanCacheReq_descriptor =
-      getDescriptor().getMessageTypes().get(72);
+      getDescriptor().getMessageTypes().get(74);
     internal_static_onebot_CleanCacheReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CleanCacheReq_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     internal_static_onebot_CleanCacheResp_descriptor =
-      getDescriptor().getMessageTypes().get(73);
+      getDescriptor().getMessageTypes().get(75);
     internal_static_onebot_CleanCacheResp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_CleanCacheResp_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Action", "Echo", });
     onebot.Base.getDescriptor();
   }
 

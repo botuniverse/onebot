@@ -14,6 +14,3306 @@ public final class Event {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface BaseEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    long getTime();
+
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    long getSelfId();
+
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    java.lang.String getPostType();
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    com.google.protobuf.ByteString
+        getPostTypeBytes();
+  }
+  /**
+   * <pre>
+   * 在序列化成protobuf时，不知道post_type是什么，可以先解析成BaseEvent，获取到post_type，然后解析成BaseMessageEvent/BaseNoticeEvent/BaseRequestEvent，最后解析成对应event
+   * 在序列化成json时，不需要BaseEvent过渡
+   * </pre>
+   *
+   * Protobuf type {@code onebot.BaseEvent}
+   */
+  public static final class BaseEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseEvent)
+      BaseEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseEvent.newBuilder() to construct.
+    private BaseEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseEvent() {
+      postType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              time_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              selfId_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Event.internal_static_onebot_BaseEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Event.internal_static_onebot_BaseEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Event.BaseEvent.class, onebot.Event.BaseEvent.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private long time_;
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int SELF_ID_FIELD_NUMBER = 2;
+    private long selfId_;
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    @java.lang.Override
+    public long getSelfId() {
+      return selfId_;
+    }
+
+    public static final int POST_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object postType_;
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    @java.lang.Override
+    public java.lang.String getPostType() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPostTypeBytes() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != 0L) {
+        output.writeInt64(1, time_);
+      }
+      if (selfId_ != 0L) {
+        output.writeInt64(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, postType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, time_);
+      }
+      if (selfId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, postType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Event.BaseEvent)) {
+        return super.equals(obj);
+      }
+      onebot.Event.BaseEvent other = (onebot.Event.BaseEvent) obj;
+
+      if (getTime()
+          != other.getTime()) return false;
+      if (getSelfId()
+          != other.getSelfId()) return false;
+      if (!getPostType()
+          .equals(other.getPostType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (37 * hash) + SELF_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSelfId());
+      hash = (37 * hash) + POST_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPostType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Event.BaseEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Event.BaseEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 在序列化成protobuf时，不知道post_type是什么，可以先解析成BaseEvent，获取到post_type，然后解析成BaseMessageEvent/BaseNoticeEvent/BaseRequestEvent，最后解析成对应event
+     * 在序列化成json时，不需要BaseEvent过渡
+     * </pre>
+     *
+     * Protobuf type {@code onebot.BaseEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseEvent)
+        onebot.Event.BaseEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Event.internal_static_onebot_BaseEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Event.internal_static_onebot_BaseEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Event.BaseEvent.class, onebot.Event.BaseEvent.Builder.class);
+      }
+
+      // Construct using onebot.Event.BaseEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        time_ = 0L;
+
+        selfId_ = 0L;
+
+        postType_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Event.internal_static_onebot_BaseEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseEvent getDefaultInstanceForType() {
+        return onebot.Event.BaseEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseEvent build() {
+        onebot.Event.BaseEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseEvent buildPartial() {
+        onebot.Event.BaseEvent result = new onebot.Event.BaseEvent(this);
+        result.time_ = time_;
+        result.selfId_ = selfId_;
+        result.postType_ = postType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Event.BaseEvent) {
+          return mergeFrom((onebot.Event.BaseEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Event.BaseEvent other) {
+        if (other == onebot.Event.BaseEvent.getDefaultInstance()) return this;
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.getSelfId() != 0L) {
+          setSelfId(other.getSelfId());
+        }
+        if (!other.getPostType().isEmpty()) {
+          postType_ = other.postType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Event.BaseEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Event.BaseEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>int64 time = 1;</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+        
+        time_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long selfId_ ;
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return The selfId.
+       */
+      @java.lang.Override
+      public long getSelfId() {
+        return selfId_;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @param value The selfId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelfId(long value) {
+        
+        selfId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelfId() {
+        
+        selfId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postType_ = "";
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The postType.
+       */
+      public java.lang.String getPostType() {
+        java.lang.Object ref = postType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The bytes for postType.
+       */
+      public com.google.protobuf.ByteString
+          getPostTypeBytes() {
+        java.lang.Object ref = postType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostType() {
+        
+        postType_ = getDefaultInstance().getPostType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The bytes for postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseEvent)
+    private static final onebot.Event.BaseEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Event.BaseEvent();
+    }
+
+    public static onebot.Event.BaseEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseEvent>
+        PARSER = new com.google.protobuf.AbstractParser<BaseEvent>() {
+      @java.lang.Override
+      public BaseEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Event.BaseEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BaseMessageEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseMessageEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    long getTime();
+
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    long getSelfId();
+
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    java.lang.String getPostType();
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    com.google.protobuf.ByteString
+        getPostTypeBytes();
+
+    /**
+     * <code>string message_type = 4;</code>
+     * @return The messageType.
+     */
+    java.lang.String getMessageType();
+    /**
+     * <code>string message_type = 4;</code>
+     * @return The bytes for messageType.
+     */
+    com.google.protobuf.ByteString
+        getMessageTypeBytes();
+  }
+  /**
+   * Protobuf type {@code onebot.BaseMessageEvent}
+   */
+  public static final class BaseMessageEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseMessageEvent)
+      BaseMessageEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseMessageEvent.newBuilder() to construct.
+    private BaseMessageEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseMessageEvent() {
+      postType_ = "";
+      messageType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseMessageEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseMessageEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              time_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              selfId_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postType_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              messageType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Event.internal_static_onebot_BaseMessageEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Event.internal_static_onebot_BaseMessageEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Event.BaseMessageEvent.class, onebot.Event.BaseMessageEvent.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private long time_;
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int SELF_ID_FIELD_NUMBER = 2;
+    private long selfId_;
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    @java.lang.Override
+    public long getSelfId() {
+      return selfId_;
+    }
+
+    public static final int POST_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object postType_;
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    @java.lang.Override
+    public java.lang.String getPostType() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPostTypeBytes() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MESSAGE_TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object messageType_;
+    /**
+     * <code>string message_type = 4;</code>
+     * @return The messageType.
+     */
+    @java.lang.Override
+    public java.lang.String getMessageType() {
+      java.lang.Object ref = messageType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        messageType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string message_type = 4;</code>
+     * @return The bytes for messageType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageTypeBytes() {
+      java.lang.Object ref = messageType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != 0L) {
+        output.writeInt64(1, time_);
+      }
+      if (selfId_ != 0L) {
+        output.writeInt64(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, postType_);
+      }
+      if (!getMessageTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, messageType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, time_);
+      }
+      if (selfId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, postType_);
+      }
+      if (!getMessageTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, messageType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Event.BaseMessageEvent)) {
+        return super.equals(obj);
+      }
+      onebot.Event.BaseMessageEvent other = (onebot.Event.BaseMessageEvent) obj;
+
+      if (getTime()
+          != other.getTime()) return false;
+      if (getSelfId()
+          != other.getSelfId()) return false;
+      if (!getPostType()
+          .equals(other.getPostType())) return false;
+      if (!getMessageType()
+          .equals(other.getMessageType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (37 * hash) + SELF_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSelfId());
+      hash = (37 * hash) + POST_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPostType().hashCode();
+      hash = (37 * hash) + MESSAGE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getMessageType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseMessageEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseMessageEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseMessageEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Event.BaseMessageEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code onebot.BaseMessageEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseMessageEvent)
+        onebot.Event.BaseMessageEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Event.internal_static_onebot_BaseMessageEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Event.internal_static_onebot_BaseMessageEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Event.BaseMessageEvent.class, onebot.Event.BaseMessageEvent.Builder.class);
+      }
+
+      // Construct using onebot.Event.BaseMessageEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        time_ = 0L;
+
+        selfId_ = 0L;
+
+        postType_ = "";
+
+        messageType_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Event.internal_static_onebot_BaseMessageEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseMessageEvent getDefaultInstanceForType() {
+        return onebot.Event.BaseMessageEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseMessageEvent build() {
+        onebot.Event.BaseMessageEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseMessageEvent buildPartial() {
+        onebot.Event.BaseMessageEvent result = new onebot.Event.BaseMessageEvent(this);
+        result.time_ = time_;
+        result.selfId_ = selfId_;
+        result.postType_ = postType_;
+        result.messageType_ = messageType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Event.BaseMessageEvent) {
+          return mergeFrom((onebot.Event.BaseMessageEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Event.BaseMessageEvent other) {
+        if (other == onebot.Event.BaseMessageEvent.getDefaultInstance()) return this;
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.getSelfId() != 0L) {
+          setSelfId(other.getSelfId());
+        }
+        if (!other.getPostType().isEmpty()) {
+          postType_ = other.postType_;
+          onChanged();
+        }
+        if (!other.getMessageType().isEmpty()) {
+          messageType_ = other.messageType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Event.BaseMessageEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Event.BaseMessageEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>int64 time = 1;</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+        
+        time_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long selfId_ ;
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return The selfId.
+       */
+      @java.lang.Override
+      public long getSelfId() {
+        return selfId_;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @param value The selfId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelfId(long value) {
+        
+        selfId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelfId() {
+        
+        selfId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postType_ = "";
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The postType.
+       */
+      public java.lang.String getPostType() {
+        java.lang.Object ref = postType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The bytes for postType.
+       */
+      public com.google.protobuf.ByteString
+          getPostTypeBytes() {
+        java.lang.Object ref = postType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostType() {
+        
+        postType_ = getDefaultInstance().getPostType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The bytes for postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object messageType_ = "";
+      /**
+       * <code>string message_type = 4;</code>
+       * @return The messageType.
+       */
+      public java.lang.String getMessageType() {
+        java.lang.Object ref = messageType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          messageType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string message_type = 4;</code>
+       * @return The bytes for messageType.
+       */
+      public com.google.protobuf.ByteString
+          getMessageTypeBytes() {
+        java.lang.Object ref = messageType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string message_type = 4;</code>
+       * @param value The messageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        messageType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message_type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageType() {
+        
+        messageType_ = getDefaultInstance().getMessageType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string message_type = 4;</code>
+       * @param value The bytes for messageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        messageType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseMessageEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseMessageEvent)
+    private static final onebot.Event.BaseMessageEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Event.BaseMessageEvent();
+    }
+
+    public static onebot.Event.BaseMessageEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseMessageEvent>
+        PARSER = new com.google.protobuf.AbstractParser<BaseMessageEvent>() {
+      @java.lang.Override
+      public BaseMessageEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseMessageEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseMessageEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseMessageEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Event.BaseMessageEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BaseNoticeEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseNoticeEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    long getTime();
+
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    long getSelfId();
+
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    java.lang.String getPostType();
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    com.google.protobuf.ByteString
+        getPostTypeBytes();
+
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The noticeType.
+     */
+    java.lang.String getNoticeType();
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The bytes for noticeType.
+     */
+    com.google.protobuf.ByteString
+        getNoticeTypeBytes();
+  }
+  /**
+   * Protobuf type {@code onebot.BaseNoticeEvent}
+   */
+  public static final class BaseNoticeEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseNoticeEvent)
+      BaseNoticeEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseNoticeEvent.newBuilder() to construct.
+    private BaseNoticeEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseNoticeEvent() {
+      postType_ = "";
+      noticeType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseNoticeEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseNoticeEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              time_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              selfId_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postType_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              noticeType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Event.internal_static_onebot_BaseNoticeEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Event.internal_static_onebot_BaseNoticeEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Event.BaseNoticeEvent.class, onebot.Event.BaseNoticeEvent.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private long time_;
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int SELF_ID_FIELD_NUMBER = 2;
+    private long selfId_;
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    @java.lang.Override
+    public long getSelfId() {
+      return selfId_;
+    }
+
+    public static final int POST_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object postType_;
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    @java.lang.Override
+    public java.lang.String getPostType() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPostTypeBytes() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTICE_TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object noticeType_;
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The noticeType.
+     */
+    @java.lang.Override
+    public java.lang.String getNoticeType() {
+      java.lang.Object ref = noticeType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        noticeType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The bytes for noticeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNoticeTypeBytes() {
+      java.lang.Object ref = noticeType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        noticeType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != 0L) {
+        output.writeInt64(1, time_);
+      }
+      if (selfId_ != 0L) {
+        output.writeInt64(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, postType_);
+      }
+      if (!getNoticeTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, noticeType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, time_);
+      }
+      if (selfId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, postType_);
+      }
+      if (!getNoticeTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, noticeType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Event.BaseNoticeEvent)) {
+        return super.equals(obj);
+      }
+      onebot.Event.BaseNoticeEvent other = (onebot.Event.BaseNoticeEvent) obj;
+
+      if (getTime()
+          != other.getTime()) return false;
+      if (getSelfId()
+          != other.getSelfId()) return false;
+      if (!getPostType()
+          .equals(other.getPostType())) return false;
+      if (!getNoticeType()
+          .equals(other.getNoticeType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (37 * hash) + SELF_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSelfId());
+      hash = (37 * hash) + POST_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPostType().hashCode();
+      hash = (37 * hash) + NOTICE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getNoticeType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseNoticeEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseNoticeEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseNoticeEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Event.BaseNoticeEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code onebot.BaseNoticeEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseNoticeEvent)
+        onebot.Event.BaseNoticeEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Event.internal_static_onebot_BaseNoticeEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Event.internal_static_onebot_BaseNoticeEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Event.BaseNoticeEvent.class, onebot.Event.BaseNoticeEvent.Builder.class);
+      }
+
+      // Construct using onebot.Event.BaseNoticeEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        time_ = 0L;
+
+        selfId_ = 0L;
+
+        postType_ = "";
+
+        noticeType_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Event.internal_static_onebot_BaseNoticeEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseNoticeEvent getDefaultInstanceForType() {
+        return onebot.Event.BaseNoticeEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseNoticeEvent build() {
+        onebot.Event.BaseNoticeEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseNoticeEvent buildPartial() {
+        onebot.Event.BaseNoticeEvent result = new onebot.Event.BaseNoticeEvent(this);
+        result.time_ = time_;
+        result.selfId_ = selfId_;
+        result.postType_ = postType_;
+        result.noticeType_ = noticeType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Event.BaseNoticeEvent) {
+          return mergeFrom((onebot.Event.BaseNoticeEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Event.BaseNoticeEvent other) {
+        if (other == onebot.Event.BaseNoticeEvent.getDefaultInstance()) return this;
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.getSelfId() != 0L) {
+          setSelfId(other.getSelfId());
+        }
+        if (!other.getPostType().isEmpty()) {
+          postType_ = other.postType_;
+          onChanged();
+        }
+        if (!other.getNoticeType().isEmpty()) {
+          noticeType_ = other.noticeType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Event.BaseNoticeEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Event.BaseNoticeEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>int64 time = 1;</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+        
+        time_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long selfId_ ;
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return The selfId.
+       */
+      @java.lang.Override
+      public long getSelfId() {
+        return selfId_;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @param value The selfId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelfId(long value) {
+        
+        selfId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelfId() {
+        
+        selfId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postType_ = "";
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The postType.
+       */
+      public java.lang.String getPostType() {
+        java.lang.Object ref = postType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The bytes for postType.
+       */
+      public com.google.protobuf.ByteString
+          getPostTypeBytes() {
+        java.lang.Object ref = postType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostType() {
+        
+        postType_ = getDefaultInstance().getPostType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The bytes for postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object noticeType_ = "";
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return The noticeType.
+       */
+      public java.lang.String getNoticeType() {
+        java.lang.Object ref = noticeType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          noticeType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return The bytes for noticeType.
+       */
+      public com.google.protobuf.ByteString
+          getNoticeTypeBytes() {
+        java.lang.Object ref = noticeType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          noticeType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @param value The noticeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoticeType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        noticeType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNoticeType() {
+        
+        noticeType_ = getDefaultInstance().getNoticeType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @param value The bytes for noticeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoticeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        noticeType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseNoticeEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseNoticeEvent)
+    private static final onebot.Event.BaseNoticeEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Event.BaseNoticeEvent();
+    }
+
+    public static onebot.Event.BaseNoticeEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseNoticeEvent>
+        PARSER = new com.google.protobuf.AbstractParser<BaseNoticeEvent>() {
+      @java.lang.Override
+      public BaseNoticeEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseNoticeEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseNoticeEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseNoticeEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Event.BaseNoticeEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BaseRequestEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:onebot.BaseRequestEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    long getTime();
+
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    long getSelfId();
+
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    java.lang.String getPostType();
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    com.google.protobuf.ByteString
+        getPostTypeBytes();
+
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The noticeType.
+     */
+    java.lang.String getNoticeType();
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The bytes for noticeType.
+     */
+    com.google.protobuf.ByteString
+        getNoticeTypeBytes();
+  }
+  /**
+   * Protobuf type {@code onebot.BaseRequestEvent}
+   */
+  public static final class BaseRequestEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:onebot.BaseRequestEvent)
+      BaseRequestEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BaseRequestEvent.newBuilder() to construct.
+    private BaseRequestEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BaseRequestEvent() {
+      postType_ = "";
+      noticeType_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BaseRequestEvent();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BaseRequestEvent(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              time_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              selfId_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              postType_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              noticeType_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return onebot.Event.internal_static_onebot_BaseRequestEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return onebot.Event.internal_static_onebot_BaseRequestEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              onebot.Event.BaseRequestEvent.class, onebot.Event.BaseRequestEvent.Builder.class);
+    }
+
+    public static final int TIME_FIELD_NUMBER = 1;
+    private long time_;
+    /**
+     * <code>int64 time = 1;</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int SELF_ID_FIELD_NUMBER = 2;
+    private long selfId_;
+    /**
+     * <code>int64 self_id = 2;</code>
+     * @return The selfId.
+     */
+    @java.lang.Override
+    public long getSelfId() {
+      return selfId_;
+    }
+
+    public static final int POST_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object postType_;
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The postType.
+     */
+    @java.lang.Override
+    public java.lang.String getPostType() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        postType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string post_type = 3;</code>
+     * @return The bytes for postType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPostTypeBytes() {
+      java.lang.Object ref = postType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        postType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTICE_TYPE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object noticeType_;
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The noticeType.
+     */
+    @java.lang.Override
+    public java.lang.String getNoticeType() {
+      java.lang.Object ref = noticeType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        noticeType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string notice_type = 4;</code>
+     * @return The bytes for noticeType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNoticeTypeBytes() {
+      java.lang.Object ref = noticeType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        noticeType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (time_ != 0L) {
+        output.writeInt64(1, time_);
+      }
+      if (selfId_ != 0L) {
+        output.writeInt64(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, postType_);
+      }
+      if (!getNoticeTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, noticeType_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, time_);
+      }
+      if (selfId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, selfId_);
+      }
+      if (!getPostTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, postType_);
+      }
+      if (!getNoticeTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, noticeType_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof onebot.Event.BaseRequestEvent)) {
+        return super.equals(obj);
+      }
+      onebot.Event.BaseRequestEvent other = (onebot.Event.BaseRequestEvent) obj;
+
+      if (getTime()
+          != other.getTime()) return false;
+      if (getSelfId()
+          != other.getSelfId()) return false;
+      if (!getPostType()
+          .equals(other.getPostType())) return false;
+      if (!getNoticeType()
+          .equals(other.getNoticeType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (37 * hash) + SELF_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSelfId());
+      hash = (37 * hash) + POST_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getPostType().hashCode();
+      hash = (37 * hash) + NOTICE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getNoticeType().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseRequestEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseRequestEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static onebot.Event.BaseRequestEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(onebot.Event.BaseRequestEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code onebot.BaseRequestEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:onebot.BaseRequestEvent)
+        onebot.Event.BaseRequestEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return onebot.Event.internal_static_onebot_BaseRequestEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return onebot.Event.internal_static_onebot_BaseRequestEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                onebot.Event.BaseRequestEvent.class, onebot.Event.BaseRequestEvent.Builder.class);
+      }
+
+      // Construct using onebot.Event.BaseRequestEvent.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        time_ = 0L;
+
+        selfId_ = 0L;
+
+        postType_ = "";
+
+        noticeType_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return onebot.Event.internal_static_onebot_BaseRequestEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseRequestEvent getDefaultInstanceForType() {
+        return onebot.Event.BaseRequestEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseRequestEvent build() {
+        onebot.Event.BaseRequestEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public onebot.Event.BaseRequestEvent buildPartial() {
+        onebot.Event.BaseRequestEvent result = new onebot.Event.BaseRequestEvent(this);
+        result.time_ = time_;
+        result.selfId_ = selfId_;
+        result.postType_ = postType_;
+        result.noticeType_ = noticeType_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof onebot.Event.BaseRequestEvent) {
+          return mergeFrom((onebot.Event.BaseRequestEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(onebot.Event.BaseRequestEvent other) {
+        if (other == onebot.Event.BaseRequestEvent.getDefaultInstance()) return this;
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.getSelfId() != 0L) {
+          setSelfId(other.getSelfId());
+        }
+        if (!other.getPostType().isEmpty()) {
+          postType_ = other.postType_;
+          onChanged();
+        }
+        if (!other.getNoticeType().isEmpty()) {
+          noticeType_ = other.noticeType_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        onebot.Event.BaseRequestEvent parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (onebot.Event.BaseRequestEvent) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <code>int64 time = 1;</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+        
+        time_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 time = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long selfId_ ;
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return The selfId.
+       */
+      @java.lang.Override
+      public long getSelfId() {
+        return selfId_;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @param value The selfId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSelfId(long value) {
+        
+        selfId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 self_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSelfId() {
+        
+        selfId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object postType_ = "";
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The postType.
+       */
+      public java.lang.String getPostType() {
+        java.lang.Object ref = postType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          postType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return The bytes for postType.
+       */
+      public com.google.protobuf.ByteString
+          getPostTypeBytes() {
+        java.lang.Object ref = postType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          postType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPostType() {
+        
+        postType_ = getDefaultInstance().getPostType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string post_type = 3;</code>
+       * @param value The bytes for postType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPostTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        postType_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object noticeType_ = "";
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return The noticeType.
+       */
+      public java.lang.String getNoticeType() {
+        java.lang.Object ref = noticeType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          noticeType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return The bytes for noticeType.
+       */
+      public com.google.protobuf.ByteString
+          getNoticeTypeBytes() {
+        java.lang.Object ref = noticeType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          noticeType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @param value The noticeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoticeType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        noticeType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNoticeType() {
+        
+        noticeType_ = getDefaultInstance().getNoticeType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notice_type = 4;</code>
+       * @param value The bytes for noticeType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNoticeTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        noticeType_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:onebot.BaseRequestEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:onebot.BaseRequestEvent)
+    private static final onebot.Event.BaseRequestEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new onebot.Event.BaseRequestEvent();
+    }
+
+    public static onebot.Event.BaseRequestEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BaseRequestEvent>
+        PARSER = new com.google.protobuf.AbstractParser<BaseRequestEvent>() {
+      @java.lang.Override
+      public BaseRequestEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BaseRequestEvent(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BaseRequestEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BaseRequestEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public onebot.Event.BaseRequestEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface PrivateMessageEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:onebot.PrivateMessageEvent)
       com.google.protobuf.MessageOrBuilder {
@@ -19817,6 +23117,26 @@ public final class Event {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseMessageEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseMessageEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseNoticeEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseNoticeEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_onebot_BaseRequestEvent_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_onebot_BaseRequestEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_onebot_PrivateMessageEvent_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19905,79 +23225,112 @@ public final class Event {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013event.proto\022\006onebot\032\nbase.proto\"\324\002\n\023Pr" +
-      "ivateMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_" +
-      "id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014message_t" +
-      "ype\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\022\n\nmessage_i" +
-      "d\030\006 \001(\005\022\017\n\007user_id\030\007 \001(\003\022 \n\007message\030\010 \001(" +
-      "\0132\017.onebot.Message\022\023\n\013raw_message\030\t \001(\t\022" +
-      "\014\n\004font\030\n \001(\005\0222\n\006sender\030\013 \001(\0132\".onebot.P" +
-      "rivateMessageEvent.Sender\032E\n\006Sender\022\017\n\007u" +
-      "ser_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\013\n\003sex\030\003 " +
-      "\001(\t\022\013\n\003age\030\004 \001(\005\"\230\004\n\021GroupMessageEvent\022\014" +
+      "\n\013event.proto\022\006onebot\032\nbase.proto\"=\n\tBas" +
+      "eEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n" +
+      "\tpost_type\030\003 \001(\t\"Z\n\020BaseMessageEvent\022\014\n\004" +
+      "time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type" +
+      "\030\003 \001(\t\022\024\n\014message_type\030\004 \001(\t\"X\n\017BaseNoti" +
+      "ceEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021" +
+      "\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\"Y" +
+      "\n\020BaseRequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self" +
+      "_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_t" +
+      "ype\030\004 \001(\t\"\324\002\n\023PrivateMessageEvent\022\014\n\004tim" +
+      "e\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 " +
+      "\001(\t\022\024\n\014message_type\030\004 \001(\t\022\020\n\010sub_type\030\005 " +
+      "\001(\t\022\022\n\nmessage_id\030\006 \001(\005\022\017\n\007user_id\030\007 \001(\003" +
+      "\022 \n\007message\030\010 \001(\0132\017.onebot.Message\022\023\n\013ra" +
+      "w_message\030\t \001(\t\022\014\n\004font\030\n \001(\005\0222\n\006sender\030" +
+      "\013 \001(\0132\".onebot.PrivateMessageEvent.Sende" +
+      "r\032E\n\006Sender\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname" +
+      "\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\"\230\004\n\021Gro" +
+      "upMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030" +
+      "\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014message_type" +
+      "\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\022\n\nmessage_id\030\006" +
+      " \001(\005\022\020\n\010group_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\022" +
+      "6\n\tanonymous\030\t \001(\0132#.onebot.GroupMessage" +
+      "Event.Anonymous\022 \n\007message\030\n \001(\0132\017.onebo" +
+      "t.Message\022\023\n\013raw_message\030\013 \001(\t\022\014\n\004font\030\014" +
+      " \001(\005\0220\n\006sender\030\r \001(\0132 .onebot.GroupMessa" +
+      "geEvent.Sender\0323\n\tAnonymous\022\n\n\002id\030\001 \001(\003\022" +
+      "\014\n\004name\030\002 \001(\t\022\014\n\004flag\030\003 \001(\t\032\215\001\n\006Sender\022\017" +
+      "\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\014\n\004car" +
+      "d\030\003 \001(\t\022\013\n\003sex\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004are" +
+      "a\030\006 \001(\t\022\r\n\005level\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022\r\n\005" +
+      "title\030\t \001(\t\"\364\001\n\026GroupUploadNoticeEvent\022\014" +
       "\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_ty" +
-      "pe\030\003 \001(\t\022\024\n\014message_type\030\004 \001(\t\022\020\n\010sub_ty" +
-      "pe\030\005 \001(\t\022\022\n\nmessage_id\030\006 \001(\005\022\020\n\010group_id" +
-      "\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\0226\n\tanonymous\030\t \001" +
-      "(\0132#.onebot.GroupMessageEvent.Anonymous\022" +
-      " \n\007message\030\n \001(\0132\017.onebot.Message\022\023\n\013raw" +
-      "_message\030\013 \001(\t\022\014\n\004font\030\014 \001(\005\0220\n\006sender\030\r" +
-      " \001(\0132 .onebot.GroupMessageEvent.Sender\0323" +
-      "\n\tAnonymous\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\014\n" +
-      "\004flag\030\003 \001(\t\032\215\001\n\006Sender\022\017\n\007user_id\030\001 \001(\003\022" +
-      "\020\n\010nickname\030\002 \001(\t\022\014\n\004card\030\003 \001(\t\022\013\n\003sex\030\004" +
-      " \001(\t\022\013\n\003age\030\005 \001(\005\022\014\n\004area\030\006 \001(\t\022\r\n\005level" +
-      "\030\007 \001(\t\022\014\n\004role\030\010 \001(\t\022\r\n\005title\030\t \001(\t\"\364\001\n\026" +
-      "GroupUploadNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007" +
-      "self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013noti" +
-      "ce_type\030\004 \001(\t\022\020\n\010group_id\030\005 \001(\003\022\017\n\007user_" +
-      "id\030\006 \001(\003\0221\n\004file\030\007 \001(\0132#.onebot.GroupUpl" +
-      "oadNoticeEvent.File\032=\n\004File\022\n\n\002id\030\001 \001(\t\022" +
-      "\014\n\004name\030\002 \001(\t\022\014\n\004size\030\003 \001(\003\022\r\n\005busid\030\004 \001" +
-      "(\003\"\223\001\n\025GroupAdminNoticeEvent\022\014\n\004time\030\001 \001" +
-      "(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023" +
-      "\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n" +
-      "\010group_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001(\003\"\253\001\n\030Gro" +
-      "upDecreaseNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007s" +
-      "elf_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notic" +
-      "e_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_" +
-      "id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id" +
-      "\030\010 \001(\003\"\253\001\n\030GroupIncreaseNoticeEvent\022\014\n\004t" +
-      "ime\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030" +
-      "\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type\030\005" +
-      " \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operator_id\030\007 " +
-      "\001(\003\022\017\n\007user_id\030\010 \001(\003\"\270\001\n\023GroupBanNoticeE" +
+      "pe\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010group_i" +
+      "d\030\005 \001(\003\022\017\n\007user_id\030\006 \001(\003\0221\n\004file\030\007 \001(\0132#" +
+      ".onebot.GroupUploadNoticeEvent.File\032=\n\004F" +
+      "ile\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004size\030\003 " +
+      "\001(\003\022\r\n\005busid\030\004 \001(\003\"\223\001\n\025GroupAdminNoticeE" +
       "vent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tp" +
       "ost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010s" +
-      "ub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013opera" +
-      "tor_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\022\020\n\010duratio" +
-      "n\030\t \001(\003\"n\n\024FriendAddNoticeEvent\022\014\n\004time\030" +
-      "\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(" +
-      "\t\022\023\n\013notice_type\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\"" +
-      "\253\001\n\026GroupRecallNoticeEvent\022\014\n\004time\030\001 \001(\003" +
-      "\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013" +
-      "notice_type\030\004 \001(\t\022\020\n\010group_id\030\005 \001(\003\022\017\n\007u" +
-      "ser_id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\022\n\nmes" +
-      "sage_id\030\010 \001(\003\"\205\001\n\027FriendRecallNoticeEven" +
-      "t\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost" +
-      "_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\017\n\007user" +
-      "_id\030\005 \001(\003\022\022\n\nmessage_id\030\006 \001(\003\"\214\001\n\022Friend" +
-      "RequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 " +
-      "\001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014request_type\030\004" +
-      " \001(\t\022\017\n\007user_id\030\005 \001(\003\022\017\n\007comment\030\006 \001(\t\022\014" +
-      "\n\004flag\030\007 \001(\t\"\257\001\n\021GroupRequestEvent\022\014\n\004ti" +
-      "me\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003" +
-      " \001(\t\022\024\n\014request_type\030\004 \001(\t\022\020\n\010sub_type\030\005" +
-      " \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001(\003\022" +
-      "\017\n\007comment\030\010 \001(\t\022\014\n\004flag\030\t \001(\tb\006proto3"
+      "ub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017\n\007user_" +
+      "id\030\007 \001(\003\"\253\001\n\030GroupDecreaseNoticeEvent\022\014\n" +
+      "\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_typ" +
+      "e\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010sub_type" +
+      "\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operator_id\030" +
+      "\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\253\001\n\030GroupIncrease" +
+      "NoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001" +
+      "(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001" +
+      "(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023" +
+      "\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\270\001\n" +
+      "\023GroupBanNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007se" +
+      "lf_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice" +
+      "_type\030\004 \001(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_i" +
+      "d\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030" +
+      "\010 \001(\003\022\020\n\010duration\030\t \001(\003\"n\n\024FriendAddNoti" +
+      "ceEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021" +
+      "\n\tpost_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\017" +
+      "\n\007user_id\030\005 \001(\003\"\253\001\n\026GroupRecallNoticeEve" +
+      "nt\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpos" +
+      "t_type\030\003 \001(\t\022\023\n\013notice_type\030\004 \001(\t\022\020\n\010gro" +
+      "up_id\030\005 \001(\003\022\017\n\007user_id\030\006 \001(\003\022\023\n\013operator" +
+      "_id\030\007 \001(\003\022\022\n\nmessage_id\030\010 \001(\003\"\205\001\n\027Friend" +
+      "RecallNoticeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_" +
+      "id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\023\n\013notice_ty" +
+      "pe\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\022\022\n\nmessage_id\030" +
+      "\006 \001(\003\"\214\001\n\022FriendRequestEvent\022\014\n\004time\030\001 \001" +
+      "(\003\022\017\n\007self_id\030\002 \001(\003\022\021\n\tpost_type\030\003 \001(\t\022\024" +
+      "\n\014request_type\030\004 \001(\t\022\017\n\007user_id\030\005 \001(\003\022\017\n" +
+      "\007comment\030\006 \001(\t\022\014\n\004flag\030\007 \001(\t\"\257\001\n\021GroupRe" +
+      "questEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(" +
+      "\003\022\021\n\tpost_type\030\003 \001(\t\022\024\n\014request_type\030\004 \001" +
+      "(\t\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017" +
+      "\n\007user_id\030\007 \001(\003\022\017\n\007comment\030\010 \001(\t\022\014\n\004flag" +
+      "\030\t \001(\tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           onebot.Base.getDescriptor(),
         });
-    internal_static_onebot_PrivateMessageEvent_descriptor =
+    internal_static_onebot_BaseEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_onebot_BaseEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseEvent_descriptor,
+        new java.lang.String[] { "Time", "SelfId", "PostType", });
+    internal_static_onebot_BaseMessageEvent_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_onebot_BaseMessageEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseMessageEvent_descriptor,
+        new java.lang.String[] { "Time", "SelfId", "PostType", "MessageType", });
+    internal_static_onebot_BaseNoticeEvent_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_onebot_BaseNoticeEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseNoticeEvent_descriptor,
+        new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", });
+    internal_static_onebot_BaseRequestEvent_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_onebot_BaseRequestEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_onebot_BaseRequestEvent_descriptor,
+        new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", });
+    internal_static_onebot_PrivateMessageEvent_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_onebot_PrivateMessageEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_PrivateMessageEvent_descriptor,
@@ -19989,7 +23342,7 @@ public final class Event {
         internal_static_onebot_PrivateMessageEvent_Sender_descriptor,
         new java.lang.String[] { "UserId", "Nickname", "Sex", "Age", });
     internal_static_onebot_GroupMessageEvent_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_onebot_GroupMessageEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupMessageEvent_descriptor,
@@ -20007,7 +23360,7 @@ public final class Event {
         internal_static_onebot_GroupMessageEvent_Sender_descriptor,
         new java.lang.String[] { "UserId", "Nickname", "Card", "Sex", "Age", "Area", "Level", "Role", "Title", });
     internal_static_onebot_GroupUploadNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_onebot_GroupUploadNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupUploadNoticeEvent_descriptor,
@@ -20019,55 +23372,55 @@ public final class Event {
         internal_static_onebot_GroupUploadNoticeEvent_File_descriptor,
         new java.lang.String[] { "Id", "Name", "Size", "Busid", });
     internal_static_onebot_GroupAdminNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_onebot_GroupAdminNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupAdminNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "SubType", "GroupId", "UserId", });
     internal_static_onebot_GroupDecreaseNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_onebot_GroupDecreaseNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupDecreaseNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "SubType", "GroupId", "OperatorId", "UserId", });
     internal_static_onebot_GroupIncreaseNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_onebot_GroupIncreaseNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupIncreaseNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "SubType", "GroupId", "OperatorId", "UserId", });
     internal_static_onebot_GroupBanNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_onebot_GroupBanNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupBanNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "SubType", "GroupId", "OperatorId", "UserId", "Duration", });
     internal_static_onebot_FriendAddNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_onebot_FriendAddNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_FriendAddNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "UserId", });
     internal_static_onebot_GroupRecallNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_onebot_GroupRecallNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupRecallNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "GroupId", "UserId", "OperatorId", "MessageId", });
     internal_static_onebot_FriendRecallNoticeEvent_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_onebot_FriendRecallNoticeEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_FriendRecallNoticeEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "NoticeType", "UserId", "MessageId", });
     internal_static_onebot_FriendRequestEvent_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_onebot_FriendRequestEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_FriendRequestEvent_descriptor,
         new java.lang.String[] { "Time", "SelfId", "PostType", "RequestType", "UserId", "Comment", "Flag", });
     internal_static_onebot_GroupRequestEvent_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_onebot_GroupRequestEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_onebot_GroupRequestEvent_descriptor,

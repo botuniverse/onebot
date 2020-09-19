@@ -2,22 +2,39 @@ syntax = "proto3";
 package onebot;
 import "base.proto";
 
+message BaseApiReq{
+  string action = 101;
+  string echo = 102;
+}
+message BaseApiResp{
+  string action = 101;
+  string echo = 102;
+}
+
 message SendPrivateMsgReq{
   int64 user_id = 1;
   Message message = 2;
   bool auto_escape = 3;
+  string action = 101;
+  string echo = 102;
 }
 message SendPrivateMsgResp{
   int32 message_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message SendGroupMsgReq{
   int64 group_id = 1;
   Message message = 2;
   bool auto_escape = 3;
+  string action = 101;
+  string echo = 102;
 }
 message SendGroupMsgResp{
   int32 message_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message SendMsgReq{
@@ -26,19 +43,29 @@ message SendMsgReq{
   int64 group_id = 3;
   Message message = 4;
   bool auto_escape = 5;
+  string action = 101;
+  string echo = 102;
 }
 message SendMsgResp{
   int32 message_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message DeleteMsgReq{
   int32 message_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 message DeleteMsgResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message GetMsgReq{
   int32 message_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetMsgResp{
   int32 time = 1;
@@ -47,6 +74,8 @@ message GetMsgResp{
   int32 real_id = 4;
   Sender sender = 5;
   Message message = 6;
+  string action = 101;
+  string echo = 102;
   message Sender{
     int64 user_id = 1;
     string nickname = 2;
@@ -63,31 +92,47 @@ message GetMsgResp{
 // TODO 暂时不支持
 message GetForwardMsgReq{
   string id = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetForwardMsgResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SendLikeReq{
   int64 user_id = 1;
   int32 times = 2;
+  string action = 101;
+  string echo = 102;
 }
 message SendListResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupKickReq{
   int64 group_id = 1;
   int64 user_id = 2;
   bool reject_add_request = 3;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupKickResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupBanReq{
   int64 group_id = 1;
   int64 user_id = 2;
   int64 duration = 3; // onebot文档未说明32、64，为了与event统一选择64
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupBanResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupAnonymousBanReq{
@@ -96,6 +141,8 @@ message SetGroupAnonymousBanReq{
   string anonymous_flag = 3;
   string flag = 4;
   int64 duration = 5;
+  string action = 101;
+  string echo = 102;
   message Anonymous{
     int64 id = 1;
     string name = 2;
@@ -103,42 +150,64 @@ message SetGroupAnonymousBanReq{
   }
 }
 message SetGroupAnonymousBanResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupWholeBanReq{
   int64 group_id = 1;
   bool enable = 2;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupWholeBanResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupAdminReq{
   int64 group_id = 1;
   int64 user_id = 2;
   bool enable = 3;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupAdminResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupAnonymousReq{
   int64 group_id = 1;
   bool enable = 2;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupAnonymousResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupNameReq{
   int64 group_id = 1;
   string group_name = 2;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupNameResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupLeaveReq{
   int64 group_id = 1;
   bool is_dismiss = 2;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupLeaveResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupSpecialTitleReq{
@@ -146,16 +215,24 @@ message SetGroupSpecialTitleReq{
   int64 user_id = 2;
   string special_title = 3;
   int64 duration = 4;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupSpecialTitleResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetFriendAddRequestReq{
   string flag = 1;
   bool approve = 2;
   string remark = 3;
+  string action = 101;
+  string echo = 102;
 }
 message SetFriendAddRequestResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message SetGroupAddRequestReq{
@@ -164,32 +241,48 @@ message SetGroupAddRequestReq{
   string type = 3;
   bool approve = 4;
   string reason = 5;
+  string action = 101;
+  string echo = 102;
 }
 message SetGroupAddRequestResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message GetLoginInfoReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetLoginInfoResp{
   int64 user_id = 1;
   string nickname = 2;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetStrangerInfoReq{
   int64 user_id = 1;
   bool no_cache = 2;
+  string action = 101;
+  string echo = 102;
 }
 message GetStrangerInfoResp{
   int64 user_id = 1;
   string nickname = 2;
   string sex = 3;
   int32 age = 4;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetFriendListReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetFriendListResp{
   repeated Friend friend_list = 1;
+  string action = 101;
+  string echo = 102;
   message Friend{
     int64 user_id = 1;
     string nickname = 2;
@@ -200,18 +293,26 @@ message GetFriendListResp{
 message GetGroupInfoReq{
   int64 group_id = 1;
   bool no_cache = 2;
+  string action = 101;
+  string echo = 102;
 }
 message GetGroupInfoResp{
   int64 group_id = 1;
   string group_name = 2;
   int32 member_count = 3;
   int32 max_member_count = 4;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetGroupListReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetGroupListResp{
   repeated Group group_list = 1;
+  string action = 101;
+  string echo = 102;
   message Group{
     int64 group_id = 1;
     string group_name = 2;
@@ -224,6 +325,8 @@ message GetGroupMemberInfoReq{
   int64 group_id = 1;
   int64 user_id = 2;
   bool no_cache = 3;
+  string action = 101;
+  string echo = 102;
 }
 message GetGroupMemberInfoResp{
   int64 group_id = 1;
@@ -241,13 +344,19 @@ message GetGroupMemberInfoResp{
   string title = 13;
   int32 title_expire_time = 14;
   bool card_changeable = 15;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetGroupMemberListReq{
   int64 group_id = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetGroupMemberListResp{
   repeated GroupMember group_member_list = 1;
+  string action = 101;
+  string echo = 102;
   message GroupMember{
     int64 group_id = 1;
     int64 user_id = 2;
@@ -270,6 +379,8 @@ message GetGroupMemberListResp{
 message GetGroupHonorInfoReq{
   int64 group_id = 1;
   string type = 2;
+  string action = 101;
+  string echo = 102;
 }
 message GetGroupHonorInfoResp{
   int64 group_id = 1;
@@ -279,6 +390,8 @@ message GetGroupHonorInfoResp{
   repeated Honor legend_list = 5;
   repeated Honor strong_newbie_list = 6;
   repeated Honor emotion_list = 7;
+  string action = 101;
+  string echo = 102;
   message CurrentTalkative{
     int64 user_id = 1;
     string nickname = 2;
@@ -295,75 +408,119 @@ message GetGroupHonorInfoResp{
 
 message GetCookiesReq{
   string domain = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetCookiesResp{
   string cookies = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetCsrfTokenReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetCsrfTokenResp{
   int32 token = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetCredentialsReq{
   string domain = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetCredentialsResp{
   string cookies = 1;
   int32 csrf_token = 2;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetRecordReq{
   string file = 1;
   string out_format = 2;
+  string action = 101;
+  string echo = 102;
 }
 message GetRecordResp{
   string file = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetImageReq{
   string file = 1;
+  string action = 101;
+  string echo = 102;
 }
 message GetImageResp{
   string file = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message CanSendImageReq{
+  string action = 101;
+  string echo = 102;
 }
 message CanSendImageResp{
   bool yes = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message CanSendRecordReq{
+  string action = 101;
+  string echo = 102;
 }
 message CanSendRecordResp{
   bool yes = 1;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetStatusReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetStatusResp{
   bool online = 1;
   bool good = 2;
+  string action = 101;
+  string echo = 102;
 }
 
 message GetVersionInfoReq{
+  string action = 101;
+  string echo = 102;
 }
 message GetVersionInfoResp{
   string app_name = 1;
   string app_version = 2;
   string protocol_version = 3;
   map<string, string> extra = 4;
+  string action = 101;
+  string echo = 102;
 }
 
 message SetRestartReq{
   int32 delay = 1;
+  string action = 101;
+  string echo = 102;
 }
 message SetRestartResp{
+  string action = 101;
+  string echo = 102;
 }
 
 message CleanCacheReq{
+  string action = 101;
+  string echo = 102;
 }
 message CleanCacheResp{
+  string action = 101;
+  string echo = 102;
 }

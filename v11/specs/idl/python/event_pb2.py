@@ -20,11 +20,216 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0b\x65vent.proto\x12\x06onebot\x1a\nbase.proto\"\xd4\x02\n\x13PrivateMessageEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0cmessage_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x12\n\nmessage_id\x18\x06 \x01(\x05\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\x12 \n\x07message\x18\x08 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0braw_message\x18\t \x01(\t\x12\x0c\n\x04\x66ont\x18\n \x01(\x05\x12\x32\n\x06sender\x18\x0b \x01(\x0b\x32\".onebot.PrivateMessageEvent.Sender\x1a\x45\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0b\n\x03sex\x18\x03 \x01(\t\x12\x0b\n\x03\x61ge\x18\x04 \x01(\x05\"\x98\x04\n\x11GroupMessageEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0cmessage_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x12\n\nmessage_id\x18\x06 \x01(\x05\x12\x10\n\x08group_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\x12\x36\n\tanonymous\x18\t \x01(\x0b\x32#.onebot.GroupMessageEvent.Anonymous\x12 \n\x07message\x18\n \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0braw_message\x18\x0b \x01(\t\x12\x0c\n\x04\x66ont\x18\x0c \x01(\x05\x12\x30\n\x06sender\x18\r \x01(\x0b\x32 .onebot.GroupMessageEvent.Sender\x1a\x33\n\tAnonymous\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x66lag\x18\x03 \x01(\t\x1a\x8d\x01\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x03 \x01(\t\x12\x0b\n\x03sex\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x06 \x01(\t\x12\r\n\x05level\x18\x07 \x01(\t\x12\x0c\n\x04role\x18\x08 \x01(\t\x12\r\n\x05title\x18\t \x01(\t\"\xf4\x01\n\x16GroupUploadNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08group_id\x18\x05 \x01(\x03\x12\x0f\n\x07user_id\x18\x06 \x01(\x03\x12\x31\n\x04\x66ile\x18\x07 \x01(\x0b\x32#.onebot.GroupUploadNoticeEvent.File\x1a=\n\x04\x46ile\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\r\n\x05\x62usid\x18\x04 \x01(\x03\"\x93\x01\n\x15GroupAdminNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\"\xab\x01\n\x18GroupDecreaseNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\"\xab\x01\n\x18GroupIncreaseNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\"\xb8\x01\n\x13GroupBanNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\x12\x10\n\x08\x64uration\x18\t \x01(\x03\"n\n\x14\x46riendAddNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\"\xab\x01\n\x16GroupRecallNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08group_id\x18\x05 \x01(\x03\x12\x0f\n\x07user_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x12\n\nmessage_id\x18\x08 \x01(\x03\"\x85\x01\n\x17\x46riendRecallNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\x12\x12\n\nmessage_id\x18\x06 \x01(\x03\"\x8c\x01\n\x12\x46riendRequestEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0crequest_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\x12\x0c\n\x04\x66lag\x18\x07 \x01(\t\"\xaf\x01\n\x11GroupRequestEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0crequest_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x0c\n\x04\x66lag\x18\t \x01(\tb\x06proto3'
+  serialized_pb=b'\n\x0b\x65vent.proto\x12\x06onebot\x1a\nbase.proto\"=\n\tBaseEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\"Z\n\x10\x42\x61seMessageEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0cmessage_type\x18\x04 \x01(\t\"X\n\x0f\x42\x61seNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\"Y\n\x10\x42\x61seRequestEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\"\xd4\x02\n\x13PrivateMessageEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0cmessage_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x12\n\nmessage_id\x18\x06 \x01(\x05\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\x12 \n\x07message\x18\x08 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0braw_message\x18\t \x01(\t\x12\x0c\n\x04\x66ont\x18\n \x01(\x05\x12\x32\n\x06sender\x18\x0b \x01(\x0b\x32\".onebot.PrivateMessageEvent.Sender\x1a\x45\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0b\n\x03sex\x18\x03 \x01(\t\x12\x0b\n\x03\x61ge\x18\x04 \x01(\x05\"\x98\x04\n\x11GroupMessageEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0cmessage_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x12\n\nmessage_id\x18\x06 \x01(\x05\x12\x10\n\x08group_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\x12\x36\n\tanonymous\x18\t \x01(\x0b\x32#.onebot.GroupMessageEvent.Anonymous\x12 \n\x07message\x18\n \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0braw_message\x18\x0b \x01(\t\x12\x0c\n\x04\x66ont\x18\x0c \x01(\x05\x12\x30\n\x06sender\x18\r \x01(\x0b\x32 .onebot.GroupMessageEvent.Sender\x1a\x33\n\tAnonymous\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x66lag\x18\x03 \x01(\t\x1a\x8d\x01\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x03 \x01(\t\x12\x0b\n\x03sex\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x06 \x01(\t\x12\r\n\x05level\x18\x07 \x01(\t\x12\x0c\n\x04role\x18\x08 \x01(\t\x12\r\n\x05title\x18\t \x01(\t\"\xf4\x01\n\x16GroupUploadNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08group_id\x18\x05 \x01(\x03\x12\x0f\n\x07user_id\x18\x06 \x01(\x03\x12\x31\n\x04\x66ile\x18\x07 \x01(\x0b\x32#.onebot.GroupUploadNoticeEvent.File\x1a=\n\x04\x46ile\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\r\n\x05\x62usid\x18\x04 \x01(\x03\"\x93\x01\n\x15GroupAdminNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\"\xab\x01\n\x18GroupDecreaseNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\"\xab\x01\n\x18GroupIncreaseNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\"\xb8\x01\n\x13GroupBanNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x0f\n\x07user_id\x18\x08 \x01(\x03\x12\x10\n\x08\x64uration\x18\t \x01(\x03\"n\n\x14\x46riendAddNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\"\xab\x01\n\x16GroupRecallNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x10\n\x08group_id\x18\x05 \x01(\x03\x12\x0f\n\x07user_id\x18\x06 \x01(\x03\x12\x13\n\x0boperator_id\x18\x07 \x01(\x03\x12\x12\n\nmessage_id\x18\x08 \x01(\x03\"\x85\x01\n\x17\x46riendRecallNoticeEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x13\n\x0bnotice_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\x12\x12\n\nmessage_id\x18\x06 \x01(\x03\"\x8c\x01\n\x12\x46riendRequestEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0crequest_type\x18\x04 \x01(\t\x12\x0f\n\x07user_id\x18\x05 \x01(\x03\x12\x0f\n\x07\x63omment\x18\x06 \x01(\t\x12\x0c\n\x04\x66lag\x18\x07 \x01(\t\"\xaf\x01\n\x11GroupRequestEvent\x12\x0c\n\x04time\x18\x01 \x01(\x03\x12\x0f\n\x07self_id\x18\x02 \x01(\x03\x12\x11\n\tpost_type\x18\x03 \x01(\t\x12\x14\n\x0crequest_type\x18\x04 \x01(\t\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x10\n\x08group_id\x18\x06 \x01(\x03\x12\x0f\n\x07user_id\x18\x07 \x01(\x03\x12\x0f\n\x07\x63omment\x18\x08 \x01(\t\x12\x0c\n\x04\x66lag\x18\t \x01(\tb\x06proto3'
   ,
   dependencies=[base__pb2.DESCRIPTOR,])
 
 
+
+
+_BASEEVENT = _descriptor.Descriptor(
+  name='BaseEvent',
+  full_name='onebot.BaseEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='onebot.BaseEvent.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='self_id', full_name='onebot.BaseEvent.self_id', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='post_type', full_name='onebot.BaseEvent.post_type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=35,
+  serialized_end=96,
+)
+
+
+_BASEMESSAGEEVENT = _descriptor.Descriptor(
+  name='BaseMessageEvent',
+  full_name='onebot.BaseMessageEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='onebot.BaseMessageEvent.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='self_id', full_name='onebot.BaseMessageEvent.self_id', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='post_type', full_name='onebot.BaseMessageEvent.post_type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='message_type', full_name='onebot.BaseMessageEvent.message_type', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=98,
+  serialized_end=188,
+)
+
+
+_BASENOTICEEVENT = _descriptor.Descriptor(
+  name='BaseNoticeEvent',
+  full_name='onebot.BaseNoticeEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='onebot.BaseNoticeEvent.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='self_id', full_name='onebot.BaseNoticeEvent.self_id', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='post_type', full_name='onebot.BaseNoticeEvent.post_type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='notice_type', full_name='onebot.BaseNoticeEvent.notice_type', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=190,
+  serialized_end=278,
+)
+
+
+_BASEREQUESTEVENT = _descriptor.Descriptor(
+  name='BaseRequestEvent',
+  full_name='onebot.BaseRequestEvent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='onebot.BaseRequestEvent.time', index=0,
+      number=1, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='self_id', full_name='onebot.BaseRequestEvent.self_id', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='post_type', full_name='onebot.BaseRequestEvent.post_type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='notice_type', full_name='onebot.BaseRequestEvent.notice_type', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=280,
+  serialized_end=369,
+)
 
 
 _PRIVATEMESSAGEEVENT_SENDER = _descriptor.Descriptor(
@@ -75,8 +280,8 @@ _PRIVATEMESSAGEEVENT_SENDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=376,
+  serialized_start=643,
+  serialized_end=712,
 )
 
 _PRIVATEMESSAGEEVENT = _descriptor.Descriptor(
@@ -176,8 +381,8 @@ _PRIVATEMESSAGEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36,
-  serialized_end=376,
+  serialized_start=372,
+  serialized_end=712,
 )
 
 
@@ -222,8 +427,8 @@ _GROUPMESSAGEEVENT_ANONYMOUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=720,
-  serialized_end=771,
+  serialized_start=1056,
+  serialized_end=1107,
 )
 
 _GROUPMESSAGEEVENT_SENDER = _descriptor.Descriptor(
@@ -309,8 +514,8 @@ _GROUPMESSAGEEVENT_SENDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=774,
-  serialized_end=915,
+  serialized_start=1110,
+  serialized_end=1251,
 )
 
 _GROUPMESSAGEEVENT = _descriptor.Descriptor(
@@ -424,8 +629,8 @@ _GROUPMESSAGEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=379,
-  serialized_end=915,
+  serialized_start=715,
+  serialized_end=1251,
 )
 
 
@@ -477,8 +682,8 @@ _GROUPUPLOADNOTICEEVENT_FILE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1101,
-  serialized_end=1162,
+  serialized_start=1437,
+  serialized_end=1498,
 )
 
 _GROUPUPLOADNOTICEEVENT = _descriptor.Descriptor(
@@ -550,8 +755,8 @@ _GROUPUPLOADNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=918,
-  serialized_end=1162,
+  serialized_start=1254,
+  serialized_end=1498,
 )
 
 
@@ -624,8 +829,8 @@ _GROUPADMINNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1165,
-  serialized_end=1312,
+  serialized_start=1501,
+  serialized_end=1648,
 )
 
 
@@ -705,8 +910,8 @@ _GROUPDECREASENOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1315,
-  serialized_end=1486,
+  serialized_start=1651,
+  serialized_end=1822,
 )
 
 
@@ -786,8 +991,8 @@ _GROUPINCREASENOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1489,
-  serialized_end=1660,
+  serialized_start=1825,
+  serialized_end=1996,
 )
 
 
@@ -874,8 +1079,8 @@ _GROUPBANNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1663,
-  serialized_end=1847,
+  serialized_start=1999,
+  serialized_end=2183,
 )
 
 
@@ -934,8 +1139,8 @@ _FRIENDADDNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1849,
-  serialized_end=1959,
+  serialized_start=2185,
+  serialized_end=2295,
 )
 
 
@@ -1015,8 +1220,8 @@ _GROUPRECALLNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1962,
-  serialized_end=2133,
+  serialized_start=2298,
+  serialized_end=2469,
 )
 
 
@@ -1082,8 +1287,8 @@ _FRIENDRECALLNOTICEEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2136,
-  serialized_end=2269,
+  serialized_start=2472,
+  serialized_end=2605,
 )
 
 
@@ -1156,8 +1361,8 @@ _FRIENDREQUESTEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2272,
-  serialized_end=2412,
+  serialized_start=2608,
+  serialized_end=2748,
 )
 
 
@@ -1244,8 +1449,8 @@ _GROUPREQUESTEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2415,
-  serialized_end=2590,
+  serialized_start=2751,
+  serialized_end=2926,
 )
 
 _PRIVATEMESSAGEEVENT_SENDER.containing_type = _PRIVATEMESSAGEEVENT
@@ -1258,6 +1463,10 @@ _GROUPMESSAGEEVENT.fields_by_name['message'].message_type = base__pb2._MESSAGE
 _GROUPMESSAGEEVENT.fields_by_name['sender'].message_type = _GROUPMESSAGEEVENT_SENDER
 _GROUPUPLOADNOTICEEVENT_FILE.containing_type = _GROUPUPLOADNOTICEEVENT
 _GROUPUPLOADNOTICEEVENT.fields_by_name['file'].message_type = _GROUPUPLOADNOTICEEVENT_FILE
+DESCRIPTOR.message_types_by_name['BaseEvent'] = _BASEEVENT
+DESCRIPTOR.message_types_by_name['BaseMessageEvent'] = _BASEMESSAGEEVENT
+DESCRIPTOR.message_types_by_name['BaseNoticeEvent'] = _BASENOTICEEVENT
+DESCRIPTOR.message_types_by_name['BaseRequestEvent'] = _BASEREQUESTEVENT
 DESCRIPTOR.message_types_by_name['PrivateMessageEvent'] = _PRIVATEMESSAGEEVENT
 DESCRIPTOR.message_types_by_name['GroupMessageEvent'] = _GROUPMESSAGEEVENT
 DESCRIPTOR.message_types_by_name['GroupUploadNoticeEvent'] = _GROUPUPLOADNOTICEEVENT
@@ -1271,6 +1480,34 @@ DESCRIPTOR.message_types_by_name['FriendRecallNoticeEvent'] = _FRIENDRECALLNOTIC
 DESCRIPTOR.message_types_by_name['FriendRequestEvent'] = _FRIENDREQUESTEVENT
 DESCRIPTOR.message_types_by_name['GroupRequestEvent'] = _GROUPREQUESTEVENT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+BaseEvent = _reflection.GeneratedProtocolMessageType('BaseEvent', (_message.Message,), {
+  'DESCRIPTOR' : _BASEEVENT,
+  '__module__' : 'event_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseEvent)
+  })
+_sym_db.RegisterMessage(BaseEvent)
+
+BaseMessageEvent = _reflection.GeneratedProtocolMessageType('BaseMessageEvent', (_message.Message,), {
+  'DESCRIPTOR' : _BASEMESSAGEEVENT,
+  '__module__' : 'event_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseMessageEvent)
+  })
+_sym_db.RegisterMessage(BaseMessageEvent)
+
+BaseNoticeEvent = _reflection.GeneratedProtocolMessageType('BaseNoticeEvent', (_message.Message,), {
+  'DESCRIPTOR' : _BASENOTICEEVENT,
+  '__module__' : 'event_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseNoticeEvent)
+  })
+_sym_db.RegisterMessage(BaseNoticeEvent)
+
+BaseRequestEvent = _reflection.GeneratedProtocolMessageType('BaseRequestEvent', (_message.Message,), {
+  'DESCRIPTOR' : _BASEREQUESTEVENT,
+  '__module__' : 'event_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseRequestEvent)
+  })
+_sym_db.RegisterMessage(BaseRequestEvent)
 
 PrivateMessageEvent = _reflection.GeneratedProtocolMessageType('PrivateMessageEvent', (_message.Message,), {
 

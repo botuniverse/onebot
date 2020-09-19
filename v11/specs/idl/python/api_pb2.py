@@ -20,11 +20,89 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\tapi.proto\x12\x06onebot\x1a\nbase.proto\"[\n\x11SendPrivateMsgReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12 \n\x07message\x18\x02 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x03 \x01(\x08\"(\n\x12SendPrivateMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\"Z\n\x0fSendGroupMsgReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12 \n\x07message\x18\x02 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x03 \x01(\x08\"&\n\x10SendGroupMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\"|\n\nSendMsgReq\x12\x14\n\x0cmessage_type\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08group_id\x18\x03 \x01(\x03\x12 \n\x07message\x18\x04 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x05 \x01(\x08\"!\n\x0bSendMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\"\"\n\x0c\x44\x65leteMsgReq\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\"\x0f\n\rDeleteMsgResp\"\x1f\n\tGetMsgReq\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\"\xb2\x02\n\nGetMsgResp\x12\x0c\n\x04time\x18\x01 \x01(\x05\x12\x14\n\x0cmessage_type\x18\x02 \x01(\t\x12\x12\n\nmessage_id\x18\x03 \x01(\x05\x12\x0f\n\x07real_id\x18\x04 \x01(\x05\x12)\n\x06sender\x18\x05 \x01(\x0b\x32\x19.onebot.GetMsgResp.Sender\x12 \n\x07message\x18\x06 \x01(\x0b\x32\x0f.onebot.Message\x1a\x8d\x01\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x03 \x01(\t\x12\x0b\n\x03sex\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x06 \x01(\t\x12\r\n\x05level\x18\x07 \x01(\t\x12\x0c\n\x04role\x18\x08 \x01(\t\x12\r\n\x05title\x18\t \x01(\t\"\x1e\n\x10GetForwardMsgReq\x12\n\n\x02id\x18\x01 \x01(\t\"\x13\n\x11GetForwardMsgResp\"-\n\x0bSendLikeReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\r\n\x05times\x18\x02 \x01(\x05\"\x0e\n\x0cSendListResp\"P\n\x0fSetGroupKickReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x1a\n\x12reject_add_request\x18\x03 \x01(\x08\"\x12\n\x10SetGroupKickResp\"E\n\x0eSetGroupBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08\x64uration\x18\x03 \x01(\x03\"\x11\n\x0fSetGroupBanResp\"\xd6\x01\n\x17SetGroupAnonymousBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12<\n\tanonymous\x18\x02 \x01(\x0b\x32).onebot.SetGroupAnonymousBanReq.Anonymous\x12\x16\n\x0e\x61nonymous_flag\x18\x03 \x01(\t\x12\x0c\n\x04\x66lag\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\x03\x1a\x33\n\tAnonymous\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x66lag\x18\x03 \x01(\t\"\x1a\n\x18SetGroupAnonymousBanResp\"7\n\x13SetGroupWholeBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x02 \x01(\x08\"\x16\n\x14SetGroupWholeBanResp\"E\n\x10SetGroupAdminReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x03 \x01(\x08\"\x13\n\x11SetGroupAdminResp\"8\n\x14SetGroupAnonymousReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x02 \x01(\x08\"\x17\n\x15SetGroupAnonymousResp\"7\n\x0fSetGroupNameReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\"\x12\n\x10SetGroupNameResp\"8\n\x10SetGroupLeaveReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\nis_dismiss\x18\x02 \x01(\x08\"\x13\n\x11SetGroupLeaveResp\"e\n\x17SetGroupSpecialTitleReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x15\n\rspecial_title\x18\x03 \x01(\t\x12\x10\n\x08\x64uration\x18\x04 \x01(\x03\"\x1a\n\x18SetGroupSpecialTitleResp\"G\n\x16SetFriendAddRequestReq\x12\x0c\n\x04\x66lag\x18\x01 \x01(\t\x12\x0f\n\x07\x61pprove\x18\x02 \x01(\x08\x12\x0e\n\x06remark\x18\x03 \x01(\t\"\x19\n\x17SetFriendAddRequestResp\"f\n\x15SetGroupAddRequestReq\x12\x0c\n\x04\x66lag\x18\x01 \x01(\t\x12\x10\n\x08sub_type\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0f\n\x07\x61pprove\x18\x04 \x01(\x08\x12\x0e\n\x06reason\x18\x05 \x01(\t\"\x18\n\x16SetGroupAddRequestResp\"\x11\n\x0fGetLoginInfoReq\"5\n\x10GetLoginInfoResp\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\"7\n\x12GetStrangerInfoReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08no_cache\x18\x02 \x01(\x08\"R\n\x13GetStrangerInfoResp\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0b\n\x03sex\x18\x03 \x01(\t\x12\x0b\n\x03\x61ge\x18\x04 \x01(\x05\"\x12\n\x10GetFriendListReq\"\x87\x01\n\x11GetFriendListResp\x12\x35\n\x0b\x66riend_list\x18\x01 \x03(\x0b\x32 .onebot.GetFriendListResp.Friend\x1a;\n\x06\x46riend\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06remark\x18\x03 \x01(\t\"5\n\x0fGetGroupInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x10\n\x08no_cache\x18\x02 \x01(\x08\"h\n\x10GetGroupInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x12\x14\n\x0cmember_count\x18\x03 \x01(\x05\x12\x18\n\x10max_member_count\x18\x04 \x01(\x05\"\x11\n\x0fGetGroupListReq\"\xa5\x01\n\x10GetGroupListResp\x12\x32\n\ngroup_list\x18\x01 \x03(\x0b\x32\x1e.onebot.GetGroupListResp.Group\x1a]\n\x05Group\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x12\x14\n\x0cmember_count\x18\x03 \x01(\x05\x12\x18\n\x10max_member_count\x18\x04 \x01(\x05\"L\n\x15GetGroupMemberInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08no_cache\x18\x03 \x01(\x08\"\xa2\x02\n\x16GetGroupMemberInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x04 \x01(\t\x12\x0b\n\x03sex\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\x11\n\tjoin_time\x18\x08 \x01(\x05\x12\x16\n\x0elast_sent_time\x18\t \x01(\x05\x12\r\n\x05level\x18\n \x01(\t\x12\x0c\n\x04role\x18\x0b \x01(\t\x12\x12\n\nunfriendly\x18\x0c \x01(\x08\x12\r\n\x05title\x18\r \x01(\t\x12\x19\n\x11title_expire_time\x18\x0e \x01(\x05\x12\x17\n\x0f\x63\x61rd_changeable\x18\x0f \x01(\x08\")\n\x15GetGroupMemberListReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\"\xf9\x02\n\x16GetGroupMemberListResp\x12\x45\n\x11group_member_list\x18\x01 \x03(\x0b\x32*.onebot.GetGroupMemberListResp.GroupMember\x1a\x97\x02\n\x0bGroupMember\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x04 \x01(\t\x12\x0b\n\x03sex\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\x11\n\tjoin_time\x18\x08 \x01(\x05\x12\x16\n\x0elast_sent_time\x18\t \x01(\x05\x12\r\n\x05level\x18\n \x01(\t\x12\x0c\n\x04role\x18\x0b \x01(\t\x12\x12\n\nunfriendly\x18\x0c \x01(\x08\x12\r\n\x05title\x18\r \x01(\t\x12\x19\n\x11title_expire_time\x18\x0e \x01(\x05\x12\x17\n\x0f\x63\x61rd_changeable\x18\x0f \x01(\x08\"6\n\x14GetGroupHonorInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0c\n\x04type\x18\x02 \x01(\t\"\xcf\x04\n\x15GetGroupHonorInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12I\n\x11\x63urrent_talkative\x18\x02 \x01(\x0b\x32..onebot.GetGroupHonorInfoResp.CurrentTalkative\x12;\n\x0etalkative_list\x18\x03 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12;\n\x0eperformer_list\x18\x04 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12\x38\n\x0blegend_list\x18\x05 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12?\n\x12strong_newbie_list\x18\x06 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12\x39\n\x0c\x65motion_list\x18\x07 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x1aX\n\x10\x43urrentTalkative\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\x11\n\tday_count\x18\x04 \x01(\x05\x1aO\n\x05Honor\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"\x1f\n\rGetCookiesReq\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"!\n\x0eGetCookiesResp\x12\x0f\n\x07\x63ookies\x18\x01 \x01(\t\"\x11\n\x0fGetCsrfTokenReq\"!\n\x10GetCsrfTokenResp\x12\r\n\x05token\x18\x01 \x01(\x05\"#\n\x11GetCredentialsReq\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\"9\n\x12GetCredentialsResp\x12\x0f\n\x07\x63ookies\x18\x01 \x01(\t\x12\x12\n\ncsrf_token\x18\x02 \x01(\x05\"0\n\x0cGetRecordReq\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\x12\x12\n\nout_format\x18\x02 \x01(\t\"\x1d\n\rGetRecordResp\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\"\x1b\n\x0bGetImageReq\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\"\x1c\n\x0cGetImageResp\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\"\x11\n\x0f\x43\x61nSendImageReq\"\x1f\n\x10\x43\x61nSendImageResp\x12\x0b\n\x03yes\x18\x01 \x01(\x08\"\x12\n\x10\x43\x61nSendRecordReq\" \n\x11\x43\x61nSendRecordResp\x12\x0b\n\x03yes\x18\x01 \x01(\x08\"\x0e\n\x0cGetStatusReq\"-\n\rGetStatusResp\x12\x0e\n\x06online\x18\x01 \x01(\x08\x12\x0c\n\x04good\x18\x02 \x01(\x08\"\x13\n\x11GetVersionInfoReq\"\xb9\x01\n\x12GetVersionInfoResp\x12\x10\n\x08\x61pp_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x02 \x01(\t\x12\x18\n\x10protocol_version\x18\x03 \x01(\t\x12\x34\n\x05\x65xtra\x18\x04 \x03(\x0b\x32%.onebot.GetVersionInfoResp.ExtraEntry\x1a,\n\nExtraEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1e\n\rSetRestartReq\x12\r\n\x05\x64\x65lay\x18\x01 \x01(\x05\"\x10\n\x0eSetRestartResp\"\x0f\n\rCleanCacheReq\"\x10\n\x0e\x43leanCacheRespb\x06proto3'
+  serialized_pb=b'\n\tapi.proto\x12\x06onebot\x1a\nbase.proto\"*\n\nBaseApiReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"+\n\x0b\x42\x61seApiResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"y\n\x11SendPrivateMsgReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12 \n\x07message\x18\x02 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x03 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"F\n\x12SendPrivateMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"x\n\x0fSendGroupMsgReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12 \n\x07message\x18\x02 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x03 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"D\n\x10SendGroupMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\x9a\x01\n\nSendMsgReq\x12\x14\n\x0cmessage_type\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08group_id\x18\x03 \x01(\x03\x12 \n\x07message\x18\x04 \x01(\x0b\x32\x0f.onebot.Message\x12\x13\n\x0b\x61uto_escape\x18\x05 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"?\n\x0bSendMsgResp\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"@\n\x0c\x44\x65leteMsgReq\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"-\n\rDeleteMsgResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"=\n\tGetMsgReq\x12\x12\n\nmessage_id\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xd0\x02\n\nGetMsgResp\x12\x0c\n\x04time\x18\x01 \x01(\x05\x12\x14\n\x0cmessage_type\x18\x02 \x01(\t\x12\x12\n\nmessage_id\x18\x03 \x01(\x05\x12\x0f\n\x07real_id\x18\x04 \x01(\x05\x12)\n\x06sender\x18\x05 \x01(\x0b\x32\x19.onebot.GetMsgResp.Sender\x12 \n\x07message\x18\x06 \x01(\x0b\x32\x0f.onebot.Message\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a\x8d\x01\n\x06Sender\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x03 \x01(\t\x12\x0b\n\x03sex\x18\x04 \x01(\t\x12\x0b\n\x03\x61ge\x18\x05 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x06 \x01(\t\x12\r\n\x05level\x18\x07 \x01(\t\x12\x0c\n\x04role\x18\x08 \x01(\t\x12\r\n\x05title\x18\t \x01(\t\"<\n\x10GetForwardMsgReq\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"1\n\x11GetForwardMsgResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"K\n\x0bSendLikeReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\r\n\x05times\x18\x02 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\",\n\x0cSendListResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"n\n\x0fSetGroupKickReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x1a\n\x12reject_add_request\x18\x03 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"0\n\x10SetGroupKickResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"c\n\x0eSetGroupBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08\x64uration\x18\x03 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"/\n\x0fSetGroupBanResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xf4\x01\n\x17SetGroupAnonymousBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12<\n\tanonymous\x18\x02 \x01(\x0b\x32).onebot.SetGroupAnonymousBanReq.Anonymous\x12\x16\n\x0e\x61nonymous_flag\x18\x03 \x01(\t\x12\x0c\n\x04\x66lag\x18\x04 \x01(\t\x12\x10\n\x08\x64uration\x18\x05 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a\x33\n\tAnonymous\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x66lag\x18\x03 \x01(\t\"8\n\x18SetGroupAnonymousBanResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"U\n\x13SetGroupWholeBanReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"4\n\x14SetGroupWholeBanResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"c\n\x10SetGroupAdminReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x03 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"1\n\x11SetGroupAdminResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"V\n\x14SetGroupAnonymousReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0e\n\x06\x65nable\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"5\n\x15SetGroupAnonymousResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"U\n\x0fSetGroupNameReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"0\n\x10SetGroupNameResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"V\n\x10SetGroupLeaveReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\nis_dismiss\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"1\n\x11SetGroupLeaveResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\x83\x01\n\x17SetGroupSpecialTitleReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x15\n\rspecial_title\x18\x03 \x01(\t\x12\x10\n\x08\x64uration\x18\x04 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"8\n\x18SetGroupSpecialTitleResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"e\n\x16SetFriendAddRequestReq\x12\x0c\n\x04\x66lag\x18\x01 \x01(\t\x12\x0f\n\x07\x61pprove\x18\x02 \x01(\x08\x12\x0e\n\x06remark\x18\x03 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"7\n\x17SetFriendAddRequestResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\x84\x01\n\x15SetGroupAddRequestReq\x12\x0c\n\x04\x66lag\x18\x01 \x01(\t\x12\x10\n\x08sub_type\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0f\n\x07\x61pprove\x18\x04 \x01(\x08\x12\x0e\n\x06reason\x18\x05 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"6\n\x16SetGroupAddRequestResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"/\n\x0fGetLoginInfoReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"S\n\x10GetLoginInfoResp\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"U\n\x12GetStrangerInfoReq\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08no_cache\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"p\n\x13GetStrangerInfoResp\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0b\n\x03sex\x18\x03 \x01(\t\x12\x0b\n\x03\x61ge\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"0\n\x10GetFriendListReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xa5\x01\n\x11GetFriendListResp\x12\x35\n\x0b\x66riend_list\x18\x01 \x03(\x0b\x32 .onebot.GetFriendListResp.Friend\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a;\n\x06\x46riend\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06remark\x18\x03 \x01(\t\"S\n\x0fGetGroupInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x10\n\x08no_cache\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\x86\x01\n\x10GetGroupInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x12\x14\n\x0cmember_count\x18\x03 \x01(\x05\x12\x18\n\x10max_member_count\x18\x04 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"/\n\x0fGetGroupListReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xc3\x01\n\x10GetGroupListResp\x12\x32\n\ngroup_list\x18\x01 \x03(\x0b\x32\x1e.onebot.GetGroupListResp.Group\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a]\n\x05Group\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x12\n\ngroup_name\x18\x02 \x01(\t\x12\x14\n\x0cmember_count\x18\x03 \x01(\x05\x12\x18\n\x10max_member_count\x18\x04 \x01(\x05\"j\n\x15GetGroupMemberInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08no_cache\x18\x03 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xc0\x02\n\x16GetGroupMemberInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x04 \x01(\t\x12\x0b\n\x03sex\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\x11\n\tjoin_time\x18\x08 \x01(\x05\x12\x16\n\x0elast_sent_time\x18\t \x01(\x05\x12\r\n\x05level\x18\n \x01(\t\x12\x0c\n\x04role\x18\x0b \x01(\t\x12\x12\n\nunfriendly\x18\x0c \x01(\x08\x12\r\n\x05title\x18\r \x01(\t\x12\x19\n\x11title_expire_time\x18\x0e \x01(\x05\x12\x17\n\x0f\x63\x61rd_changeable\x18\x0f \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"G\n\x15GetGroupMemberListReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\x97\x03\n\x16GetGroupMemberListResp\x12\x45\n\x11group_member_list\x18\x01 \x03(\x0b\x32*.onebot.GetGroupMemberListResp.GroupMember\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a\x97\x02\n\x0bGroupMember\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0f\n\x07user_id\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0c\n\x04\x63\x61rd\x18\x04 \x01(\t\x12\x0b\n\x03sex\x18\x05 \x01(\t\x12\x0b\n\x03\x61ge\x18\x06 \x01(\x05\x12\x0c\n\x04\x61rea\x18\x07 \x01(\t\x12\x11\n\tjoin_time\x18\x08 \x01(\x05\x12\x16\n\x0elast_sent_time\x18\t \x01(\x05\x12\r\n\x05level\x18\n \x01(\t\x12\x0c\n\x04role\x18\x0b \x01(\t\x12\x12\n\nunfriendly\x18\x0c \x01(\x08\x12\r\n\x05title\x18\r \x01(\t\x12\x19\n\x11title_expire_time\x18\x0e \x01(\x05\x12\x17\n\x0f\x63\x61rd_changeable\x18\x0f \x01(\x08\"T\n\x14GetGroupHonorInfoReq\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xed\x04\n\x15GetGroupHonorInfoResp\x12\x10\n\x08group_id\x18\x01 \x01(\x03\x12I\n\x11\x63urrent_talkative\x18\x02 \x01(\x0b\x32..onebot.GetGroupHonorInfoResp.CurrentTalkative\x12;\n\x0etalkative_list\x18\x03 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12;\n\x0eperformer_list\x18\x04 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12\x38\n\x0blegend_list\x18\x05 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12?\n\x12strong_newbie_list\x18\x06 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12\x39\n\x0c\x65motion_list\x18\x07 \x03(\x0b\x32#.onebot.GetGroupHonorInfoResp.Honor\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1aX\n\x10\x43urrentTalkative\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\x11\n\tday_count\x18\x04 \x01(\x05\x1aO\n\x05Honor\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x10\n\x08nickname\x18\x02 \x01(\t\x12\x0e\n\x06\x61vatar\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"=\n\rGetCookiesReq\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"?\n\x0eGetCookiesResp\x12\x0f\n\x07\x63ookies\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"/\n\x0fGetCsrfTokenReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"?\n\x10GetCsrfTokenResp\x12\r\n\x05token\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"A\n\x11GetCredentialsReq\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"W\n\x12GetCredentialsResp\x12\x0f\n\x07\x63ookies\x18\x01 \x01(\t\x12\x12\n\ncsrf_token\x18\x02 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"N\n\x0cGetRecordReq\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\x12\x12\n\nout_format\x18\x02 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\";\n\rGetRecordResp\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"9\n\x0bGetImageReq\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\":\n\x0cGetImageResp\x12\x0c\n\x04\x66ile\x18\x01 \x01(\t\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"/\n\x0f\x43\x61nSendImageReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"=\n\x10\x43\x61nSendImageResp\x12\x0b\n\x03yes\x18\x01 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"0\n\x10\x43\x61nSendRecordReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\">\n\x11\x43\x61nSendRecordResp\x12\x0b\n\x03yes\x18\x01 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\",\n\x0cGetStatusReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"K\n\rGetStatusResp\x12\x0e\n\x06online\x18\x01 \x01(\x08\x12\x0c\n\x04good\x18\x02 \x01(\x08\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"1\n\x11GetVersionInfoReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"\xd7\x01\n\x12GetVersionInfoResp\x12\x10\n\x08\x61pp_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x02 \x01(\t\x12\x18\n\x10protocol_version\x18\x03 \x01(\t\x12\x34\n\x05\x65xtra\x18\x04 \x03(\x0b\x32%.onebot.GetVersionInfoResp.ExtraEntry\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\x1a,\n\nExtraEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"<\n\rSetRestartReq\x12\r\n\x05\x64\x65lay\x18\x01 \x01(\x05\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\".\n\x0eSetRestartResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\"-\n\rCleanCacheReq\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\t\".\n\x0e\x43leanCacheResp\x12\x0e\n\x06\x61\x63tion\x18\x65 \x01(\t\x12\x0c\n\x04\x65\x63ho\x18\x66 \x01(\tb\x06proto3'
   ,
   dependencies=[base__pb2.DESCRIPTOR,])
 
 
+
+
+_BASEAPIREQ = _descriptor.Descriptor(
+  name='BaseApiReq',
+  full_name='onebot.BaseApiReq',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.BaseApiReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.BaseApiReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33,
+  serialized_end=75,
+)
+
+
+_BASEAPIRESP = _descriptor.Descriptor(
+  name='BaseApiResp',
+  full_name='onebot.BaseApiResp',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.BaseApiResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.BaseApiResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=77,
+  serialized_end=120,
+)
 
 
 _SENDPRIVATEMSGREQ = _descriptor.Descriptor(
@@ -56,6 +134,20 @@ _SENDPRIVATEMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendPrivateMsgReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendPrivateMsgReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -68,8 +160,8 @@ _SENDPRIVATEMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33,
-  serialized_end=124,
+  serialized_start=122,
+  serialized_end=243,
 )
 
 
@@ -88,6 +180,20 @@ _SENDPRIVATEMSGRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendPrivateMsgResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendPrivateMsgResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -100,8 +206,8 @@ _SENDPRIVATEMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=126,
-  serialized_end=166,
+  serialized_start=245,
+  serialized_end=315,
 )
 
 
@@ -134,6 +240,20 @@ _SENDGROUPMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendGroupMsgReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendGroupMsgReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -146,8 +266,8 @@ _SENDGROUPMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=168,
-  serialized_end=258,
+  serialized_start=317,
+  serialized_end=437,
 )
 
 
@@ -166,6 +286,20 @@ _SENDGROUPMSGRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendGroupMsgResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendGroupMsgResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -178,8 +312,8 @@ _SENDGROUPMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=260,
-  serialized_end=298,
+  serialized_start=439,
+  serialized_end=507,
 )
 
 
@@ -226,6 +360,20 @@ _SENDMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendMsgReq.action', index=5,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendMsgReq.echo', index=6,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -238,8 +386,8 @@ _SENDMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=300,
-  serialized_end=424,
+  serialized_start=510,
+  serialized_end=664,
 )
 
 
@@ -258,6 +406,20 @@ _SENDMSGRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendMsgResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendMsgResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -270,8 +432,8 @@ _SENDMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=426,
-  serialized_end=459,
+  serialized_start=666,
+  serialized_end=729,
 )
 
 
@@ -290,6 +452,20 @@ _DELETEMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.DeleteMsgReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.DeleteMsgReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -302,8 +478,8 @@ _DELETEMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=461,
-  serialized_end=495,
+  serialized_start=731,
+  serialized_end=795,
 )
 
 
@@ -315,6 +491,20 @@ _DELETEMSGRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.DeleteMsgResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.DeleteMsgResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -327,8 +517,8 @@ _DELETEMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=497,
-  serialized_end=512,
+  serialized_start=797,
+  serialized_end=842,
 )
 
 
@@ -347,6 +537,20 @@ _GETMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetMsgReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetMsgReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -359,8 +563,8 @@ _GETMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=514,
-  serialized_end=545,
+  serialized_start=844,
+  serialized_end=905,
 )
 
 
@@ -447,8 +651,8 @@ _GETMSGRESP_SENDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=713,
-  serialized_end=854,
+  serialized_start=1103,
+  serialized_end=1244,
 )
 
 _GETMSGRESP = _descriptor.Descriptor(
@@ -501,6 +705,20 @@ _GETMSGRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetMsgResp.action', index=6,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetMsgResp.echo', index=7,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -513,8 +731,8 @@ _GETMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=548,
-  serialized_end=854,
+  serialized_start=908,
+  serialized_end=1244,
 )
 
 
@@ -533,6 +751,20 @@ _GETFORWARDMSGREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetForwardMsgReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetForwardMsgReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -545,8 +777,8 @@ _GETFORWARDMSGREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=856,
-  serialized_end=886,
+  serialized_start=1246,
+  serialized_end=1306,
 )
 
 
@@ -558,6 +790,20 @@ _GETFORWARDMSGRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetForwardMsgResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetForwardMsgResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -570,8 +816,8 @@ _GETFORWARDMSGRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=888,
-  serialized_end=907,
+  serialized_start=1308,
+  serialized_end=1357,
 )
 
 
@@ -597,6 +843,20 @@ _SENDLIKEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendLikeReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendLikeReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -609,8 +869,8 @@ _SENDLIKEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=909,
-  serialized_end=954,
+  serialized_start=1359,
+  serialized_end=1434,
 )
 
 
@@ -622,6 +882,20 @@ _SENDLISTRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SendListResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SendListResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -634,8 +908,8 @@ _SENDLISTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=956,
-  serialized_end=970,
+  serialized_start=1436,
+  serialized_end=1480,
 )
 
 
@@ -668,6 +942,20 @@ _SETGROUPKICKREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupKickReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupKickReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -680,8 +968,8 @@ _SETGROUPKICKREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=972,
-  serialized_end=1052,
+  serialized_start=1482,
+  serialized_end=1592,
 )
 
 
@@ -693,6 +981,20 @@ _SETGROUPKICKRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupKickResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupKickResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -705,8 +1007,8 @@ _SETGROUPKICKRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1054,
-  serialized_end=1072,
+  serialized_start=1594,
+  serialized_end=1642,
 )
 
 
@@ -739,6 +1041,20 @@ _SETGROUPBANREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupBanReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupBanReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -751,8 +1067,8 @@ _SETGROUPBANREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1074,
-  serialized_end=1143,
+  serialized_start=1644,
+  serialized_end=1743,
 )
 
 
@@ -764,6 +1080,20 @@ _SETGROUPBANRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupBanResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupBanResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -776,8 +1106,8 @@ _SETGROUPBANRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1145,
-  serialized_end=1162,
+  serialized_start=1745,
+  serialized_end=1792,
 )
 
 
@@ -822,8 +1152,8 @@ _SETGROUPANONYMOUSBANREQ_ANONYMOUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1328,
-  serialized_end=1379,
+  serialized_start=1988,
+  serialized_end=2039,
 )
 
 _SETGROUPANONYMOUSBANREQ = _descriptor.Descriptor(
@@ -869,6 +1199,20 @@ _SETGROUPANONYMOUSBANREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAnonymousBanReq.action', index=5,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAnonymousBanReq.echo', index=6,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -881,8 +1225,8 @@ _SETGROUPANONYMOUSBANREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1165,
-  serialized_end=1379,
+  serialized_start=1795,
+  serialized_end=2039,
 )
 
 
@@ -894,6 +1238,20 @@ _SETGROUPANONYMOUSBANRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAnonymousBanResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAnonymousBanResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -906,8 +1264,8 @@ _SETGROUPANONYMOUSBANRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1381,
-  serialized_end=1407,
+  serialized_start=2041,
+  serialized_end=2097,
 )
 
 
@@ -933,6 +1291,20 @@ _SETGROUPWHOLEBANREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupWholeBanReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupWholeBanReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -945,8 +1317,8 @@ _SETGROUPWHOLEBANREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1409,
-  serialized_end=1464,
+  serialized_start=2099,
+  serialized_end=2184,
 )
 
 
@@ -958,6 +1330,20 @@ _SETGROUPWHOLEBANRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupWholeBanResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupWholeBanResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -970,8 +1356,8 @@ _SETGROUPWHOLEBANRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1466,
-  serialized_end=1488,
+  serialized_start=2186,
+  serialized_end=2238,
 )
 
 
@@ -1004,6 +1390,20 @@ _SETGROUPADMINREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAdminReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAdminReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1016,8 +1416,8 @@ _SETGROUPADMINREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1490,
-  serialized_end=1559,
+  serialized_start=2240,
+  serialized_end=2339,
 )
 
 
@@ -1029,6 +1429,20 @@ _SETGROUPADMINRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAdminResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAdminResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1041,8 +1455,8 @@ _SETGROUPADMINRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1561,
-  serialized_end=1580,
+  serialized_start=2341,
+  serialized_end=2390,
 )
 
 
@@ -1068,6 +1482,20 @@ _SETGROUPANONYMOUSREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAnonymousReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAnonymousReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1080,8 +1508,8 @@ _SETGROUPANONYMOUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1582,
-  serialized_end=1638,
+  serialized_start=2392,
+  serialized_end=2478,
 )
 
 
@@ -1093,6 +1521,20 @@ _SETGROUPANONYMOUSRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAnonymousResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAnonymousResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1105,8 +1547,8 @@ _SETGROUPANONYMOUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1640,
-  serialized_end=1663,
+  serialized_start=2480,
+  serialized_end=2533,
 )
 
 
@@ -1132,6 +1574,20 @@ _SETGROUPNAMEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupNameReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupNameReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1144,8 +1600,8 @@ _SETGROUPNAMEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1665,
-  serialized_end=1720,
+  serialized_start=2535,
+  serialized_end=2620,
 )
 
 
@@ -1157,6 +1613,20 @@ _SETGROUPNAMERESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupNameResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupNameResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1169,8 +1639,8 @@ _SETGROUPNAMERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1722,
-  serialized_end=1740,
+  serialized_start=2622,
+  serialized_end=2670,
 )
 
 
@@ -1196,6 +1666,20 @@ _SETGROUPLEAVEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupLeaveReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupLeaveReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1208,8 +1692,8 @@ _SETGROUPLEAVEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1742,
-  serialized_end=1798,
+  serialized_start=2672,
+  serialized_end=2758,
 )
 
 
@@ -1221,6 +1705,20 @@ _SETGROUPLEAVERESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupLeaveResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupLeaveResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1233,8 +1731,8 @@ _SETGROUPLEAVERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1800,
-  serialized_end=1819,
+  serialized_start=2760,
+  serialized_end=2809,
 )
 
 
@@ -1274,6 +1772,20 @@ _SETGROUPSPECIALTITLEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupSpecialTitleReq.action', index=4,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupSpecialTitleReq.echo', index=5,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1286,8 +1798,8 @@ _SETGROUPSPECIALTITLEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1821,
-  serialized_end=1922,
+  serialized_start=2812,
+  serialized_end=2943,
 )
 
 
@@ -1299,6 +1811,20 @@ _SETGROUPSPECIALTITLERESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupSpecialTitleResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupSpecialTitleResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1311,8 +1837,8 @@ _SETGROUPSPECIALTITLERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1924,
-  serialized_end=1950,
+  serialized_start=2945,
+  serialized_end=3001,
 )
 
 
@@ -1345,6 +1871,20 @@ _SETFRIENDADDREQUESTREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetFriendAddRequestReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetFriendAddRequestReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1357,8 +1897,8 @@ _SETFRIENDADDREQUESTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1952,
-  serialized_end=2023,
+  serialized_start=3003,
+  serialized_end=3104,
 )
 
 
@@ -1370,6 +1910,20 @@ _SETFRIENDADDREQUESTRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetFriendAddRequestResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetFriendAddRequestResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1382,8 +1936,8 @@ _SETFRIENDADDREQUESTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2025,
-  serialized_end=2050,
+  serialized_start=3106,
+  serialized_end=3161,
 )
 
 
@@ -1430,6 +1984,20 @@ _SETGROUPADDREQUESTREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAddRequestReq.action', index=5,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAddRequestReq.echo', index=6,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1442,8 +2010,8 @@ _SETGROUPADDREQUESTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2052,
-  serialized_end=2154,
+  serialized_start=3164,
+  serialized_end=3296,
 )
 
 
@@ -1455,6 +2023,20 @@ _SETGROUPADDREQUESTRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetGroupAddRequestResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetGroupAddRequestResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1467,8 +2049,8 @@ _SETGROUPADDREQUESTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2156,
-  serialized_end=2180,
+  serialized_start=3298,
+  serialized_end=3352,
 )
 
 
@@ -1480,6 +2062,20 @@ _GETLOGININFOREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetLoginInfoReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetLoginInfoReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1492,8 +2088,8 @@ _GETLOGININFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2182,
-  serialized_end=2199,
+  serialized_start=3354,
+  serialized_end=3401,
 )
 
 
@@ -1519,6 +2115,20 @@ _GETLOGININFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetLoginInfoResp.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetLoginInfoResp.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1531,8 +2141,8 @@ _GETLOGININFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2201,
-  serialized_end=2254,
+  serialized_start=3403,
+  serialized_end=3486,
 )
 
 
@@ -1558,6 +2168,20 @@ _GETSTRANGERINFOREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetStrangerInfoReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetStrangerInfoReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1570,8 +2194,8 @@ _GETSTRANGERINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2256,
-  serialized_end=2311,
+  serialized_start=3488,
+  serialized_end=3573,
 )
 
 
@@ -1611,6 +2235,20 @@ _GETSTRANGERINFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetStrangerInfoResp.action', index=4,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetStrangerInfoResp.echo', index=5,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1623,8 +2261,8 @@ _GETSTRANGERINFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2313,
-  serialized_end=2395,
+  serialized_start=3575,
+  serialized_end=3687,
 )
 
 
@@ -1636,6 +2274,20 @@ _GETFRIENDLISTREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetFriendListReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetFriendListReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1648,8 +2300,8 @@ _GETFRIENDLISTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2397,
-  serialized_end=2415,
+  serialized_start=3689,
+  serialized_end=3737,
 )
 
 
@@ -1694,8 +2346,8 @@ _GETFRIENDLISTRESP_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2494,
-  serialized_end=2553,
+  serialized_start=3846,
+  serialized_end=3905,
 )
 
 _GETFRIENDLISTRESP = _descriptor.Descriptor(
@@ -1713,6 +2365,20 @@ _GETFRIENDLISTRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetFriendListResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetFriendListResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1725,8 +2391,8 @@ _GETFRIENDLISTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2418,
-  serialized_end=2553,
+  serialized_start=3740,
+  serialized_end=3905,
 )
 
 
@@ -1752,6 +2418,20 @@ _GETGROUPINFOREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupInfoReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupInfoReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1764,8 +2444,8 @@ _GETGROUPINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2555,
-  serialized_end=2608,
+  serialized_start=3907,
+  serialized_end=3990,
 )
 
 
@@ -1805,6 +2485,20 @@ _GETGROUPINFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupInfoResp.action', index=4,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupInfoResp.echo', index=5,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1817,8 +2511,8 @@ _GETGROUPINFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2610,
-  serialized_end=2714,
+  serialized_start=3993,
+  serialized_end=4127,
 )
 
 
@@ -1830,6 +2524,20 @@ _GETGROUPLISTREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupListReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupListReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1842,8 +2550,8 @@ _GETGROUPLISTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2716,
-  serialized_end=2733,
+  serialized_start=4129,
+  serialized_end=4176,
 )
 
 
@@ -1895,8 +2603,8 @@ _GETGROUPLISTRESP_GROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2808,
-  serialized_end=2901,
+  serialized_start=4281,
+  serialized_end=4374,
 )
 
 _GETGROUPLISTRESP = _descriptor.Descriptor(
@@ -1914,6 +2622,20 @@ _GETGROUPLISTRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupListResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupListResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1926,8 +2648,8 @@ _GETGROUPLISTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2736,
-  serialized_end=2901,
+  serialized_start=4179,
+  serialized_end=4374,
 )
 
 
@@ -1960,6 +2682,20 @@ _GETGROUPMEMBERINFOREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupMemberInfoReq.action', index=3,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupMemberInfoReq.echo', index=4,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1972,8 +2708,8 @@ _GETGROUPMEMBERINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2903,
-  serialized_end=2979,
+  serialized_start=4376,
+  serialized_end=4482,
 )
 
 
@@ -2090,6 +2826,20 @@ _GETGROUPMEMBERINFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupMemberInfoResp.action', index=15,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupMemberInfoResp.echo', index=16,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2102,8 +2852,8 @@ _GETGROUPMEMBERINFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2982,
-  serialized_end=3272,
+  serialized_start=4485,
+  serialized_end=4805,
 )
 
 
@@ -2122,6 +2872,20 @@ _GETGROUPMEMBERLISTREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupMemberListReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupMemberListReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2134,8 +2898,8 @@ _GETGROUPMEMBERLISTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3274,
-  serialized_end=3315,
+  serialized_start=4807,
+  serialized_end=4878,
 )
 
 
@@ -2264,8 +3028,8 @@ _GETGROUPMEMBERLISTRESP_GROUPMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3416,
-  serialized_end=3695,
+  serialized_start=5009,
+  serialized_end=5288,
 )
 
 _GETGROUPMEMBERLISTRESP = _descriptor.Descriptor(
@@ -2283,6 +3047,20 @@ _GETGROUPMEMBERLISTRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupMemberListResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupMemberListResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2295,8 +3073,8 @@ _GETGROUPMEMBERLISTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3318,
-  serialized_end=3695,
+  serialized_start=4881,
+  serialized_end=5288,
 )
 
 
@@ -2322,6 +3100,20 @@ _GETGROUPHONORINFOREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupHonorInfoReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupHonorInfoReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2334,8 +3126,8 @@ _GETGROUPHONORINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3697,
-  serialized_end=3751,
+  serialized_start=5290,
+  serialized_end=5374,
 )
 
 
@@ -2387,8 +3179,8 @@ _GETGROUPHONORINFORESP_CURRENTTALKATIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4176,
-  serialized_end=4264,
+  serialized_start=5829,
+  serialized_end=5917,
 )
 
 _GETGROUPHONORINFORESP_HONOR = _descriptor.Descriptor(
@@ -2439,8 +3231,8 @@ _GETGROUPHONORINFORESP_HONOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4266,
-  serialized_end=4345,
+  serialized_start=5919,
+  serialized_end=5998,
 )
 
 _GETGROUPHONORINFORESP = _descriptor.Descriptor(
@@ -2500,6 +3292,20 @@ _GETGROUPHONORINFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetGroupHonorInfoResp.action', index=7,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetGroupHonorInfoResp.echo', index=8,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2512,8 +3318,8 @@ _GETGROUPHONORINFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3754,
-  serialized_end=4345,
+  serialized_start=5377,
+  serialized_end=5998,
 )
 
 
@@ -2532,6 +3338,20 @@ _GETCOOKIESREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCookiesReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCookiesReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2544,8 +3364,8 @@ _GETCOOKIESREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4347,
-  serialized_end=4378,
+  serialized_start=6000,
+  serialized_end=6061,
 )
 
 
@@ -2564,6 +3384,20 @@ _GETCOOKIESRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCookiesResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCookiesResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2576,8 +3410,8 @@ _GETCOOKIESRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4380,
-  serialized_end=4413,
+  serialized_start=6063,
+  serialized_end=6126,
 )
 
 
@@ -2589,6 +3423,20 @@ _GETCSRFTOKENREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCsrfTokenReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCsrfTokenReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2601,8 +3449,8 @@ _GETCSRFTOKENREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4415,
-  serialized_end=4432,
+  serialized_start=6128,
+  serialized_end=6175,
 )
 
 
@@ -2621,6 +3469,20 @@ _GETCSRFTOKENRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCsrfTokenResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCsrfTokenResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2633,8 +3495,8 @@ _GETCSRFTOKENRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4434,
-  serialized_end=4467,
+  serialized_start=6177,
+  serialized_end=6240,
 )
 
 
@@ -2653,6 +3515,20 @@ _GETCREDENTIALSREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCredentialsReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCredentialsReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2665,8 +3541,8 @@ _GETCREDENTIALSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4469,
-  serialized_end=4504,
+  serialized_start=6242,
+  serialized_end=6307,
 )
 
 
@@ -2692,6 +3568,20 @@ _GETCREDENTIALSRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetCredentialsResp.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetCredentialsResp.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2704,8 +3594,8 @@ _GETCREDENTIALSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4506,
-  serialized_end=4563,
+  serialized_start=6309,
+  serialized_end=6396,
 )
 
 
@@ -2731,6 +3621,20 @@ _GETRECORDREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetRecordReq.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetRecordReq.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2743,8 +3647,8 @@ _GETRECORDREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4565,
-  serialized_end=4613,
+  serialized_start=6398,
+  serialized_end=6476,
 )
 
 
@@ -2763,6 +3667,20 @@ _GETRECORDRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetRecordResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetRecordResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2775,8 +3693,8 @@ _GETRECORDRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4615,
-  serialized_end=4644,
+  serialized_start=6478,
+  serialized_end=6537,
 )
 
 
@@ -2795,6 +3713,20 @@ _GETIMAGEREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetImageReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetImageReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2807,8 +3739,8 @@ _GETIMAGEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4646,
-  serialized_end=4673,
+  serialized_start=6539,
+  serialized_end=6596,
 )
 
 
@@ -2827,6 +3759,20 @@ _GETIMAGERESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetImageResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetImageResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2839,8 +3785,8 @@ _GETIMAGERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4675,
-  serialized_end=4703,
+  serialized_start=6598,
+  serialized_end=6656,
 )
 
 
@@ -2852,6 +3798,20 @@ _CANSENDIMAGEREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CanSendImageReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CanSendImageReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2864,8 +3824,8 @@ _CANSENDIMAGEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4705,
-  serialized_end=4722,
+  serialized_start=6658,
+  serialized_end=6705,
 )
 
 
@@ -2884,6 +3844,20 @@ _CANSENDIMAGERESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CanSendImageResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CanSendImageResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2896,8 +3870,8 @@ _CANSENDIMAGERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4724,
-  serialized_end=4755,
+  serialized_start=6707,
+  serialized_end=6768,
 )
 
 
@@ -2909,6 +3883,20 @@ _CANSENDRECORDREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CanSendRecordReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CanSendRecordReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2921,8 +3909,8 @@ _CANSENDRECORDREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4757,
-  serialized_end=4775,
+  serialized_start=6770,
+  serialized_end=6818,
 )
 
 
@@ -2941,6 +3929,20 @@ _CANSENDRECORDRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CanSendRecordResp.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CanSendRecordResp.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2953,8 +3955,8 @@ _CANSENDRECORDRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4777,
-  serialized_end=4809,
+  serialized_start=6820,
+  serialized_end=6882,
 )
 
 
@@ -2966,6 +3968,20 @@ _GETSTATUSREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetStatusReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetStatusReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2978,8 +3994,8 @@ _GETSTATUSREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4811,
-  serialized_end=4825,
+  serialized_start=6884,
+  serialized_end=6928,
 )
 
 
@@ -3005,6 +4021,20 @@ _GETSTATUSRESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetStatusResp.action', index=2,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetStatusResp.echo', index=3,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3017,8 +4047,8 @@ _GETSTATUSRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4827,
-  serialized_end=4872,
+  serialized_start=6930,
+  serialized_end=7005,
 )
 
 
@@ -3030,6 +4060,20 @@ _GETVERSIONINFOREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetVersionInfoReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetVersionInfoReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3042,8 +4086,8 @@ _GETVERSIONINFOREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4874,
-  serialized_end=4893,
+  serialized_start=7007,
+  serialized_end=7056,
 )
 
 
@@ -3081,8 +4125,8 @@ _GETVERSIONINFORESP_EXTRAENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5037,
-  serialized_end=5081,
+  serialized_start=7230,
+  serialized_end=7274,
 )
 
 _GETVERSIONINFORESP = _descriptor.Descriptor(
@@ -3121,6 +4165,20 @@ _GETVERSIONINFORESP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.GetVersionInfoResp.action', index=4,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.GetVersionInfoResp.echo', index=5,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3133,8 +4191,8 @@ _GETVERSIONINFORESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4896,
-  serialized_end=5081,
+  serialized_start=7059,
+  serialized_end=7274,
 )
 
 
@@ -3153,6 +4211,20 @@ _SETRESTARTREQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetRestartReq.action', index=1,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetRestartReq.echo', index=2,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3165,8 +4237,8 @@ _SETRESTARTREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5083,
-  serialized_end=5113,
+  serialized_start=7276,
+  serialized_end=7336,
 )
 
 
@@ -3178,6 +4250,20 @@ _SETRESTARTRESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.SetRestartResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.SetRestartResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3190,8 +4276,8 @@ _SETRESTARTRESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5115,
-  serialized_end=5131,
+  serialized_start=7338,
+  serialized_end=7384,
 )
 
 
@@ -3203,6 +4289,20 @@ _CLEANCACHEREQ = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CleanCacheReq.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CleanCacheReq.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3215,8 +4315,8 @@ _CLEANCACHEREQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5133,
-  serialized_end=5148,
+  serialized_start=7386,
+  serialized_end=7431,
 )
 
 
@@ -3228,6 +4328,20 @@ _CLEANCACHERESP = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='action', full_name='onebot.CleanCacheResp.action', index=0,
+      number=101, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='echo', full_name='onebot.CleanCacheResp.echo', index=1,
+      number=102, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3240,8 +4354,8 @@ _CLEANCACHERESP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5150,
-  serialized_end=5166,
+  serialized_start=7433,
+  serialized_end=7479,
 )
 
 _SENDPRIVATEMSGREQ.fields_by_name['message'].message_type = base__pb2._MESSAGE
@@ -3268,6 +4382,8 @@ _GETGROUPHONORINFORESP.fields_by_name['strong_newbie_list'].message_type = _GETG
 _GETGROUPHONORINFORESP.fields_by_name['emotion_list'].message_type = _GETGROUPHONORINFORESP_HONOR
 _GETVERSIONINFORESP_EXTRAENTRY.containing_type = _GETVERSIONINFORESP
 _GETVERSIONINFORESP.fields_by_name['extra'].message_type = _GETVERSIONINFORESP_EXTRAENTRY
+DESCRIPTOR.message_types_by_name['BaseApiReq'] = _BASEAPIREQ
+DESCRIPTOR.message_types_by_name['BaseApiResp'] = _BASEAPIRESP
 DESCRIPTOR.message_types_by_name['SendPrivateMsgReq'] = _SENDPRIVATEMSGREQ
 DESCRIPTOR.message_types_by_name['SendPrivateMsgResp'] = _SENDPRIVATEMSGRESP
 DESCRIPTOR.message_types_by_name['SendGroupMsgReq'] = _SENDGROUPMSGREQ
@@ -3343,6 +4459,20 @@ DESCRIPTOR.message_types_by_name['SetRestartResp'] = _SETRESTARTRESP
 DESCRIPTOR.message_types_by_name['CleanCacheReq'] = _CLEANCACHEREQ
 DESCRIPTOR.message_types_by_name['CleanCacheResp'] = _CLEANCACHERESP
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+BaseApiReq = _reflection.GeneratedProtocolMessageType('BaseApiReq', (_message.Message,), {
+  'DESCRIPTOR' : _BASEAPIREQ,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseApiReq)
+  })
+_sym_db.RegisterMessage(BaseApiReq)
+
+BaseApiResp = _reflection.GeneratedProtocolMessageType('BaseApiResp', (_message.Message,), {
+  'DESCRIPTOR' : _BASEAPIRESP,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:onebot.BaseApiResp)
+  })
+_sym_db.RegisterMessage(BaseApiResp)
 
 SendPrivateMsgReq = _reflection.GeneratedProtocolMessageType('SendPrivateMsgReq', (_message.Message,), {
   'DESCRIPTOR' : _SENDPRIVATEMSGREQ,

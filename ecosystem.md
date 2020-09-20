@@ -95,3 +95,4 @@
 | [lz1998/Spring-CQ-web](https://github.com/lz1998/Spring-CQ-web) | 基于 SpringCQ 的机器人 web 控制台 |
 | [suisei-cn/stargazer-qq](https://github.com/suisei-cn/stargazer-qq) | 一个灵活的 vtuber 发推/直播动态监控机器人 |
 | [Ninzore/Wecab](https://github.com/Ninzore/Wecab) | 网络内容聚合机器人，支持微博、B站、Twitter 等 |
+|[mgsky1/FG](https://github.com/mgsky1/FG)|基于Nonebot的QQ群机器人，特色功能是利用机器学习算法提取每日的聊天热词，并使用词云+文本的方式进行展示|

@@ -53,6 +53,7 @@
 | Java | HTTP | [thevsk/cqhttp-java-jfinal-sdk](https://github.com/thevsk/cqhttp-java-jfinal-sdk) | thevsk |
 | Kotlin | HTTP | [JuerGenie/juerobot](https://github.com/JuerGenie/juerobot) | JuerGenie |
 | Go | **API:**<br>HTTP,<br>正向 WS<br>**Event:**<br>HTTP,<br>长轮询,<br>正向 WS,<br>反向 WS | [catsworld/qq-bot-api](https://github.com/catsworld/qq-bot-api) | catsworld<br>rikakomoe |
+| Go | 正向 WS | [wdvxdr1123/ZeroBot](https://github.com/wdvxdr1123/ZeroBot) | wdvxdr1123 |
 | C# | HTTP,<br>正向 WS | [int-and-his-friends/Sisters.WudiLib](https://github.com/int-and-his-friends/Sisters.WudiLib) | bleatingsheep |
 | C# | HTTP,<br>正向 WS,<br>反向 WS | [frank-bots/cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan) | frankli0324 |
 | C# | 反向 WS | [cqbef/cqhttp.WebSocketReverse.NETCore](https://github.com/cqbef/cqhttp.WebSocketReverse.NETCore) | cqbef |

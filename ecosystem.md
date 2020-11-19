@@ -24,6 +24,7 @@
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | [Mirai](https://github.com/mamoe/mirai) | yyuueexxiinngg |  |
 | [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
 | [ProtobufBot](https://github.com/ProtobufBot) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容 |
+| [Yiwen-Chan/OneBot-YaYa](https://github.com/Yiwen-Chan/OneBot-YaYa) | [先驱](https://www.xianqubot.com/) | Kanri | |
 
 除了上面的实现，也欢迎大家在其它各类机器人平台实现 OneBot 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
 

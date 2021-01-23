@@ -23,7 +23,8 @@
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | [Mirai](https://github.com/mamoe/mirai) | yyuueexxiinngg |  |
 | [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
-| [ProtobufBot](https://github.com/ProtobufBot) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容 |
+| [GMC](https://github.com/protobufbot/Go-Mirai-Client) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
+| [SMC](https://github.com/protobufbot/Spring-Mirai-Client) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
 | [Yiwen-Chan/OneBot-YaYa](https://github.com/Yiwen-Chan/OneBot-YaYa) | [先驱](https://www.xianqubot.com/) | Kanri | |
 
 除了上面的实现，也欢迎大家在其它各类机器人平台实现 OneBot 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
@@ -44,12 +45,14 @@
 | Node.js | HTTP,<br>正向 WS,<br>反向 WS | [koishijs/koishi](https://github.com/koishijs/koishi) | Shigma |
 | Node.js | 正向 WS | [CaoMeiYouRen/node-coolq-robot](https://github.com/CaoMeiYouRen/node-coolq-robot) | CaoMeiYouRen | 项目已归档，不再更新 |
 | Node.js | HTTP | [XHMM/lemon-bot](https://github.com/XHMM/lemon-bot) | XHMM |
+| Node.js | 反向WS | [ProtobufBot/js-pbbot](https://github.com/protobufbot/js-pbbot) ([Demo](https://github.com/ProtobufBot/js-pbbot/tree/master/example)) | lz1998 | 需要使用[GMC](https://github.com/protobufbot/Go-Mirai-Client/releases)/[SMC](https://github.com/protobufbot/spring-Mirai-Client/releases) |
 | JavaScript | 正向 WS | [pandolia/js-bot](https://github.com/pandolia/js-bot) | pandolia | 作者已删仓库 |
 | Deno | 反向 WS | [nenojs/deno-cqhttp](https://github.com/nenojs/deno-cqhttp) | rikakomoe |
 | PHP | 反向 WS | [zhamao-robot/zhamao-framework](https://github.com/zhamao-robot/zhamao-framework) | crazywhalecc |
 | PHP | HTTP | [LovelyA72/YeziiBot-v2](https://github.com/LovelyA72/YeziiBot-v2) | LovelyA72 |
 | Java | HTTP | [HyDevelop/PicqBotX](https://github.com/HyDevelop/PicqBotX) | Hykilpikonna |
 | Java<br>Kotlin<br>Groovy | 反向 WS | [lz1998/Spring-CQ](https://github.com/lz1998/Spring-CQ)（[教程](https://www.bilibili.com/video/av89649630/)） | lz1998 |
+| Java<br>Kotlin<br>Groovy | 反向 WS | [ProtobufBot/pbbot-spring-boot-starter](https://github.com/protobufbot/pbbot-spring-boot-starter)（[Demo](https://github.com/protobufbot/spring-mirai-server)） | lz1998 | 需要使用[GMC](https://github.com/protobufbot/Go-Mirai-Client/releases)/[SMC](https://github.com/protobufbot/spring-Mirai-Client/releases) |
 | Java | HTTP | [ForteScarlet/simple-robot-core](https://github.com/ForteScarlet/simple-robot-core) | ForteScarlet |
 | Java | HTTP | [thevsk/cqhttp-java-jfinal-sdk](https://github.com/thevsk/cqhttp-java-jfinal-sdk) | thevsk | 项目已不再更新 |
 | Kotlin | HTTP | [JuerGenie/juerobot](https://github.com/JuerGenie/juerobot) | JuerGenie |
@@ -61,6 +64,7 @@
 | C# | 反向 WS | [Yukrai103/Sora](https://github.com/Yukrai103/Sora) | Yukrai103 |
 | PowerShell | HTTP | [cqmoe/cqhttp-powershell-sdk](https://github.com/cqmoe/cqhttp-powershell-sdk) | richardchien | 项目归档，不再更新 |
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
+| 易语言 | 反向 WS | [ProtobufBot/pbbot_e_sdk](https://github.com/ProtobufBot/pbbot_e_sdk) | lz1998<br>GhostSn | 需要使用[GMC](https://github.com/protobufbot/Go-Mirai-Client/releases)/[SMC](https://github.com/protobufbot/spring-Mirai-Client/releases) |
 
 ## 应用案例
 

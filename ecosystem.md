@@ -23,7 +23,6 @@
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | [Mirai](https://github.com/mamoe/mirai) | yyuueexxiinngg |  |
 | [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
-| [ProtobufBot](https://github.com/ProtobufBot) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容 |
 | [Yiwen-Chan/OneBot-YaYa](https://github.com/Yiwen-Chan/OneBot-YaYa) | [先驱](https://www.xianqubot.com/) | Kanri | |
 
 除了上面的实现，也欢迎大家在其它各类机器人平台实现 OneBot 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
@@ -31,6 +30,14 @@
 > **提示**
 >
 > OneBot 实现可以在 README 中添加徽章 ![Badge](https://img.shields.io/badge/OneBot-v11-black) 来表示支持的 OneBot 标准版本，徽章图片 URL 是 `https://img.shields.io/badge/OneBot-v11-black`，可修改 URL 中的 `v11` 以表示不同版本。
+
+### 变种
+
+除了上面列出的基本可以无缝切换的 OneBot 实现，还有一些开发者编写了与 OneBot 部分兼容的实现，这些实现在一些方面破除了 OneBot 的历史包袱，但可能无法与其它 OneBot 实现任意切换。
+
+| 项目地址 | 平台 | 核心作者 | 备注 |
+| --- | --- | --- | --- |
+| [ProtobufBot](https://github.com/ProtobufBot/ProtobufBot) | [Mirai](https://github.com/mamoe/mirai) / [MiraiGo](https://github.com/Mrs4s/MiraiGo) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式改用 Protobuf 序列化 |
 
 ## SDK／开发框架
 

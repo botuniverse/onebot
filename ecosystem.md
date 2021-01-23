@@ -23,8 +23,8 @@
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | [Mirai](https://github.com/mamoe/mirai) | yyuueexxiinngg |  |
 | [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
-| [GMC](https://github.com/protobufbot/Go-Mirai-Client) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
-| [SMC](https://github.com/protobufbot/Spring-Mirai-Client) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
+| [GMC](https://github.com/protobufbot/Go-Mirai-Client) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
+| [SMC](https://github.com/protobufbot/Spring-Mirai-Client) | [Mirai](https://github.com/mamoe/mirai) | lz1998 | 事件和 API 数据内容和 OneBot 一致，通信方式不兼容，ProtoBuf序列化 |
 | [Yiwen-Chan/OneBot-YaYa](https://github.com/Yiwen-Chan/OneBot-YaYa) | [先驱](https://www.xianqubot.com/) | Kanri | |
 
 除了上面的实现，也欢迎大家在其它各类机器人平台实现 OneBot 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
@@ -45,7 +45,7 @@
 | Node.js | HTTP,<br>正向 WS,<br>反向 WS | [koishijs/koishi](https://github.com/koishijs/koishi) | Shigma |
 | Node.js | 正向 WS | [CaoMeiYouRen/node-coolq-robot](https://github.com/CaoMeiYouRen/node-coolq-robot) | CaoMeiYouRen | 项目已归档，不再更新 |
 | Node.js | HTTP | [XHMM/lemon-bot](https://github.com/XHMM/lemon-bot) | XHMM |
-| Node.js | 反向WS | [ProtobufBot/js-pbbot](https://github.com/protobufbot/js-pbbot) ([Demo](https://github.com/ProtobufBot/js-pbbot/tree/master/example)) | lz1998 | 需要使用[GMC](https://github.com/protobufbot/Go-Mirai-Client/releases)/[SMC](https://github.com/protobufbot/spring-Mirai-Client/releases) |
+| Node.js | 反向WS | [ProtobufBot/js-pbbot](https://github.com/protobufbot/js-pbbot) （[Demo](https://github.com/ProtobufBot/js-pbbot/tree/master/example)） | lz1998 | 需要使用[GMC](https://github.com/protobufbot/Go-Mirai-Client/releases)/[SMC](https://github.com/protobufbot/spring-Mirai-Client/releases) |
 | JavaScript | 正向 WS | [pandolia/js-bot](https://github.com/pandolia/js-bot) | pandolia | 作者已删仓库 |
 | Deno | 反向 WS | [nenojs/deno-cqhttp](https://github.com/nenojs/deno-cqhttp) | rikakomoe |
 | PHP | 反向 WS | [zhamao-robot/zhamao-framework](https://github.com/zhamao-robot/zhamao-framework) | crazywhalecc |

@@ -68,6 +68,7 @@
 | C# | 反向 WS | [Yukrai103/Sora](https://github.com/Yukrai103/Sora) | Yukrai103 |
 | PowerShell | HTTP | [cqmoe/cqhttp-powershell-sdk](https://github.com/cqmoe/cqhttp-powershell-sdk) | richardchien | 项目归档，不再更新 |
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
+| C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 |
 
 ## 应用案例
 

@@ -606,6 +606,10 @@
 | `app_name` | string | 应用标识，如 `mirai-native` |
 | `app_version` | string | 应用版本，如 `1.2.3` |
 | `protocol_version` | string | OneBot 标准版本，如 `v11` |
+| `support_method` | array | 支持的通信方式，如 `["http","http_post","websocket","reverse_websocket"]` |
+| `support_api` | array | 支持的API，如 `["get_version_info","set_restart","send_msg","get_msg"]` |
+| `support_event` | array | 支持的事件，如 `["private_msg","group_msg"]` |
+| `support_cq` | array | 支持的cq码，如 `["at","face","image"]` |
 | …… | - | OneBot 实现自行添加的其它内容 |
 
 ## `set_restart` 重启 OneBot 实现

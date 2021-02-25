@@ -1,6 +1,6 @@
 <div align=right>
 
-[主页](README.md)　[生态](ecosystem.md)　[更新日志](changelog.md)　标准版本：[v11](v11/specs/README.md)　[v10](v10/specs/README.md)
+[主页](README.md)　[生态](ecosystem.md)　[更新日志](changelog.md)　标准版本：[v12 草案](v12-draft/specs/README.md)　[v11](v11/specs/README.md)　[v10](v10/specs/README.md)
 
 </div>
 

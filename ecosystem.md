@@ -22,7 +22,7 @@
 | [richardchien/coolq-http-api](https://github.com/richardchien/coolq-http-api) | CKYU | richardchien | 可在 Mirai 平台使用 [mirai-native](https://github.com/iTXTech/mirai-native) 加载 |
 | [Mrs4s/go-cqhttp](https://github.com/Mrs4s/go-cqhttp) | [MiraiGo](https://github.com/Mrs4s/MiraiGo) | Mrs4s |  |
 | [yyuueexxiinngg/cqhttp-mirai](https://github.com/yyuueexxiinngg/cqhttp-mirai) | [Mirai](https://github.com/mamoe/mirai) | yyuueexxiinngg |  |
-| [takayama-lily/onebot](https://github.com/takayama-lily/onebot) | [OICQ](https://github.com/takayama-lily/oicq) | takayama |  |
+| [takayama-lily/node-onebot](https://github.com/takayama-lily/node-onebot) | [node-oicq](https://github.com/takayama-lily/oicq) | takayama |  |
 | [Yiwen-Chan/OneBot-YaYa](https://github.com/Yiwen-Chan/OneBot-YaYa) | [先驱](https://www.xianqubot.com/) | Kanri | |
 
 除了上面的实现，也欢迎大家在其它各类机器人平台实现 OneBot 标准，如果你已经实现了，欢迎通过 pull request 加到上面的表格里～
@@ -66,8 +66,10 @@
 | C# | HTTP,<br>正向 WS,<br>反向 WS | [frank-bots/cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan) | frankli0324 |
 | C# | 反向 WS | [cqbef/cqhttp.WebSocketReverse.NETCore](https://github.com/cqbef/cqhttp.WebSocketReverse.NETCore) | cqbef |
 | C# | 反向 WS | [Yukrai103/Sora](https://github.com/Yukrai103/Sora) | Yukrai103 |
+| C# | 反向 WS | [ParaParty/OneBot-Framework](https://github.com/ParaParty/OneBot-Framework) | ExerciseBook<br>LovelyCatHyt<br>Yorkin | 使用 [Sora](https://github.com/Yukrai103/Sora) 作 OneBot 实现，配合 [ASP.Net Core](https://docs.microsoft.com/en-us/aspnet/core/) 作 IOC DI 框架的 OneBot 指令路由系统 |
 | PowerShell | HTTP | [cqmoe/cqhttp-powershell-sdk](https://github.com/cqmoe/cqhttp-powershell-sdk) | richardchien | 项目归档，不再更新 |
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
+| C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 |
 
 ## 应用案例
 
@@ -108,3 +110,4 @@
 | [Ninzore/Wecab](https://github.com/Ninzore/Wecab) | 网络内容聚合机器人，支持微博、B站、Twitter 等 |
 | [mgsky1/FG](https://github.com/mgsky1/FG) | 基于 NoneBot 的 QQ 群机器人，特色功能是利用机器学习算法提取每日的聊天热词，并使用词云+文本的方式进行展示 |
 | [Yiwen-Chan/GroupManager](https://github.com/Yiwen-Chan/GroupManager) | 基于 qq-bot-api 框架的 QQ 群机器人，支持多种自定义群管功能 |
+| [yuudi/gypsum](https://github.com/yuudi/gypsum) | 简单易用的网页控制台，匹配消息进行回复，也可以使用 jinja 模板与 lua 脚本实现高级功能 |

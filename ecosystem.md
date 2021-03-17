@@ -4,9 +4,11 @@
 <summary>目录</summary>
 <p>
 
-- [OneBot 实现](#onebot-实现)
-- [SDK／开发框架](#sdk开发框架)
-- [应用案例](#应用案例)
+- [生态](#生态)
+  - [OneBot 实现](#onebot-实现)
+    - [变种](#变种)
+  - [SDK／开发框架](#sdk开发框架)
+  - [应用案例](#应用案例)
 
 </p>
 </details>
@@ -55,6 +57,7 @@
 | Deno | 反向 WS | [nenojs/deno-cqhttp](https://github.com/nenojs/deno-cqhttp) | rikakomoe |
 | PHP | 反向 WS | [zhamao-robot/zhamao-framework](https://github.com/zhamao-robot/zhamao-framework) | crazywhalecc |
 | PHP | HTTP | [LovelyA72/YeziiBot-v2](https://github.com/LovelyA72/YeziiBot-v2) | LovelyA72 |
+| PHP | HTTP | [ParaParty/MPBot](https://github.com/ParaParty/MPBot) | endymx |
 | Java | HTTP | [HyDevelop/PicqBotX](https://github.com/HyDevelop/PicqBotX) | Hykilpikonna |
 | Java<br>Kotlin<br>Groovy | 反向 WS | [lz1998/Spring-CQ](https://github.com/lz1998/Spring-CQ)（[教程](https://www.bilibili.com/video/av89649630/)） | lz1998 |
 | Java | HTTP | [ForteScarlet/simple-robot-core](https://github.com/ForteScarlet/simple-robot-core) | ForteScarlet |

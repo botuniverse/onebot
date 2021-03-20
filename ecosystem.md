@@ -112,5 +112,5 @@
 | [suisei-cn/stargazer-qq](https://github.com/suisei-cn/stargazer-qq) | 一个灵活的 vtuber 发推/直播动态监控机器人 |
 | [Ninzore/Wecab](https://github.com/Ninzore/Wecab) | 网络内容聚合机器人，支持微博、B站、Twitter 等 |
 | [mgsky1/FG](https://github.com/mgsky1/FG) | 基于 NoneBot 的 QQ 群机器人，特色功能是利用机器学习算法提取每日的聊天热词，并使用词云+文本的方式进行展示 |
-| [Yiwen-Chan/GroupManager](https://github.com/Yiwen-Chan/GroupManager) | 基于 qq-bot-api 框架的 QQ 群机器人，支持多种自定义群管功能 |
+| [Yiwen-Chan/ZeroBot-Plugin](https://github.com/Yiwen-Chan/ZeroBot-Plugin) | 基于 ZeroBot 开发的群管、点歌、涩图等功能 |
 | [yuudi/gypsum](https://github.com/yuudi/gypsum) | 简单易用的网页控制台，匹配消息进行回复，也可以使用 jinja 模板与 lua 脚本实现高级功能 |

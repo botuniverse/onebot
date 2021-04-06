@@ -148,6 +148,8 @@
 
 | 字段          | 类型   | 可能的值       | 说明           |
 | ------------- | ------ | -------------- | -------------- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `poke` | 提示类型 |
@@ -161,6 +163,8 @@
 
 | 字段          | 类型   | 可能的值       | 说明           |
 | ------------- | ------ | -------------- | -------------- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `lucky_king` | 提示类型 |
@@ -174,6 +178,8 @@
 
 | 字段          | 类型   | 可能的值       | 说明           |
 | ------------- | ------ | -------------- | -------------- |
+| `time` | number (int64) | - | 事件发生的时间戳 |
+| `self_id` | number (int64) | - | 收到事件的机器人 QQ 号 |
 | `post_type`   | string | `notice`       | 上报类型       |
 | `notice_type` | string | `notify` | 消息类型       |
 | `sub_type` | string | `honor` | 提示类型 |

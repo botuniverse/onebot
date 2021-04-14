@@ -1,29 +1,21 @@
-<div align=right>
+# OneBot
 
-[主页](README.md)　[生态](ecosystem.md)　[更新日志](changelog.md)　标准版本：[v12 草案](v12-draft/specs/README.md)　[v11](v11/specs/README.md)　[v10](v10/specs/README.md)
+**OneBot** 是一个聊天机器人应用接口标准，旨在统一不同聊天平台上的机器人应用开发接口，使开发者只需编写一次代码即可应用到多种机器人平台。
 
-</div>
+## 特点
 
-<br>
+- **简单**：接口简单易懂，可轻松接入
+- **兼容性**：兼容原 CQHTTP 插件，零负担迁移
 
-<div align=center>
-  <img src="assets/logo-256.png" width="220" height="220">
+## 导航
 
-# OneBot 标准
+- 版本
+  - [v12 草案](v12-draft/specs/README.md)
+  - [v11](v11/specs/README.md)（当前最新版）
+  - [v10](v10/specs/README.md)
+- [生态](ecosystem.md)
+- [更新日志](changelog.md)
 
-一个聊天机器人应用接口标准
+## 贡献
 
-<br>
-
-[<img src="assets/btn-getting-started.png" width="100">](v11/specs/README.md)
-
-<br>
-
-<table>
-  <tr>
-        <td align=center><h3>简单</h3>接口简单易懂，可轻松接入。<br><img width=300></td>
-        <td align=center><h3>兼容性</h3>兼容原 CQHTTP 插件，零负担迁移。<br><img width=300></td>
-    </tr>
-</table>
-
-</div>
+如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/howmanybots/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](CONTRIBUTING.md)。

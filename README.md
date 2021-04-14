@@ -18,4 +18,4 @@
 
 ## 贡献
 
-如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/howmanybots/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](CONTRIBUTING.md)。
+如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/howmanybots/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](https://github.com/howmanybots/onebot/blob/master/CONTRIBUTING.md)。

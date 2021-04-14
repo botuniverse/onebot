@@ -26,8 +26,8 @@ RFC 从提交到接收需经过下面三个阶段：
 
 ## 更新标准文档
 
-RFC 进入候选阶段后，提出 RFC 的人或社区中其他有兴趣的人可在 [pull requests](https://github.com/howmanybots/onebot/pulls) 中提出 PR，实际地修改标准文档，其中标明所关联的 RFC issue 编号，并在对应 RFC 中标明 PR 编号。
-
-经过 review 和修改后，合并 PR，同时将 RFC 转至接收状态。
+RFC 进入候选阶段后，提出 RFC 的人或社区中其他有兴趣的人可在 [pull requests](https://github.com/howmanybots/onebot/pulls) 中提出 PR，实际地修改标准文档，其中标明所关联的 RFC issue 编号，并在对应 RFC 中标明 PR 编号。经过 review 和修改后，合并 PR，同时将 RFC 转至接收状态。
 
 更新标准文档时，应遵循 [风格指南](style-guide/README.md)。
+
+注意，对标准的更新只应发生在**草案**阶段（例如 `v12-draft`），当一个版本特性稳定后，将发布为正式版本，此后新的变更应创建新的草案版本，正式版本上只可进行小错误修复。

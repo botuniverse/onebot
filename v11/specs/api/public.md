@@ -1,9 +1,5 @@
 # 公开 API
 
-<details>
-<summary>目录</summary>
-<p>
-
 - [`send_private_msg` 发送私聊消息](#send_private_msg-发送私聊消息)
 - [`send_group_msg` 发送群消息](#send_group_msg-发送群消息)
 - [`send_msg` 发送消息](#send_msg-发送消息)
@@ -42,9 +38,6 @@
 - [`get_version_info` 获取版本信息](#get_version_info-获取版本信息)
 - [`set_restart` 重启 OneBot 实现](#set_restart-重启-onebot-实现)
 - [`clean_cache` 清理缓存](#clean_cache-清理缓存)
-
-</p>
-</details>
 
 ## `send_private_msg` 发送私聊消息
 

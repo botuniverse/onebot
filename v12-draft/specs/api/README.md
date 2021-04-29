@@ -1,17 +1,10 @@
 # API
 
-<details>
-<summary>目录</summary>
-<p>
-
 - [参数](#参数)
 - [响应](#响应)
 - [异步调用](#异步调用)
 - [限速调用](#限速调用)
 - [相关配置](#相关配置)
-
-</p>
-</details>
 
 API 是 OneBot 向用户提供的操作接口，用户可通过 HTTP 请求或 WebSocket 消息等方式调用 API。
 

@@ -1,15 +1,8 @@
 # 鉴权
 
-<details>
-<summary>目录</summary>
-<p>
-
 - [HTTP 和正向 WebSocket](#http-和正向-websocket)
 - [反向 WebSocket](#反向-websocket)
 - [相关配置](#相关配置)
-
-</p>
-</details>
 
 在 HTTP POST 通信方式中，OneBot 提供了 [签名](http-post.md#签名) 来保证安全性，而在 HTTP、正向 WebSocket、反向 WebSocket 通信方式中，通过对 access token 进行验证来保证安全性。
 

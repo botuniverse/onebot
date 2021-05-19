@@ -268,13 +268,13 @@ OneBot 并不是商业性质的项目，读者、用户、开发者和标准维�
 
 正确示例：
 
-> 怎样看待 Google 推出的社交网络产品 Google+ ？
+> 怎样看待 Google 推出的社交网络产品 Google+？
 >
 > iCloud 为用户带来了什么？或：iCloud 为开发者带来了什么？
 
 错误示例：
 
-> Google 推出了社交网络产品 Google+ ，大家怎么看？
+> Google 推出了社交网络产品 Google+，大家怎么看？
 >
 > iCloud 为我们带来了什么？
 

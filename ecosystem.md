@@ -63,6 +63,7 @@
 | C# | 反向 WS | [cqbef/cqhttp.WebSocketReverse.NETCore](https://github.com/cqbef/cqhttp.WebSocketReverse.NETCore) | cqbef | 项目归档，不再更新 |
 | C# | 正向 WS,<br>反向 WS | [Yukari316/Sora](https://github.com/Yukari316/Sora) | Yukari316 |
 | C# | 反向 WS | [ParaParty/OneBot-Framework](https://github.com/ParaParty/OneBot-Framework) | ExerciseBook<br>LovelyCatHyt<br>Yorkin | 使用 [Sora](https://github.com/Yukrai103/Sora) 作 OneBot 实现，配合 [ASP.Net Core](https://docs.microsoft.com/en-us/aspnet/core/) 作 IOC DI 框架的 OneBot 指令路由系统 |
+| C# | HTTP,<br>正常 WS | [ac682/Ac682.Hyperai.Clients.CQHTTP](https://github.com/ac682/Ac682.Hyperai.Clients.CQHTTP) | ac682 | 使用 [Hyperai.Abstractions](https://github.com/theGravityLab/Hyperai) 作为基础设施。可以单独使用，也可以作为 [HyperaiShell](https://github.com/theGravityLab/HyperaiShell) 的适配器 |
 | PowerShell | HTTP | [cqmoe/cqhttp-powershell-sdk](https://github.com/cqmoe/cqhttp-powershell-sdk) | richardchien | 项目归档，不再更新 |
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
 | C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 |
@@ -98,6 +99,7 @@
 | [duan602728596/qqtools](https://github.com/duan602728596/qqtools) | 基于 Nwjs 的 QQ 群工具（摩点、口袋 48、微博提醒、入群欢迎、定时喊话、自定义命令和回复信息等） |
 | [Tsuk1ko/CQ-picfinder-robot](https://github.com/Tsuk1ko/CQ-picfinder-robot) | 基于 Saucenao 的搜图机器人 |
 | [kasora/dice](https://github.com/kasora/dice) | COC7 骰子 QQ 机器人 |
+| [ac682/arcbot](https://github.com/ac682/arcbot) | 基于 [ProjHyperai](https://github.com/theGravityLab/ProjHyperai) 的群基础机器人，提供推送转发和一些娱乐功能 |
 | [shidenggui/tuishujun-for-qq](https://github.com/shidenggui/tuishujun-for-qq) | 基于推书君的小说查询推荐 QQ 机器人 |
 | [JuerGenie/cn.juerwhang.jgbot](https://github.com/JuerGenie/cn.juerwhang.jgbot) | 基于 [JuerGenie/juerobot](https://github.com/JuerGenie/juerobot) 的娱乐用 QQ 机器人 |
 | [drsanwujiang/DiceRobot](https://github.com/drsanwujiang/DiceRobot) | 一个基于 coolq-http-api 插件的 TRPG 骰子机器人 |

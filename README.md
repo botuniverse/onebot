@@ -10,7 +10,7 @@
 ## 导航
 
 - 版本
-  - [v12 草案](v12-draft/specs/README.md)
+  - v12 草案
   - [v11](v11/specs/README.md)（当前最新版）
   - [v10](v10/specs/README.md)
 - [生态](ecosystem.md)

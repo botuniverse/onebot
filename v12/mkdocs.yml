@@ -1,0 +1,24 @@
+site_name: OneBot v12 标准
+repo_name: OneBot 标准
+repo_url: https://github.com/botuniverse/onebot
+edit_uri: blob/master/v12/docs/
+theme:
+  name: material
+  custom_dir: material
+  language: zh
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+markdown_extensions:
+  - admonition
+extra:
+  search:
+    language: jp
+
+nav:
+  - 主页: index.md
+  - 介绍: production.md
+  - 指南: 
+    - 通信: specs/index.md

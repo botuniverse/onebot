@@ -1,0 +1,3 @@
+[submodule "v12/material"]
+	path = v12/material
+	url = https://github.com/crazywhalecc/onebot-material-theme.git

@@ -1,7 +1,7 @@
 site_name: OneBot v12 标准
 repo_name: OneBot 标准
 repo_url: https://github.com/botuniverse/onebot
-edit_uri: blob/master/v12/docs/
+edit_uri: blob/v12-draft/v12/docs/
 theme:
   name: material
   custom_dir: material

@@ -1,13 +1,15 @@
 site_name: OneBot v12 标准
-repo_name: OneBot 标准
+repo_name: botuniverse/onebot
 repo_url: https://github.com/botuniverse/onebot
 edit_uri: blob/v12-draft/v12/docs/
 theme:
   name: material
   custom_dir: material
   language: zh
+  logo: assets/logo-white.png
+  favicon: assets/logo.png
   palette:
-    primary: indigo
+    primary: black
     accent: indigo
   features:
     - navigation.tabs
@@ -20,5 +22,6 @@ extra:
 nav:
   - 主页: index.md
   - 介绍: production.md
-  - 指南: 
+  - 生态: ecosystem.md
+  - 指南:
     - 通信: specs/index.md

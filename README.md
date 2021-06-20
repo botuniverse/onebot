@@ -10,12 +10,13 @@
 ## 导航
 
 - 版本
-  - [v12 草案](v12-draft/specs/README.md)
+  - [v12 (WIP)](https://github.com/botuniverse/onebot/pull/108)
   - [v11](v11/specs/README.md)（当前最新版）
-  - [v10](v10/specs/README.md)
+  - [v10](legacy/v10/specs/README.md)
+  - [cqhttp](legacy/cqhttp/README.md)
 - [生态](ecosystem.md)
 - [更新日志](changelog.md)
 
 ## 贡献
 
-如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/howmanybots/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](https://github.com/howmanybots/onebot/blob/master/CONTRIBUTING.md)。
+如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/botuniverse/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](https://github.com/botuniverse/onebot/blob/master/CONTRIBUTING.md)。

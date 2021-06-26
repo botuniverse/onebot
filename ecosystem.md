@@ -38,37 +38,38 @@
 
 | 语言 | 通信方式 | 地址 | 核心作者 | 备注 |
 | ---| --- | --- | --- | --- |
-| Python | HTTP,<br>反向 WS | [nonebot/nonebot](https://github.com/nonebot/nonebot) | richardchien<br>cleoold<br>yanyongyu |
-| Python | HTTP,<br>反向 WS | [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp) | richardchien |
-| Python | HTTP,<br>反向 WS | [nonebot/nonebot2](https://github.com/nonebot/nonebot2) | yanyongyu |
-| Python | HTTP,<br>反向 WS | [SSmJaE/PepperBot](https://github.com/SSmJaE/PepperBot) | SSmJaE |
+| Python | HTTP,<br>反向 WS | [nonebot/nonebot](https://github.com/nonebot/nonebot) | richardchien<br>cleoold<br>yanyongyu ||
+| Python | HTTP,<br>反向 WS | [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp) | richardchien ||
+| Python | HTTP,<br>反向 WS | [nonebot/nonebot2](https://github.com/nonebot/nonebot2) | yanyongyu ||
+| Python | HTTP,<br>反向 WS | [SSmJaE/PepperBot](https://github.com/SSmJaE/PepperBot) | SSmJaE ||
 | Node.js | 正向 WS | [momocow/node-cq-websocket](https://github.com/momocow/node-cq-websocket) | momocow | 项目已归档，不再更新 |
-| Node.js | HTTP,<br>正向 WS,<br>反向 WS | [koishijs/koishi](https://github.com/koishijs/koishi) | Shigma |
+| Node.js | HTTP,<br>正向 WS,<br>反向 WS | [koishijs/koishi](https://github.com/koishijs/koishi) | Shigma ||
 | Node.js | 正向 WS | [CaoMeiYouRen/node-coolq-robot](https://github.com/CaoMeiYouRen/node-coolq-robot) | CaoMeiYouRen | 项目已归档，不再更新 |
-| Node.js | HTTP | [XHMM/lemon-bot](https://github.com/XHMM/lemon-bot) | XHMM |
+| Node.js | HTTP | [XHMM/lemon-bot](https://github.com/XHMM/lemon-bot) | XHMM ||
 | JavaScript | 正向 WS | [pandolia/js-bot](https://github.com/pandolia/js-bot) | pandolia | 作者已删仓库 |
-| Deno | 反向 WS | [nenojs/deno-cqhttp](https://github.com/nenojs/deno-cqhttp) | rikakomoe |
-| PHP | 反向 WS | [zhamao-robot/zhamao-framework](https://github.com/zhamao-robot/zhamao-framework) | crazywhalecc |
-| PHP | HTTP | [LovelyA72/YeziiBot-v2](https://github.com/LovelyA72/YeziiBot-v2) | LovelyA72 |
-| PHP | HTTP | [ParaParty/MPBot](https://github.com/ParaParty/MPBot) | endymx |
-| Java | HTTP | [HyDevelop/PicqBotX](https://github.com/HyDevelop/PicqBotX) | Hykilpikonna |
-| Java<br>Kotlin<br>Groovy | 反向 WS | [lz1998/Spring-CQ](https://github.com/lz1998/Spring-CQ)（[教程](https://www.bilibili.com/video/av89649630/)） | lz1998 |
-| Java | HTTP | [ForteScarlet/simple-robot-core](https://github.com/ForteScarlet/simple-robot-core) | ForteScarlet |
+| Deno | 反向 WS | [nenojs/deno-cqhttp](https://github.com/nenojs/deno-cqhttp) | rikakomoe ||
+| PHP | 反向 WS | [zhamao-robot/zhamao-framework](https://github.com/zhamao-robot/zhamao-framework) | crazywhalecc ||
+| PHP | HTTP | [LovelyA72/YeziiBot-v2](https://github.com/LovelyA72/YeziiBot-v2) | LovelyA72 ||
+| PHP | HTTP | [ParaParty/MPBot](https://github.com/ParaParty/MPBot) | endymx ||
+| Java | HTTP | [HyDevelop/PicqBotX](https://github.com/HyDevelop/PicqBotX) | Hykilpikonna ||
+| Java<br>Kotlin<br>Groovy | 反向 WS | [lz1998/Spring-CQ](https://github.com/lz1998/Spring-CQ)（[教程](https://www.bilibili.com/video/av89649630/)） | lz1998 ||
+| Java | HTTP | [ForteScarlet/simple-robot-core](https://github.com/ForteScarlet/simple-robot-core) | ForteScarlet ||
 | Java | HTTP | [thevsk/cqhttp-java-jfinal-sdk](https://github.com/thevsk/cqhttp-java-jfinal-sdk) | thevsk | 项目已不再更新 |
-| Kotlin | HTTP | [JuerGenie/juerobot](https://github.com/JuerGenie/juerobot) | JuerGenie |
+| Kotlin | HTTP | [JuerGenie/juerobot](https://github.com/JuerGenie/juerobot) | JuerGenie ||
 | Go | **API:**<br>HTTP,<br>正向 WS<br>**Event:**<br>HTTP,<br>长轮询,<br>正向 WS,<br>反向 WS | [catsworld/qq-bot-api](https://github.com/catsworld/qq-bot-api) | catsworld<br>rikakomoe | 项目归档，不再更新 |
-| Go | 正向 WS | [wdvxdr1123/ZeroBot](https://github.com/wdvxdr1123/ZeroBot) | wdvxdr1123 |
-| Go | 正向 WS | [0ojixueseno0/go-Pichubot](https://github.com/0ojixueseno0/go-Pichubot) | 0ojixueseno0 |
-| C# | HTTP,<br>正向 WS,<br>反向 WS | [int-and-his-friends/Sisters.WudiLib](https://github.com/int-and-his-friends/Sisters.WudiLib) | bleatingsheep |
-| C# | HTTP,<br>正向 WS,<br>反向 WS | [frank-bots/cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan) | frankli0324 |
+| Go | 正向 WS | [wdvxdr1123/ZeroBot](https://github.com/wdvxdr1123/ZeroBot) | wdvxdr1123 ||
+| Go | 正向 WS | [0ojixueseno0/go-Pichubot](https://github.com/0ojixueseno0/go-Pichubot) | 0ojixueseno0 ||
+| Go | 反向WS | [huoxue1/leafBot](https://github.com/huoxue1/leafBot) |huoxue1 |拥有一些常用内置插件，支持自由拓展|
+| C# | HTTP,<br>正向 WS,<br>反向 WS | [int-and-his-friends/Sisters.WudiLib](https://github.com/int-and-his-friends/Sisters.WudiLib) | bleatingsheep ||
+| C# | HTTP,<br>正向 WS,<br>反向 WS | [frank-bots/cqhttp.Cyan](https://github.com/frank-bots/cqhttp.Cyan) | frankli0324 ||
 | C# | 反向 WS | [cqbef/cqhttp.WebSocketReverse.NETCore](https://github.com/cqbef/cqhttp.WebSocketReverse.NETCore) | cqbef | 项目归档，不再更新 |
-| C# | 正向 WS,<br>反向 WS | [Yukari316/Sora](https://github.com/Yukari316/Sora) | Yukari316 |
+| C# | 正向 WS,<br>反向 WS | [Yukari316/Sora](https://github.com/Yukari316/Sora) | Yukari316 ||
 | C# | 反向 WS | [ParaParty/OneBot-Framework](https://github.com/ParaParty/OneBot-Framework) | ExerciseBook<br>LovelyCatHyt<br>Yorkin | 使用 [Sora](https://github.com/Yukrai103/Sora) 作 OneBot 实现，配合 [ASP.Net Core](https://docs.microsoft.com/en-us/aspnet/core/) 作 IOC DI 框架的 OneBot 指令路由系统 |
 | C# | HTTP,<br>正向 WS | [ac682/Ac682.Hyperai.Clients.CQHTTP](https://github.com/ac682/Ac682.Hyperai.Clients.CQHTTP) | ac682 | 使用 [Hyperai.Abstractions](https://github.com/theGravityLab/Hyperai) 作为基础设施。可以单独使用，也可以作为 [HyperaiShell](https://github.com/theGravityLab/HyperaiShell) 的适配器 |
 | PowerShell | HTTP | [cqmoe/cqhttp-powershell-sdk](https://github.com/cqmoe/cqhttp-powershell-sdk) | richardchien | 项目归档，不再更新 |
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
-| C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 |
-| Ruby | HTTP,<br>正向 WS | [fantasyzhjk/ruby-cqhttp](https://github.com/fantasyzhjk/ruby-cqhttp) | fantasyzhjk |
+| C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 ||
+| Ruby | HTTP,<br>正向 WS | [fantasyzhjk/ruby-cqhttp](https://github.com/fantasyzhjk/ruby-cqhttp) | fantasyzhjk ||
 
 
 ## 应用案例

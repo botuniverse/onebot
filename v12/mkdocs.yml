@@ -24,4 +24,7 @@ nav:
   - 介绍: production.md
   - 生态: ecosystem.md
   - 指南:
-    - 通信: specs/index.md
+    - 指南: specs/index.md
+    - 通信: 
+      - 通信概述: specs/communication/index.md
+      - HTTP: specs/communication/http.md

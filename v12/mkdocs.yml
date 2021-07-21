@@ -28,3 +28,6 @@ nav:
     - 通信: 
       - 通信概述: specs/communication/index.md
       - HTTP: specs/communication/http.md
+      - HTTP Webhook: specs/communication/http-webhook.md
+      - 正向 WebSocket: specs/communication/websocket.md
+      - 反向 WebSocket: specs/communication/websocket-reverse.md

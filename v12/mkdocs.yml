@@ -31,3 +31,7 @@ nav:
       - HTTP Webhook: specs/communication/http-webhook.md
       - 正向 WebSocket: specs/communication/websocket.md
       - 反向 WebSocket: specs/communication/websocket-reverse.md
+    - OneBot RPC 格式:
+      - 事件: specs/onebot-rpc/event.md
+      - 动作: specs/onebot-rpc/action.md
+      - 动作响应: specs/onebot-rpc/action-response.md

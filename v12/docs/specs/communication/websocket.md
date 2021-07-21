@@ -27,7 +27,7 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 ## 请求
 
 - 正向 WebSocket 通信方式**必须**使用 `ws://` 或 `wss://` 开头的协议进行对接
-- 正向 WebSocket 通信方式**必须**支持 [OneBot RPC - 请求]() 传输的数据格式 `(待定)`
+- 正向 WebSocket 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 libonebot 标准库的开发者：
@@ -40,7 +40,7 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 数据传输指 OneBot 实现与业务代码端建立连接后收发 WebSocket 消息帧的内容。
 
 - 对于正向 WebSocket 通信方式，如果需断开连接，**应该**使用正确的 WebSocket 返回码，如 `1000`（代表 `CLOSE_NORMAL`）
-- OneBot 实现推送的 Event **必须**支持 [OneBot RPC - 事件]() 传输的数据格式 `(待定)`
-- 机器人逻辑代码或框架端发送的 Action **必须**支持 [OneBot RPC - 动作]() 传输的数据格式 `(待定)`
-- OneBot 实现对 Action 的响应**必须**支持 [OneBot RPC - 动作响应]() 传输的数据格式 `(待定)`
+- OneBot 实现推送的 Event **必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
+- 机器人逻辑代码或框架端发送的 Action **必须**支持 [OneBot RPC - 动作](../../onebot-rpc/action) 传输的数据格式 `(待定)`
+- OneBot 实现对 Action 的响应**必须**支持 [OneBot RPC - 动作响应](../../onebot-rpc/action-response) 传输的数据格式 `(待定)`
 

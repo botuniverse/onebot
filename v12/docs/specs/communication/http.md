@@ -26,7 +26,7 @@ HTTP 通信方式适用于：
 ## 请求
 
 - HTTP 请求方式**必须**支持 POST 类型
-- HTTP 请求**必须**支持 [OneBot RPC - 请求]() 传输的数据格式 `(待定)`
+- HTTP 请求**必须**支持 [OneBot RPC - 动作](../../onebot-rpc/action) 传输的数据格式 `(待定)`
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 libonebot 标准库的开发者：
@@ -37,7 +37,7 @@ HTTP 通信方式适用于：
 ## 响应
 
 - 对于响应的状态码，除非是 HTTP 包内容损坏或不合规（比如使用错误的协议版本，一般由各语言的库处理），其余所有的 HTTP 请求响应**应该**使用 `200` 状态码返回
-- HTTP 响应**必须**按照 [OneBot RPC - 响应]() 规定的字段返回数据
+- HTTP 响应**必须**按照 [OneBot RPC - 动作响应](../../onebot-rpc/action-response) 规定的字段返回数据
 - 当按照 HTTP 响应的异常状态码（如 `404`）返回时，也**需要**按照 OneBot RPC 规定的字段返回 Body 内容数据
 
 对于 HTTP 响应，OneBot 实现和 libonebot 标准库**必须**按照下方的约定返回对应的状态：

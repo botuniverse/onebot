@@ -41,8 +41,8 @@
 | Python | HTTP,<br>反向 WS | [nonebot/nonebot](https://github.com/nonebot/nonebot) | richardchien<br>cleoold<br>yanyongyu ||
 | Python | HTTP,<br>反向 WS | [nonebot/aiocqhttp](https://github.com/nonebot/aiocqhttp) | richardchien ||
 | Python | HTTP,<br>反向 WS | [nonebot/nonebot2](https://github.com/nonebot/nonebot2) | yanyongyu ||
-| Python | HTTP,<br>正向 WS| [Graia Avilla](https://github.com/GraiaProject/AvillaCore) | GreyElaina ||
 | Python | HTTP,<br>反向 WS | [SSmJaE/PepperBot](https://github.com/SSmJaE/PepperBot) | SSmJaE ||
+| Python | HTTP,<br>正向 WS| [GraiaProject/AvillaCore](https://github.com/GraiaProject/AvillaCore) | GreyElaina ||
 | Node.js | 正向 WS | [momocow/node-cq-websocket](https://github.com/momocow/node-cq-websocket) | momocow | 项目已归档，不再更新 |
 | Node.js | HTTP,<br>正向 WS,<br>反向 WS | [koishijs/koishi](https://github.com/koishijs/koishi) | Shigma ||
 | Node.js | 正向 WS | [CaoMeiYouRen/node-coolq-robot](https://github.com/CaoMeiYouRen/node-coolq-robot) | CaoMeiYouRen | 项目已归档，不再更新 |

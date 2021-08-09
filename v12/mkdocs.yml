@@ -35,3 +35,6 @@ nav:
       - 事件: specs/onebot-rpc/event.md
       - 动作: specs/onebot-rpc/action.md
       - 动作响应: specs/onebot-rpc/action-response.md
+    - 消息段: specs/message/message-array.md
+    - 动作（Action）: specs/action/index.md
+    - 事件（Event）: specs/event/index.md

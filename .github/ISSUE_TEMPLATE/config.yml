@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用上遇到问题？
+    url: https://github.com/howmanybots/onebot/discussions/categories/%E9%97%AE%E7%AD%94
+    about: 向社区寻求帮助
+  - name: 改进 OneBot 的想法或建议？
+    url: https://github.com/howmanybots/onebot/discussions/categories/%E6%83%B3%E6%B3%95-%E5%BB%BA%E8%AE%AE
+    about: 分享你对 OneBot 新特性的想法，与社区一起讨论 
+  - name: 发布应用、框架或 SDK
+    url: https://github.com/howmanybots/onebot/discussions/categories/%E5%BA%94%E7%94%A8-sdk
+    about: 分享你基于 OneBot 制作的机器人项目、框架或 SDK
+  - name: OneBot 实现相关
+    url: https://github.com/howmanybots/onebot/discussions/categories/%E5%AE%9E%E7%8E%B0
+    about: 分享你的 OneBot 实现，或讨论与具体实现相关的问题

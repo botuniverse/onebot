@@ -1,15 +1,8 @@
 # HTTP
 
-<details>
-<summary>目录</summary>
-<p>
-
 - [请求](#请求)
 - [响应](#响应)
 - [相关配置](#相关配置)
-
-</p>
-</details>
 
 OneBot 在启动时开启一个 HTTP 服务器，监听配置文件指定的 IP 和端口，接受路径为 `/:action` 的 API 请求（或 `/:action/`），如 `/send_private_msg`，请求可以使用 GET 或 POST 方法，可以通过 query 参数（`?arg1=111&arg2=222`）、urlencoded 表单（`arg1=111&arg2=222`）或 JSON（`{"arg1": "111", "arg2": "222"}`）传递参数。
 

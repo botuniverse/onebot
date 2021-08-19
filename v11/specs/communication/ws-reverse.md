@@ -1,15 +1,8 @@
 # 反向 WebSocket
 
-<details>
-<summary>目录</summary>
-<p>
-
 - [连接请求](#连接请求)
 - [断线重连](#断线重连)
 - [相关配置](#相关配置)
-
-</p>
-</details>
 
 OneBot 启动后，作为客户端向用户配置的反向 WebSocket URL 建立连接。连接建立后，将一直保持连接，并根据连接的 URL 不同，提供 API 调用或事件推送服务。通过 WebSocket 消息发送的数据全部使用 JSON 格式。
 

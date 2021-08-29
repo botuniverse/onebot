@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout v12-draft
         uses: actions/checkout@v2
+        with:
+          submodules: true
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master

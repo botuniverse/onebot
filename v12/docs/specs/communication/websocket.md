@@ -13,7 +13,7 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 
 ## 配置
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - 正向 WebSocket **需要**提供配置服务器监听地址和端口的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `ws.host`、`ws.port`、`ws.enable` 分别代表监听地址、端口和是否启用正向 WebSocket 通信方式
@@ -30,7 +30,7 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 - 正向 WebSocket 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - 正向 WebSocket 通信方式**必须**支持 endpoint 的动作请求，也就是所有动作请求都发到 `/`
 - 正向 WebSocket 通信方式**可选**支持旧版本（v11）标准中的使用 URL 路由传递动作（Action）

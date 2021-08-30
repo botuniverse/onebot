@@ -12,7 +12,7 @@ HTTP Webhook 通信方式适用于：
 
 ## 配置
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - HTTP Webhook 通信方式**必须**提供对 HTTP Webhook 目标通信地址配置的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `http_webhook.url`、`http_webhook.enable` 代表订阅地址和是否启用 Webhook
@@ -30,10 +30,10 @@ HTTP Webhook 通信方式适用于：
 - HTTP Webhook 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - HTTP Webhook 上报时**必须**采用 JSON 格式上报数据
-- HTTP Webhook 上报时 HTTP Header **必须**拥有 `X-Self-ID` 来声明 OneBot 实现或 libonebot 本身的身份 ID
+- HTTP Webhook 上报时 HTTP Header **必须**拥有 `X-Self-ID` 来声明 OneBot 实现或 LibOneBot 本身的身份 ID
 - 如果用户配置了 secret 签名密钥，HTTP 请求中**必须**带有 `X-Signature` 头信息，签名相关标准见下方 `签名`
 
 ## 响应

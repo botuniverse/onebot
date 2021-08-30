@@ -5,7 +5,7 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 ## 格式
 
 - 每个动作响应的数据都**必须**使用 JSON 格式进行传递
-- 动作响应**必须**由 OneBot 实现或 libonebot 库返回给 OneBot 逻辑代码端
+- 动作响应**必须**由 OneBot 实现或 LibOneBot 库返回给 OneBot 逻辑代码端
 
 ## 字段
 

@@ -5,8 +5,8 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 ## 格式
 
 - 每个动作的数据都**必须**使用 JSON 格式进行传递
-- 动作**必须**由 OneBot 机器人逻辑端发出，由 OneBot 实现或 libonebot 库进行处理
-- 每个动作**必须**有动作响应，由 OneBot 实现或 libonebot 库响应，详见 [OneBot RPC - 动作响应](../action-response)
+- 动作**必须**由 OneBot 机器人逻辑端发出，由 OneBot 实现或 LibOneBot 库进行处理
+- 每个动作**必须**有动作响应，由 OneBot 实现或 LibOneBot 库响应，详见 [OneBot RPC - 动作响应](../action-response)
 
 ## 字段
 
@@ -23,6 +23,6 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 
 字段名 | 变量类型 | 说明
 --- | --- | ---
-`echo` | mixed | 标记动作本身的字段，OneBot 实现或 libonebot 在响应动作时应作为原样返回
+`echo` | mixed | 标记动作本身的字段，OneBot 实现或 LibOneBot 在响应动作时应作为原样返回
 
 对于核心动作集要求包含的字段及相关标准，见`(待定)`。

@@ -12,7 +12,7 @@ HTTP 通信方式适用于：
 
 ## 配置
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - HTTP 通信方式**需要**提供对 HTTP 通信方式配置的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `http.host`、`http.port`、`http.enable` 分别代表监听地址、端口和是否启用 HTTP 通信方式
@@ -29,7 +29,7 @@ HTTP 通信方式适用于：
 - HTTP 请求**必须**支持 [OneBot RPC - 动作](../../onebot-rpc/action) 传输的数据格式 `(待定)`
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
-对于 OneBot 实现和 libonebot 标准库的开发者：
+对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
 - HTTP 通信方式**必须**支持 endpoint 的动作请求，也就是所有动作请求都发到 `/`
 - HTTP 通信方式**可选**支持旧版本（v11）标准中的使用 URL 路由传递动作（Action）
@@ -40,7 +40,7 @@ HTTP 通信方式适用于：
 - HTTP 响应**必须**按照 [OneBot RPC - 动作响应](../../onebot-rpc/action-response) 规定的字段返回数据
 - 当按照 HTTP 响应的异常状态码（如 `404`）返回时，也**需要**按照 OneBot RPC 规定的字段返回 Body 内容数据
 
-对于 HTTP 响应，OneBot 实现和 libonebot 标准库**必须**按照下方的约定返回对应的状态：
+对于 HTTP 响应，OneBot 实现和 LibOneBot 标准库**必须**按照下方的约定返回对应的状态：
 
 - 如果设置了鉴权，但收到的请求未包含鉴权信息，HTTP 状态码为 401
 - 如果设置了鉴权，但收到的请求鉴权信息不符合，状态码为 403

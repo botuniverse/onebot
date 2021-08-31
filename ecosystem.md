@@ -74,7 +74,7 @@
 | Lua | HTTP,<br>正向 WS | [cleoold/cqhttp-lua53-sdk](https://github.com/cleoold/cqhttp-lua53-sdk) | cleoold | 项目归档，不再更新 |
 | C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 ||
 | Ruby | HTTP,<br>正向 WS | [fantasyzhjk/ruby-cqhttp](https://github.com/fantasyzhjk/ruby-cqhttp) | fantasyzhjk ||
-
+| Rust | 反向 WS | [abrahum/nonebot-rs](https://github.com/abrahum/nonebot-rs) | abrahum ||
 
 ## 应用案例
 

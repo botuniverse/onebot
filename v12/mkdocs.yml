@@ -38,4 +38,4 @@ nav:
     - 消息段: specs/message/message-array.md
     - 动作（Action）: specs/action/index.md
     - 事件（Event）: specs/event/index.md
-    - 术语表: specs/glossary/index.mds
+    - 术语表: specs/glossary/index.md

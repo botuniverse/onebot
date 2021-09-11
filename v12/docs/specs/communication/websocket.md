@@ -27,6 +27,7 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 
 - 正向 WebSocket 通信方式**必须**使用 `ws://` 或 `wss://` 开头的协议进行对接
 - 正向 WebSocket 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
+- 如果在通讯过程中，发起的 WebSocket 数据包的 message 类型为 binary（二进制），则**必须**按照 MsgPack 格式进行收发
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：

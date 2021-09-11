@@ -33,7 +33,7 @@ nav:
       - 概述:
         - 术语表: specs/glossary/index.md
       - OneBot RPC:
-        - 通信: 
+        - 通信:
           - 通信概述: specs/communication/index.md
           - HTTP: specs/communication/http.md
           - HTTP Webhook: specs/communication/http-webhook.md

@@ -28,6 +28,7 @@ OneBot 实现作为 WebSocket 客户端，发起 WebSocket 连接，提供 Actio
 - OneBot 实现在发起 WebSocket 连接请求时，**必须**使用 WebSocket 的 HTTP 头信息，包括 `Connection: Upgrade` 和 `Upgrade: websocket`
 - OneBot 实现如果支持配置鉴权，**必须**包含 `X-Client-Role` 头部鉴权信息
 - OneBot 实现发起的 WebSocket 连接 URL **必须**使用 `ws://` 或 `wss://` 开头
+- 如果在通讯过程中，发起的 WebSocket 数据包的 message 类型为 binary（二进制），则**必须**按照 MsgPack 格式进行收发
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：

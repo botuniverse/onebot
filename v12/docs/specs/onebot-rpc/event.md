@@ -21,6 +21,9 @@ OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Exten
 `type` | string | 事件类型名称，**必须**是 `message`、`notice`、`request`、`meta_event` 的其中一种
 `detail_type` | string | 事件的子类型，一般用作区分对于消息或通知、请求类事件的具体细分类型，核心事件集规定群组以及私聊相关的子事件**必须**使用 `group` 和 `private`，对于其他需要自行扩展的，**必须**使用平台专有前缀，如 `qq_`
 `sub_type` | string | 一般用作事件具体类型的表明，可为空，但不存在时**必须**使用空字符串，**不可**缺少此参数（例如：QQ 群内的禁言通知，可能区分为解禁或禁言两种类型）
+`id` | int64 | 事件的唯一 ID，不同事件不可以使用同一个 ID
+`platform` | string | 平台名称
+
 
 对于类型为 `message` 的事件，**必须**包含以下字段：
 

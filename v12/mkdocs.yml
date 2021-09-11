@@ -19,6 +19,8 @@ markdown_extensions:
 extra:
   search:
     language: jp
+extra_javascript:
+  - javascripts/config.js
 
 nav:
   - 主页: index.md

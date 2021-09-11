@@ -19,6 +19,9 @@ markdown_extensions:
 extra:
   search:
     language: jp
+  analytics:
+    provider: google
+    property: G-7GZP8RMCBB
 extra_javascript:
   - javascripts/config.js
 

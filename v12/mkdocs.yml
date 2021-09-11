@@ -12,6 +12,7 @@ theme:
     primary: black
     accent: indigo
   features:
+    - navigation.sections
     - navigation.tabs
 markdown_extensions:
   - admonition
@@ -24,18 +25,21 @@ nav:
   - 介绍: production.md
   - 生态: ecosystem.md
   - 指南:
-    - 指南: specs/index.md
-    - 通信: 
-      - 通信概述: specs/communication/index.md
-      - HTTP: specs/communication/http.md
-      - HTTP Webhook: specs/communication/http-webhook.md
-      - 正向 WebSocket: specs/communication/websocket.md
-      - 反向 WebSocket: specs/communication/websocket-reverse.md
-    - OneBot RPC 格式:
-      - 事件: specs/onebot-rpc/event.md
-      - 动作: specs/onebot-rpc/action.md
-      - 动作响应: specs/onebot-rpc/action-response.md
-    - 消息段: specs/message/message-array.md
-    - 动作（Action）: specs/action/index.md
-    - 事件（Event）: specs/event/index.md
-    - 术语表: specs/glossary/index.md
+      - 概述:
+        - 术语表: specs/glossary/index.md
+      - OneBot RPC:
+        - 通信: 
+          - 通信概述: specs/communication/index.md
+          - HTTP: specs/communication/http.md
+          - HTTP Webhook: specs/communication/http-webhook.md
+          - 正向 WebSocket: specs/communication/websocket.md
+          - 反向 WebSocket: specs/communication/websocket-reverse.md
+        - 数据协议:
+          - 事件: specs/onebot-rpc/event.md
+          - 动作: specs/onebot-rpc/action.md
+          - 动作响应: specs/onebot-rpc/action-response.md
+      - 核心接口定义:
+        - 消息段: specs/message/message-array.md
+        - 动作（Action）: specs/action/index.md
+        - 事件（Event）: specs/event/index.md
+        

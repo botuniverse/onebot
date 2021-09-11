@@ -14,7 +14,6 @@ HTTP Webhook 通信方式适用于：
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
-- HTTP Webhook 通信方式**必须**提供对 HTTP Webhook 目标通信地址配置的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `http_webhook.url`、`http_webhook.enable` 代表订阅地址和是否启用 Webhook
 - 对于 HTTP Webhook 通信方式，**需要**实现鉴权模块，使用 Access Token 形式进行配置，**建议**使用 `access_token` 作为配置项名称
 - 配置字段**可选**支持配置多个 Webhook 地址，当支持多个地址时，**推荐**支持配置事件发送顺序

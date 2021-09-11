@@ -15,7 +15,6 @@ OneBot 实现作为 WebSocket 服务端，接受用户连接，提供 Action 调
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
-- 正向 WebSocket **需要**提供配置服务器监听地址和端口的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `ws.host`、`ws.port`、`ws.enable` 分别代表监听地址、端口和是否启用正向 WebSocket 通信方式
 - 对于正向 WebSocket 通信方式，**需要**实现鉴权模块，使用 Access Token 形式进行配置，**建议**使用 `access_token` 作为配置项名称
 - 如果监听地址为广播地址，**建议**增加安全提示，告知用户监听地址的安全问题及使用鉴权的提示 `(待定)`

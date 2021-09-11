@@ -15,7 +15,6 @@ OneBot 实现作为 WebSocket 客户端，发起 WebSocket 连接，提供 Actio
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：
 
-- 反向 WebSocket 通信方式**必须**提供对 WebSocket 目标通信地址配置的方式，如果使用配置文件，**应该**使用 JSON 格式进行统一
 - 使用配置文件的字段名**建议**使用 `ws_reverse.url`、`ws_reverse.enable` 分别代表连接地址和是否启用反向 WebSocket 通信方式
 - 对于反向 WebSocket 通信方式，**需要**实现鉴权模块，使用 Access Token 形式进行配置，**建议**使用 `access_token` 作为配置项名称
 - 配置字段**可选**支持配置多个 WebSocket 地址

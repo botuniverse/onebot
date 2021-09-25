@@ -16,6 +16,8 @@ theme:
     - navigation.tabs
 markdown_extensions:
   - admonition
+  - pymdownx.tabbed
+  - pymdownx.superfences
 extra:
   search:
     language: jp
@@ -43,8 +45,9 @@ nav:
           - 事件: specs/onebot-rpc/event.md
           - 动作: specs/onebot-rpc/action.md
           - 动作响应: specs/onebot-rpc/action-response.md
+      - 消息格式:
+        - 消息格式: specs/message/message-array.md
       - 核心接口定义:
-        - 消息段: specs/message/message-array.md
         - 动作（Action）: specs/action/index.md
         - 事件（Event）: specs/event/index.md
         

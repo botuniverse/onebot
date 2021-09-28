@@ -30,24 +30,27 @@ extra_javascript:
 nav:
   - 主页: index.md
   - 介绍: production.md
-  - 生态: ecosystem.md
+  - 生态:
+    - OneBot 实现 / LibOneBot: ecosystem/libonebot.md
+    - OneBot 开发框架 / SDK: ecosystem/onebot-sdk.md
+    - OneBot 应用案例: ecosystem/onebot-application.md
   - 指南:
-      - 概述:
-        - 术语表: specs/glossary/index.md
-      - OneBot RPC:
-        - 通信:
-          - 通信概述: specs/communication/index.md
-          - HTTP: specs/communication/http.md
-          - HTTP Webhook: specs/communication/http-webhook.md
-          - 正向 WebSocket: specs/communication/websocket.md
-          - 反向 WebSocket: specs/communication/websocket-reverse.md
-        - 数据协议:
-          - 事件: specs/onebot-rpc/event.md
-          - 动作: specs/onebot-rpc/action.md
-          - 动作响应: specs/onebot-rpc/action-response.md
-      - 消息格式:
-        - 消息格式: specs/message/message-array.md
-      - 核心接口定义:
-        - 动作（Action）: specs/action/index.md
-        - 事件（Event）: specs/event/index.md
+    - 概述:
+      - 术语表: specs/glossary/index.md
+    - OneBot RPC:
+      - 通信:
+        - 通信概述: specs/communication/index.md
+        - HTTP: specs/communication/http.md
+        - HTTP Webhook: specs/communication/http-webhook.md
+        - 正向 WebSocket: specs/communication/websocket.md
+        - 反向 WebSocket: specs/communication/websocket-reverse.md
+      - 数据协议:
+        - 事件: specs/onebot-rpc/event.md
+        - 动作: specs/onebot-rpc/action.md
+        - 动作响应: specs/onebot-rpc/action-response.md
+    - 消息格式:
+      - 消息格式: specs/message/message-array.md
+    - 核心接口定义:
+      - 动作（Action）: specs/action/index.md
+      - 事件（Event）: specs/event/index.md
         

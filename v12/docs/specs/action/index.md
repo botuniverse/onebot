@@ -694,10 +694,40 @@ transfer 为分段传输文件的阶段
 
 获取 OneBot 实现的运行状态。
 
-待定。
+=== "请求参数"
 
-good
+    无请求参数。
 
+=== "响应参数"
+
+    字段名 | 数据类型 | 说明
+    --- | --- | ---
+    `good` | bool | 是否各项状态都符合预期，OneBot 实现各模块均正常
+    `online` | bool | OneBot 实现对接的平台连接是否顺畅（如 QQ 平台为是否在线）
+
+=== "请求数据"
+
+    ```json
+    {
+        "action": "get_version",
+        "params": []
+    }
+    ```
+
+=== "响应数据"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": {
+            "name": "go-onebot-qq",
+            "platform": "qq",
+            "version": "1.2.0",
+            "onebot_version": "12"
+        }
+    }
+    ```
 
 ## get_version 获取版本信息
 

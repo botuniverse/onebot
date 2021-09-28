@@ -16,7 +16,7 @@ HTTP 通信方式适用于：
 
 - 使用配置文件的字段名**建议**使用 `http.host`、`http.port`、`http.enable` 分别代表监听地址、端口和是否启用 HTTP 通信方式
 - 对于 HTTP 通信方式，**需要**实现鉴权模块，使用 Access Token 形式进行配置，**建议**使用 `access_token` 作为配置项名称
-- 如果监听地址设置为广播监听地址，**建议**增加安全提示，告知用户监听地址的安全问题及使用鉴权的提示 `(待定)`
+- 如果监听地址设置为广播监听地址，**建议**增加安全提示，告知用户监听地址的安全问题及使用鉴权的提示
 
 对于 OneBot 机器人业务代码和框架的开发者：
 
@@ -25,7 +25,7 @@ HTTP 通信方式适用于：
 ## 请求
 
 - HTTP 请求方式**必须**支持 POST 类型
-- HTTP 请求**必须**支持 [OneBot RPC - 动作](../../onebot-rpc/action) 传输的数据格式 `(待定)`
+- HTTP 请求**必须**支持 [OneBot RPC - 动作](../../onebot-rpc/action) 传输的数据格式
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：

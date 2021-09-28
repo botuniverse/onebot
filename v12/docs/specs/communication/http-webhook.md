@@ -26,7 +26,7 @@ HTTP Webhook 通信方式适用于：
 ## 请求
 
 - OneBot 实现在 HTTP Webhook 通信方式下**必须**使用 POST 类型发出
-- HTTP Webhook 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式 `(待定)`
+- HTTP Webhook 通信方式**必须**支持 [OneBot RPC - 事件](../../onebot-rpc/event) 传输的数据格式
 - 发起的 HTTP 请求**必须**合法，符合 [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231) 规范
 
 对于 OneBot 实现和 LibOneBot 标准库的开发者：

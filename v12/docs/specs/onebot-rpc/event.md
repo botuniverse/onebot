@@ -24,23 +24,11 @@ OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Exten
 `id` | int64 | 事件的唯一 ID，不同事件不可以使用同一个 ID
 `platform` | string | 平台名称
 
-
-对于类型为 `message` 的事件，**必须**包含以下字段：
-
-字段名 | 变量类型 | 说明
---- | --- | ---
-`message` | array | 消息本身的所有数据，以 array 格式包含消息内所有的数据，关于消息段的定义，见`(待定)`
-`message_id` | string | 消息的唯一 ID，由 LibOneBot 指定，不同消息**必须**使用不同的 ID
-`user_id` | string | 消息发送者，如果在兼容 OneBot 标准时存在匿名用户或群内系统自身发送的消息，**需要**指定为固定值并告知 OneBot 对接用户以便排除
-`alt_message` | string | 消息的字符串表现形式，一般用于只对消息本身内容不敏感的处理上使用，将多媒体字段转义为无内容符号，如 `[图片]`、`[语音]`
-
 对于类型为 `message` 的事件，在 `detail_type` 为 `group` 时**必须**包含以下字段：
 
 字段名 | 变量类型 | 说明
 --- | --- | ---
 `group_id` | string | 群自身 ID
-
-对于类型为 `notice` 的事件，没有必须要包含的额外字段。
 
 对于类型为 `request` 的事件，**必须**包含以下字段：
 
@@ -51,15 +39,26 @@ OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Exten
 对于扩展事件，如果需要带有额外的参数，**需要**将额外的参数使用前缀 `xxx_`（xxx 为平台对应的 `platform`）。
 
 下面是一个典型的符合 OneBot RPC 规范的事件数据格式：
+
 ```json
 {
-  "self_id": "123234",
-  "messsage": "这都是大棚的瓜",
-  "type": "message",
-  "detail_type": "private",
-  "user_id": "123456788",
-  "sub_type": "",
-  "qq_nickname": "这瓜保熟吗"
+    "self_id": "123234",
+    "messsage": [
+        {
+            "type": "text",
+            "data": {
+                "text": "OneBot is not a bot"
+            }
+        }
+    ],
+    "message_id": "6283",
+    "id": 80203,
+    "type": "message",
+    "detail_type": "private",
+    "user_id": "123456788",
+    "sub_type": "",
+    "qq_nickname": "海阔天空",
+    "platform": "qq"
 }
 ```
 

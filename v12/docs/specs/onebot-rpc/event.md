@@ -10,7 +10,7 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 
 ## 字段
 
-OneBot 事件分为标准事件集（Core Event Set）和扩展事件集（Extended Events）。
+OneBot 事件分为标准事件集（Standard Event Set）和扩展事件集（Extended Events）。
 
 无论标准事件集还是扩展事件集，都**必须**包含以下字段：
 

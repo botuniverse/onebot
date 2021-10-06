@@ -88,7 +88,7 @@ OneBot 实现和机器人业务端通过网络连接的规范，规范包括通�
 
 OneBot 实现和机器人业务端通过动态链接库连接的规范，规范包括函数调用约定和数据协议。
 
-## 标准事件集（Core Events）
+## 标准事件集（Standard Events）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的事件，以及与 OneBot 实现本身相关的元事件。
 
@@ -96,18 +96,18 @@ OneBot 标准定义的一系列在不同机器人平台普遍存在的事件，�
 
 OneBot 实现在标准事件集之外扩展的事件。
 
-## 标准动作集（Core Actions）
+## 标准动作集（Standard Actions）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的动作，以及用于控制/查询 OneBot 实现本身的动作。
 
 ## 扩展动作（Extended Action）
 
-OneBot 实现在核心动作集之外扩展的动作。
+OneBot 实现在标准动作集之外扩展的动作。
 
-## 标准消息段集（Core Segments）
+## 标准消息段集（Standard Segments）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的消息段。
 
 ## 扩展消息段（Extended Segment）
 
-OneBot 实现在核心消息段集之外扩展的消息段。
+OneBot 实现在标准消息段集之外扩展的消息段。

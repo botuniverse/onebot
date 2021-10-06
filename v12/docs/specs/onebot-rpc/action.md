@@ -10,9 +10,9 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 
 ## 字段
 
-动作分为核心动作（Core Action Set）和扩展动作（Extended Actions），扩展动作必须带有响应平台的前缀，如 `qq_`。
+动作分为标准动作集（Standard Action Set）和扩展动作（Extended Actions），扩展动作必须带有响应平台的前缀，如 `qq_`。
 
-无论是核心动作还是扩展动作，都**必须**包含以下字段：
+无论是标准动作还是扩展动作，都**必须**包含以下字段：
 
 字段名 | 变量类型 | 说明
 --- | --- | ---
@@ -25,9 +25,9 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 --- | --- | ---
 `echo` | mixed | 标记动作本身的字段，OneBot 实现或 LibOneBot 在响应动作时应作为原样返回
 
-对于核心动作集要求包含的字段及相关标准，见 [OneBot RPC - 动作](../../onebot-rpc/action)。
+对于标准动作集要求包含的字段及相关标准，见 [OneBot RPC - 动作](../../onebot-rpc/action)。
 
 对于动作扩展时要注意：
 
-- 核心动作的扩展参数：加 `platform` 前缀，如 `params.qq_nickname`
+- 标准动作的扩展参数：加 `platform` 前缀，如 `params.qq_nickname`
 - 扩展动作的 `action`：加 `platform` 前缀，同时其它参数任意扩展，如 `qq_get_group_honor_info`

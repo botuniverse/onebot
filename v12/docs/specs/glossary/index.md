@@ -65,7 +65,7 @@ OneBot 实现向机器人业务端传送事件的行为称为**推送（Push）*
 
 表示聊天消息的一个部分，在一些平台上，聊天消息支持图文混排，其中就会有多个消息段，分别表示每个图片和每段文字。
 
-## OneBotRPC
+## OneBot RPC
 
 OneBot 实现和机器人业务端通过网络连接的规范，规范包括通信方式和数据协议。
 
@@ -82,21 +82,21 @@ OneBot 实现和机器人业务端通过网络连接的规范，规范包括通�
 - 动作请求（Action Request 或 Request）
 - 动作响应（Action Response 或 Response）
 
-## OneBotABI
+## OneBot ABI
 
 > 挖坑中……
 
 OneBot 实现和机器人业务端通过动态链接库连接的规范，规范包括函数调用约定和数据协议。
 
-## 核心事件集（Core Events）
+## 标准事件集（Core Events）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的事件，以及与 OneBot 实现本身相关的元事件。
 
 ## 扩展事件（Extended Event）
 
-OneBot 实现在核心事件集之外扩展的事件。
+OneBot 实现在标准事件集之外扩展的事件。
 
-## 核心动作集（Core Actions）
+## 标准动作集（Core Actions）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的动作，以及用于控制/查询 OneBot 实现本身的动作。
 
@@ -104,7 +104,7 @@ OneBot 标准定义的一系列在不同机器人平台普遍存在的动作，�
 
 OneBot 实现在核心动作集之外扩展的动作。
 
-## 核心消息段集（Core Segments）
+## 标准消息段集（Core Segments）
 
 OneBot 标准定义的一系列在不同机器人平台普遍存在的消息段。
 

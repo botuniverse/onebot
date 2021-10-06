@@ -25,10 +25,10 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
 
 === "响应参数"
 
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `message_id` | string | - | 唯一的消息 ID，无论消息是否成功发送
-    `time` | int64 | - | 消息成功发出的时间戳
+    字段名 | 数据类型 | 说明
+    --- | --- | ---
+    `message_id` | string | 唯一的消息 ID，无论消息是否成功发送
+    `time` | int64 | 消息成功发出的时间戳
 
 === "请求数据"
 
@@ -56,6 +56,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "message_id": "2452352435",
             "time": 1627476314
@@ -93,7 +94,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -129,7 +131,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -167,7 +170,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -205,7 +209,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -239,7 +244,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -275,7 +281,8 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     ```json
     {
         "status": "ok",
-        "retcode": 0
+        "retcode": 0,
+        "message": ""
     }
     ```
 
@@ -311,6 +318,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "user_id": "123456",
             "nickname": "foo"
@@ -354,6 +362,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "user_id": "123456",
             "nickname": "foo"
@@ -395,6 +404,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": [
             {
                 "user_id": "123456",
@@ -444,6 +454,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "group_id": "123456",
             "group_name": "foo"
@@ -487,6 +498,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": [
             {
                 "group_id": "123456",
@@ -536,6 +548,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "group_id": "123456",
             "user_id": "3847573",
@@ -582,6 +595,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": [
             {
                 "user_id": "111222333",
@@ -647,6 +661,7 @@ OneBot 动作（原 OneBot API）是指通过通信方式向用户提供操作�
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
         }
@@ -720,6 +735,7 @@ transfer 为分段传输文件的阶段
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "name": "go-onebot-qq",
             "platform": "qq",
@@ -763,6 +779,7 @@ transfer 为分段传输文件的阶段
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": {
             "name": "go-onebot-qq",
             "platform": "qq",
@@ -807,6 +824,7 @@ transfer 为分段传输文件的阶段
     {
         "status": "ok",
         "retcode": 0,
+        "message": "",
         "data": [
             {
                 "type": "message",

@@ -20,7 +20,7 @@ markdown_extensions:
   - pymdownx.superfences
 extra:
   search:
-    language: jp
+    language: jp # 不支持中文，改成日文好像能搜到一部分中文了（无语）
   analytics:
     provider: google
     property: G-7GZP8RMCBB
@@ -48,9 +48,9 @@ nav:
         - 事件: specs/onebot-rpc/event.md
         - 动作: specs/onebot-rpc/action.md
         - 动作响应: specs/onebot-rpc/action-response.md
-    - 消息格式:
-      - 消息格式: specs/message/message-array.md
-    - 核心接口定义:
-      - 动作（Action）: specs/action/index.md
-      - 事件（Event）: specs/event/index.md
+        - 错误码: specs/onebot-rpc/retcode.md
+    - 标准接口:
+      - 事件: specs/event/index.md
+      - 动作: specs/action/index.md
+      - 消息: specs/message/index.md
         

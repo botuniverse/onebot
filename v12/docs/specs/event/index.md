@@ -9,7 +9,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
 
 在所有能够推送事件的通信方式中（HTTP POST、正向和反向 WebSocket），事件都以 JSON 格式表示。
 
-本章说明的为 OneBot 标准中核心事件附带的参数和相应的内容，关于 OneBot 事件本身所必须携带的参数格式定义，见 [OneBot RPC - 事件](../onebot-rpc/event)。
+本章说明的为 OneBot 标准中标准事件附带的参数和相应的内容，关于 OneBot 事件本身所必须携带的参数格式定义，见 [OneBot RPC - 事件](../onebot-rpc/event)。
 
 ## message 消息事件
 
@@ -37,7 +37,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "messsage": [
@@ -87,7 +87,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "messsage": [
@@ -140,7 +140,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -172,7 +172,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -203,7 +203,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -234,7 +234,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -266,7 +266,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -295,7 +295,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -324,7 +324,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "notice",
@@ -356,7 +356,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "meta",
@@ -383,7 +383,7 @@ OneBot 事件是用户需要从 OneBot 被动接收的数据，有以下几个�
     ```json
     {
         "self_id": "123234",
-        "id": 80203,
+        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "time": 1632847927,
         "platform": "qq",
         "type": "meta",

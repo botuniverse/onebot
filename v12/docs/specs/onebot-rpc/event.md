@@ -10,25 +10,19 @@ OneBot 标准中包含了对传输数据格式的规定和要求，下面是对�
 
 ## 字段
 
-OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Extended Events）。
+OneBot 事件分为标准事件集（Core Event Set）和扩展事件集（Extended Events）。
 
-无论核心事件集还是扩展事件集，都**必须**包含以下字段：
+无论标准事件集还是扩展事件集，都**必须**包含以下字段：
 
 字段名 | 变量类型 | 说明
 --- | --- | ---
 `time` | int64 | 事件发生的时间戳
 `self_id` | string | 一般用于表明 OneBot 实现自身的身份 ID，如 TG 机器人可指定为机器人自身的 ID
 `type` | string | 事件类型名称，**必须**是 `message`、`notice`、`request`、`meta_event` 的其中一种
-`detail_type` | string | 事件的子类型，一般用作区分对于消息或通知、请求类事件的具体细分类型，核心事件集规定群组以及私聊相关的子事件**必须**使用 `group` 和 `private`，对于其他需要自行扩展的，**必须**使用平台专有前缀，如 `qq_`
+`detail_type` | string | 事件的子类型，一般用作区分对于消息或通知、请求类事件的具体细分类型，标准事件集规定群组以及私聊相关的子事件**必须**使用 `group` 和 `private`，对于其他需要自行扩展的，**必须**使用平台专有前缀，如 `qq_`
 `sub_type` | string | 一般用作事件具体类型的表明，可为空，但不存在时**必须**使用空字符串，**不可**缺少此参数（例如：QQ 群内的禁言通知，可能区分为解禁或禁言两种类型）
-`id` | int64 | 事件的唯一 ID，不同事件不可以使用同一个 ID
+`uuid` | string | 事件的唯一 ID，一般使用 `uuidgen` 等方式生成
 `platform` | string | 平台名称
-
-对于类型为 `message` 的事件，在 `detail_type` 为 `group` 时**必须**包含以下字段：
-
-字段名 | 变量类型 | 说明
---- | --- | ---
-`group_id` | string | 群自身 ID
 
 对于类型为 `request` 的事件，**必须**包含以下字段：
 
@@ -52,7 +46,7 @@ OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Exten
         }
     ],
     "message_id": "6283",
-    "id": 80203,
+    "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
     "type": "message",
     "detail_type": "private",
     "user_id": "123456788",
@@ -64,5 +58,5 @@ OneBot 事件分为核心事件集（Core Event Set）和扩展事件集（Exten
 
 在不同实现中实现扩展字段时应注意：
 
-- 核心事件的扩展字段：加 `platform` 前缀，如 `qq_nickname`
+- 标准事件的扩展字段：加 `platform` 前缀，如 `qq_nickname`
 - 扩展事件的 `detail_type`：加 `platform` 前缀，同时其它字段任意扩展，如 `qq_discuss`（纪念不复存在的讨论组）

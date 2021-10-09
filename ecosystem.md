@@ -76,6 +76,7 @@
 | C++ | 正向 WS | [super1207/MiraiCQ](https://github.com/super1207/MiraiCQ) | super1207 ||
 | Ruby | HTTP,<br>正向 WS | [fantasyzhjk/ruby-cqhttp](https://github.com/fantasyzhjk/ruby-cqhttp) | fantasyzhjk ||
 | Rust | 反向 WS | [abrahum/nonebot-rs](https://github.com/abrahum/nonebot-rs) | abrahum ||
+| C | 正向 WS | [super1207/SBot](https://github.com/super1207/SBot) | super1207 ||
 
 ## 应用案例
 

@@ -1,4 +1,4 @@
-site_name: OneBot v12 标准文档
+site_name: OneBot 标准草案
 repo_name: botuniverse/onebot
 repo_url: https://github.com/botuniverse/onebot
 edit_uri: blob/v12-draft/v12/docs/
@@ -6,8 +6,8 @@ theme:
   name: material
   custom_dir: material
   language: zh
-  logo: assets/logo-white.png
-  favicon: assets/logo.png
+  logo: assets/images/logo-white.png
+  favicon: assets/images/logo.png
   palette:
     primary: black
     accent: indigo
@@ -25,31 +25,44 @@ extra:
     provider: google
     property: G-7GZP8RMCBB
 extra_javascript:
-  - javascripts/config.js
+  - assets/javascripts/config.js
 
 nav:
   - 主页: index.md
-  - 介绍: production.md
-  - 生态:
-    - OneBot 实现 / LibOneBot: ecosystem/libonebot.md
-    - OneBot 开发框架 / SDK: ecosystem/onebot-sdk.md
-    - OneBot 应用案例: ecosystem/onebot-application.md
-  - 指南:
-    - 概述:
-      - 术语表: specs/glossary/index.md
-    - OneBot RPC:
-      - 通信:
-        - 通信概述: specs/communication/index.md
-        - HTTP: specs/communication/http.md
-        - HTTP Webhook: specs/communication/http-webhook.md
-        - 正向 WebSocket: specs/communication/websocket.md
-        - 反向 WebSocket: specs/communication/websocket-reverse.md
-      - 数据协议:
-        - 事件: specs/onebot-rpc/event.md
-        - 动作: specs/onebot-rpc/action.md
-        - 动作响应: specs/onebot-rpc/action-response.md
-        - 错误码: specs/onebot-rpc/retcode.md
-    - 标准接口:
-      - 事件: specs/event/index.md
-      - 动作: specs/action/index.md
-      - 消息: specs/message/index.md
+  - 术语表: glossary.md
+  - OneBotRPC:
+    - 概述: onebotrpc/index.md
+    - 通信方式:
+      - HTTP: onebotrpc/communication/http.md
+      - HTTP Webhook: onebotrpc/communication/http-webhook.md
+      - 正向 WebSocket: onebotrpc/communication/websocket.md
+      - 反向 WebSocket: onebotrpc/communication/websocket-reverse.md
+    - 数据协议:
+      - 事件: onebotrpc/data-protocol/event.md
+      - 动作请求: onebotrpc/data-protocol/action-request.md
+      - 动作响应: onebotrpc/data-protocol/action-response.md
+  # - 接口定义:
+  #   - 概述: interface/index.md
+  #   - 数据类型:
+  #     - 基本数据类型: interface/type/basic.md
+  #     - 消息: interface/type/message.md
+  #   - 事件:
+  #     - 元事件: interface/event/meta.md
+  #     - 消息事件: interface/event/message.md
+  #     - 通知事件: interface/event/notice.md
+  #     - 请求事件: interface/event/request.md
+  #     - 扩展规则: interface/event/extended.md
+  #   - 动作:
+  #     - 元信息相关动作: interface/action/meta.md
+  #     - 消息相关动作: interface/action/message.md
+  #     - 用户相关动作: interface/action/user.md
+  #     - 群相关动作: interface/action/group.md
+  #     - 文件相关动作: interface/action/file.md
+  #     - 扩展规则: interface/action/extended.md
+  #   - 消息段:
+  #     - 消息段: interface/segment/segment.md
+  #     - 扩展规则: interface/segment/extended.md
+  - 接口定义:
+    - 事件: specs/event/index.md
+    - 动作: specs/action/index.md
+    - 消息: specs/message/index.md

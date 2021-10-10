@@ -20,4 +20,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CONFIG_FILE: v12/mkdocs.yml
           EXTRA_PACKAGES: build-base
-

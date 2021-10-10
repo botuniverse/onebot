@@ -53,4 +53,3 @@ nav:
       - 事件: specs/event/index.md
       - 动作: specs/action/index.md
       - 消息: specs/message/index.md
-        

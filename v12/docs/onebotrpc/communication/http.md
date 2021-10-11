@@ -33,6 +33,8 @@ OneBot 实现**必须**同时支持两种 `Content-Type` 请求头：
 
 当 `event_enabled` 配置为 true 时，OneBot 实现**必须**支持特殊动作 `get_latest_events`，并至少提供 `event_buffer_size` 所指定的缓冲区大小，当用户尚未获取的事件数量超过缓冲区大小时，**可以**丢弃最旧的事件，也**可以**利用数据库提供无限容量的事件缓冲区。
 
+多个并发请求同时调用 `get_latest_events` 是未定义行为，OneBot 实现**可以**做任意假设。
+
 ## 错误
 
 - 如果收到非 `POST` 请求，**可以**返回 HTTP 状态码 `405 Method Not Allowed`

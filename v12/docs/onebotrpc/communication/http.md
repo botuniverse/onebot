@@ -9,7 +9,7 @@
     - `host`：HTTP 服务器监听 IP
     - `port`：HTTP 服务器监听端口
     - `access_token`：访问令牌
-    - `event_enabled`：是否启用 `get_latest_events` 轮询动作
+    - `event_enabled`：是否启用 `get_latest_events` 元动作
     - `event_buffer_size`：事件缓冲区大小，超过该大小将会丢弃最旧的事件，0 表示不限大小
 
     本页后续将使用 `配置项名称` 或 `<配置项名称>` 的形式引用上述配置项的内容。
@@ -31,7 +31,7 @@ OneBot 实现**必须**同时支持两种 `Content-Type` 请求头：
 
 ## 事件轮询
 
-当 `event_enabled` 配置为 true 时，OneBot 实现**必须**支持特殊动作 `get_latest_events`，并至少提供 `event_buffer_size` 所指定的缓冲区大小，当用户尚未获取的事件数量超过缓冲区大小时，**可以**丢弃最旧的事件，也**可以**利用数据库提供无限容量的事件缓冲区。
+当 `event_enabled` 配置为 true 时，OneBot 实现**必须**支持 `get_latest_events` 元动作，并至少提供 `event_buffer_size` 所指定的缓冲区大小，当用户尚未获取的事件数量超过缓冲区大小时，**可以**丢弃最旧的事件，也**可以**利用数据库提供无限容量的事件缓冲区。
 
 多个并发请求同时调用 `get_latest_events` 是未定义行为，OneBot 实现**可以**做任意假设。
 

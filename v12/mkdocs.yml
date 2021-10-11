@@ -1,4 +1,4 @@
-site_name: OneBot 标准草案
+site_name: OneBot 12 标准草案
 repo_name: botuniverse/onebot
 repo_url: https://github.com/botuniverse/onebot
 edit_uri: blob/v12-draft/v12/docs/
@@ -41,28 +41,28 @@ nav:
       - 事件: onebotrpc/data-protocol/event.md
       - 动作请求: onebotrpc/data-protocol/action-request.md
       - 动作响应: onebotrpc/data-protocol/action-response.md
-  # - 接口定义:
-  #   - 概述: interface/index.md
-  #   - 数据类型:
-  #     - 基本数据类型: interface/type/basic.md
-  #     - 消息: interface/type/message.md
-  #   - 事件:
-  #     - 元事件: interface/event/meta.md
-  #     - 消息事件: interface/event/message.md
-  #     - 通知事件: interface/event/notice.md
-  #     - 请求事件: interface/event/request.md
-  #     - 扩展规则: interface/event/extended.md
-  #   - 动作:
-  #     - 元信息相关动作: interface/action/meta.md
-  #     - 消息相关动作: interface/action/message.md
-  #     - 用户相关动作: interface/action/user.md
-  #     - 群相关动作: interface/action/group.md
-  #     - 文件相关动作: interface/action/file.md
-  #     - 扩展规则: interface/action/extended.md
-  #   - 消息段:
-  #     - 消息段: interface/segment/segment.md
-  #     - 扩展规则: interface/segment/extended.md
   - 接口定义:
-    - 事件: specs/event/index.md
-    - 动作: specs/action/index.md
-    - 消息: specs/message/index.md
+    - 概述: interface/index.md
+    - 数据类型:
+      - 基本数据类型: interface/type/basic.md
+      - 消息: interface/type/message.md
+    - 事件:
+      - 元事件: interface/event/meta.md
+      - 消息事件: interface/event/message.md
+      - 通知事件: interface/event/notice.md
+      - 请求事件: interface/event/request.md
+      - 扩展规则: interface/event/extended.md
+    - 动作:
+      - 元动作: interface/action/meta.md
+      - 消息动作: interface/action/message.md
+      - 用户动作: interface/action/user.md
+      - 群动作: interface/action/group.md
+      - 文件动作: interface/action/file.md
+      - 扩展规则: interface/action/extended.md
+    - 消息段:
+      - 消息段: interface/segment/segment.md
+      - 扩展规则: interface/segment/extended.md
+  # - 接口定义:
+  #   - 事件: specs/event/index.md
+  #   - 动作: specs/action/index.md
+  #   - 消息: specs/message/index.md

@@ -8,7 +8,7 @@
 
 ## `meta.heartbeat` 心跳
 
-!!! info "建议 OneBot 实现提供的配置项"
+!!! tip "建议 OneBot 实现提供的配置项"
 
     - `enabled`：是否启用心跳
     - `interval`：心跳间隔，单位：毫秒，必须大于 0

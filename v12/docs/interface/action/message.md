@@ -1,6 +1,6 @@
 ## `send_message` 发送消息
 
-!!! info "关于扩展此动作的提示"
+!!! tip "关于扩展此动作的提示"
 
     对于不同平台的 `detail_type`，如果符合标准所定义的类型，如私聊对应 `private`、群组对应 `group`，则**建议**使用标准定义的 `detail_type` 和 `xxx_id`。
 
@@ -13,8 +13,8 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `detail_type` | string | - | 发送的类型，**可以**为 `private`、`group` 或扩展的类型，和 [消息事件](../event/message.md) 的 `detail_type` 字段对应
-    `group_id` | string | - | 群 ID，当 `detail_type` 为 `group` 时**必须**包含
-    `user_id` | string | - | 用户 ID，当 `detail_type` 为 `private` 时**必须**包含
+    `group_id` | string | - | 群 ID，当 `detail_type` 为 `group` 时**必须**传入
+    `user_id` | string | - | 用户 ID，当 `detail_type` 为 `private` 时**必须**传入
     `message` | message | - | 消息内容
 
 === "响应数据"

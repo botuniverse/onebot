@@ -3,7 +3,7 @@
     - OneBot 实现能主动访问到机器人业务端（后者有公网 IP，或两者在同一局域网内）
     - 对性能要求不高，要求接入简单
 
-!!! info "建议 OneBot 实现提供的配置项"
+!!! tip "建议 OneBot 实现提供的配置项"
 
     - `url`：Webhook 上报地址
     - `access_token`：访问令牌

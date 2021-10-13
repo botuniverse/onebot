@@ -4,7 +4,7 @@
     - 未知个数的机器人业务端需要接入同一个 OneBot 实现
     - 对性能有一定要求
 
-!!! info "建议 OneBot 实现提供的配置项"
+!!! tip "建议 OneBot 实现提供的配置项"
 
     - `host`：WebSocket 服务器监听 IP
     - `port`：WebSocket 服务器监听端口

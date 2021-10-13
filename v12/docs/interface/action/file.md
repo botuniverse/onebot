@@ -1,10 +1,6 @@
-!!! warning
+!!! tip "关于 bytes 类型的提示"
 
-    WIP
-
-## `get_file` 获取文件
-
-
+        在 JSON 中，bytes 类型的字段表示为 Base64 编码的字符串。具体见 [基本数据类型](../type/basic.md)。
 
 ## `upload_file` 上传文件
 
@@ -12,20 +8,19 @@
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `type` | string | - | 上传的方式，限定 `uri`、`bytes` 两种格式
-    `name` | string | - | 上传的文件名，如 `foo.jpg`
-    `uri` | string | 如果 `type` 为 `uri` 则必须有此项 | 上传的 URI，**必须**以传输协议开头，限定 `http(s)://`、`file://`、`base64://`
-    `data` | base64 或 bytes | 如果 `type` 为 `bytes` 则必须有此项 | 上传的文件内容字节数据或 base64 数据
-    `category` | string | 空（可选） | 文件的类别，限定 `image`、`audio`、`file`，可使用前缀进行扩展
-    `sha256` | string | 空（可选） | 整个文件的 sha256，用于校验
-
-    > 如果使用 JSON 格式请求此动作，则 `data` 段内容为 base64；如果使用 MsgPack 格式请求此动作，则 `data` 段内容为纯二进制。
+    `type` | string | - | 上传文件的方式，**可以**为 `url`、`path`、`data` 或扩展的方式
+    `name` | string | - | 文件名，如 `foo.jpg`
+    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**传入，OneBot 实现**必须**支持以 HTTP(S) 协议从此 URL 下载要上传的文件
+    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，**可选**传入，当 `type` 为 `url` 时 OneBot 实现**必须**在请求 URL 时加上这些请求头
+    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**传入，OneBot 实现**必须**能从此路径访问要上传的文件
+    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时**必须**传入
+    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，**可选**传入
 
 === "响应数据"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `file_id` | string | - | 上传文件的文件 ID，可后期使用
+    `file_id` | string | - | 文件 ID，可供以后使用
 
 === "请求示例"
 
@@ -33,10 +28,9 @@
     {
         "action": "upload_file",
         "params": {
-            "type": "uri",
+            "type": "url",
             "name": "logo.jpg",
-            "category": "image",
-            "uri": "https://1bot.dev/assets/logo.png"
+            "url": "https://avatars.githubusercontent.com/u/56297293?s=200&v=4"
         }
     }
     ```
@@ -47,10 +41,10 @@
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
             "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
-        }
+        },
+        "message": ""
     }
     ```
 
@@ -58,34 +52,138 @@
 
 准备阶段：
 
-=== "prepare 请求参数"
+!!! tip "提示"
+
+    在准备阶段，OneBot 实现可以在文件系统中先创建好文件，之后在传输阶段写入数据。
+
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `stage` | string | - | 上传阶段，prepare 阶段限定 `prepare`
-    `name` | string | - | 上传的文件名
-    `total_size` | int64 | - | 要上传的文件大小（字节）
-    `sha256` | string | 空（可选） | 文件的 sha256，用于验证完整性
+    `stage` | string | - | 上传阶段，必须为 `prepare`
+    `name` | string | - | 文件名，如 `foo.jpg`
+    `total_size` | int64 | - | 文件完整大小，单位：字节
+    `sha256` | string | - | 整个文件的 SHA256 校验和，全小写
 
-=== "prepare 响应参数"
+=== "响应数据"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `file_id` | string | - | 文件的资源 ID
+    `file_id` | string | - | 文件 ID，仅传输阶段使用
 
 传输阶段：
 
-=== "transfer 必填参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `file_id` | string | - | 上传的文件 ID，通过 `prepare` 阶段获取
-    `offset` | int64 | - | 要上传的文件偏移字节数
-    `size` | int64 | - | 要上传的文件分段大小
-    `data` | base64 或 bytes | - | 上传的文件内容字节数据或 base64 数据
+    `stage` | string | - | 上传阶段，必须为 `transfer`
+    `file_id` | string | - | 准备阶段返回的文件 ID
+    `offset` | int64 | - | 本次传输的文件偏移，单位：字节
+    `size` | int64 | - | 本次传输的文件大小，单位：字节
+    `data` | bytes | - | 本次传输的文件数据
 
-    > 如果使用 JSON 格式请求此动作，则 `data` 段内容为 base64；如果使用 MsgPack 格式请求此动作，则 `data` 段内容为纯二进制。
+=== "响应数据"
 
-=== "transfer 响应参数"
+    无。
 
-    待定。
+结束阶段：
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `stage` | string | - | 上传阶段，必须为 `finish`
+    `file_id` | string | - | 准备阶段返回的文件 ID
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `file_id` | string | - | 文件 ID，可供以后使用
+
+## `get_file` 获取文件
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `file_id` | string | - | 文件 ID
+    `type` | string | - | 获取文件的方式，**可以**为 `url`、`path`、`data` 或扩展的方式
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `name` | string | - | 文件名，如 `foo.jpg`
+    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**返回，机器人业务端**必须**能以 HTTP(S) 协议从此 URL 下载文件
+    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，**可选**返回
+    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**返回，机器人业务端**必须**能从此路径访问文件
+    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时**必须**返回
+    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，**可选**返回
+
+    !!! tip "提示"
+
+        这里虽然说“必须返回”，但如果平台真的无法获得 URL，当用户请求 `type` 为 `url` 时，可以返回 `10004 Unsupported Param`。具体见 [概述](../index.md) 中对 OneBot 实现的要求。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_file",
+        "params": {
+            "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16",
+            "type": "url"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": {
+            "name": "logo.jpg",
+            "url": "https://avatars.githubusercontent.com/u/56297293?s=200&v=4"
+        },
+        "message": ""
+    }
+    ```
+
+## `get_file_fragmented` 分片获取文件
+
+准备阶段：
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `stage` | string | - | 上传阶段，必须为 `prepare`
+    `file_id` | string | - | 文件 ID
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `name` | string | - | 文件名，如 `foo.jpg`
+    `total_size` | int64 | - | 文件完整大小，单位：字节
+    `sha256` | string | - | 整个文件的 SHA256 校验和，全小写
+
+传输阶段：
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `stage` | string | - | 上传阶段，必须为 `transfer`
+    `file_id` | string | - | 文件 ID
+    `offset` | int64 | - | 本次传输的文件偏移，单位：字节
+    `size` | int64 | - | 本次传输的文件大小，单位：字节
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `data` | bytes | - | 本次传输的文件数据

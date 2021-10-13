@@ -1,25 +1,19 @@
-!!! warning
+## `get_latest_events` 获取最新事件列表
 
-    WIP
-
-## get_latest_events 获取最新事件列表
-
-对 HTTP 通信方式适用，可以在 HTTP 通信方式下通过此动作轮询获取 OneBot 事件。
-
-响应的数据与 OneBot 事件返回的元素相同。
+仅 HTTP 通信方式**必须**支持，用于轮询获取事件。
 
 === "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `limit` | int64 | 空（可选） | 获取的事件数量上限
-    `timeout` | int64 | 空（可选） | 没有事件时要等待的秒数，0 表示使用短轮询，不等待
+    `limit` | int64 | 0 | 获取的事件数量上限，0 表示不限制
+    `timeout` | int64 | 0 | 没有事件时要等待的秒数，0 表示使用短轮询，不等待
 
-=== "响应参数"
+=== "响应数据"
 
-    响应内容与 OneBot 事件内容元素相同。
+    事件列表，从旧到新排序。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -31,90 +25,143 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": [
             {
+                "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+                "impl": "go_onebot_qq",
+                "platform": "qq",
+                "self_id": "123234",
+                "time": 1632847927,
                 "type": "message",
-                "event_id": "1234567899377234",
                 "detail_type": "private",
                 "sub_type": "",
-                "user_id": "123456",
-                "message": [
+                "message_id": "6283",
+                "messsage": [
                     {
                         "type": "text",
                         "data": {
-                            "text": "哈哈哈"
+                            "text": "OneBot is not a bot"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "data": {
+                            "file_id": "0EF48CED-A905-4C3D-ACA2-BE765D2D0292"
                         }
                     }
-                ]
+                ],
+                "alt_message": "OneBot is not a bot[图片]",
+                "user_id": "123456788"
+            },
+            {
+                "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+                "impl": "go_onebot_qq",
+                "platform": "qq",
+                "self_id": "123234",
+                "time": 1632847929,
+                "type": "notice",
+                "detail_type": "group_member_increase",
+                "sub_type": "join",
+                "user_id": "123456788",
+                "group_id": "87654321",
+                "operator_id": "1234567"
             }
-        ]
+        ],
+        "message": ""
     }
     ```
 
-## get_status 获取 OneBot 状态
-
-获取 OneBot 实现的运行状态。
+## `get_supported_actions` 获取支持的动作列表
 
 === "请求参数"
 
-    无请求参数。
+    无。
 
-=== "响应参数"
+=== "响应数据"
+
+    支持的动作名称列表，**可以**不包括 `get_latest_events`。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_supported_actions",
+        "params": {}
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": [
+            "get_supported_actions",
+            "get_status",
+            "get_version",
+            "send_message",
+            "get_self_info"
+        ],
+        "message": ""
+    }
+    ```
+
+## `get_status` 获取运行状态
+
+=== "请求参数"
+
+    无。
+
+=== "响应数据"
 
     字段名 | 数据类型 | 说明
     --- | --- | ---
     `good` | bool | 是否各项状态都符合预期，OneBot 实现各模块均正常
-    `online` | bool | OneBot 实现对接的平台连接是否顺畅（如 QQ 平台为是否在线）
+    `online` | bool | OneBot 实现对接的平台连接是否顺畅（如 QQ 平台为是否在线），是 `good` 的必要条件之一
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
-        "action": "get_version",
-        "params": []
+        "action": "get_status",
+        "params": {}
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
-            "name": "go-onebot-qq",
-            "platform": "qq",
-            "version": "1.2.0",
-            "onebot_version": "12"
-        }
+            "good": true,
+            "online": true
+        },
+        "message": ""
     }
     ```
 
-## get_version 获取版本信息
-
-获取 OneBot 版本信息。
-
-对于补充的版本信息，比如 OneBot 实现使用了开源的第三方组件，可以使用前缀加扩展的字段进行补充。
+## `get_version` 获取版本信息
 
 === "请求参数"
 
-    无请求参数。
+    无。
 
-=== "响应参数"
+=== "响应数据"
 
     字段名 | 数据类型 | 说明
     --- | --- | ---
-    `name` | string | OneBot 实现的名称
-    `platform` | string | OneBot 实现的平台前缀
-    `version` | string | OneBot 实现自身的的版本号
+    `impl` | string | OneBot 实现名称，格式 `[_a-z]+`
+    `platform` | string | OneBot 实现平台名称，格式 `[_a-z]+`
+    `version` | string | OneBot 实现的版本号
     `onebot_version` | string | OneBot 实现的 OneBot 标准版本号
 
 === "请求数据"
@@ -122,7 +169,7 @@
     ```json
     {
         "action": "get_version",
-        "params": []
+        "params": {}
     }
     ```
 
@@ -132,12 +179,12 @@
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
-            "name": "go-onebot-qq",
+            "impl": "go_onebot_qq",
             "platform": "qq",
             "version": "1.2.0",
             "onebot_version": "12"
-        }
+        },
+        "message": ""
     }
     ```

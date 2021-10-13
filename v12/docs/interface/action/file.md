@@ -22,7 +22,7 @@
     `name` | string | - | 上传的文件名，如 `foo.jpg`
     `uri` | string | 如果 `type` 为 `uri` 则必须有此项 | 上传的 URI，**必须**以传输协议开头，限定 `http(s)://`、`file://`、`base64://`
     `data` | base64 或 bytes | 如果 `type` 为 `bytes` 则必须有此项 | 上传的文件内容字节数据或 base64 数据
-    `category` | string | 空（可选） | 文件的类别，限定 `image`、`audio`、`file`，可使用平台前缀进行扩展
+    `category` | string | 空（可选） | 文件的类别，限定 `image`、`audio`、`file`，可使用前缀进行扩展
     `sha256` | string | 空（可选） | 整个文件的 sha256，用于校验
 
     > 如果使用 JSON 格式请求此动作，则 `data` 段内容为 base64；如果使用 MsgPack 格式请求此动作，则 `data` 段内容为纯二进制。

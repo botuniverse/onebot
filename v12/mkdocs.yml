@@ -62,7 +62,3 @@ nav:
     - 消息段:
       - 消息段: interface/segment/segment.md
       - 扩展规则: interface/segment/extended.md
-  # - 接口定义:
-  #   - 事件: specs/event/index.md
-  #   - 动作: specs/action/index.md
-  #   - 消息: specs/message/index.md

@@ -4,7 +4,7 @@
 
     后面的定义中只给出 `detail_type`、`sub_type` 和具体事件特定的字段，如果没有给出 `sub_type`，则该字段值**可以**为空字符串。
 
-通知事件是聊天平台向机器人发送通知对应的事件，例如群成员变动等。
+通知事件是机器人平台向机器人发送通知对应的事件，例如群成员变动等。
 
 ## `notice.group_member_increase` 群成员增加
 
@@ -27,6 +27,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -60,6 +61,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -90,6 +92,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -120,6 +123,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -150,6 +154,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -180,6 +185,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -214,6 +220,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -243,6 +250,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -269,6 +277,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -296,6 +305,7 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,

@@ -84,7 +84,7 @@
 `31xxx` | Database Error | 数据库错误 | 如数据库查询失败等
 `32xxx` | Filesystem Error | 文件系统错误 | 如读取或写入文件失败等
 `33xxx` | Network Error | 网络错误 | 如下载文件失败等
-`34xxx` | Platform Error | 聊天平台错误 | 如由于聊天平台限制导致消息发送失败等
+`34xxx` | Platform Error | 机器人平台错误 | 如由于机器人平台限制导致消息发送失败等
 `35xxx` | Logic Error | 动作逻辑错误 | 如尝试向不存在的用户发送消息等
 `36xxx` | I Am Tired | 我不想干了 | 一位 OneBot 实现决定罢工
 

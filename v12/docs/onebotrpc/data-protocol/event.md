@@ -6,7 +6,7 @@
 
 字段名 | 类型 | 说明
 --- | --- | ---
-`uuid` | string | 事件唯一标识符
+`id` | string | 事件唯一标识符
 `platform` | string | OneBot 实现平台名称，格式 `[_a-z]+`
 `self_id` | string | 机器人自身 ID
 `time` | int64 | 事件发生时间（Unix 时间戳），单位：秒
@@ -26,7 +26,7 @@
 
 ```json
 {
-    "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+    "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
     "platform": "qq",
     "self_id": "123234",
     "time": 1632847927,

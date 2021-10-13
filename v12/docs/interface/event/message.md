@@ -24,7 +24,7 @@
 
     ```json
     {
-        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,
@@ -70,7 +70,7 @@
 
     ```json
     {
-        "uuid": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
         "platform": "qq",
         "self_id": "123234",
         "time": 1632847927,

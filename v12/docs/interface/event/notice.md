@@ -12,7 +12,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_member_increase`
     `sub_type` | string | **必须**为 `join`、`invite`、空字符串或扩展的子类型
@@ -46,7 +46,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_member_decrease`
     `sub_type` | string | **必须**为 `leave`、`kick`、空字符串或扩展的子类型
@@ -80,7 +80,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_member_ban`
     `group_id` | string | 群 ID
@@ -111,7 +111,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_member_unban`
     `group_id` | string | 群 ID
@@ -142,7 +142,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_admin_set`
     `group_id` | string | 群 ID
@@ -173,7 +173,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_admin_unset`
     `group_id` | string | 群 ID
@@ -204,7 +204,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group_message_delete`
     `sub_type` | string | **必须**为 `recall`、`delete`、空字符串或扩展的子类型
@@ -240,7 +240,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `friend_increase`
     `user_id` | string | 用户 ID
@@ -267,7 +267,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `friend_decrease`
     `user_id` | string | 用户 ID
@@ -294,7 +294,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `private_message_delete`
     `message_id` | string | 消息 ID

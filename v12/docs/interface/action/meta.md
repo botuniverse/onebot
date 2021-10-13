@@ -164,7 +164,7 @@
     `version` | string | OneBot 实现的版本号
     `onebot_version` | string | OneBot 实现的 OneBot 标准版本号
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {

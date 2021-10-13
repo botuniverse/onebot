@@ -10,7 +10,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `private`
     `message_id` | string | 消息唯一 ID
@@ -56,7 +56,7 @@
 
 === "事件字段"
 
-    字段名 | 类型 | 说明
+    字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | **必须**为 `group`
     `message_id` | string | 消息唯一 ID

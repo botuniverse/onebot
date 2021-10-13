@@ -1,32 +1,30 @@
-!!! warning
+## `send_message` 发送消息
 
-    WIP
+!!! info "关于扩展此动作的提示"
 
-## send_message 发送消息
+    对于不同平台的 `detail_type`，如果符合标准所定义的类型，如私聊对应 `private`、群组对应 `group`，则**建议**使用标准定义的 `detail_type` 和 `xxx_id`。
 
-给用户发送消息的动作。
+    对于其它具体类型，例如过去 QQ 还存在讨论组的情况，可以指定 `detail_type` 为 `qq.discuss`，然后参数使用 `qq.discuss_id` 指示讨论组 ID。
 
-> 对于不同平台的 `detail_type`，如果符合支持的类型，如私聊对应 `private`，群组对应 `group`，则**必须**使用不带前缀的发送类型和 `xxx_id`。
->   
-> 对于其他发送类型，假设过去的 QQ 还存在讨论组的情况，可以指定讨论组为 `qq_discuss` 的类型，然后参数**必须**带有对应的目标身份地址，如 `qq_discuss_id` 参数。
+    更多详细扩展规则请参考 [扩展规则](extended.md)。
 
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 如果 `detail_type` 为 `group` 则**必须**包含 `group_id` 用于确定发送的目标群组
-    `user_id` | string | - | 如果 `detail_type` 为 `private` 则**必须**包含 `user_id` 用于确定用户身份
-    `detail_type` | string | - | 发送的类型，**必须**为 `group`、`private`、`impl_spec_xxx` 中的一种（第三个是指不同平台的扩展子类型）
-    `message` | array | - | **必须**包含消息本身的内容，其中消息必须为 array 格式的消息段，有关消息段内容的定义，见 [消息段](../message/message-array)
+    `detail_type` | string | - | 发送的类型，**可以**为 `private`、`group` 或扩展的类型，和 [消息事件](../event/message.md) 的 `detail_type` 字段对应
+    `group_id` | string | - | 群 ID，当 `detail_type` 为 `group` 时**必须**包含
+    `user_id` | string | - | 用户 ID，当 `detail_type` 为 `private` 时**必须**包含
+    `message` | message | - | 消息内容
 
-=== "响应参数"
+=== "响应数据"
 
     字段名 | 数据类型 | 说明
     --- | --- | ---
-    `message_id` | string | 唯一的消息 ID，无论消息是否成功发送
-    `time` | int64 | 消息成功发出的时间戳
+    `message_id` | string | 消息 ID
+    `time` | int64 | 消息成功发出的时间（Unix 时间戳），单位：秒
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -46,35 +44,33 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
             "message_id": "2452352435",
             "time": 1627476314
-        }
+        },
+        "message": ""
     }
     ```
 
-## delete_message 撤回消息
+## `delete_message` 撤回消息
 
-撤回一条信息。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `message_id` | string | - | 唯一的消息 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -85,12 +81,13 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```

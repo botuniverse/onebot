@@ -1,27 +1,19 @@
-!!! warning
+## `get_group_info` 获取群信息
 
-    WIP
-
-## get_group_info 获取群组信息
-
-通过 `group_id` 获取群组相关信息。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 群号
+    `group_id` | string | - | 群 ID
 
-=== "响应参数"
-
-    > OneBot 标准只规定 `group_id` 和 `group_name` 参数作为必须返回的内容，其他信息可以使用扩展字段。
+=== "响应数据"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 群号
-    `group_name` | string | - | 群组名称
+    `group_id` | string | - | 群 ID
+    `group_name` | string | - | 群名称
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -32,89 +24,78 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
             "group_id": "123456",
-            "group_name": "foo"
-        }
+            "group_name": "一群大笨蛋"
+        },
+        "message": ""
     }
     ```
 
-## get_group_list 获取群组列表
+## `get_group_list` 获取群列表
 
-获取机器人加入的群组列表。
+获取机器人加入的群列表。
 
-> OneBot 标准只规定 `group_id` 和 `group_name` 参数作为必须返回的内容，其他信息（例如分组信息）可以使用扩展字段。
->
-> 响应内容为 json 数组格式，参数内的字段为每个元素内的参数。
+=== "请求参数"
 
-=== "参数"
+    无。
 
-    无请求参数。
+=== "响应数据"
 
-=== "响应参数"
+    群信息列表，每一个元素的字段同 `get_group_info` 的响应数据。
 
-    > OneBot 标准只规定 `group_id` 和 `group_name` 参数作为必须返回的内容，其他信息可以使用扩展字段。
-
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `group_id` | string | - | 群号
-    `group_name` | string | - | 群组名称
-
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
         "action": "get_group_list",
-        "params": []
+        "params": {}
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": [
             {
                 "group_id": "123456",
-                "group_name": "foo"
+                "group_name": "一群大笨蛋"
             },
-            //...
-        ]
+            {
+                "group_id": "654321",
+                "group_name": "一群大笨蛋2群"
+            }
+        ],
+        "message": ""
     }
     ```
 
-## get_group_member_info 获取群成员信息
+## `get_group_member_info` 获取群成员信息
 
-获取群内的某个成员信息。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 群号
-    `user_id` | string | - | 群内成员 ID
-
-=== "响应参数"
-
-    > OneBot 标准只规定以下参数作为必须返回的内容，其他信息可以使用扩展字段。
-
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `group_id` | string | - | 群号
+    `group_id` | string | - | 群 ID
     `user_id` | string | - | 用户 ID
-    `nickname` | string | - | 用户昵称
 
-=== "请求数据"
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `user_id` | string | - | 用户 ID
+    `nickname` | string | - | 用户名称/昵称
+
+=== "请求示例"
 
     ```json
     {
@@ -126,43 +107,33 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": {
-            "group_id": "123456",
             "user_id": "3847573",
-            "nickname": "foo"
-        }
+            "nickname": "我是大笨蛋"
+        },
+        "message": ""
     }
     ```
 
-## get_group_member_list 获取群成员列表
+## `get_group_member_list` 获取群成员列表
 
-获取群内的成员列表。
-
-> OneBot 标准只规定部分参数作为必须返回的内容，其他信息（例如用户的头衔）可以使用扩展字段。
->
-> 响应内容为 json 数组格式，参数内的字段为每个元素内的参数。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 群号
+    `group_id` | string | - | 群 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `user_id` | string | - | 用户 ID
-    `nickname` | string | - | 用户昵称
+    群信息列表，每一个元素的字段同 `get_group_member_info` 的响应数据。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -173,43 +144,40 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
-        "message": "",
         "data": [
             {
                 "user_id": "111222333",
-                "nickname": "foo"
+                "nickname": "我是大笨蛋"
             },
             {
                 "user_id": "444555666",
-                "nickname": "bar"
-            },
-            //...
-        ]
+                "nickname": "我是小笨蛋"
+            }
+        ],
+        "message": ""
     }
     ```
 
-## set_group_name 设置群名
+## `set_group_name` 设置群名称
 
-设置群名。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 执行动作的群号
-    `group_name` | string | - | 新群名
+    `group_id` | string | - | 群 ID
+    `group_name` | string | - | 新群名称
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
@@ -221,162 +189,227 @@
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```
 
-## set_group_leave 退出群组
+## `leave_group` 退出群
 
-让机器人从某个群组退出。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 执行动作的群号
+    `group_id` | string | - | 群 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
-        "action": "set_group_leave",
+        "action": "leave_group",
         "params": {
             "group_id": "2452352435"
         }
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```
 
-## set_group_kick 群组踢人
+## `kick_group_member` 踢出群成员
 
-踢出一名群成员。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 执行踢人动作的群号
-    `user_id` | string | - | 要踢的用户 ID
+    `group_id` | string | - | 群 ID
+    `user_id` | string | - | 用户 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
-        "action": "set_group_kick",
+        "action": "kick_group_member",
         "params": {
-            "group_id": "2452352435",
-            "user_id": "123456"
+            "group_id": "123456",
+            "user_id": "123456789"
         }
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```
 
-## set_group_ban 群组禁言某人
+## `ban_group_member` 禁言群成员
 
-禁言群内的某人或全部禁言。
-
-> 如果 OneBot 对应的平台存在全员禁言，可以通过增加扩展字段扩展此接口。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 执行禁言动作的群号
-    `user_id` | string | - | 要禁言的用户 ID
+    `group_id` | string | - | 群 ID
+    `user_id` | string | - | 用户 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
 
     ```json
     {
-        "action": "set_group_ban",
+        "action": "ban_group_member",
         "params": {
-            "group_id": "2452352435",
-            "user_id": "123456"
+            "group_id": "123456",
+            "user_id": "123456789"
         }
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```
 
-## set_group_admin 设置群管理员
+## `unban_group_member` 取消禁言群成员
 
-将群内某人设置为管理员或取消管理员。
-
-=== "参数"
+=== "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `group_id` | string | - | 执行动作的群号
-    `user_id` | string | - | 要设置的用户 ID
-    `enable` | bool | `true` | `true` 为设置，`false` 为取消设置
+    `group_id` | string | - | 群 ID
+    `user_id` | string | - | 用户 ID
 
-=== "响应参数"
+=== "响应数据"
 
-    无响应参数。
+    无。
 
-=== "请求数据"
+=== "请求示例"
+
+    ```json
+    {
+        "action": "unban_group_member",
+        "params": {
+            "group_id": "123456",
+            "user_id": "123456789"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": null,
+        "message": ""
+    }
+    ```
+
+## `set_group_admin` 设置群管理员
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `group_id` | string | - | 群 ID
+    `user_id` | string | - | 用户 ID
+
+=== "响应数据"
+
+    无。
+
+=== "请求示例"
 
     ```json
     {
         "action": "set_group_admin",
         "params": {
-            "group_id": "2452352435",
-            "user_id": "123456",
-            "enable": true
+            "group_id": "123456",
+            "user_id": "123456789"
         }
     }
     ```
 
-=== "响应数据"
+=== "响应示例"
 
     ```json
     {
         "status": "ok",
         "retcode": 0,
+        "data": null,
+        "message": ""
+    }
+    ```
+
+## `unset_group_admin` 取消设置群管理员
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `group_id` | string | - | 群 ID
+    `user_id` | string | - | 用户 ID
+
+=== "响应数据"
+
+    无。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "unset_group_admin",
+        "params": {
+            "group_id": "123456",
+            "user_id": "123456789"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": null,
         "message": ""
     }
     ```

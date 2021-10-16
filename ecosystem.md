@@ -43,6 +43,7 @@
 | Python | HTTP,<br>反向 WS | [nonebot/nonebot2](https://github.com/nonebot/nonebot2) | yanyongyu ||
 | Python | HTTP,<br>反向 WS | [SSmJaE/PepperBot](https://github.com/SSmJaE/PepperBot) | SSmJaE ||
 | Python | HTTP,<br>正向 WS| [GraiaProject/AvillaCore](https://github.com/GraiaProject/AvillaCore) | GreyElaina ||
+| Python | HTTP,<br>正向 WS| [Lxns-Network/nakuru-project](https://github.com/Lxns-Network/nakuru-project) | JoinChang | 支持 CQ 码与消息链的转换处理 |
 | Python | HTTP | [OlivOS-Team/OlivOS](https://github.com/OlivOS-Team/OlivOS) | lunzhiPenxil ||
 | Python | 正向 WS | [FloatTech/voidbot](https://github.com/FloatTech/voidbot) | FloatTech | 非常轻量的学习 Demo  |
 | Node.js | 正向 WS | [momocow/node-cq-websocket](https://github.com/momocow/node-cq-websocket) | momocow | 项目已归档，不再更新 |

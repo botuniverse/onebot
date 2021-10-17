@@ -1,0 +1,65 @@
+site_name: OneBot 12 标准草案
+repo_name: botuniverse/onebot
+repo_url: https://github.com/botuniverse/onebot
+edit_uri: blob/master/specs/
+docs_dir: specs
+theme:
+  name: material
+  custom_dir: theme
+  language: zh
+  logo: assets/images/logo-white.png
+  favicon: assets/images/logo.png
+  palette:
+    primary: black
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.tabs
+markdown_extensions:
+  - admonition
+  - pymdownx.tabbed
+  - pymdownx.superfences
+extra:
+  search:
+    language: jp # 不支持中文，改成日文好像能搜到一部分中文了（无语）
+  analytics:
+    provider: google
+    property: G-7GZP8RMCBB
+extra_javascript:
+  - assets/javascripts/config.js
+
+nav:
+  - 主页: index.md
+  - 术语表: glossary.md
+  - OneBotRPC:
+    - 概述: onebotrpc/index.md
+    - 通信方式:
+      - HTTP: onebotrpc/communication/http.md
+      - HTTP Webhook: onebotrpc/communication/http-webhook.md
+      - 正向 WebSocket: onebotrpc/communication/websocket.md
+      - 反向 WebSocket: onebotrpc/communication/websocket-reverse.md
+    - 数据协议:
+      - 事件: onebotrpc/data-protocol/event.md
+      - 动作请求: onebotrpc/data-protocol/action-request.md
+      - 动作响应: onebotrpc/data-protocol/action-response.md
+  - 接口定义:
+    - 概述: interface/index.md
+    - 数据类型:
+      - 基本数据类型: interface/type/basic.md
+      - 消息: interface/type/message.md
+    - 事件:
+      - 元事件: interface/event/meta.md
+      - 消息事件: interface/event/message.md
+      - 通知事件: interface/event/notice.md
+      - 请求事件: interface/event/request.md
+      - 扩展规则: interface/event/extended.md
+    - 动作:
+      - 元动作: interface/action/meta.md
+      - 消息动作: interface/action/message.md
+      - 用户动作: interface/action/user.md
+      - 群动作: interface/action/group.md
+      - 文件动作: interface/action/file.md
+      - 扩展规则: interface/action/extended.md
+    - 消息段:
+      - 消息段: interface/segment/segment.md
+      - 扩展规则: interface/segment/extended.md

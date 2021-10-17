@@ -30,11 +30,11 @@
 
 与机器人平台对接、向上提供符合 OneBot 标准的接口的程序。
 
-## 机器人业务端（Bot Service）
+## OneBot 应用（OneBot Application）
 
-与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑即具体功能的程序。
+与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑即具体功能的程序。可简称为“应用端”。
 
-机器人业务端通常可以基于现成的 SDK 或开发框架来编写，而无需关心 OneBot 标准的通信细节，常用的开发框架包括 NoneBot、Koishi 等。
+OneBot 应用通常可以基于现成的 SDK 或开发框架来编写，而无需关心 OneBot 标准的通信细节，常用的开发框架包括 NoneBot、Koishi 等。
 
 ## LibOneBot
 
@@ -49,15 +49,15 @@
 - 群成员减少：一种**通知事件**（Notice Event）
 - 收到加好友请求：一种**请求事件**（Request Event）
 
-OneBot 实现向机器人业务端传送事件的行为称为**推送**（Push），例如“OneBot 实现向机器人业务端推送了一个事件”。
+OneBot 实现向应用端传送事件的行为称为**推送**（Push），例如“OneBot 实现向应用端推送了一个事件”。
 
 ## 动作（Action）
 
-机器人业务端获取 OneBot 实现或机器人平台相关信息、控制 OneBot 实现或机器人行为的接口。
+应用端主动获取 OneBot 实现或机器人平台相关信息、控制 OneBot 实现或机器人行为的接口。
 
-一些动作可能需要机器人业务端传入一些参数，这些参数称为**动作参数**（Action Params 或 Params）。
+一些动作可能需要应用端传入一些参数，这些参数称为**动作参数**（Action Params 或 Params）。
 
-机器人业务端向 OneBot 实现请求执行动作的行为称为**调用**（Call），例如“机器人业务端向 OneBot 实现调用了一个动作”。
+应用端向 OneBot 实现请求执行动作的行为称为**调用**（Call），例如“应用端向 OneBot 实现调用了一个动作”。
 
 ## 消息（Message）
 
@@ -69,7 +69,7 @@ OneBot 实现向机器人业务端传送事件的行为称为**推送**（Push�
 
 ## OneBotRPC
 
-OneBot 实现和机器人业务端通过网络连接的规范，规范包括通信方式和数据协议。
+OneBot 实现和 OneBot 应用通过网络连接的规范，规范包括通信方式和数据协议。
 
 四种**通信方式**（Communication Method）：
 

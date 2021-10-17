@@ -116,9 +116,9 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `name` | string | - | 文件名，如 `foo.jpg`
-    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**返回，机器人业务端**必须**能以 HTTP(S) 协议从此 URL 下载文件
+    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**返回，应用端**必须**能以 HTTP(S) 协议从此 URL 下载文件
     `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，**可选**返回
-    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**返回，机器人业务端**必须**能从此路径访问文件
+    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**返回，应用端**必须**能从此路径访问文件
     `data` | bytes | - | 文件数据，当 `type` 为 `data` 时**必须**返回
     `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，**可选**返回
 

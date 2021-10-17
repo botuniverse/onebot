@@ -124,7 +124,7 @@
 
     !!! tip "提示"
 
-        这里虽然说“必须返回”，但如果平台真的无法获得 URL，当用户请求 `type` 为 `url` 时，可以返回 `10004 Unsupported Param`。具体见 [概述](../index.md) 中对 OneBot 实现的要求。
+        这里虽然说“必须返回”，但如果平台真的无法获得 URL，当用户请求 `type` 为 `url` 时，可以返回 `10004 Unsupported Param`。具体见 [接口定义 - 概述](../index.md) 中对 OneBot 实现的要求。
 
 === "请求示例"
 

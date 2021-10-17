@@ -32,7 +32,7 @@
 
 ## OneBot 应用（OneBot Application）
 
-与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑即具体功能的程序。可简称为“应用端”。
+与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑的程序。可简称为**应用端**。
 
 OneBot 应用通常可以基于现成的 SDK 或开发框架来编写，而无需关心 OneBot 标准的通信细节，常用的开发框架包括 NoneBot、Koishi 等。
 

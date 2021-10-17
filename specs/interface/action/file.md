@@ -8,13 +8,13 @@
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `type` | string | - | 上传文件的方式，**可以**为 `url`、`path`、`data` 或扩展的方式
+    `type` | string | - | 上传文件的方式，可以为 `url`、`path`、`data` 或扩展的方式
     `name` | string | - | 文件名，如 `foo.jpg`
-    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**传入，OneBot 实现**必须**支持以 HTTP(S) 协议从此 URL 下载要上传的文件
-    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，**可选**传入，当 `type` 为 `url` 时 OneBot 实现**必须**在请求 URL 时加上这些请求头
-    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**传入，OneBot 实现**必须**能从此路径访问要上传的文件
-    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时**必须**传入
-    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，**可选**传入
+    `url` | string | - | 文件 URL，当 `type` 为 `url` 时必须传入，OneBot 实现必须支持以 HTTP(S) 协议从此 URL 下载要上传的文件
+    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，可选传入，当 `type` 为 `url` 时 OneBot 实现必须在请求 URL 时加上这些请求头
+    `path` | string | - | 文件路径，当 `type` 为 `path` 时必须传入，OneBot 实现必须能从此路径访问要上传的文件
+    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时必须传入
+    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，可选传入
 
 === "响应数据"
 
@@ -109,18 +109,18 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `file_id` | string | - | 文件 ID
-    `type` | string | - | 获取文件的方式，**可以**为 `url`、`path`、`data` 或扩展的方式
+    `type` | string | - | 获取文件的方式，可以为 `url`、`path`、`data` 或扩展的方式
 
 === "响应数据"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `name` | string | - | 文件名，如 `foo.jpg`
-    `url` | string | - | 文件 URL，当 `type` 为 `url` 时**必须**返回，应用端**必须**能以 HTTP(S) 协议从此 URL 下载文件
-    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，**可选**返回
-    `path` | string | - | 文件路径，当 `type` 为 `path` 时**必须**返回，应用端**必须**能从此路径访问文件
-    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时**必须**返回
-    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，**可选**返回
+    `url` | string | - | 文件 URL，当 `type` 为 `url` 时必须返回，应用端必须能以 HTTP(S) 协议从此 URL 下载文件
+    `headers` | map[string]string | - | 下载 URL 时需要添加的 HTTP 请求头，可选返回
+    `path` | string | - | 文件路径，当 `type` 为 `path` 时必须返回，应用端必须能从此路径访问文件
+    `data` | bytes | - | 文件数据，当 `type` 为 `data` 时必须返回
+    `sha256` | string | - | 文件数据（原始二进制）的 SHA256 校验和，全小写，可选返回
 
     !!! tip "提示"
 

@@ -1,35 +1,112 @@
-!!! warning
+消息数据类型是在 OneBot 标准中表示聊天消息内容的数据类型，标准中使用 `message` 表示该类型。
 
-    WIP
+在 OneBot 实现传给应用端的事件字段和动作响应数据中，消息数据类型**必须**是消息段数组/列表。
 
-消息是 OneBot 标准中的一个重要内容，其规定了消息的收发格式。
-
-数组格式将消息表示为一系列消息段对象的数组，表达能力较强，覆盖几乎所有复杂文本类型的消息。
-
-首先，OneBot V12 标准规定，所有 `message` 字段必须为 `array` 类型。
+在由应用端传给 OneBot 实现的动作请求参数中，消息数据类型**建议**是消息段数组/列表，也**可以**是单个消息段或字符串。对于字符串，OneBot 实现**应**将其理解为单个纯文本消息段组成的消息。
 
 ## 消息段
 
-在原 OneBot V11 标准中，使用 CQ 码的形式作为富文本传输，而消息段就是将存在 CQ 码的地方等量替换为数组格式。在字符串格式中，使用 CQ 码表示多媒体内容，例如 `[CQ:image,file=123.jpg]`，这里 CQ 码功能名为 `image`，参数为 file=123.jpg，也即一个键值对。
+消息段的数据类型为 `map[string]any`，其中**必须**包含以下字段：
 
-V12 标准下强制要求为 array 格式消息段，消息段是 CQ 码在数组格式中的表示形式，基本格式如下：
+字段名 | 数据类型 | 说明
+--- | --- | ---
+`type` | string | 消息段名称
+`data` | map[string]any | 消息段参数
+
+一个以 JSON 编码的消息段例子如下：
 
 ```json
 {
     "type": "image",
     "data": {
-        "file": "123.jpg"
+        "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
     }
 }
 ```
 
-其中 `type` 为必需字段，对应原 CQ 码中的功能名，`data` 段对应原参数内容。
+## 替代表示
 
-在 V12 中，新引入的媒体文件概念的加持下，一条普通包含图片的文本**应该**表现为如下形式：
+以消息段数组/列表形式表示消息虽然提高了对多媒体消息的表示能力，但对不关心特殊消息类型的用户来说，解析门槛也提高了。为了让这部分用户能更方便地处理消息，在消息事件中添加了字符串类型的 `alt_message` 字段，作为消息的纯文本替代表示。
+
+消息替代表示中，纯文本消息段的内容**应**原样表示为字符串，其它消息段**应**表示为适当的形式，**建议**表示为人类可读的形式，例如 `这是一段纯文本[图片][表情:憨笑]`。
+
+## 例子
+
+以 JSON 编码的动作请求中消息类型参数的例子：
 
 ```json
-[
-    {"type": "text", "data": {"text": "blah"}},
-    {"type": "image", "data": {"file_id": "blahblah"}}
-]
+{
+    "action": "send_message",
+    "params": {
+        "detail_type": "private",
+        "user_id": "1234567",
+        "message": [
+            {
+                "type": "text",
+                "data": {
+                    "text": "这是一个纯文本消息段"
+                }
+            }
+        ]
+    }
+}
+```
+
+```json
+{
+    "action": "send_message",
+    "params": {
+        "detail_type": "private",
+        "user_id": "1234567",
+        "message": {
+            "type": "text",
+            "data": {
+                "text": "这是一个纯文本消息段"
+            }
+        }
+    }
+}
+```
+
+```json
+{
+    "action": "send_message",
+    "params": {
+        "detail_type": "private",
+        "user_id": "1234567",
+        "message": "这是一个纯文本消息段"
+    }
+}
+```
+
+以 JSON 编码的事件中消息类型字段的例子：
+
+```json
+{
+    "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+    "impl": "go_onebot_qq",
+    "platform": "qq",
+    "self_id": "123234",
+    "time": 1632847927,
+    "type": "message",
+    "detail_type": "private",
+    "sub_type": "",
+    "message_id": "6283",
+    "messsage": [
+        {
+            "type": "text",
+            "data": {
+                "text": "OneBot is not a bot"
+            }
+        },
+        {
+            "type": "image",
+            "data": {
+                "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
+            }
+        }
+    ],
+    "alt_message": "OneBot is not a bot[图片]",
+    "user_id": "123456788"
+}
 ```

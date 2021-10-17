@@ -52,7 +52,7 @@
                     {
                         "type": "image",
                         "data": {
-                            "file_id": "0EF48CED-A905-4C3D-ACA2-BE765D2D0292"
+                            "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
                         }
                     }
                 ],

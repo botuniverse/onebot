@@ -2,21 +2,21 @@ name: Publish docs via GitHub Pages
 on:
   push:
     branches:
-      - v12-draft
+      - master
 
 jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout v12-draft
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           submodules: true
 
-      - name: Deploy docs
+      - name: Deploy
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: v12/mkdocs.yml
+          CONFIG_FILE: mkdocs.yml
           EXTRA_PACKAGES: build-base

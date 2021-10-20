@@ -92,7 +92,7 @@
     "detail_type": "private",
     "sub_type": "",
     "message_id": "6283",
-    "messsage": [
+    "message": [
         {
             "type": "text",
             "data": {

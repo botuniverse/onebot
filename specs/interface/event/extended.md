@@ -15,7 +15,7 @@ OneBot 实现可以在标准事件的基础上添加扩展字段，扩展字段�
         "detail_type": "private",
         "sub_type": "",
         "message_id": "6283",
-        "messsage": [
+        "message": [
             {
                 "type": "text",
                 "data": {

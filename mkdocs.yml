@@ -24,7 +24,7 @@ extra:
     language: jp # 不支持中文，改成日文好像能搜到一部分中文了（无语）
   analytics:
     provider: google
-    property: G-7GZP8RMCBB
+    property: G-RT0B6ZLNQH
 extra_javascript:
   - assets/javascripts/config.js
 

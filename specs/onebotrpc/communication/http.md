@@ -41,4 +41,4 @@ OneBot 实现必须同时支持两种 `Content-Type` 请求头：
 - 如果收到请求非 `/` 的路径，可以返回 HTTP 状态码 `404 Not Found`
 - 如果鉴权失败，必须返回 HTTP 状态码 `401 Unauthorized`
 - 如果收到不支持的 `Content-Type` 请求头，必须返回 HTTP 状态码 `415 Unsupported Media Type`
-- 一旦开始读取 HTTP 请求体，此后所有出错情形应通过动作响应的 `retcode` 字段区分
+- 一旦开始读取 HTTP 请求体，此后所有出错情形应通过动作响应的 `retcode` 字段区分，HTTP 状态码返回 `200 OK`

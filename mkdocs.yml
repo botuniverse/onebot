@@ -49,8 +49,12 @@ nav:
       - 消息: interface/type/message.md
     - 事件:
       - 元事件: interface/event/meta.md
-      - 消息事件: interface/event/message.md
-      - 通知事件: interface/event/notice.md
+      - 消息事件:
+        - 用户消息事件: interface/event/message/user.md
+        - 群消息事件: interface/event/message/group.md
+      - 通知事件:
+        - 用户通知事件: interface/event/notice/user.md
+        - 群通知事件: interface/event/notice/group.md
       - 请求事件: interface/event/request.md
       - 扩展规则: interface/event/extended.md
     - 动作:

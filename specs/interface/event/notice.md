@@ -310,7 +310,7 @@
         "self_id": "123234",
         "time": 1632847927,
         "type": "notice",
-        "detail_type": "group_message_delete",
+        "detail_type": "private_message_delete",
         "sub_type": "",
         "message_id": "2847",
         "user_id": "123456788"

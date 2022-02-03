@@ -34,7 +34,13 @@
 
 与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑的程序。可简称为**应用端**。
 
-OneBot 应用通常可以基于现成的 SDK 或开发框架来编写，而无需关心 OneBot 标准的通信细节，常用的开发框架包括 NoneBot、Koishi 等。
+OneBot 应用通常可以基于现成的 OneBot SDK 来编写，而无需关心 OneBot 标准的通信细节。
+
+## OneBot SDK
+
+帮助 OneBot 用户对接 OneBot 实现，使用户不需要自行编写 HTTP、WebSocket 等通信逻辑的库。一些封装层次较高的 SDK 还会提供事件、动作、消息等类型的封装。
+
+常用的 OneBot SDK（往往也称为“开发框架”）包括 NoneBot、Koishi 等。
 
 ## LibOneBot
 

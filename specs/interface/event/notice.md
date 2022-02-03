@@ -288,7 +288,7 @@
     }
     ```
 
-### `notice.private_message_delete` 私聊消息删除
+## `notice.private_message_delete` 私聊消息删除
 
 本事件应在私聊消息被删除时触发。
 

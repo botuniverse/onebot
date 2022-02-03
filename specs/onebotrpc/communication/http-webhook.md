@@ -25,9 +25,11 @@ OneBot 实现必须在请求时设置以下请求头：
 - `X-Platform: <platform>`：`<platform>` 应为实现所针对的机器人平台名称，格式为 `[_a-z]+`
 - `X-Self-ID: <self_id>`：`<self_id>` 应为当前所“登录”的机器人 ID
 
-如果配置了 `access_token`，还应该设置：
+如果配置了 `access_token` 且不为空字符串，则还应该设置：
 
 - `Authorization: Bearer <access_token>`
+
+这里 `<access_token>` 不需要对两边的空白字符进行裁剪。
 
 ## 请求体
 

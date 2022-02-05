@@ -22,12 +22,14 @@ OneBot 实现应该根据用户配置启动 HTTP 服务器，监听指定的 `<h
 
 ## Content-Type
 
-OneBot 实现必须同时支持两种 `Content-Type` 请求头：
+标准定义两种 `Content-Type` 请求头：
 
 - `application/json`：在请求体中使用 JSON 和 UTF-8 编码的字符串表示动作请求
 - `application/msgpack`：在请求体中使用 MessagePack 编码的字节序列表示动作请求
 
-当收到上述任一种请求后，应在响应头中设置相同的 `Content-Type`，并以相同的格式和编码返回动作响应。
+其中，`application/json` 是任何 OneBot 实现必须支持的，`application/msgpack` 是可选的。
+
+当收到上述任一种请求后，如果支持，应在响应头中设置相同的 `Content-Type`，并以相同的格式和编码返回动作响应。
 
 ## 事件轮询
 

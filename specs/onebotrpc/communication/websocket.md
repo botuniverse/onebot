@@ -27,9 +27,11 @@ OneBot 实现主动向应用端推送事件时，必须使用 JSON 和 UTF-8 编
 当收到应用端发来的 WebSocket 消息时：
 
 - 如果是 text 类型，则应按 JSON 和 UTF-8 编码解析动作请求
-- 如果是 binary 类型，则应按 MessagePack 编码解析动作请求。
+- 如果是 binary 类型，则应按 MessagePack 编码解析动作请求
 
-当收到上述任一种 WebSocket 消息后，应以相同的格式和编码返回动作响应。
+其中，text 类型是任何 OneBot 实现必须支持的，binary 类型是可选的。
+
+当收到上述任一种 WebSocket 消息后，如果支持，应以相同的格式和编码返回动作响应。
 
 ## 错误
 

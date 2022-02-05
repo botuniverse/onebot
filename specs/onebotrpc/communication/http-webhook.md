@@ -45,12 +45,14 @@ OneBot 实现必须在请求时设置以下请求头：
 
 如果响应状态码为 `200 OK`，也应认为事件推送成功，此时应该根据响应头中的 `Content-Type` 将响应体解析为动作请求列表，依次处理动作请求，丢弃动作响应。
 
-对于后一种情况，OneBot 实现必须同时支持两种 `Content-Type` 响应头：
+对于后一种情况，标准定义两种 `Content-Type` 响应头：
 
 - `application/json`：在响应体中使用 JSON 和 UTF-8 编码的字符串表示动作请求列表
 - `application/msgpack`：在响应体中使用 MessagePack 编码的字节序列表示动作请求列表
 
-如果响应状态码不是上述的任一个，应认为事件推送失败。
+其中，`application/json` 是任何 OneBot 实现必须支持的，`application/msgpack` 是可选的。当 `Content-Type` 不支持时，实现应该输出错误日志。
+
+如果响应状态码不是 `204` 或 `200` 中的任一个，应认为事件推送失败。
 
 ## 错误
 

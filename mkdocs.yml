@@ -44,26 +44,24 @@ nav:
       - 动作响应: onebotrpc/data-protocol/action-response.md
   - 接口定义:
     - 概述: interface/index.md
-    - 数据类型:
-      - 基本数据类型: interface/type/basic.md
-      - 消息: interface/type/message.md
-    - 事件:
-      - 元事件: interface/event/meta.md
-      - 消息事件:
-        - 用户消息事件: interface/event/message/user.md
-        - 群消息事件: interface/event/message/group.md
-      - 通知事件:
-        - 用户通知事件: interface/event/notice/user.md
-        - 群通知事件: interface/event/notice/group.md
-      - 请求事件: interface/event/request.md
-      - 扩展规则: interface/event/extended.md
-    - 动作:
-      - 元动作: interface/action/meta.md
-      - 消息动作: interface/action/message.md
-      - 用户动作: interface/action/user.md
-      - 群动作: interface/action/group.md
-      - 文件动作: interface/action/file.md
-      - 扩展规则: interface/action/extended.md
-    - 消息段:
-      - 消息段: interface/segment/segment.md
-      - 扩展规则: interface/segment/extended.md
+    - 基本数据类型: interface/basic-types.md
+    - 扩展规则: interface/rules.md
+    - 元接口:
+      - 元事件: interface/meta/events.md
+      - 元动作: interface/meta/actions.md
+    - 消息接口:
+      - 消息数据类型: interface/message/type.md
+      - 消息段: interface/message/segments.md
+      - 消息动作: interface/message/actions.md
+    - 单用户接口（Private / Direct）:
+      - 用户消息事件: interface/user/message-events.md
+      - 用户通知事件: interface/user/notice-events.md
+      - 用户动作: interface/user/actions.md
+    - 单级群组接口（Group）:
+      - 群消息事件: interface/group/message-events.md
+      - 群通知事件: interface/group/notice-events.md
+      - 群动作: interface/group/actions.md
+    - 两级群组接口（Guild-Channel）:
+      - TODO: interface/guild/todo.md
+    - 文件接口:
+      - 文件动作: interface/file/actions.md

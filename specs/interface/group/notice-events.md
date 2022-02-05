@@ -1,10 +1,8 @@
 !!! tip "提示"
 
-    本页所定义的事件均基于 [OneBotRPC - 事件](../../../onebotrpc/data-protocol/event.md)，其中 `type` 字段值应为 `notice`。
+    本页所定义的事件均基于 [OneBotRPC - 事件](../../onebotrpc/data-protocol/event.md)，其中 `type` 字段值应为 `notice`。
 
     后面的定义中只给出 `detail_type`、`sub_type` 和具体事件特定的字段，如果没有给出 `sub_type`，则该字段值可以为空字符串。
-
-群通知事件是机器人平台向机器人发送的关于群的事件，例如群成员变动等。
 
 ## `notice.group_member_increase` 群成员增加
 

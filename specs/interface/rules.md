@@ -64,7 +64,7 @@ OneBot 实现可以扩展标准事件的子类型（`sub_type`），扩展的子
 
 OneBot 实现不得扩展事件的基本类型（`type`）。
 
-OneBot 实现可以扩展事件的具体类型（`detail_type`），扩展的具体事件称为**扩展事件**，扩展的具体事件类型必须包含前缀。扩展事件仍必须包含 [OneBotRPC - 事件](../../onebotrpc/data-protocol/event.md) 中定义的所有字段，除此之外的字段可以任意命名。
+OneBot 实现可以扩展事件的具体类型（`detail_type`），扩展的具体事件称为**扩展事件**，扩展的具体事件类型必须包含前缀。扩展事件仍必须包含 [OneBotRPC - 事件](../onebotrpc/data-protocol/event.md) 中定义的所有字段，除此之外的字段可以任意命名。
 
 例子：
 
@@ -131,7 +131,7 @@ OneBot 实现可以在标准动作响应数据的基础上添加扩展字段，�
 
 ### 扩展动作
 
-OneBot 实现可以支持扩展的动作（`action`），称为**扩展动作**，扩展动作的名称必须包含前缀。扩展动作的请求和响应仍必须包含 [OneBotRPC - 动作请求](../../onebotrpc/data-protocol/action-request.md) 和 [OneBotRPC - 动作响应](../../onebotrpc/data-protocol/action-response.md) 中定义的所有字段，但具体的动作参数和动作响应数据字段可以任意命名。
+OneBot 实现可以支持扩展的动作（`action`），称为**扩展动作**，扩展动作的名称必须包含前缀。扩展动作的请求和响应仍必须包含 [OneBotRPC - 动作请求](../onebotrpc/data-protocol/action-request.md) 和 [OneBotRPC - 动作响应](../onebotrpc/data-protocol/action-response.md) 中定义的所有字段，但具体的动作参数和动作响应数据字段可以任意命名。
 
 例子：
 
@@ -164,7 +164,7 @@ OneBot 实现可以在标准消息段参数的基础上添加扩展参数，扩�
 
 ### 扩展消息段
 
-OneBot 实现可以支持扩展的消息段类型（`type`），称为**扩展消息段**，扩展消息段类型必须包含前缀。扩展消息段仍必须包含 [消息](../type/message.md) 中定义的所有字段。
+OneBot 实现可以支持扩展的消息段类型（`type`），称为**扩展消息段**，扩展消息段类型必须包含前缀。扩展消息段仍必须包含 [消息](message/type.md) 中定义的所有字段。
 
 扩展消息段的参数（`data` 字段中的内容）不得使用名字 `type`，除此之外可以任意命名。
 

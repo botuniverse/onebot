@@ -49,7 +49,7 @@ nav:
     - 元接口:
       - 元事件: interface/meta/events.md
       - 元动作: interface/meta/actions.md
-    - 消息:
+    - 消息接口:
       - 消息数据类型: interface/message/type.md
       - 消息段: interface/message/segments.md
       - 消息动作: interface/message/actions.md

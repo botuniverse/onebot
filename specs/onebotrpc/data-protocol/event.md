@@ -10,7 +10,7 @@
 `impl` | string | OneBot 实现名称，格式 `[_a-z]+`
 `platform` | string | OneBot 实现平台名称，格式 `[_a-z]+`
 `self_id` | string | 机器人自身 ID
-`time` | int64 | 事件发生时间（Unix 时间戳），单位：秒
+`time` | float64 | 事件发生时间（Unix 时间戳），单位：秒
 `type` | string | 事件类型，必须是 `meta`、`message`、`notice`、`request` 中的一个，分别表示元事件、消息事件、通知事件和请求事件
 `detail_type` | string | 事件详细类型
 `sub_type` | string | 事件子类型（详细类型的下一级类型）
@@ -31,7 +31,7 @@
     "impl": "go_onebot_qq",
     "platform": "qq",
     "self_id": "123234",
-    "time": 1632847927,
+    "time": 1632847927.599013,
     "type": "message",
     "detail_type": "private",
     "sub_type": "",

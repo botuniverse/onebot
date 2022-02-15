@@ -26,7 +26,7 @@
         "impl": "go_onebot_qq",
         "platform": "qq",
         "self_id": "123234",
-        "time": 1632847927,
+        "time": 1632847927.599013,
         "type": "message",
         "detail_type": "private",
         "sub_type": "",

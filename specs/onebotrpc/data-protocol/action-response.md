@@ -31,7 +31,7 @@
     "retcode": 0,
     "data": {
         "message_id": "1234",
-        "time": 1632847927
+        "time": 1632847927.599013
     },
     "message": "",
     "echo": "1234"

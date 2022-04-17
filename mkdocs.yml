@@ -62,6 +62,8 @@ nav:
       - 群通知事件: interface/group/notice-events.md
       - 群动作: interface/group/actions.md
     - 两级群组接口（Guild-Channel）:
-      - TODO: interface/guild/todo.md
+      - 群组消息事件: interface/guild/message-events.md
+      - 群组通知事件: interface/guild/notice-events.md
+      - 群组动作: interface/guild/actions.md
     - 文件接口:
       - 文件动作: interface/file/actions.md

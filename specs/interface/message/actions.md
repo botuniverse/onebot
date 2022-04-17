@@ -12,9 +12,11 @@
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `detail_type` | string | - | 发送的类型，可以为 `private`、`group` 或扩展的类型，和**消息事件**的 `detail_type` 字段对应
-    `group_id` | string | - | 群 ID，当 `detail_type` 为 `group` 时必须传入
+    `detail_type` | string | - | 发送的类型，可以为 `private`、`group`、`channel` 或扩展的类型，和**消息事件**的 `detail_type` 字段对应
     `user_id` | string | - | 用户 ID，当 `detail_type` 为 `private` 时必须传入
+    `group_id` | string | - | 群 ID，当 `detail_type` 为 `group` 时必须传入
+    `guild_id` | string | - | Guild 群组 ID，当 `detail_type` 为 `channel` 时必须传入
+    `channel_id` | string | - | 频道 ID，当 `detail_type` 为 `channel` 时必须传入
     `message` | message | - | 消息内容
 
 === "响应数据"

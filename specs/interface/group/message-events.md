@@ -29,7 +29,7 @@
         "self_id": "123234",
         "time": 1632847927.599013,
         "type": "message",
-        "detail_type": "private",
+        "detail_type": "group",
         "sub_type": "",
         "message_id": "6283",
         "message": [

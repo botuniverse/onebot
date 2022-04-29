@@ -91,3 +91,66 @@
         "message": ""
     }
     ```
+
+## `get_message` 获取消息
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `message_id` | string | - | 唯一的消息 ID
+
+=== "响应数据"
+
+    若存在返回对应 MessageEvent
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_message",
+        "params": {
+            "message_id": "2452352435"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": null,
+        "message": {
+            {
+                "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+                "impl": "go_onebot_qq",
+                "platform": "qq",
+                "self_id": "123234",
+                "time": 1632847927.599013,
+                "type": "message",
+                "detail_type": "group",
+                "sub_type": "",
+                "message_id": "2452352435",
+                "message": [
+                    {
+                        "type": "text",
+                        "data": {
+                            "text": "OneBot is not a bot"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "data": {
+                            "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
+                        }
+                    }
+                ],
+                "alt_message": "OneBot is not a bot[图片]",
+                "group_id": "12345",
+                "user_id": "123456788"
+            }
+        }
+    }
+    ```

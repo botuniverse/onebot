@@ -123,34 +123,32 @@
         "retcode": 0,
         "data": null,
         "message": {
-            {
-                "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-                "impl": "go_onebot_qq",
-                "platform": "qq",
-                "self_id": "123234",
-                "time": 1632847927.599013,
-                "type": "message",
-                "detail_type": "group",
-                "sub_type": "",
-                "message_id": "2452352435",
-                "message": [
-                    {
-                        "type": "text",
-                        "data": {
-                            "text": "OneBot is not a bot"
-                        }
-                    },
-                    {
-                        "type": "image",
-                        "data": {
-                            "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
-                        }
+            "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+            "impl": "go_onebot_qq",
+            "platform": "qq",
+            "self_id": "123234",
+            "time": 1632847927.599013,
+            "type": "message",
+            "detail_type": "group",
+            "sub_type": "",
+            "message_id": "2452352435",
+            "message": [
+                {
+                    "type": "text",
+                    "data": {
+                        "text": "OneBot is not a bot"
                     }
-                ],
-                "alt_message": "OneBot is not a bot[图片]",
-                "group_id": "12345",
-                "user_id": "123456788"
-            }
+                },
+                {
+                    "type": "image",
+                    "data": {
+                        "file_id": "e30f9684-3d54-4f65-b2da-db291a477f16"
+                    }
+                }
+            ],
+            "alt_message": "OneBot is not a bot[图片]",
+            "group_id": "12345",
+            "user_id": "123456788"
         }
     }
     ```

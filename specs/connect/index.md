@@ -1,11 +1,11 @@
-OneBotRPC 是 OneBot 应用与 OneBot 实现通过网络连接的规范，由两部分组成：
+OneBot Connect 是 OneBot 应用与 OneBot 实现通过网络连接的规范，由两部分组成：
 
 - **通信方式**规定了 OneBot 应用与 OneBot 实现进行网络连接所使用的通信协议、数据编码
 - **数据协议**定义了 OneBot 应用与 OneBot 实现之间在各种通信方式上传输的数据
 
 ## 通信方式
 
-OneBotRPC 目前包含四种通信方式，分别是：
+OneBot Connect 目前包含四种通信方式，分别是：
 
 - **HTTP**：OneBot 实现作为 HTTP 服务端，提供动作调用服务
 - **HTTP Webhook**：OneBot 实现作为 HTTP 客户端，向用户配置的地址推送事件
@@ -14,7 +14,7 @@ OneBotRPC 目前包含四种通信方式，分别是：
 
 ## 数据协议
 
-OneBotRPC 目前包含三种数据协议，分别是：
+OneBot Connect 目前包含三种数据协议，分别是：
 
 - **事件**：OneBot 实现自发产生或从机器人平台获得的消息、通知等，由 OneBot 实现向应用端推送
 - **动作请求**：应用端向 OneBot 实现主动请求服务时所发送的动作调用请求
@@ -22,6 +22,6 @@ OneBotRPC 目前包含三种数据协议，分别是：
 
 ## 对 OneBot 实现的要求
 
-OneBot 实现必须完整实现 OneBotRPC 所规定的所有通信方式和数据协议。每种通信方式可以允许用户同时配置多个。
+OneBot 实现必须完整实现 OneBot Connect 所规定的所有通信方式和数据协议。每种通信方式可以允许用户同时配置多个。
 
 OneBot 实现可以支持其它扩展的通信方式，但建议提供明显的区别方式，让用户能意识到它不是标准通信方式。

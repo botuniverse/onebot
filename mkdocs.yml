@@ -31,17 +31,17 @@ extra_javascript:
 nav:
   - 主页: index.md
   - 术语表: glossary.md
-  - OneBotRPC:
-    - 概述: onebotrpc/index.md
+  - OneBot Connect:
+    - 概述: connect/index.md
     - 通信方式:
-      - HTTP: onebotrpc/communication/http.md
-      - HTTP Webhook: onebotrpc/communication/http-webhook.md
-      - 正向 WebSocket: onebotrpc/communication/websocket.md
-      - 反向 WebSocket: onebotrpc/communication/websocket-reverse.md
+      - HTTP: connect/communication/http.md
+      - HTTP Webhook: connect/communication/http-webhook.md
+      - 正向 WebSocket: connect/communication/websocket.md
+      - 反向 WebSocket: connect/communication/websocket-reverse.md
     - 数据协议:
-      - 事件: onebotrpc/data-protocol/event.md
-      - 动作请求: onebotrpc/data-protocol/action-request.md
-      - 动作响应: onebotrpc/data-protocol/action-response.md
+      - 事件: connect/data-protocol/event.md
+      - 动作请求: connect/data-protocol/action-request.md
+      - 动作响应: connect/data-protocol/action-response.md
   - 接口定义:
     - 概述: interface/index.md
     - 基本数据类型: interface/basic-types.md

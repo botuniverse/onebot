@@ -63,7 +63,6 @@
     `stage` | string | - | 上传阶段，必须为 `prepare`
     `name` | string | - | 文件名，如 `foo.jpg`
     `total_size` | int64 | - | 文件完整大小，单位：字节
-    `sha256` | string | - | 整个文件的 SHA256 校验和，全小写
 
 === "响应数据"
 
@@ -95,6 +94,7 @@
     --- | --- | --- | ---
     `stage` | string | - | 上传阶段，必须为 `finish`
     `file_id` | string | - | 准备阶段返回的文件 ID
+    `sha256` | string | - | 整个文件的 SHA256 校验和，全小写
 
 === "响应数据"
 

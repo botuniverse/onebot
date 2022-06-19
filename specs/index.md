@@ -16,9 +16,9 @@ OneBot 标准，即本网站上的所有内容，只是一个文档，OneBot 标
 
 ## 组成部分
 
-OneBot 标准由 OneBotRPC 和接口定义两部分组成：
+OneBot 标准由 OneBot Connect 和接口定义两部分组成：
 
-- OneBotRPC 规定了 OneBot 应用与 OneBot 实现之间通过网络交互所使用的通信方式和数据协议
+- OneBot Connect 规定了 OneBot 应用与 OneBot 实现之间通过网络交互所使用的通信方式和数据协议
 - 接口定义描述了一组标准事件、动作、消息段和它们的扩展规则
 
 ## 文档用词

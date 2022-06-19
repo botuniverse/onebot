@@ -28,11 +28,11 @@
 
 ## OneBot 实现（OneBot Implementation）
 
-与机器人平台对接、向上提供符合 OneBot 标准的接口的程序。
+与机器人平台对接、向上提供符合 OneBot 标准的接口的程序，可简称为**实现端**。
 
 ## OneBot 应用（OneBot Application）
 
-与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑的程序。可简称为**应用端**。
+与 OneBot 实现按照 OneBot 标准交互，实现机器人业务逻辑的程序，可简称为**应用端**。
 
 OneBot 应用通常可以基于现成的 OneBot SDK 来编写，而无需关心 OneBot 标准的通信细节。
 
@@ -44,7 +44,7 @@ OneBot 应用通常可以基于现成的 OneBot SDK 来编写，而无需关心 
 
 ## LibOneBot
 
-不同 OneBot 实现可以复用的部分，主要包括 OneBotRPC 的实现和事件、动作、消息段等数据模型的定义，可以帮助 OneBot 实现者快速在新的聊天机器人平台实现 OneBot 标准。
+不同 OneBot 实现可以复用的部分，主要包括 OneBot Connect 的实现和事件、动作、消息段等数据模型的定义，可以帮助 OneBot 实现者快速在新的聊天机器人平台实现 OneBot 标准。
 
 ## 事件（Event）
 
@@ -73,9 +73,9 @@ OneBot 实现向应用端传送事件的行为称为**推送**（Push），例�
 
 表示聊天消息的一个部分，在一些平台上，聊天消息支持图文混排，其中就会有多个消息段，分别表示每个图片和每段文字。
 
-## OneBotRPC
+## OneBot Connect
 
-OneBot 实现和 OneBot 应用通过网络连接的规范，规范包括通信方式和数据协议。
+OneBot 实现和 OneBot 应用通过网络连接的规范，可简称为 **OBC**。连接规范包括通信方式和数据协议两部分。
 
 四种**通信方式**（Communication Method）：
 

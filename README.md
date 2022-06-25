@@ -6,10 +6,11 @@
 
 ## 特点
 
-- **简洁**：抽象了众多聊天机器人 API 通用的部分，以非常简洁的方式进行描述，保证极高表达能力的同时易于接入
-- **开放**：标准的制定采用开放的运作模式，由社区提出改进建议（RFC），再由委员会评议决定接收
-- **可扩展**：针对不同聊天机器人平台提供的特色功能，OneBot 实现可根据需要对标准进行扩展
+- **简洁**：标准所描述的连接规范和接口定义简洁明了，易于理解、实现和接入，同时文档语言清晰易读
+- **通用**：连接规范适用于几乎所有聊天机器人平台，接口定义抽象了众多聊天机器人 API 的共通部分，保证了通用性
+- **可扩展**：针对不同聊天机器人平台提供的特色功能，OneBot 实现可根据需要方便地对标准接口进行扩展
+- **开放**：标准的制定和维护采用开放的运作模式，贡献者提出 RFC 后，由社区评议决定是否接收
 
 ## 贡献
 
-如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/botuniverse/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](https://github.com/botuniverse/onebot/blob/master/CONTRIBUTING.md)。
+如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/botuniverse/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](CONTRIBUTING.md)。

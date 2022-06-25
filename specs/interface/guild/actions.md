@@ -79,30 +79,27 @@
     }
     ```
 
-## `get_channel_info` 获取频道信息
+## `set_guild_name` 设置群组名称
 
 === "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `guild_id` | string | - | 群组 ID
-    `channel_id` | string | - | 频道 ID
+    `guild_name` | string | - | 新群组名称
 
 === "响应数据"
 
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `channel_id` | string | - | 频道 ID
-    `channel_name` | string | - | 频道名称
+    无。
 
 === "请求示例"
 
     ```json
     {
-        "action": "get_channel_info",
+        "action": "set_guild_name",
         "params": {
-            "guild_id": "123456",
-            "channel_id": "12"
+            "guild_id": "12345",
+            "guild_name": "一个非常普通的群名"
         }
     }
     ```
@@ -113,55 +110,7 @@
     {
         "status": "ok",
         "retcode": 0,
-        "data": {
-            "channel_id": "12",
-            "channel_name": "笨蛋频道"
-        },
-        "message": ""
-    }
-    ```
-
-## `get_channel_list` 获取频道列表
-
-获取指定群组中的频道列表。
-
-=== "请求参数"
-
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `guild_id` | string | - | 群组 ID
-
-=== "响应数据"
-
-    频道信息列表，每一个元素的字段同 `get_channel_info` 的响应数据。
-
-=== "请求示例"
-
-    ```json
-    {
-        "action": "get_channel_list",
-        "params": {
-            "guild_id": "12345"
-        }
-    }
-    ```
-
-=== "响应示例"
-
-    ```json
-    {
-        "status": "ok",
-        "retcode": 0,
-        "data": [
-            {
-                "channel_id": "12",
-                "channel_name": "笨蛋频道"
-            },
-            {
-                "channel_id": "13",
-                "channel_name": "聪明频道"
-            }
-        ],
+        "data": null,
         "message": ""
     }
     ```
@@ -251,14 +200,14 @@
     }
     ```
 
-## `set_guild_name` 设置群组名称
+
+## `leave_guild` 退出群组
 
 === "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `guild_id` | string | - | 群组 ID
-    `guild_name` | string | - | 新群组名称
 
 === "响应数据"
 
@@ -268,10 +217,9 @@
 
     ```json
     {
-        "action": "set_guild_name",
+        "action": "leave_guild",
         "params": {
-            "guild_id": "12345",
-            "guild_name": "一个非常普通的群名"
+            "guild_id": "12345"
         }
     }
     ```
@@ -283,6 +231,93 @@
         "status": "ok",
         "retcode": 0,
         "data": null,
+        "message": ""
+    }
+    ```
+
+## `get_channel_info` 获取频道信息
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `guild_id` | string | - | 群组 ID
+    `channel_id` | string | - | 频道 ID
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `channel_id` | string | - | 频道 ID
+    `channel_name` | string | - | 频道名称
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_channel_info",
+        "params": {
+            "guild_id": "123456",
+            "channel_id": "12"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": {
+            "channel_id": "12",
+            "channel_name": "笨蛋频道"
+        },
+        "message": ""
+    }
+    ```
+
+## `get_channel_list` 获取频道列表
+
+获取指定群组中的频道列表。
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `guild_id` | string | - | 群组 ID
+
+=== "响应数据"
+
+    频道信息列表，每一个元素的字段同 `get_channel_info` 的响应数据。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_channel_list",
+        "params": {
+            "guild_id": "12345"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": [
+            {
+                "channel_id": "12",
+                "channel_name": "笨蛋频道"
+            },
+            {
+                "channel_id": "13",
+                "channel_name": "聪明频道"
+            }
+        ],
         "message": ""
     }
     ```
@@ -310,40 +345,6 @@
             "guild_id": "12345",
             "channel_id": "13",
             "channel_name": "笨蛋频道2"
-        }
-    }
-    ```
-
-=== "响应示例"
-
-    ```json
-    {
-        "status": "ok",
-        "retcode": 0,
-        "data": null,
-        "message": ""
-    }
-    ```
-
-## `leave_guild` 退出群组
-
-=== "请求参数"
-
-    字段名 | 数据类型 | 默认值 | 说明
-    --- | --- | --- | ---
-    `guild_id` | string | - | 群组 ID
-
-=== "响应数据"
-
-    无。
-
-=== "请求示例"
-
-    ```json
-    {
-        "action": "leave_guild",
-        "params": {
-            "guild_id": "12345"
         }
     }
     ```

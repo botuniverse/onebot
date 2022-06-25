@@ -279,13 +279,14 @@
 
 ## `get_channel_list` 获取频道列表
 
-获取指定群组中的频道列表。
+获取指定群组中机器人可见的频道列表。
 
 === "请求参数"
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `guild_id` | string | - | 群组 ID
+    `joined_only` | bool | `false` | 只获取机器人账号已加入的频道列表
 
 === "响应数据"
 
@@ -345,6 +346,131 @@
             "guild_id": "12345",
             "channel_id": "13",
             "channel_name": "笨蛋频道2"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": null,
+        "message": ""
+    }
+    ```
+
+## `get_channel_member_info` 获取频道成员信息
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `guild_id` | string | - | 群组 ID
+    `channel_id` | string | - | 频道 ID
+    `user_id` | string | - | 用户 ID
+
+=== "响应数据"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `user_id` | string | - | 用户 ID
+    `nickname` | string | - | 用户名称/昵称
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_channel_member_info",
+        "params": {
+            "guild_id": "12345",
+            "channel_id": "12",
+            "user_id": "3847573"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": {
+            "user_id": "3847573",
+            "nickname": "我是大笨蛋"
+        },
+        "message": ""
+    }
+    ```
+
+## `get_channel_member_list` 获取频道成员列表
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `guild_id` | string | - | 群组 ID
+    `channel_id` | string | - | 频道 ID
+
+=== "响应数据"
+
+    频道成员信息列表，每一个元素的字段同 `get_channel_member_info` 的响应数据。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "get_channel_member_list",
+        "params": {
+            "guild_id": "123456",
+            "channel_id": "12"
+        }
+    }
+    ```
+
+=== "响应示例"
+
+    ```json
+    {
+        "status": "ok",
+        "retcode": 0,
+        "data": [
+            {
+                "user_id": "111222333",
+                "nickname": "我是大笨蛋"
+            },
+            {
+                "user_id": "444555666",
+                "nickname": "我是小笨蛋"
+            }
+        ],
+        "message": ""
+    }
+    ```
+
+## `leave_channel` 退出频道
+
+=== "请求参数"
+
+    字段名 | 数据类型 | 默认值 | 说明
+    --- | --- | --- | ---
+    `guild_id` | string | - | 群组 ID
+    `channel_id` | string | - | 频道 ID
+
+=== "响应数据"
+
+    无。
+
+=== "请求示例"
+
+    ```json
+    {
+        "action": "leave_channel",
+        "params": {
+            "guild_id": "12345",
+            "channel_id": "12"
         }
     }
     ```

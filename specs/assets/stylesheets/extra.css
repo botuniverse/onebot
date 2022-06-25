@@ -1,0 +1,29 @@
+/* https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss */
+
+:root>* {
+    --color-midnight: #2f3641;
+    --color-starlight: #f0e4d3;
+    --color-space-gray: #6c6c6e;
+    --color-silver: #e3e4e6;
+    --color-silver2: #f2f2ed;
+    --color-alpine-green: #576956;
+    --color-gold: #f8e5cd;
+    --color-graphite: #53524e;
+    --color-sierra-blue: #a8bfd7;
+}
+
+[data-md-color-scheme="onebot"] {
+    /* Primary color shades */
+    --md-primary-fg-color: var(--color-midnight);
+    --md-primary-fg-color--light: var(--color-graphite);
+    --md-primary-fg-color--dark: var(--color-space-gray);
+
+    /* Accent color shades */
+    --md-accent-fg-color: var(--color-space-gray);
+
+    /* Footer color shades */
+    --md-footer-fg-color: hsla(0, 0%, 100%, 1);
+    --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
+    --md-footer-fg-color--lighter: hsla(0, 0%, 100%, 0.3);
+    --md-footer-bg-color: var(--color-midnight);
+}

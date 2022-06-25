@@ -10,8 +10,7 @@ theme:
   logo: assets/images/logo-white.png
   favicon: assets/images/logo.png
   palette:
-    primary: black
-    accent: indigo
+    scheme: onebot
   features:
     - navigation.sections
     - navigation.tabs
@@ -27,6 +26,8 @@ extra:
     property: G-RT0B6ZLNQH
 extra_javascript:
   - assets/javascripts/config.js
+extra_css:
+  - assets/stylesheets/extra.css
 
 nav:
   - 主页: index.md

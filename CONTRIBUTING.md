@@ -2,7 +2,7 @@
 
 向 OneBot 贡献内容应按照下图所示的流程进行，以使标准的维护和更新工作有条不紊。
 
-![](assets/contribution.png)
+<center><img src="assets/contributing.svg"></center>
 
 ## 提出想法
 

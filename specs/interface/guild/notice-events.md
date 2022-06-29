@@ -16,7 +16,7 @@
     `user_id` | string | 用户 ID
     `operator_id` | string | 操作者 ID
 
-    其中 `sub_type` 为 `join` 表示申请加群通过，`invite` 表示被邀请进群。
+    其中 `sub_type` 为 `join` 表示成员主动加入，`invite` 表成员被邀请加入。
 
 === "示例"
 
@@ -48,7 +48,7 @@
     `user_id` | string | 用户 ID
     `operator_id` | string | 操作者 ID
 
-    其中 `sub_type` 为 `leave` 表示主动退出，`kick` 表示被踢出。
+    其中 `sub_type` 为 `leave` 表示成员主动退出，`kick` 表示成员被踢出。
 
 === "示例"
 
@@ -81,7 +81,7 @@
     `user_id` | string | 用户 ID
     `operator_id` | string | 操作者 ID
 
-    其中 `sub_type` 为 `join` 表示申请加入通过，`invite` 表示被邀请加入。
+    其中 `sub_type` 为 `join` 表示成员主动加入，`invite` 表成员被邀请加入。
 
 === "示例"
 
@@ -115,7 +115,7 @@
     `user_id` | string | 用户 ID
     `operator_id` | string | 操作者 ID
 
-    其中 `sub_type` 为 `leave` 表示主动退出，`kick` 表示被踢出。
+    其中 `sub_type` 为 `leave` 表示成员主动退出，`kick` 表示成员被踢出。
 
 === "示例"
 
@@ -150,7 +150,7 @@
     `user_id` | string | 消息发送者 ID
     `operator_id` | string | 操作者 ID
 
-    其中 `sub_type` 为 `recall` 表示主动撤回，`delete` 表示被管理员删除。
+    其中 `sub_type` 为 `recall` 表示发送者主动删除，`delete` 表示管理员删除。
 
 === "示例"
 

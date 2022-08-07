@@ -16,8 +16,8 @@
 要在本地预览 OneBot 标准文档，请参考下面命令：
 
 ```sh
-$ PIPENV_VENV_IN_PROJECT=1 pipenv install
-$ pipenv run mkdocs serve
+$ pip install -r requirements.txt
+$ mkdocs serve
 ```
 
 ## 贡献

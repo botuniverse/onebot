@@ -9,7 +9,8 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `user_id` | string | - | 机器人用户 ID
-    `nickname` | string | - | 机器人名称/昵称
+    `user_name` | string | - | 机器人名称/姓名/昵称
+    `user_displayname` | string | - | 机器人账号设置的显示名称，若无则为空字符串
 
 === "请求示例"
 
@@ -28,7 +29,8 @@
         "retcode": 0,
         "data": {
             "user_id": "123456",
-            "nickname": "我是大笨蛋"
+            "user_name": "我是大笨蛋",
+            "user_displayname": ""
         },
         "message": ""
     }
@@ -47,7 +49,9 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `user_id` | string | - | 用户 ID
-    `nickname` | string | - | 用户名称/昵称
+    `user_name` | string | - | 用户名称/姓名/昵称
+    `user_displayname` | string | - | 用户设置的显示名称，若无则为空字符串
+    `user_remark` | string | - | 机器人账号对该用户的备注名称，若无则为空字符串
 
 === "请求示例"
 
@@ -68,7 +72,9 @@
         "retcode": 0,
         "data": {
             "user_id": "123456",
-            "nickname": "我是大笨蛋"
+            "user_name": "我是大笨蛋",
+            "user_displayname": "",
+            "user_remark": "一个自称大笨蛋的人"
         },
         "message": ""
     }
@@ -104,11 +110,15 @@
         "data": [
             {
                 "user_id": "123456",
-                "nickname": "我是大笨蛋"
+                "user_name": "我是大笨蛋",
+                "user_displayname": "",
+                "user_remark": "一个自称大笨蛋的人"
             },
             {
                 "user_id": "654321",
-                "nickname": "我是小笨蛋"
+                "user_name": "我是小笨蛋",
+                "user_displayname": "",
+                "user_remark": "一个自称小笨蛋的人"
             }
         ],
         "message": ""

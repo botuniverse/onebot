@@ -129,7 +129,8 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `user_id` | string | - | 用户 ID
-    `nickname` | string | - | 用户名称/昵称
+    `user_name` | string | - | 用户名称/姓名/昵称
+    `user_displayname` | string | - | 用户设置的群组内显示名称或账号显示名称，若无则为空字符串
 
 === "请求示例"
 
@@ -151,7 +152,8 @@
         "retcode": 0,
         "data": {
             "user_id": "3847573",
-            "nickname": "我是大笨蛋"
+            "user_name": "我是大笨蛋",
+            "user_displayname": "本群最菜的"
         },
         "message": ""
     }
@@ -189,11 +191,13 @@
         "data": [
             {
                 "user_id": "111222333",
-                "nickname": "我是大笨蛋"
+                "user_name": "我是大笨蛋",
+                "user_displayname": "本群最菜的"
             },
             {
                 "user_id": "444555666",
-                "nickname": "我是小笨蛋"
+                "user_name": "我是小笨蛋",
+                "user_displayname": "本群最强的"
             }
         ],
         "message": ""
@@ -376,7 +380,8 @@
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
     `user_id` | string | - | 用户 ID
-    `nickname` | string | - | 用户名称/昵称
+    `user_name` | string | - | 用户名称/姓名/昵称
+    `user_displayname` | string | - | 用户设置的频道内显示名称或账号显示名称，若无则为空字符串
 
 === "请求示例"
 
@@ -399,7 +404,8 @@
         "retcode": 0,
         "data": {
             "user_id": "3847573",
-            "nickname": "我是大笨蛋"
+            "user_name": "我是大笨蛋",
+            "user_displayname": "本群最菜的"
         },
         "message": ""
     }
@@ -439,11 +445,13 @@
         "data": [
             {
                 "user_id": "111222333",
-                "nickname": "我是大笨蛋"
+                "user_name": "我是大笨蛋",
+                "user_displayname": "本群最菜的"
             },
             {
                 "user_id": "444555666",
-                "nickname": "我是小笨蛋"
+                "user_name": "我是小笨蛋",
+                "user_displayname": "本群最强的"
             }
         ],
         "message": ""

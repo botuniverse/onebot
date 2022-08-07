@@ -35,7 +35,9 @@ OneBot 实现应该根据用户配置启动 HTTP 服务器，监听指定的 `<h
 
 当 `event_enabled` 配置为 true 时，OneBot 实现必须支持 `get_latest_events` 元动作，并至少提供 `event_buffer_size` 所指定的缓冲区大小，当用户尚未获取的事件数量超过缓冲区大小时，可以丢弃最旧的事件，也可以利用数据库提供无限容量的事件缓冲区。
 
-多个并发请求同时调用 `get_latest_events` 是未定义行为，OneBot 实现可以做任意假设。
+不同通信方式之间应该相互隔离，即，无论其它通信方式上是否成功推送事件，`get_latest_events` 都应该能收到所有事件（在未超出缓冲区的情况下）。OneBot 实现应建议用户不要同时使用 `get_latest_events` 和其它通信方式来接收事件。
+
+多个并发请求同时调用 `get_latest_events` 的结果由 OneBot 实现定义，实现可以对后来的请求返回错误码、返回空事件列表或是对所有请求返回相同的事件列表。
 
 ## 错误
 

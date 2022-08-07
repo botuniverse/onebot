@@ -11,6 +11,24 @@
 - **可扩展**：针对不同聊天机器人平台提供的特色功能，OneBot 实现可根据需要方便地对标准接口进行扩展
 - **开放**：标准的制定和维护采用开放的运作模式，贡献者提出 RFC 后，由社区评议决定是否接收
 
+## 本地预览
+
+要在本地预览 OneBot 标准文档，请参考下面命令：
+
+**使用 pipenv**
+
+```sh
+$ PIPENV_VENV_IN_PROJECT=1 pipenv install
+$ pipenv run mkdocs serve
+```
+
+**使用 pip**
+
+```sh
+$ pip install -r requirements.txt
+$ mkdocs serve
+```
+
 ## 贡献
 
 如果你有兴趣帮助完善 OneBot，可积极参与 [discussions](https://github.com/botuniverse/onebot/discussions) 中的讨论、提出 RFC 或帮助更新标准文档，具体贡献方式请参考 [贡献指南](CONTRIBUTING.md)。

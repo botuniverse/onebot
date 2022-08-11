@@ -16,7 +16,7 @@ OneBot 实现应该根据用户配置启动 WebSocket 服务器，监听指定�
 
 ## 鉴权
 
-如果配置了 `access_token` 且不为空字符串，OneBot 实现必须在连接建立前（协议 upgrade 前）检查请求头中的 `Authorization` 头是否等于 `Bearer <access_token>`（`<access_token>` 不需要对两边的空白字符进行裁剪），若等于则认为鉴权成功，否则鉴权失败。
+如果配置了 `access_token` 且不为空字符串，OneBot 实现必须在连接建立前（协议 upgrade 前）以和 [HTTP](http.md) 相同的方式鉴权。
 
 ## 事件
 

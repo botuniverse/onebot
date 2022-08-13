@@ -1,3 +1,7 @@
+## 任意类型
+
+`any`
+
 ## 整数
 
 `int64`、`uint64`、`int32`、`uint32`、`int16`、`uint16`、`int8`、`uint8`
@@ -28,6 +32,15 @@
 
 其中，`<action_name>` 为动作名。
 
-## 任意类型
+## 机器人自身
 
-`any`
+`self`
+
+用于唯一标识一个机器人账号，应包含 `platform` 和 `user_id` 字段，数据类型均为 `string`，分别表示机器人平台名称和机器人用户 ID。以 JSON 编码的例子如下：
+
+```json
+{
+    "platform": "telegram",
+    "user_id": "foobar"
+}
+```

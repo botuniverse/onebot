@@ -36,7 +36,14 @@
 
 `self`
 
-用于唯一标识一个机器人账号，应包含 `platform` 和 `user_id` 字段，数据类型均为 `string`，分别表示机器人平台名称和机器人用户 ID。以 JSON 编码的例子如下：
+继承自 `map[string]any` 类型，用于唯一标识一个机器人账号，应包含以下字段：
+
+字段名 | 数据类型 | 说明
+--- | --- | ---
+`platform` | `string` | 机器人平台名称
+`user_id` | `string` | 机器人用户 ID
+
+以 JSON 编码的例子如下：
 
 ```json
 {

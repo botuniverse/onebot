@@ -23,9 +23,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "guild_member_increase",
@@ -55,9 +57,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "guild_member_decrease",
@@ -88,9 +92,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "channel_member_increase",
@@ -122,9 +128,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "channel_member_decrease",
@@ -157,9 +165,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "channel_message_delete",
@@ -188,9 +198,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "channel_create",
@@ -217,9 +229,11 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "notice",
         "detail_type": "channel_delete",

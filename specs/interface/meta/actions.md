@@ -36,9 +36,11 @@
         "data": [
             {
                 "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-                "impl": "go_onebot_qq",
-                "platform": "qq",
-                "self_id": "123234",
+                "impl": "go-onebot-qq",
+                "self": {
+                    "platform": "qq",
+                    "user_id": "123234"
+                },
                 "time": 1632847927.599013,
                 "type": "message",
                 "detail_type": "private",
@@ -63,9 +65,11 @@
             },
             {
                 "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-                "impl": "go_onebot_qq",
-                "platform": "qq",
-                "self_id": "123234",
+                "impl": "go-onebot-qq",
+                "self": {
+                    "platform": "qq",
+                    "user_id": "123234"
+                },
                 "time": 1632847927.599013,
                 "type": "notice",
                 "detail_type": "group_member_increase",
@@ -205,7 +209,7 @@
         "status": "ok",
         "retcode": 0,
         "data": {
-            "impl": "go_onebot_qq",
+            "impl": "go-onebot-qq",
             "platform": "qq",
             "version": "1.2.0",
             "onebot_version": "12"

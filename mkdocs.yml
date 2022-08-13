@@ -16,7 +16,8 @@ theme:
     - navigation.tabs
 markdown_extensions:
   - admonition
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences
 extra:
   search:

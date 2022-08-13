@@ -21,8 +21,8 @@ OneBot 实现必须在请求时设置以下请求头：
 - `User-Agent`：具体的 UA 值可以由实现自行定义
     - 例如 `User-Agent: OneBot/12 (qq) Go-LibOneBot/1.0.0`
 - `X-OneBot-Version: <onebot_version>`：`<onebot_version>` 应为实现的 OneBot 标准版本
-- `X-Impl: <impl>`：`<impl>` 应为实现的名称，格式为 `[_a-z]+`
-- `X-Platform: <platform>`：`<platform>` 应为实现所针对的机器人平台名称，格式为 `[_a-z]+`
+- `X-Impl: <impl>`：`<impl>` 应为实现的名称，格式见 [术语表](../../glossary.md#onebot-onebot-implementation)
+- `X-Platform: <platform>`：`<platform>` 应为实现所针对的机器人平台名称，格式见 [术语表](../../glossary.md#bot-platform)
 - `X-Self-ID: <self_id>`：`<self_id>` 应为当前所“登录”的机器人 ID
 
 如果配置了 `access_token` 且不为空字符串，则还应该设置：

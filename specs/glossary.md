@@ -10,6 +10,8 @@
 
 官方或非官方提供了聊天机器人 API 的聊天软件平台，例如 QQ、微信、微信公众号、企业微信、飞书、钉钉、Telegram、Discord、Facebook Messenger 等。
 
+每个机器人平台应有一个格式为 `[a-z][\-a-z0-9]*` 的名字，各 OneBot 实现在为机器人平台确定名字时应与其它实现的开发者沟通以确保名字的统一。
+
 ## OneBot
 
 根据上下文不同，可能表示 OneBot 标准或 OneBot 实现。
@@ -29,6 +31,8 @@
 ## OneBot 实现（OneBot Implementation）
 
 与机器人平台对接、向上提供符合 OneBot 标准的接口的程序，可简称为**实现端**。
+
+每个 OneBot 实现应有一个格式为 `[a-z][\-a-z0-9]*(\.[\-a-z0-9]+)*` 的名字，点号分割不同部分可以允许实现采用版本号来区分扩展 API 版本，或者方便兼容实现声明自己的兼容性（以它所兼容的实现名作为前缀如 `go-cqhttp.v2.foo-impl`）。
 
 ## OneBot 应用（OneBot Application）
 

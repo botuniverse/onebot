@@ -52,7 +52,7 @@
 
 字段名 | 数据类型 | 说明
 --- | --- | ---
-`platform` | `string` | 机器人平台名称
+`platform` | `string` | 机器人平台名称，格式见 [术语表](../../glossary.md#bot-platform)
 `user_id` | `string` | 机器人用户 ID
 
 以 JSON 编码的例子如下：

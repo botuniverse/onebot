@@ -27,3 +27,7 @@
 ``resp[`<action_name>`]``
 
 其中，`<action_name>` 为动作名。
+
+## 任意类型
+
+`any`

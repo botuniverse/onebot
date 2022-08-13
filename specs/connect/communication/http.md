@@ -18,7 +18,11 @@ OneBot 实现应该根据用户配置启动 HTTP 服务器，监听指定的 `<h
 
 ## 鉴权
 
-如果配置了 `access_token` 且不为空字符串，OneBot 实现必须检查请求头中的 `Authorization` 头是否等于 `Bearer <access_token>`（`<access_token>` 不需要对两边的空白字符进行裁剪），若等于则认为鉴权成功，否则鉴权失败。
+如果配置了 `access_token` 且不为空字符串，OneBot 实现必须：
+
+- 首先检查请求头中是否存在 `Authorization` 头，若存在，则判断其值是否等于 `Bearer <access_token>`（`<access_token>` 不需要对两边的空白字符进行裁剪），若等于则鉴权成功，否则鉴权失败；
+- 若不存在 `Authorization` 头，则继续检查是否存在 `access_token` URL query 参数，若存在，则判断其值是否等于 `<access_token>`，若等于则鉴权成功，否则鉴权失败；
+- 若以上均不存在，则鉴权失败。
 
 ## Content-Type
 

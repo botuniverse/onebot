@@ -29,7 +29,7 @@ OneBot 实现必须在请求时设置以下请求头：
 
 - `Authorization: Bearer <access_token>`
 
-这里 `<access_token>` 不需要对两边的空白字符进行裁剪。
+这里 `<access_token>` 不需要对两边的空白字符进行裁剪。若无法设置此请求头，实现应通过 `access_token` URL query 参数来传递 `<access_token>`。
 
 ## 请求体
 

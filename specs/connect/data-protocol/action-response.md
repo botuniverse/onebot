@@ -61,6 +61,7 @@
 `10005` | Unsupported Segment | 不支持的消息段类型 | OneBot 实现没有实现该消息段类型
 `10006` | Bad Segment Data | 无效的消息段参数 | 参数缺失或参数类型错误
 `10007` | Unsupported Segment Data | 不支持的消息段参数 | OneBot 实现没有实现该参数的语义
+`10101` | Who Am I | 未指定机器人账号 | OneBot 实现在单个 OneBot Connect 连接上支持多个机器人账号，但动作请求未指定要使用的账号
 
 ### `2xxxx` 动作处理器错误（Handler Error）
 

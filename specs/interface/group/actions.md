@@ -48,7 +48,7 @@
 
 === "响应数据"
 
-    群信息列表，每一个元素的字段同 `get_group_info` 的响应数据。
+    群信息列表，数据类型为 ``list[resp[`get_group_info`]]``。
 
 === "请求示例"
 
@@ -133,7 +133,7 @@
 
 === "响应数据"
 
-    群成员信息列表，每一个元素的字段同 `get_group_member_info` 的响应数据。
+    群成员信息列表，数据类型为 ``list[resp[`get_group_member_info`]]``。
 
 === "请求示例"
 

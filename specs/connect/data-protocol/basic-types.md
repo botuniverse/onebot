@@ -20,11 +20,23 @@
 
 在 JSON 中表示为 Base64 编码的字符串，MessagePack 中表示为 bin 格式的字节数组。
 
-## 字典/映射/对象
+## 列表/数组
+
+`list[<value_type>]`
+
+其中，`<value_type>` 为列表中的值类型。
+
+## 映射/字典
 
 `map[<key_type>]<value_type>`
 
 其中，`<key_type>` 为键类型，`<value_type>` 为值类型。
+
+## 对象
+
+`object`
+
+等价于 `map[string]any`。
 
 ## 动作响应数据
 
@@ -36,7 +48,7 @@
 
 `self`
 
-继承自 `map[string]any` 类型，用于唯一标识一个机器人账号，应包含以下字段：
+继承自 `object` 类型，用于唯一标识一个机器人账号，应包含以下字段：
 
 字段名 | 数据类型 | 说明
 --- | --- | ---

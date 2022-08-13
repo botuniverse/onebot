@@ -126,7 +126,14 @@
     字段名 | 数据类型 | 说明
     --- | --- | ---
     `good` | bool | 是否各项状态都符合预期，OneBot 实现各模块均正常
-    `online` | bool | OneBot 实现对接的平台连接是否顺畅（如 QQ 平台为是否在线），是 `good` 的必要条件之一
+    `bots` | list[object] | 当前 OneBot Connect 连接上所有机器人账号的状态列表
+
+    其中，`bots` 的每一个元素具有下面这些字段：
+
+    字段名 | 数据类型 | 说明
+    --- | --- | ---
+    `self` | self | 机器人自身标识
+    `online` | bool | 机器人账号是否在线（可收发消息等）
 
 === "请求示例"
 
@@ -145,7 +152,23 @@
         "retcode": 0,
         "data": {
             "good": true,
-            "online": true
+            "bots": [
+                {
+                    "self": {
+                        "platform": "qq",
+                        "user_id": "1234567"
+                    },
+                    "online": true,
+                    "qq.status": "信号弱"
+                },
+                {
+                    "self": {
+                        "platform": "telegram",
+                        "user_id": "2345678"
+                    },
+                    "online": true
+                }
+            ]
         },
         "message": ""
     }

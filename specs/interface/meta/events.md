@@ -17,15 +17,12 @@
 
 当 `enabled` 配置为 true 时，OneBot 实现应该每隔 `interval` 产生一个心跳事件。
 
-建议 HTTP 通信方式忽略该类事件。
-
 === "事件字段"
 
     字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | 必须为 `heartbeat`
     `interval` | int64 | 到下次心跳的间隔，单位：毫秒
-    `status` | resp[`get_status`] | OneBot 状态，与 `get_status` 动作响应数据一致
 
 === "示例"
 
@@ -36,10 +33,55 @@
         "type": "meta",
         "detail_type": "heartbeat",
         "sub_type": "",
-        "interval": 5000,
+        "interval": 5000
+    }
+    ```
+
+## `meta.status_update` 状态更新
+
+对于正向 WebSocket 和反向 WebSocket 通信方式，OneBot 实现应在连接建立后的适当时机（如所有机器人账号登录完成后）产生一个状态更新事件，发送所有机器人账号的状态。
+
+对于 HTTP Webhook 通信方式，OneBot 实现应在启动后的适当时机（如所有机器人账号登录完成后）产生一个状态更新事件，发送所有机器人账号的状态。
+
+在上述时机首次产生事件后，实现应在机器人账号或实现本身状态有变化时产生状态更新事件。
+
+=== "事件字段"
+
+    字段名 | 数据类型 | 说明
+    --- | --- | ---
+    `detail_type` | string | 必须为 `status_update`
+    `status` | resp[`get_status`] | OneBot 状态，与 `get_status` 动作响应数据一致
+
+    一个连接上的首次状态更新事件中，`status.bots` 字段应包含所有机器人账号的状态，后续则可以只包含状态有变化的机器人账号。如果是 `status.good` 或 OneBot 实现本身的其它状态变化，`status.bots` 字段可为空列表。
+
+=== "示例"
+
+    ```json
+    {
+        "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "time": 1632847927.599013,
+        "type": "meta",
+        "detail_type": "heartbeat",
+        "sub_type": "",
         "status": {
             "good": true,
-            "online": true
+            "bots": [
+                {
+                    "self": {
+                        "platform": "qq",
+                        "user_id": "1234567"
+                    },
+                    "online": true,
+                    "qq.status": "信号弱"
+                },
+                {
+                    "self": {
+                        "platform": "telegram",
+                        "user_id": "2345678"
+                    },
+                    "online": true
+                }
+            ]
         }
     }
     ```

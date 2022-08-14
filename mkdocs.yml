@@ -5,7 +5,6 @@ edit_uri: blob/main/specs/
 docs_dir: specs
 theme:
   name: material
-  custom_dir: theme
   language: zh
   logo: assets/images/logo-white.png
   favicon: assets/images/logo.png

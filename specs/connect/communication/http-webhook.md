@@ -18,9 +18,8 @@ OneBot 实现应该根据用户配置，在发生事件时，向指定的 `url` 
 OneBot 实现必须在请求时设置以下请求头：
 
 - `Content-Type: application/json`
-- `User-Agent`：具体的 UA 值可以由实现自行定义
-    - 例如 `User-Agent: OneBot/12 (qq) Go-LibOneBot/1.0.0`
-- `X-OneBot-Version: <onebot_version>`：`<onebot_version>` 应为实现的 OneBot 标准版本
+- `User-Agent`：具体的 UA 值可以由实现自行定义，如 `OneBot/12 (qq) Go-LibOneBot/1.0.0`
+- `X-OneBot-Version: <onebot_version>`：`<onebot_version>` 应为实现的 OneBot 标准版本，如 `12`
 - `X-Impl: <impl>`：`<impl>` 应为实现的名称，格式见 [术语表](../../glossary.md#onebot-onebot-implementation)
 
 如果配置了 `access_token` 且不为空字符串，则还应该设置：

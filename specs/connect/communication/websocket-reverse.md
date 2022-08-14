@@ -15,7 +15,18 @@ OneBot 实现应该根据用户配置，向指定的 `url` 发起 WebSocket 连�
 
 ## 请求头
 
-除了不需要 `Content-Type`，在请求连接时应设置和 [HTTP Webhook](http-webhook.md) 相同的请求头。
+OneBot 实现必须在请求连接时设置以下请求头：
+
+- `User-Agent`：具体的 UA 值可以由实现自行定义，如 `OneBot/12 (qq) Go-LibOneBot/1.0.0`
+- `Sec-WebSocket-Protocol: <onebot_version>.<impl>`：
+    - `<onebot_version>` 应为实现的 OneBot 标准版本，如 `12`
+    - `<impl>` 应为实现的名称，格式见 [术语表](../../glossary.md#onebot-onebot-implementation)
+
+如果配置了 `access_token` 且不为空字符串，则还应该设置：
+
+- `Authorization: Bearer <access_token>`
+
+这里 `<access_token>` 不需要对两边的空白字符进行裁剪。若无法设置此请求头，实现应通过 `access_token` URL query 参数来传递 `<access_token>`。
 
 ## 事件和动作
 

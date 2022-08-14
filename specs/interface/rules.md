@@ -19,9 +19,11 @@ OneBot 实现可以在标准事件的基础上添加扩展字段，扩展字段�
 ```json
 {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go_onebot_qq",
-        "platform": "qq",
-        "self_id": "123234",
+        "impl": "go-onebot-qq",
+        "self": {
+            "platform": "qq",
+            "user_id": "123234"
+        },
         "time": 1632847927.599013,
         "type": "message",
         "detail_type": "private",
@@ -53,9 +55,11 @@ OneBot 实现可以扩展标准事件的子类型（`sub_type`），扩展的子
 ```json
 {
     "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-    "impl": "go_onebot_qq",
-    "platform": "qq",
-    "self_id": "123234",
+    "impl": "go-onebot-qq",
+    "self": {
+        "platform": "qq",
+        "user_id": "123234"
+    },
     "time": 1632847927.599013,
     "type": "notice",
     "detail_type": "friend_increase",
@@ -75,9 +79,11 @@ OneBot 实现可以扩展事件的具体类型（`detail_type`），扩展的具
 ```json
 {
     "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-    "impl": "go_onebot_qq",
-    "platform": "qq",
-    "self_id": "123234",
+    "impl": "go-onebot-qq",
+    "self": {
+        "platform": "qq",
+        "user_id": "123234"
+    },
     "time": 1632847927.599013,
     "type": "notice",
     "detail_type": "qq.group_file_upload",

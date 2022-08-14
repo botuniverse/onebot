@@ -48,7 +48,7 @@
 
 === "响应数据"
 
-    群组信息列表，每一个元素的字段同 `get_guild_info` 的响应数据。
+    群组信息列表，数据类型为 ``list[resp[`get_guild_info`]]``。
 
 === "请求示例"
 
@@ -169,7 +169,7 @@
 
 === "响应数据"
 
-    群组成员信息列表，每一个元素的字段同 `get_guild_member_info` 的响应数据。
+    群组成员信息列表，数据类型为 ``list[resp[`get_guild_member_info`]]``。
 
 === "请求示例"
 
@@ -294,7 +294,7 @@
 
 === "响应数据"
 
-    频道信息列表，每一个元素的字段同 `get_channel_info` 的响应数据。
+    频道信息列表，数据类型为 ``list[resp[`get_channel_info`]]``。
 
 === "请求示例"
 
@@ -422,7 +422,7 @@
 
 === "响应数据"
 
-    频道成员信息列表，每一个元素的字段同 `get_channel_member_info` 的响应数据。
+    频道成员信息列表，数据类型为 ``list[resp[`get_channel_member_info`]]``。
 
 === "请求示例"
 

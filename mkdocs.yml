@@ -1,7 +1,7 @@
 site_name: OneBot 12 标准草案
 repo_name: botuniverse/onebot
 repo_url: https://github.com/botuniverse/onebot
-edit_uri: blob/master/specs/
+edit_uri: blob/main/specs/
 docs_dir: specs
 theme:
   name: material
@@ -16,7 +16,8 @@ theme:
     - navigation.tabs
 markdown_extensions:
   - admonition
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences
 extra:
   search:
@@ -40,12 +41,12 @@ nav:
       - 正向 WebSocket: connect/communication/websocket.md
       - 反向 WebSocket: connect/communication/websocket-reverse.md
     - 数据协议:
+      - 基本数据类型: connect/data-protocol/basic-types.md
       - 事件: connect/data-protocol/event.md
       - 动作请求: connect/data-protocol/action-request.md
       - 动作响应: connect/data-protocol/action-response.md
   - 接口定义:
     - 概述: interface/index.md
-    - 基本数据类型: interface/basic-types.md
     - 扩展规则: interface/rules.md
     - 元接口:
       - 元事件: interface/meta/events.md

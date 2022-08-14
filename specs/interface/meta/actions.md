@@ -186,8 +186,7 @@
 
     字段名 | 数据类型 | 说明
     --- | --- | ---
-    `impl` | string | OneBot 实现名称，格式 `[_a-z]+`
-    `platform` | string | OneBot 实现平台名称，格式 `[_a-z]+`
+    `impl` | string | OneBot 实现名称，格式见 [术语表](../../glossary.md#onebot-onebot-implementation)
     `version` | string | OneBot 实现的版本号
     `onebot_version` | string | OneBot 实现的 OneBot 标准版本号
 
@@ -208,7 +207,6 @@
         "retcode": 0,
         "data": {
             "impl": "go-onebot-qq",
-            "platform": "qq",
             "version": "1.2.0",
             "onebot_version": "12"
         },

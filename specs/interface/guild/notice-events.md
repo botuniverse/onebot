@@ -23,7 +23,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -57,7 +56,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -92,7 +90,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -128,7 +125,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -165,7 +161,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -198,7 +193,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"
@@ -229,7 +223,6 @@
     ```json
     {
         "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
-        "impl": "go-onebot-qq",
         "self": {
             "platform": "qq",
             "user_id": "123234"

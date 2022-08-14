@@ -13,6 +13,8 @@ theme:
   features:
     - navigation.sections
     - navigation.tabs
+    - search.suggest
+    - search.highlight
 markdown_extensions:
   - admonition
   - pymdownx.tabbed:
@@ -20,7 +22,7 @@ markdown_extensions:
   - pymdownx.superfences
 extra:
   search:
-    language: jp # 不支持中文，改成日文好像能搜到一部分中文了（无语）
+    language: jp
   analytics:
     provider: google
     property: G-RT0B6ZLNQH

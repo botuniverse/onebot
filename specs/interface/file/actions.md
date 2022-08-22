@@ -160,7 +160,7 @@
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `stage` | string | - | 上传阶段，必须为 `prepare`
+    `stage` | string | - | 准备阶段，必须为 `prepare`
     `file_id` | string | - | 文件 ID
 
 === "响应数据"
@@ -177,7 +177,7 @@
 
     字段名 | 数据类型 | 默认值 | 说明
     --- | --- | --- | ---
-    `stage` | string | - | 上传阶段，必须为 `transfer`
+    `stage` | string | - | 传输阶段，必须为 `transfer`
     `file_id` | string | - | 文件 ID
     `offset` | int64 | - | 本次传输的文件偏移，单位：字节
     `size` | int64 | - | 本次传输的文件大小，单位：字节

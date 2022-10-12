@@ -1,6 +1,6 @@
 !!! tip "关于 bytes 类型的提示"
 
-        在 JSON 中，bytes 类型的字段表示为 Base64 编码的字符串。具体见 [基本数据类型](../basic-types.md)。
+        在 JSON 中，bytes 类型的字段表示为 Base64 编码的字符串。具体见 [基本数据类型](../../connect/data-protocol/basic-types.md)。
 
 ## `upload_file` 上传文件
 

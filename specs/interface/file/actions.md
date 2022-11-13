@@ -79,7 +79,6 @@
     `stage` | string | - | 上传阶段，必须为 `transfer`
     `file_id` | string | - | 准备阶段返回的文件 ID
     `offset` | int64 | - | 本次传输的文件偏移，单位：字节
-    `size` | int64 | - | 本次传输的文件大小，单位：字节
     `data` | bytes | - | 本次传输的文件数据
 
 === "响应数据"

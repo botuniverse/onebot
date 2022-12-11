@@ -6,6 +6,36 @@
 
 元事件是 OneBot 实现内部自发产生的一类事件，例如心跳等，与 OneBot 本身的运行状态有关，与实现对应的机器人平台无关。
 
+## `meta.connect` 连接
+
+对于正向 WebSocket 和反向 WebSocket 通信方式，OneBot 实现应在连接建立后立即产生一个连接事件，以向应用端推送当前实现端的相关版本信息。连接事件必须是一次成功的正向或反向 WebSocket 连接上传输的第一个事件。
+
+HTTP 和 HTTP Webhook 通信方式不需要产生连接事件。
+
+=== "事件字段"
+
+    字段名 | 数据类型 | 说明
+    --- | --- | ---
+    `detail_type` | string | 必须为 `connect`
+    `version` | resp[`get_version`] | OneBot 实现端版本信息，与 `get_version` 动作响应数据一致
+
+=== "示例"
+
+    ```json
+    {
+        "id": "b6e65187-5ac0-489c-b431-53078e9d2bbb",
+        "time": 1632847927.599013,
+        "type": "meta",
+        "detail_type": "connect",
+        "sub_type": "",
+        "version": {
+            "impl": "go-onebot-qq",
+            "version": "1.2.0",
+            "onebot_version": "12"
+        }
+    }
+    ```
+
 ## `meta.heartbeat` 心跳
 
 !!! tip "建议 OneBot 实现提供的配置项"
@@ -50,7 +80,7 @@
     字段名 | 数据类型 | 说明
     --- | --- | ---
     `detail_type` | string | 必须为 `status_update`
-    `status` | resp[`get_status`] | OneBot 状态，与 `get_status` 动作响应数据一致
+    `status` | resp[`get_status`] | OneBot 实现端状态信息，与 `get_status` 动作响应数据一致
 
     一个连接上的首次状态更新事件中，`status.bots` 字段应包含所有机器人账号的状态，后续则可以只包含状态有变化的机器人账号。如果是 `status.good` 或 OneBot 实现本身的其它状态变化，`status.bots` 字段可为空列表。
 

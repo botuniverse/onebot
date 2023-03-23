@@ -41,7 +41,14 @@
     "params": {
         "detail_type": "private",
         "user_id": "123445667",
-        "message": "嗨～"
+        "message": [
+            {
+                "type": "text",
+                "data": {
+                    "text": "嗨～"
+                }
+            }
+        ]
     },
     "echo": "1234"
 }

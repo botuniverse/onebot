@@ -52,33 +52,6 @@
 }
 ```
 
-```json
-{
-    "action": "send_message",
-    "params": {
-        "detail_type": "private",
-        "user_id": "1234567",
-        "message": {
-            "type": "text",
-            "data": {
-                "text": "这是一个纯文本消息段"
-            }
-        }
-    }
-}
-```
-
-```json
-{
-    "action": "send_message",
-    "params": {
-        "detail_type": "private",
-        "user_id": "1234567",
-        "message": "这是一个纯文本消息段"
-    }
-}
-```
-
 以 JSON 编码的事件中消息类型字段的例子：
 
 ```json
